@@ -1,0 +1,10 @@
+name: approval Code
+type: module
+description: approval Code manages page specific codes on approved sites required for approval Review.
+core: 8.x
+core_version_requirement: ^8 || ^9
+configure: approval_code.admin_settings_form
+package: custom
+
+dependencies:
+  - drupal:datetime

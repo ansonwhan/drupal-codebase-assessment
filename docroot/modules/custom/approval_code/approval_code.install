@@ -1,0 +1,194 @@
+<?php
+
+/**
+ * @file
+ * Contains approval_code.install.
+ */
+
+use Drupal\Core\Database\Database;
+use Drupal\Core\Entity;
+use Drupal\Core\Entity\EntityStorageException;
+
+
+/**
+ * Implements hook_schema().
+ *
+ * Defines the database tables used by this module.
+ *
+ * @see hook_schema()
+ *
+ * @ingroup dbtng_example
+ */
+function approval_code_schema() {
+  $schema['approval'] = [
+    'description' => 'Stores approval codes for nodes.',
+    'fields' => [
+      'entity_type' => [
+        'type' => 'varchar',
+        'length' => 16,
+        'not null' => TRUE,
+        'description' => 'Entity type.',
+      ],
+      'entity_id' => [
+        'type' => 'varchar',
+        'length' => 64,
+        'not null' => TRUE,
+        'description' => 'Entity id',
+      ],
+      'code' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+        'default' => '',
+        'description' => 'approval Code.',
+      ],
+      'modified' => [
+        'type' => 'varchar',
+        'mysql_type' => 'date',
+        'not null' => TRUE,
+        'description' => 'Date Modified.',
+      ],
+      'expired' => [
+        'type' => 'varchar',
+        'mysql_type' => 'date',
+        'not null' => TRUE,
+        'description' => 'Date Expiring.',
+      ],
+      'code_mobile' => [
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+        'description' => 'Mobile approval code.',
+      ],
+      'modified_mobile' => [
+        'type' => 'varchar',
+        'not null' => FALSE,
+        'mysql_type' => 'date',
+        'description' => 'Mobile Date Modified.',
+      ],
+      'expired_mobile' => [
+        'type' => 'varchar',
+        'not null' => FALSE,
+        'mysql_type' => 'date',
+        'description' => 'Mobile Date Expiring.',
+      ],
+      'id' => [
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'code' => ['code'],
+      'modified' => ['modified'],
+    ],
+  ];
+
+  return $schema;
+}
+
+/**
+ * Updates schema to include extra columns for mobile.
+ */
+function approval_code_update_8001() {
+  $code_m = [
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => TRUE,
+    'default' => '',
+    'description' => 'Mobile approval code',
+  ];
+  $date_m = [
+    'type' => 'varchar',
+    'mysql_type' => 'date',
+    'not null' => FALSE,
+    'description' => 'Mobile Date Modified',
+  ];
+  $exp_m = [
+    'type' => 'varchar',
+    'mysql_type' => 'date',
+    'not null' => FALSE,
+    'description' => 'Mobile Date Expiring',
+  ];
+  $schema = Database::getConnection()->schema();
+  $schema->addField('approval', 'code_mobile', $code_m);
+  $schema->addField('approval', 'modified_mobile', $date_m);
+  $schema->addField('approval', 'expired_mobile', $exp_m);
+}
+
+/**
+ * Updates schema to include extra columns for non-content pages.
+ */
+function approval_code_update_8002() {
+  $entity_type = [
+    'type' => 'varchar',
+    'length' => 16,
+    'not null' => FALSE,
+    'description' => 'Entity type.',
+  ];
+  $entity_id = [
+    'type' => 'varchar',
+    'length' => 64,
+    'not null' => TRUE,
+    'description' => 'Entity id',
+  ];
+
+  $schema = Database::getConnection()->schema();
+  $schema->dropPrimaryKey('approval');
+  $schema->dropIndex('approval', 'nid');
+  $schema->addField('approval', 'entity_type', $entity_type);
+  $query = \Drupal::database()->update('approval');
+  $query->fields([
+    'entity_type' => 'node',
+  ]);
+  $query->execute();
+
+  $entity_type_new = [
+    'type' => 'varchar',
+    'length' => 16,
+    'not null' => TRUE,
+  ];
+
+  $schema->changeField('approval', 'entity_type', 'entity_type',
+    $entity_type_new);
+  $schema->changeField('approval', 'nid', 'entity_id', $entity_id);
+
+  $schema->addPrimaryKey('approval', ['entity_type', 'entity_id']);
+}
+
+/**
+ * Updates schema to include id field to use entity API possibilities.
+ */
+function approval_code_update_8003() {
+  $schema = Database::getConnection()->schema();
+
+  $schema->dropPrimaryKey('approval');
+
+  $schema->addField('approval', 'id', [
+    'type' => 'serial',
+    'unsigned' => TRUE,
+    'not null' => TRUE,
+  ], [
+    'primary key' => ['id'],
+  ]);
+
+  $schema->changeField('approval', 'code_mobile', 'code_mobile', [
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => FALSE,
+    'description' => 'Mobile approval code.',
+  ]);
+}
+
+/**
+ * Updates schema to fix the approval Code entity type install issue.
+ */
+function approval_code_update_8004() {
+  try {
+    \Drupal::entityDefinitionUpdateManager()->getChangeList();
+  }
+  catch (EntityStorageException $e) {
+    print_r($e);
+  }
+}

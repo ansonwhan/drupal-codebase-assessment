@@ -1,0 +1,6 @@
+approval_code.admin_settings_form:
+  title: 'approval Codes'
+  route_name: approval_code.admin_settings_form
+  description: 'approval Code Configuration'
+  parent: system.admin_config_content
+  # weight: 0

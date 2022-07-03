@@ -1,0 +1,5 @@
+.approval-ct-list label.option { text-transform: capitalize !important }
+#edit-overridden-group ul, #edit-overridden-routes ul {
+  margin: 0;
+  padding: 1em;
+}

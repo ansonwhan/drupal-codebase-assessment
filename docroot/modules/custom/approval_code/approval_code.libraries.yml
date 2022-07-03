@@ -1,0 +1,4 @@
+approval_code:
+  css:
+    state:
+      assets/approval_code.css: {}

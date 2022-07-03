@@ -1,0 +1,347 @@
+<?php
+
+/**
+ * @file
+ * Contains approval_code.module.
+ */
+
+use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_help().
+ */
+function approval_code_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the approval_code module.
+    case 'help.page.approval_code':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('approval Code module manages page specific codes on approved sites required for approval Review.') . '</p>';
+      return $output;
+  }
+}
+
+/**
+ * Implements hook_form_sitemap_settings_alter().
+ */
+function approval_code_form_sitemap_settings_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form['approval'] = _approval_code_form_part('route', 'sitemap.page', 50);
+  $form['#submit'][] = 'approval_code_form_submit';
+  $form['#validate'][] = 'approval_code_form_validate';
+}
+
+/**
+ * Implements hook_form_node_form_alter().
+ */
+function approval_code_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof ContentEntityForm) {
+    $bundle = $form_object->getEntity()->bundle();
+    $config = \Drupal::config('approval_code.settings');
+    $allowed_cts = $config->get('content_types');
+    // Checking to see if approval codes are allowed on this content type.
+    if (isset($allowed_cts) && array_key_exists($bundle, $allowed_cts)) {
+      $nid = $form_state->getFormObject()->getEntity()->id();
+      $form['approval'] = _approval_code_form_part('node', $nid, -3);
+      $form['actions']['submit']['#submit'][] = 'approval_code_form_submit';
+      $form['#validate'][] = 'approval_code_form_validate';
+    }
+  }
+}
+
+/**
+ * Returns approval code form part. Use it for any form where you want to use approval.
+ *
+ * @param string $entity_type
+ *   Entity type for approval code request.
+ * @param string|int $entity_id
+ *   Entity id for approval code request.
+ * @param int $weight
+ *   Weight to use in your form in right place.
+ *
+ * @return array
+ *   approval form array.
+ */
+function _approval_code_form_part($entity_type, $entity_id, $weight) {
+  $config = \Drupal::config('approval_code.settings');
+  $global_approval = $config->get('global_approval');
+  $mobile_approval = $config->get('global_approval_mobile');
+  $approval = _approval_code_data($entity_type, $entity_id, []);
+
+  return [
+    '#group' => "advanced",
+    '#title' => t('approval Code'),
+    '#type' => "details",
+    '#weight' => $weight,
+    'code' => [
+      '#default_value' => $approval ? $approval['code'] : $approval,
+      '#description' => t('Enter a approval code above to override global approval for this page.'),
+      '#placeholder' => $global_approval ? $global_approval : t('No Global approval Code set'),
+      '#title' => t('Code'),
+      '#type' => 'textfield',
+    ],
+    'approval_modified' => [
+      '#default_value' => $approval ? $approval['modified'] : $approval,
+      '#description' => t('Day may not be displayed to the user'),
+      '#placeholder' => t('Not Set'),
+      '#title' => t('approval Date'),
+      '#type' => 'date',
+    ],
+    'approval_expiration' => [
+      '#default_value' => $approval ? $approval['expired'] : $approval,
+      '#description' => t('If expiration is not set, this will default to 1 year from approval date'),
+      '#placeholder' => t('Not Set'),
+      '#title' => t('approval Expiration Date'),
+      '#type' => 'date',
+    ],
+    'mobile' => [
+      '#open' => ($approval && $approval['code_mobile']),
+      '#title' => t('Mobile'),
+      '#type' => 'details',
+      'code_mobile' => [
+        '#default_value' => $approval ? $approval['code_mobile'] : $approval,
+        '#description' => t('Enter a Mobile approval to output a mobile-specific approval value.'),
+        '#placeholder' => $mobile_approval ? $mobile_approval : t('No Global approval Code set'),
+        '#title' => t('Mobile Code'),
+        '#type' => 'textfield',
+      ],
+      'approval_modified_mobile' => [
+        '#default_value' => $approval ? $approval['modified_mobile'] : $approval,
+        '#description' => t('Day may not be displayed to the user'),
+        '#placeholder' => t('Not Set'),
+        '#title' => t('approval Date'),
+        '#type' => 'date',
+      ],
+      'approval_expiration_mobile' => [
+        '#default_value' => $approval ? $approval['expired_mobile'] : $approval,
+        '#description' => t('If expiration is not set, this will default to 1 year from approval date'),
+        '#placeholder' => t('Not Set'),
+        '#title' => t('approval Expiration Date'),
+        '#type' => 'date',
+      ],
+    ],
+    'entity_type' => [
+      '#value' => $entity_type,
+      '#type' => 'value',
+    ],
+    'entity_id' => [
+      '#value' => $entity_id,
+      '#type' => 'value',
+    ],
+  ];
+}
+
+/**
+ * Validates submission values in approval_code_form_node_form_alter().
+ */
+function approval_code_form_validate(array &$form, FormStateInterface $form_state) {
+  $approval = $form_state->getValue('code');
+  $date = $form_state->getValue('approval_modified');
+  $exp = $form_state->getValue('approval_expiration');
+  $approval_m = $form_state->getValue('code_mobile');
+  $date_m = $form_state->getValue('approval_modified_mobile');
+  $exp_m = $form_state->getValue('approval_expiration_mobile');
+
+  if (empty($approval) && !empty($date)) {
+    $form_state->setErrorByName('code',
+      t('A approval Code must be entered if a approval date is set.'));
+  }
+  elseif (empty($date) && !empty($approval)) {
+    $form_state->setErrorByName('approval_modified',
+      t('A approval Date must be entered if a approval value is set.'));
+  }
+  // If expiration is not set, set it one year in advance.
+  if (!empty($approval) && !empty($date) && empty($exp)) {
+    $form_state->setValue('approval_expiration',
+      date('Y-m-d', strtotime('+1 year', strtotime($date))));
+  }
+  // Mobile.
+  if (empty($approval) && !empty($approval_m)) {
+    $form_state->setErrorByName('code',
+      t('A approval Code must be entered if a Mobile code is set.'));
+  }
+  if (empty($approval_m) && !empty($date_m)) {
+    $form_state->setErrorByName('code_mobile',
+      t('A mobile approval Code must be entered if a mobile approval date is set.'));
+  }
+  elseif (empty($date_m) && !empty($approval_m)) {
+    $form_state->setErrorByName('approval_modified_mobile',
+      t('A mobile approval Date must be entered if a mobile approval value is set.'));
+  }
+  if (!empty($approval_m) && !empty($date_m) && empty($exp_m)) {
+    $form_state->setValue('approval_expiration_mobile',
+      date('Y-m-d', strtotime('+1 year', strtotime($date))));
+  }
+}
+
+/**
+ * Submits values in the approval_code_form_node_form_alter() form.
+ */
+function approval_code_form_submit($form, FormStateInterface $form_state) {
+  $db = Database::getConnection();
+  $entity_type = $form_state->getValue('entity_type');
+  $entity_id = $form_state->getValue('entity_id');
+  $approval = $form_state->getValue('code');
+  $date_m = $form_state->getValue('approval_modified_mobile');
+  $exp_m = $form_state->getValue('approval_expiration_mobile');
+
+  if (!empty($approval)) {
+    $db->merge('approval')->key([
+      'entity_id' => $entity_id,
+      'entity_type' => $entity_type,
+    ])->fields([
+      'entity_type' => $entity_type,
+      'entity_id' => $entity_id,
+      'code' => $approval,
+      'modified' => $form_state->getValue('approval_modified'),
+      'expired' => $form_state->getValue('approval_expiration'),
+      'code_mobile' => $form_state->getValue('code_mobile'),
+      'modified_mobile' => $date_m ? $date_m : NULL,
+      'expired_mobile' => $exp_m ? $exp_m : NULL,
+    ])->execute();
+  }
+  else {
+    $db->delete('approval')
+      ->condition('entity_type', $entity_type)
+      ->condition('entity_id', $entity_id)
+      ->execute();
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function approval_code_preprocess_page(&$vars) {
+
+  // Fetch values.
+  $values = _approval_values_build();
+
+  $vars['page']['approval_code'] = $values['approval_code'];
+  $vars['page']['approval_date_raw'] = $values['approval_date'];
+  $vars['page']['approval_date_formatted'] = date('F Y',
+    strtotime($vars['page']['approval_date_raw']));
+  $vars['page']['approval_code_mobile'] = $values['approval_code_mobile'];
+  $vars['page']['approval_date_mobile_raw'] = $values['approval_date_mobile'];
+  $vars['page']['approval_date_mobile_formatted'] = date('F Y',
+    strtotime($vars['page']['approval_date_mobile_raw']));
+
+}
+
+/**
+ * Fetches approval values for nodes and separate pages. Returns fields in array.
+ *
+ * @param string $entity_type
+ *   Entity type for approval code request.
+ * @param string|int $entity_id
+ *   Entity id for approval code request.
+ * @param array $fields
+ *   Array of returned fields.
+ *
+ * @return array
+ *   approval data array.
+ */
+function _approval_code_data($entity_type, $entity_id, array $fields = []) {
+  if (empty($fields)) {
+    $fields = [
+      'code',
+      'modified',
+      'expired',
+      'code_mobile',
+      'modified_mobile',
+      'expired_mobile',
+    ];
+  }
+
+  $approval = NULL;
+  if ($entity_type && $entity_id) {
+    $db = Database::getConnection();
+
+    $approval = $db->select('approval', 'approval')
+      ->fields('approval', $fields)
+      ->condition('approval.entity_type', $entity_type)
+      ->condition('approval.entity_id', $entity_id)
+      ->execute()
+      ->fetchAssoc();
+  }
+
+  return $approval;
+}
+
+/**
+ * Returns both approval code and date in an array. See return for keys.
+ */
+function _approval_values_build() {
+  $config = \Drupal::config('approval_code.settings');
+  $approval_code = $config->get('global_approval');
+  $approval_date = $config->get('global_approval_modified');
+  $approval_code_mobile = $config->get('global_approval_mobile');
+  $approval_date_mobile = $config->get('global_approval_modified_mobile');
+  $entity_type = NULL;
+  $entity_id = NULL;
+
+  foreach (\Drupal::routeMatch()->getParameters() as $key => $param) {
+    if ($param instanceof EntityInterface) {
+      $entity_type = $key;
+      $entity_id = $param->id();
+      break;
+    }
+  }
+
+  if (!$entity_type && !$entity_id) {
+    $entity_type = 'route';
+    $entity_id = \Drupal::routeMatch()->getRouteName();
+  }
+
+  // Set node-specific values if they exist.
+  $approval_data = _approval_code_data($entity_type, $entity_id, [
+    'code',
+    'modified',
+    'code_mobile',
+    'modified_mobile',
+  ]);
+  if ($approval_data) {
+    $approval_code = $approval_data['code'];
+    $approval_date = $approval_data['modified'];
+    $approval_code_mobile = $approval_data['code_mobile'];
+    $approval_date_mobile = $approval_data['modified_mobile'];
+  }
+
+  return [
+    'approval_code' => $approval_code,
+    'approval_date' => $approval_date,
+    'approval_code_mobile' => $approval_code_mobile,
+    'approval_date_mobile' => $approval_date_mobile,
+  ];
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function approval_code_theme($existing, $type, $theme, $path) {
+  return [
+    'approval_code_info' => [
+      'variables' => [
+        'approval_date_markup' => NULL,
+        'approval_code_markup' => NULL,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Cleans up approval references on node delete.
+ */
+function approval_code_node_delete($node) {
+  $nid = $node->id();
+  $db = Database::getConnection();
+  $db->delete('approval')
+    ->condition('entity_type', 'node')
+    ->condition('entity_id', $nid)
+    ->execute();
+  \Drupal::messenger()->addMessage(t('approval configuration for: @title has been removed.', ['@title' => $node->label()]), 'status');
+}

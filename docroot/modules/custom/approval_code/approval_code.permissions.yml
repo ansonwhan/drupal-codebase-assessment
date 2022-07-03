@@ -1,0 +1,13 @@
+modify approval codes:
+  title: 'Modify approval Codes'
+  description: 'Allows the user to modify approval codes.'
+  restrict access: TRUE
+
+'delete approval_code entity':
+  title: Delete approval Code entity content.
+'add approval_code entity':
+  title: Add approval Code entity content
+'edit approval_code entity':
+  title: Edit approval Code entity content
+'administer approval_code entity':
+  title: Administer approval Code settings

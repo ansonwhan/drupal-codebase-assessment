@@ -1,0 +1,58 @@
+approval_code.admin_settings_form:
+  path: '/admin/config/content/approval-codes'
+  defaults:
+    _form: '\Drupal\approval_code\Form\approvalAdminForm'
+    _title: 'approval Code Configuration'
+  requirements:
+    _permission: 'modify approval codes'
+  options:
+    _admin_route: TRUE
+
+approval_code.autocomplete.entity:
+  path: '/admin/approval_code/autocomplete/entity/{entity_type}'
+  defaults:
+    _controller: '\Drupal\approval_code\Controller\EntityAutoCompleteController::handleAutocomplete'
+    _format: json
+    entity_type: 'node'
+  requirements:
+    _permission: 'modify approval codes'
+
+entity.approval_code.canonical:
+  path: '/admin/config/content/approval-codes/{approval_code}'
+  defaults:
+    _entity_view: 'approval_code'
+    _title: 'approval Content Data'
+  requirements:
+    _entity_access: 'approval_code.edit'
+
+entity.approval_code.collection:
+  path: '/admin/config/content/approval-codes/list'
+  defaults:
+    _entity_list: 'approval_code'
+    _title: 'approval code list'
+  requirements:
+    _permission: 'edit approval_code entity'
+
+entity.approval_code.add:
+  path: '/admin/config/content/approval-codes/add'
+  defaults:
+    _entity_form: approval_code.add
+    _title: 'Add approval Code'
+  requirements:
+    _entity_create_access: 'approval_code'
+
+entity.approval_code.edit_form:
+  path: '/admin/config/content/approval-codes/{approval_code}/edit'
+  defaults:
+    _entity_form: approval_code.edit
+    _title: 'Edit approval Code'
+  requirements:
+    _entity_access: 'approval_code.edit'
+
+entity.approval_code.delete_form:
+  path: '/admin/config/content/approval-codes/{approval_code}/delete'
+  defaults:
+    _entity_form: approval_code.delete
+    _title: 'Delete approval Code'
+  requirements:
+    _entity_access: 'approval_code.delete'

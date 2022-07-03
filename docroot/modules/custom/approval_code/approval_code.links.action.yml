@@ -1,0 +1,6 @@
+approval_code.add:
+  route_name: entity.approval_code.add
+  title: 'Add approval Code'
+  appears_on:
+    - entity.approval_code.collection
+    - entity.approval_code.canonical
