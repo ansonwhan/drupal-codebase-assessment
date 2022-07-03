@@ -1,0 +1,30 @@
+uuid: 8078edd6-d294-40c9-b8d9-97b670a0f74b
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_divider_type
+field_name: field_divider_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: hr
+      label: 'Horizontal Rule'
+    -
+      value: colored_div
+      label: 'Colored Div'
+    -
+      value: graphic_div
+      label: 'Graphic Div'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

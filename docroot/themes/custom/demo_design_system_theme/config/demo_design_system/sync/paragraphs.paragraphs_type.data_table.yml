@@ -1,0 +1,14 @@
+uuid: 8720f6af-5c88-45f6-b293-2508b089f0a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: data_table
+label: 'Data Table'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

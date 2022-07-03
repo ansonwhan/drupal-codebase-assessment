@@ -1,0 +1,75 @@
+.paragraph--type--video {
+
+  > .field {
+    padding-bottom: 1rem;
+  }
+
+  .field-name-field-ods-video-p {
+    position: relative;
+    display: table;
+  }
+
+  .field-name-field-video-duration {
+    font-family: 'Museo Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 300;
+  }
+
+  .field--media--thumbnail--default,
+  .field--media--field-video-thumb--default,
+  .field--media--field-video-thumb--modal-player,
+  .field--media--thumbnail--modal-player {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+
+    i {
+      transition: opacity 0.25s linear;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -1.714375rem;
+      margin-top: -1.9953125rem;
+      color: white;
+      opacity: 0.7;
+      z-index: 1;
+      font-size: 4rem;
+    }
+
+    &:hover {
+      i {
+        opacity: 1;
+      }
+    }
+  }
+
+  .field--media--thumbnail--default,
+  .field--media--field-video-thumb--default {
+    transition: opacity .25s linear;
+  }
+
+  &.paragraph--view-mode--default {
+    .field-name-field-media-video-file,
+    .field-name-field-media-oembed-video {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+    }
+  }
+
+  &.paragraph--view-mode--button-modal {
+    .field-name-field-video-button-title {
+      padding-top: 1rem;
+    }
+  }
+
+  &.thumb-hidden {
+    .field--media--thumbnail--default,
+    .field--media--field-video-thumb--default {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}

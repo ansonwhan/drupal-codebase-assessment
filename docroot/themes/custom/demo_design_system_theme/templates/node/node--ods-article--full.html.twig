@@ -1,0 +1,72 @@
+{%
+  set classes = [
+  'node-type-' ~ node.bundle|clean_class,
+  not node.isPublished() ? 'node--unpublished',
+]
+%}
+
+{%
+  set addToAnyWrapperClass =  content.field_ods_add2any_widget_icons.0['#markup'] ? content.field_ods_add2any_widget_icons.0['#markup'] : 'default'
+%}
+
+{% set addToAnyMarkup %}
+  <div class="ods-a2a-icons-{{ addToAnyWrapperClass }} position-{{ content.field_ods_add2any_widgetposition.0['#markup']}}">
+    {{ content.addtoany }}
+  </div>
+{% endset %}
+
+{% set buttonAttributesAriaLabel = content.field_ods_article_link.0['#url'].options.attributes['aria-label'] %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="container" {{ content_attributes }}>
+    <div class="row">
+
+      <div class="header ods-mt-20">
+        <div class="article-title ods-mt-10">
+          {{ content.field_ods_article_title }}
+        </div>
+
+        <div class="time-source">
+          <div class="article-time">
+            {{ content.field_ods_article_dateline }}
+          </div>
+
+          {% if(content.field_ods_article_source.0['#context']['value'] is not null and content.field_ods_article_source.0['#context']['value']|trim is not empty ) %}
+            <div class="article-source">
+              {{ content.field_ods_article_source }}
+            </div>
+          {% endif %}
+
+        </div>
+
+        {% if(content.field_ods_add2any_widgetposition.0 and content.field_ods_add2any_widgetposition.0['#markup'] == 'header' ) %}
+          {{ addToAnyMarkup }}
+        {% endif %}
+
+      </div>
+
+      <div class="article-main-content ods-mb-20">
+        {% if(content.field_ods_article_img and not content.field_ods_article_link.0['#url']) %}
+          <div class="article-img">
+            {{ content.field_ods_article_img }}
+          </div>
+        {% endif %}
+        <div class="article-body">
+          {% if (content.field_ods_article_link.0['#url']) %}
+            <a class="btn btn-primary btn-rounded" href="{{ content.field_ods_article_link.0['#url'] }}" title="{{ content.field_ods_article_link.0['#title'] }}" target="_blank"
+                {{ buttonAttributesAriaLabel ? ('aria-label="' ~ buttonAttributesAriaLabel ~ '"')|raw }}
+            >Go to story</a>
+          {% else %}
+            {{ content.body }}
+          {% endif %}
+        </div>
+
+        {% if(content.field_ods_add2any_widgetposition.0 and content.field_ods_add2any_widgetposition.0['#markup'] in ['footer', 'left', 'right'] ) %}
+          {{ addToAnyMarkup }}
+        {% endif %}
+
+      </div>
+
+    </div>
+  </div>
+</article>

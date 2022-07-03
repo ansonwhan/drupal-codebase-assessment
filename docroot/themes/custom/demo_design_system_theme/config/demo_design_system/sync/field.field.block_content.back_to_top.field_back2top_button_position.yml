@@ -1,0 +1,23 @@
+uuid: 2ad6a179-5c06-482c-994f-7d6055fac935
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - field.storage.block_content.field_back2top_button_position
+  module:
+    - options
+id: block_content.back_to_top.field_back2top_button_position
+field_name: field_back2top_button_position
+entity_type: block_content
+bundle: back_to_top
+label: 'Button Position'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: right
+default_value_callback: ''
+settings: {  }
+field_type: list_string

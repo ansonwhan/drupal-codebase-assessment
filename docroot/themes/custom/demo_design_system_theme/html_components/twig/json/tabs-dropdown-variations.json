@@ -1,0 +1,24 @@
+{
+  "tabsDropdownVariations": {
+    "otsukaTabs": {
+      "mainContainerClass": "otsuka-tabs"
+    },
+    "otsukaTabsDropdowns": {
+      "mainContainerClass": "otsuka-tabs-dropdowns"
+    },
+    "otsukaHeaderTabs": {
+      "mainContainerClass": "otsuka-header-tabs",
+      "odsP20": "ods-p-20"
+    },
+    "otsukaHeaderTabsWithDropdowns": {
+      "mainContainerClass": "otsuka-header-tabs-with-dropdowns"
+    },
+    "cssModifiers": {
+      "fixedWidth": "fixed-width",
+      "standaloneOverflowMenu": "standalone-overflow-menu",
+      "standaloneMobileMenu": "standalone-mobile-menu"
+    }
+  }
+}
+
+

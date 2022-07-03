@@ -1,0 +1,48 @@
+uuid: e047179c-ee54-4e74-b1b9-16f7a1455a05
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_side_by_side_proportions
+field_name: field_side_by_side_proportions
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 70-30
+      label: '70% left column, 30% right column'
+    -
+      value: 65-35
+      label: '65% left column, 35% right column'
+    -
+      value: 60-40
+      label: '60% left column, 40% right column'
+    -
+      value: 55-45
+      label: '55% left column, 45% right column'
+    -
+      value: 50-50
+      label: '50% left & right columns'
+    -
+      value: 45-55
+      label: '45% left column, 55% right column'
+    -
+      value: 40-60
+      label: '40% left column, 60% right column'
+    -
+      value: 35-65
+      label: '35% left column, 65% right column'
+    -
+      value: 30-70
+      label: '30% left column, 70% right column'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

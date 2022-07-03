@@ -1,0 +1,19 @@
+uuid: 6f7a92b5-a188-4fea-a6fd-40a6e2827526
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_classes
+    - node.type.general_purpose_page
+id: node.general_purpose_page.field_classes
+field_name: field_classes
+entity_type: node
+bundle: general_purpose_page
+label: 'Custom Classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

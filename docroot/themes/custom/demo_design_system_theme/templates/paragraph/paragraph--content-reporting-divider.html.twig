@@ -1,0 +1,13 @@
+{%
+  set classes = [
+    'content-reporting-divider',
+  ]
+%}
+{% set sectionName %}
+{{ content.field_reporting_section_name }}
+{% endset %}
+{% block paragraph %}
+  {% block content %}
+  <div {{ attributes.addClass(classes) }} data-section-marker="{{ sectionName|trim }}"></div>
+  {% endblock %}
+{% endblock paragraph %}

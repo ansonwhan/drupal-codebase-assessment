@@ -1,0 +1,48 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.group-cta-rows-without-buttons {
+  max-width: remOrPercent(728px);
+  border: $common-border-size solid $common-border-color;
+  background-color: $common-background-light-gray;
+
+  .cta-row {
+    .rounded-circle-default-styles {
+      font-family: "Museo Sans";
+      color: $common-light-gray;
+      font-size: 30px;
+      width: remOrPercent(81px);
+      height: remOrPercent(81px);
+      background-color: $blue;
+      border: $common-border-size solid $blue;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pain-icon {
+      @include commonStylesForImg('pain_icon.webp');
+    }
+
+    .graph-icon {
+      @include commonStylesForImg('graph_icon.webp');
+    }
+
+    .time-icon {
+      @include commonStylesForImg('time_icon.webp');
+    }
+
+    //wrappers for headings tags
+    .card-title {
+      @include overwriteAllHeadingTagsStyles;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .img-container {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

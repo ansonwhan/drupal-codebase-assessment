@@ -1,0 +1,81 @@
+{% set ovalButton     = backToTopButtons[0] %}
+{% set squareButton   = backToTopButtons[1] %}
+{% set loremIpsumText = loremIpsumText %}
+
+<h5 class="ods-mt-15 ods-mb-15 text-danger">Please notice on documentReady() we calculating the
+    height
+    of HTML document if is it grater than specific value we are showing the "back-to-top"
+    component (please take a look at <i>ifDesiredDocumentHeightShowComponent()</i> function) </h5>
+
+<!-- start example code for Drupal -->
+<div class="back-to-top-buttons">
+    <div class="container">
+        {% for item in backToTopButtons %}
+            <div class="col-4 ods-mt-15">
+                <button
+                        class="js-show-button btn-secondary text-uppercase back-to-top-button__{{ item.typeOfButtonClass }}">
+                    <span class="text-center"><i class="fa {{ item.fontAwesomeClass }}"></i></span>
+                    <span class="text-span">{{ item.text }}</span>
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<br>
+
+<h6 class="text-info">1. Example implementation: <i>visible on load only,
+        fixed relative position from bottom of viewport, but
+        disappears/fades out after user starts scrolling page</i>
+</h6>
+
+<div class="back-to-top-buttons {{ squareButton.additionalCssModifiers }}">
+    <h6 style="display: contents"><i>Ad 1. Example implementation of <i>back-to-top-buttons
+                (sticky)</i> prototype <br>(please remove this text
+            before implementation)</i></h6>
+    {% for item in backToTopButtons %}
+        {% if loop.last %}
+            <button id="{{ item.jsIdSelector }}"
+                    class="js-show-button js-fade-in-or-out btn-secondary text-uppercase back-to-top-button__{{ item.typeOfButtonClass }}">
+                <span class="text-center"><i class="fa {{ item.fontAwesomeClass }}"></i></span>
+                <span class="text-span">{{ item.text }}</span>
+            </button>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<br>
+
+<h6 class="text-info">2. Example implementation: <i>fixed relative position
+        from bottom of viewport for always visible</i>
+</h6>
+
+<div class="back-to-top-buttons {{ ovalButton.additionalCssModifiers }}">
+    {% for item in backToTopButtons %}
+        {% if loop.first %}
+            <button id="{{ item.jsIdSelector }}"
+                    class="js-show-button btn-secondary text-uppercase back-to-top-button__{{ item.typeOfButtonClass }}">
+                <span class="text-center"><i class="fa {{ item.fontAwesomeClass }}"></i></span>
+                <span class="text-span">{{ item.text }}</span>
+            </button>
+        {% endif %}
+    {% endfor %}
+</div>
+
+
+<button class="btn btn-primary" id="js-on-click-scroll-example">Ad. 3 Button for example no. 3
+    (scroll to specific element)
+</button>
+<div style="
+margin-top: 100%;
+margin-bottom: 100%;">
+    <h6 class="text-info">3. Example implementation: <i>js to actually animate / scroll back to the
+            top of a selected DOM element ID (selector passed as a variable)</i>
+    </h6>
+    <h5 id="js-scroll-to-example">Scroll to specific element</h5>
+    <p>
+        {{ loremIpsumText }}
+    </p>
+</div>
+
+<!-- end example code for Drupal -->

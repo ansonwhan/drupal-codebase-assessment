@@ -1,0 +1,42 @@
+{
+  "notesAboutComponent": "",
+  "halfContentPeopleTilesWithButtons": [
+    {
+      "alternativeText": "Daniel",
+      "imgSrcClass": "__one",
+      "class": "",
+      "isMaxSizeClass": false,
+      "isCommonBorderClass": false,
+      "heading": "Chronic pain",
+      "subHeading": "Daniel, 26",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "view profile",
+      "notes": ""
+    },
+    {
+      "alternativeText": "Jessica",
+      "imgSrcClass": "__two",
+      "class": "",
+      "isMaxSizeClass": true,
+      "isCommonBorderClass": true,
+      "heading": "Card title",
+      "subHeading": "Jessica, 26",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "view profile",
+      "notes": ""
+    },
+    {
+      "alternativeText": "Daniel",
+      "imgSrcClass": "__one",
+      "class": "",
+      "isMaxSizeClass": true,
+      "isCommonBorderClass": true,
+      "heading": "Chronic pain",
+      "subHeading": "Daniel, 26",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "view profile",
+      "notes": ""
+    }
+  ]
+}
+

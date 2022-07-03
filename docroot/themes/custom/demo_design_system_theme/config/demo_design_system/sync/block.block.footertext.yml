@@ -1,0 +1,25 @@
+uuid: 6c125033-ad38-4c73-aa87-4f53368d4d2a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5fd145f2-9878-4093-9d57-f0175738128c'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: footertext
+theme: demo_design_system_theme
+region: footer_middle
+weight: 0
+provider: null
+plugin: 'block_content:5fd145f2-9878-4093-9d57-f0175738128c'
+settings:
+  id: 'block_content:5fd145f2-9878-4093-9d57-f0175738128c'
+  label: 'Footer Text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

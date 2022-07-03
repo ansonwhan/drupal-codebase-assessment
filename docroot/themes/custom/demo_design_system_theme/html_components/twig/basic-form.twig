@@ -1,0 +1,31 @@
+{% extends "./_base-layout.twig" %}
+{% block title %}
+  Basic form
+{% endblock %}
+{% block head %}
+    <!-- Dedicated CSS and JS -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/base/bootstrap/bootstrap.forms.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/forms/basic-form.css"/>
+
+    <script
+            src="{{ basePath }}js/component/forms/basic-form.js"></script>
+
+    <!-- End dedicated CSS and JS-->
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_header.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div style="background-color: azure;"
+       class="notes fixed-bottom text-primary text-center bg-success">
+    <h1>Notes about <i>basic-form</i> prototype</h1>
+  </div>
+
+  <div class="example mt-3">
+    {% include './partial/_basic-form.twig' %}
+  </div>
+{% endblock %}

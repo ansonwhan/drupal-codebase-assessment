@@ -1,0 +1,31 @@
+uuid: cbc8ee97-518c-4c1f-be04-b0ec0dfdc7b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.form_progress_indicator_example
+  module:
+    - system
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform_6
+theme: demo_design_system_theme
+region: hidden
+weight: -22
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Form Progress Indicator Example'
+  provider: webform
+  label_display: visible
+  webform_id: form_progress_indicator_example
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/356
+    negate: false
+    context_mapping: {  }

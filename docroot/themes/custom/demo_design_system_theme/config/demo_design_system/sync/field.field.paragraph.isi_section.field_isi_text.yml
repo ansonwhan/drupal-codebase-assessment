@@ -1,0 +1,26 @@
+uuid: 00302ec7-3c75-4c51-8897-c3fdef647039
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_isi_text
+    - paragraphs.paragraphs_type.isi_section
+  module:
+    - text
+_core:
+  default_config_hash: ZN7XluDQwhj8XefmAL4D1MBzAubMUnPhLXjnvnLFCsI
+id: paragraph.isi_section.field_isi_text
+field_name: field_isi_text
+entity_type: paragraph
+bundle: isi_section
+label: 'ISI text'
+description: 'Use this Drupal paragraph entity type to manage "blocks" or "sections" of important safety information that may be injected throughout the site as "Safety Sprinkles", as well as rearrangeable blocks of text for wherever you may need to display Important Safety Information.   Manage each "block" of content once, and use it in multiple places.'
+required: true
+translatable: false
+default_value:
+  -
+    value: "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut lacus tristique, faucibus ligula ac, egestas nibh. Fusce nibh metus, imperdiet ut pellentesque vel, iaculis nec quam. Maecenas quis velit eget dolor iaculis aliquet non ac mauris. Aliquam et ex eros. Proin ullamcorper imperdiet urna, ac tempor turpis facilisis eget. Vivamus nec arcu libero. Curabitur eu scelerisque velit, cursus lobortis mauris. Nulla vitae libero felis. Suspendisse potenti. Aliquam sodales, sem non pellentesque dapibus, orci orci euismod eros, ac egestas enim ante eu magna. In imperdiet, risus at volutpat efficitur, massa odio faucibus enim, id bibendum felis orci ut sapien. Nunc sollicitudin, leo a scelerisque consequat, felis elit tempor neque, a suscipit mauris arcu a felis.</p>\r\n\r\n<p>Sed nibh eros, scelerisque in malesuada vel, tempus vel mauris. Proin lectus augue, mollis vitae rutrum at, vulputate ut metus. Aenean rutrum sed nibh a mollis. Proin sit amet commodo lorem. Nunc elementum orci non nibh rutrum pharetra. Sed varius ipsum nec eleifend gravida. Vestibulum ut urna in lorem porttitor elementum. Phasellus ultrices mi vel felis pellentesque, vitae venenatis mi viverra. Aliquam gravida feugiat diam, ultrices volutpat justo. Curabitur cursus diam mauris, euismod mollis velit consectetur at. Morbi a facilisis nulla. Phasellus quis dui velit. Nunc non neque vel arcu feugiat posuere. Curabitur vel vehicula augue. Curabitur hendrerit libero tristique neque sollicitudin rutrum. Curabitur at gravida ante.</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

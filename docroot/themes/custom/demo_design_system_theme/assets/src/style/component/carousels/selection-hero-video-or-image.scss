@@ -1,0 +1,337 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+@mixin commonStylesForJumbotron($top: 3%) {
+  top: remOrPercent($top) !important;
+  left: remOrPercent(50%);
+  transform: translate(-50%, 0);
+}
+
+
+.selection-hero-video-or-image {
+  $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+  $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+  $xsSelectButtonMaxWidth: remOrPercent(280px);
+
+  //Common styles for each slide
+  .card {
+    .carousel {
+      .slick-list {
+        .slide-wrapper {
+          position: relative;
+
+          //Classes .multimedia-container and img this is width for background (img and video)
+          .multimedia-container {
+            object-fit: fill;
+          }
+
+          img, video {
+            width: 100%;
+          }
+
+          .jumbotron-container-for-video, .jumbotron-container-for-img {
+            h1 {
+              @include h1HeadingCommonStyles(null, null, $inheritedBoldClass);
+            }
+
+            //bootstrap-select library selectors
+            .bootstrap-select {
+              button {
+                color: $primary;
+                min-width: remOrPercent(280px);
+                max-width: remOrPercent(610px) !important;
+              }
+
+              .dropdown-menu {
+                width: 100%;
+                transform: translate3d(0px, 39px, 0px) !important; //position of open dropdown select
+
+                ul li a span {
+                  color: $dark;
+                  font-family: "Museo Sans";
+                  font-size: remOrPercent(14px);
+                  text-transform: uppercase;
+                  display: table;
+                  white-space: normal;
+
+                  small {
+                    color: inherit !important;
+                    font-size: inherit;
+                    font-weight: $btn-font-weight;
+                    line-height: remOrPercent(20px);
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+        }
+      }
+    }
+  }
+
+  //End common styles for each slide
+
+  @include media-breakpoint-down(xs) {
+    $xsContainerHeight: remOrPercent(240px);
+    $xsContainerWidth: remOrPercent(375px);
+    .card {
+      .carousel {
+        .slick-list {
+          max-height: $xsContainerHeight !important;
+          max-width: $xsContainerWidth !important;
+
+          .slide-wrapper {
+            .multimedia-container, img {
+              height: $xsContainerHeight !important;
+              max-width: $xsContainerWidth !important;
+            }
+
+            .jumbotron-container-for-video, .jumbotron-container-for-img {
+              @include commonStylesForJumbotron(3%);
+              min-height: auto !important;
+              min-width: remOrPercent(293px) !important;
+
+              .bootstrap-select {
+                button {
+                  color: $primary;
+                  max-width: $xsSelectButtonMaxWidth !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    $smContainerHeight: remOrPercent(350px);
+    $smContainerWidth: remOrPercent(576px);
+    .card {
+      .carousel {
+        .slick-list {
+          height: $smContainerHeight;
+          max-width: $smContainerWidth;
+
+          .slide-wrapper {
+            .multimedia-container, img {
+              height: $smContainerHeight;
+              max-width: $smContainerWidth !important;
+            }
+
+            .jumbotron-container-for-video, .jumbotron-container-for-img {
+              @include commonStylesForJumbotron(9%);
+              min-height: auto;
+              min-width: remOrPercent(300px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h3FontSizeModifier);
+              }
+
+              .bootstrap-select {
+                button {
+                  color: $primary;
+                  max-width: $xsSelectButtonMaxWidth !important;
+                }
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card {
+      .carousel {
+        .slick-list {
+          height: remOrPercent(350px);
+          max-width: remOrPercent(768px);
+
+          .slide-wrapper {
+            .jumbotron-container-for-video, .jumbotron-container-for-img {
+              @include commonStylesForJumbotron(10%);
+              min-height: remOrPercent(219px);
+              min-width: remOrPercent(464px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    $lgJumbotronHeight: remOrPercent(265px);
+    .card {
+      .carousel {
+        .slick-list {
+          height: remOrPercent(450px);
+          max-width: remOrPercent(992px);
+
+          .slide-wrapper {
+            .jumbotron-container-for-video {
+              @include commonStylesForJumbotron(17%);
+              min-height: $lgJumbotronHeight;
+              min-width: remOrPercent(727px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+
+            .jumbotron-container-for-img {
+              @include commonStylesForJumbotron(8%);
+              min-height: $lgJumbotronHeight;
+              min-width: remOrPercent(629px);
+
+              h1 {
+                font-size: $display4-size;
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    $xlJumbotronHeight: remOrPercent(268px);
+    .card {
+      .carousel {
+        .slick-list {
+          height: remOrPercent(450px);
+          max-width: remOrPercent(1440px);
+
+          .slide-wrapper {
+            .jumbotron-container-for-video {
+              @include commonStylesForJumbotron(17%);
+              min-height: $xlJumbotronHeight;
+              min-width: remOrPercent(727px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+
+            .jumbotron-container-for-img {
+              @include commonStylesForJumbotron(8%);
+              min-height: $xlJumbotronHeight;
+              min-width: remOrPercent(630px);
+
+              h1 {
+                font-size: $display4-size;
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+
+
+  $navigationButtonSize: remOrPercent(30px);
+
+  .carousel-nav {
+    height: remOrPercent(23px);
+    width: remOrPercent(130px) !important; //change it if you want to change size on navigation bar
+    left: remOrPercent(50%);
+    transform: translate(-50%, 0);
+    bottom: remOrPercent(2%);
+
+    .slick-list {
+      width: 100% !important;
+      padding: unset !important;
+
+      .slick-track {
+        width: inherit !important;
+
+        .slick-current {
+          width: $navigationButtonSize !important;
+
+          .rectangle {
+            &__one {
+              background-color: $common-background-light-gray;
+            }
+
+            &__two {
+              background-color: $common-background-light-gray;
+            }
+
+            &__three {
+              background-color: $common-background-light-gray;
+            }
+          }
+        }
+
+        .slick-slide {
+          width: $navigationButtonSize !important;
+        }
+
+        .rectangle {
+          &__one {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 0%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+
+          &__two {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 50%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+
+          &__three {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 100%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+
+

@@ -1,0 +1,21 @@
+uuid: 650810df-da28-4a48-bc7e-36b4b5f54f6c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_background_color
+    - paragraphs.paragraphs_type.components_group
+  module:
+    - options
+id: paragraph.components_group.field_background_color
+field_name: field_background_color
+entity_type: paragraph
+bundle: components_group
+label: 'Background color'
+description: 'If a background color is required for the overall wrapper, select from below.  This list is predefined in the CMS to align with classes in the theme''s stylesheets.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

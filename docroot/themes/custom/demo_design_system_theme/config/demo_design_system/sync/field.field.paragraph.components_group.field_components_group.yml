@@ -1,0 +1,133 @@
+uuid: 283e6cbd-4b24-4db1-a54b-71cd14787d42
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_components_group
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.citation_group
+    - paragraphs.paragraphs_type.components_group
+    - paragraphs.paragraphs_type.data_table
+    - paragraphs.paragraphs_type.enumerated_content_group
+    - paragraphs.paragraphs_type.graphic_divider
+    - paragraphs.paragraphs_type.hero_banner_item
+    - paragraphs.paragraphs_type.infographic
+    - paragraphs.paragraphs_type.profile_node_embed
+    - paragraphs.paragraphs_type.resource_cta
+    - paragraphs.paragraphs_type.side_by_side_content_image
+    - paragraphs.paragraphs_type.standard_body_copy
+    - paragraphs.paragraphs_type.tab_group
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: paragraph.components_group.field_components_group
+field_name: field_components_group
+entity_type: paragraph
+bundle: components_group
+label: 'Components group'
+description: 'Select the desired display behavior for the nested elements in this group.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_group: accordion_group
+      citation_group: citation_group
+      components_group: components_group
+      resource_cta: resource_cta
+      standard_body_copy: standard_body_copy
+      video: video
+      block: block
+      enumerated_content_group: enumerated_content_group
+      data_table: data_table
+      side_by_side_content_image: side_by_side_content_image
+      hero_banner_item: hero_banner_item
+      graphic_divider: graphic_divider
+      profile_node_embed: profile_node_embed
+      infographic: infographic
+      tab_group: tab_group
+    target_bundles_drag_drop:
+      accordion_group:
+        enabled: true
+        weight: 9
+      accordion_item:
+        weight: 10
+        enabled: false
+      block:
+        enabled: true
+        weight: 17
+      carousel:
+        weight: 29
+        enabled: false
+      carousel_slide:
+        weight: 30
+        enabled: false
+      citation_group:
+        enabled: true
+        weight: 11
+      citation_item:
+        weight: 12
+        enabled: false
+      components_group:
+        enabled: true
+        weight: 13
+      content_reporting_divider:
+        weight: 31
+        enabled: false
+      data_table:
+        enabled: true
+        weight: 22
+      enumerated_content_component:
+        weight: 21
+        enabled: false
+      enumerated_content_group:
+        enabled: true
+        weight: 22
+      from_library:
+        weight: 23
+        enabled: false
+      graphic_divider:
+        enabled: true
+        weight: 36
+      hero_banner_item:
+        enabled: true
+        weight: 27
+      infographic:
+        enabled: true
+        weight: 42
+      isi_section:
+        weight: 24
+        enabled: false
+      link_item:
+        weight: 40
+        enabled: false
+      links_group:
+        weight: 39
+        enabled: false
+      profile_node_embed:
+        enabled: true
+        weight: 38
+      resource_cta:
+        enabled: true
+        weight: 14
+      side_by_side_content_image:
+        enabled: true
+        weight: 26
+      standard_body_copy:
+        enabled: true
+        weight: 15
+      tab_group:
+        enabled: true
+        weight: 48
+      tab_section:
+        weight: 49
+        enabled: false
+      video:
+        enabled: true
+        weight: 16
+field_type: entity_reference_revisions

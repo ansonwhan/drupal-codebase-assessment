@@ -1,0 +1,46 @@
+.enumerated-content-group {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #fff;
+  counter-reset: item;
+  padding: 0 20px;
+}
+
+.enumerated-content-group .enumerated-content-item h1, .enumerated-content-group .enumerated-content-item h2, .enumerated-content-group .enumerated-content-item h3, .enumerated-content-group .enumerated-content-item h4, .enumerated-content-group .enumerated-content-item h5, .enumerated-content-group .enumerated-content-item h6 {
+  margin-bottom: 0;
+}
+
+.enumerated-content-group .enumerated-content-item p:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.enumerated-content-group .enumerated-content-item p:last-of-type {
+  margin-bottom: 0;
+}
+
+.enumerated-content-group .enumerated-content-item .row:before {
+  content: counter(item);
+  counter-increment: item;
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 110px;
+  background: #007BFF;
+  flex: 0 0 80px;
+  margin: 20px 15px;
+  height: 80px;
+}
+
+.enumerated-content-group .enumerated-content-item:not(:first-child) {
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.enumerated-content-group .enumerated-content-item [class*=col] {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*# sourceMappingURL=paragraph.enumerated-content-group.css.map */

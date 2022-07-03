@@ -1,0 +1,29 @@
+.paragraph--type--citation-group {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.paragraph--type--citation-group .btn:not(.collapsed) i {
+  transform: rotate(180deg);
+}
+
+.paragraph--type--citation-group .references-toggle {
+  padding: 0.645rem 0.9375rem 0.645rem 0;
+}
+
+.paragraph--type--citation-group .references-toggle i.fa {
+  margin-left: 10px;
+}
+
+.paragraph--type--citation-group .paragraph {
+  position: relative;
+}
+
+.paragraph--type--citation-group .paragraph .field-name-field-ods-citation-symbol-p {
+  position: absolute;
+  right: 100%;
+  top: 0;
+}
+
+/*# sourceMappingURL=paragraph.citation-group.css.map */

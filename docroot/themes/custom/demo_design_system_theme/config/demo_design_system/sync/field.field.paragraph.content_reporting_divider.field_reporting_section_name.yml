@@ -1,0 +1,21 @@
+uuid: 0038babf-c525-413b-8669-f4928533e073
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_reporting_section_name
+    - paragraphs.paragraphs_type.content_reporting_divider
+  module:
+    - options
+id: paragraph.content_reporting_divider.field_reporting_section_name
+field_name: field_reporting_section_name
+entity_type: paragraph
+bundle: content_reporting_divider
+label: 'Reporting Section Name'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

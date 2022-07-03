@@ -1,0 +1,21 @@
+uuid: daf68e32-2d85-490e-9fe5-97328503b35c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_blurb
+    - paragraphs.paragraphs_type.video
+  module:
+    - text
+id: paragraph.video.field_video_blurb
+field_name: field_video_blurb
+entity_type: paragraph
+bundle: video
+label: 'Video Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

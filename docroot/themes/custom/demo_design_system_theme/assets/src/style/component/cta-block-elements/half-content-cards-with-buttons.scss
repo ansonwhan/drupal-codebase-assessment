@@ -1,0 +1,84 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+$horizontalSpacing15: getSpacingSize($horizontal-spacing-sizes, 15px);
+
+.half-content-cards-with-buttons {
+  background-color: $common-background-light-gray;
+
+  .max-width-height {
+    //We comment this out because of responsiveness
+    //max-height: remOrPercent(388px);
+    //max-width: remOrPercent(348px);
+  }
+
+  .common-border {
+    border: $common-border-size solid $common-border-color;
+    border-radius: $border-radius;
+  }
+
+  .card {
+    display: grid;
+    grid-row-gap: remOrPercent(30px);
+    grid-template-rows: 0.5fr auto;
+    height: 100%;
+
+    .photo {
+      &__one {
+        @include commonStylesForHalfCardsImg('photo_of_pills.webp');
+      }
+
+      &__two {
+        @include commonStylesForHalfCardsImg('doctor_with_mobile.webp');
+      }
+
+      &__three {
+        @include commonStylesForHalfCardsImg('photo_test_tubes.webp');
+      }
+    }
+
+    .media {
+      max-height: remOrPercent(145px);
+
+      img {
+        @include commonStylesForImg();
+        margin-right: auto;
+        margin-left: auto;
+      }
+    }
+
+    //wrapper for headings tags
+    .card-title {
+      @include overwriteAllHeadingTagsStyles;
+    }
+  }
+
+  //styles dedicated for app side
+  .call-to-action__card.cta-with-photo img {
+    width: remOrPercent(100%);
+    max-width: remOrPercent(100%);
+    height: auto;
+    max-height: inherit;
+  }
+
+  .row .call-to-action:last-child {
+    margin-right: unset;
+  }
+
+  .anchor-button-container {
+    padding-left: $horizontalSpacing15;
+    display: flex;
+    margin-top: auto;
+  }
+
+  .field--link-wrapper-on .card:hover {
+    box-shadow: $applicationSideCtaCardsBoxShadow;
+  }
+}
+
+.custom--background-transparent {
+  .half-content-cards-with-buttons {
+    background-color: transparent;
+  }
+}

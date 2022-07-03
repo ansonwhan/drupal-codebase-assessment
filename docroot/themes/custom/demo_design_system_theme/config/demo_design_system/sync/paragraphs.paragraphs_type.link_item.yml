@@ -1,0 +1,10 @@
+uuid: b0ff65b4-ef51-4e73-97ba-cc5fee6af376
+langcode: en
+status: true
+dependencies: {  }
+id: link_item
+label: 'Jump Link Item'
+icon_uuid: null
+icon_default: null
+description: 'Use this entity type for a custom jump link within Link Group'
+behavior_plugins: {  }

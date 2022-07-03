@@ -1,0 +1,85 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.js--overflow-menu {
+  position: relative;
+
+  @include media-breakpoint-up(md) {
+    ul {
+      &.menu {
+        padding-right: 40px;
+        overflow-y: hidden;
+        width: 100%;
+      }
+    }
+  }
+
+  .custom--more {
+    color: #007BFF;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .custom--overflow {
+    background-color: #fff;
+    text-align: left;
+    display: none;
+    width: 250px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+    border-top: 3px solid #ccc;
+    border-bottom: 3px solid #ccc;
+
+    a {
+      display: block;
+      padding: 13px 25px;
+      font-size: 16px;
+    }
+  }
+
+  .custom--more:hover {
+    .custom--overflow {
+      display: block;
+    }
+  }
+
+  .overflow-squares-menu {
+    cursor: pointer;
+    width: remOrPercent(40px);
+    height: remOrPercent(40px);
+
+    i {
+      font-size: remOrPercent(7px);
+      color: $blue;
+    }
+
+    .spacer {
+      margin: 0 3px 0 3px;
+    }
+
+    &:hover {
+      i {
+        color: $basic-link-hover-color;
+      }
+    }
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+
+      i {
+        color: #212529;
+      }
+    }
+
+  }
+}

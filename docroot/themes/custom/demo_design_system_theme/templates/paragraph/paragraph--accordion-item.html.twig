@@ -1,0 +1,43 @@
+{% set custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+
+{% set accordion_item_id = custom_id ? custom_id : 'accordion-item--id-' ~ paragraph.id() %}
+
+{%
+  set classes = [
+    paragraph.bundle|clean_class,
+    'card',
+    accordion_item_id,
+    custom_classes ? custom_classes,
+  ]
+%}
+
+{% block paragraph %}
+  <div {{ attributes.addClass(classes) }}>
+    {% block content %}
+
+        <div class="card-header">
+        <a class="row card-link collapsed analytics--p-accordion-expand" data-analytics-id="{{ ('link-' ~ accordion_item_id)|data_analytics_id }}" data-toggle="collapse" href="#{{ accordion_item_id }}">
+          {% if content.field_icon_default.0 %}
+            <span class="col accordion-item--icon">
+              {{- content.field_icon_default -}}
+              {{- content.field_icon_hover -}}
+            </span>
+          {% endif %}
+          {% if content.field_ods_title_p %}
+            <span class="col">
+              <span class="accordion-item--title">{{- content.field_ods_title_p -}}</span>
+              <span class="accordion-item--indicator">+</span>
+            </span>
+          {% endif %}
+          </a>
+        </div>
+        <div id="{{ accordion_item_id }}" class="accordion--body collapse">
+          <div class="card-body">
+            {{- content.field_ods_additional_body_p -}}
+          </div>
+        </div>
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

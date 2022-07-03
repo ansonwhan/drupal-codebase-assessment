@@ -1,0 +1,131 @@
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_100-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_100.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_300-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_300.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_500-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_700-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whitman";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/whitman/Whitman-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whitman";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/whitman/Whitman-Bold.otf") format("opentype");
+}
+
+.side-by-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+  .side-by-side {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .side-by-side .side-by-side--container {
+    margin: 0 auto;
+  }
+}
+
+.side-by-side__70-30 .side-by-side--container:first-of-type {
+  flex-basis: 69%;
+}
+
+.side-by-side__70-30 .side-by-side--container:last-of-type {
+  flex-basis: 29%;
+}
+
+.side-by-side__65-35 .side-by-side--container:first-of-type {
+  flex-basis: 64%;
+}
+
+.side-by-side__65-35 .side-by-side--container:last-of-type {
+  flex-basis: 34%;
+}
+
+.side-by-side__60-40 .side-by-side--container:first-of-type {
+  flex-basis: 59%;
+}
+
+.side-by-side__60-40 .side-by-side--container:last-of-type {
+  flex-basis: 39%;
+}
+
+.side-by-side__55-45 .side-by-side--container:first-of-type {
+  flex-basis: 54%;
+}
+
+.side-by-side__55-45 .side-by-side--container:last-of-type {
+  flex-basis: 44%;
+}
+
+.side-by-side__50-50 .side-by-side--container {
+  flex-basis: 49%;
+}
+
+.side-by-side__45-55 .side-by-side--container:first-of-type {
+  flex-basis: 44%;
+}
+
+.side-by-side__45-55 .side-by-side--container:last-of-type {
+  flex-basis: 54%;
+}
+
+.side-by-side__40-60 .side-by-side--container:first-of-type {
+  flex-basis: 39%;
+}
+
+.side-by-side__40-60 .side-by-side--container:last-of-type {
+  flex-basis: 59%;
+}
+
+.side-by-side__35-65 .side-by-side--container:first-of-type {
+  flex-basis: 34%;
+}
+
+.side-by-side__35-65 .side-by-side--container:last-of-type {
+  flex-basis: 64%;
+}
+
+.side-by-side__30-70 .side-by-side--container:first-of-type {
+  flex-basis: 29%;
+}
+
+.side-by-side__30-70 .side-by-side--container:last-of-type {
+  flex-basis: 69%;
+}
+
+/*# sourceMappingURL=paragraph.side-by-side-content-image.css.map */

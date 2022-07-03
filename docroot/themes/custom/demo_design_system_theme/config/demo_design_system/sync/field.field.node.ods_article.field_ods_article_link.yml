@@ -1,0 +1,23 @@
+uuid: fa39a38d-f1d8-4541-b3f3-f6afaa6143c0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_article_link
+    - node.type.ods_article
+  module:
+    - link
+id: node.ods_article.field_ods_article_link
+field_name: field_ods_article_link
+entity_type: node
+bundle: ods_article
+label: Link
+description: 'Use this field to link to an external website/page for the actual article'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

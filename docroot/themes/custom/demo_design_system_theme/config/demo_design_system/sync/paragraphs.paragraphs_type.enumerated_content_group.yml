@@ -1,0 +1,14 @@
+uuid: 5e1d81f6-df80-4f76-a2c3-79b2df539917
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: enumerated_content_group
+label: 'Enumerated Content Group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

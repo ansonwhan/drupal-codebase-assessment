@@ -1,0 +1,23 @@
+uuid: ff63bcfe-4e38-4d12-8da4-2f7e87ae671e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_mobile_display_type
+    - paragraphs.paragraphs_type.tab_group
+  module:
+    - options
+id: paragraph.tab_group.field_mobile_display_type
+field_name: field_mobile_display_type
+entity_type: paragraph
+bundle: tab_group
+label: 'Mobile Display type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: accordion0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

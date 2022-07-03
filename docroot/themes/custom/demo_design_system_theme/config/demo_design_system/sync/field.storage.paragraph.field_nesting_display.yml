@@ -1,0 +1,30 @@
+uuid: aa323282-cb10-47e3-bb15-f000ae997f90
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_nesting_display
+field_name: field_nesting_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: normal
+      label: 'Normal flow'
+    -
+      value: side-by-side
+      label: 'Side-by-side CTAs when supported by viewport'
+    -
+      value: stacked
+      label: 'Stacked CTAs'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+{
+  "notesAboutComponent": "",
+  "bSpotHeroNavyBlueTheme": [
+    {
+      "alternativeText": "navy Blue theme background",
+      "imgSrc": "",
+      "class": "",
+      "heading": "About Treva",
+      "text": "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at.",
+      "buttonText": "",
+      "notes": "",
+      "specialCssClasses": {
+        "pageHeroImage": "",
+        "borderLeft": "",
+        "borderRight": "",
+        "displayLgNone": "",
+        "displayXsNone": "",
+        "marginLeft": ""
+      },
+      "imgInsideBannerProperties": {
+        "pageHeroImageAlt": "doctor hero"
+      }
+    }
+  ]
+}

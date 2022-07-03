@@ -1,0 +1,32 @@
+{
+  "notesAboutComponent": "",
+  "groupCtaRowsWithoutButtons": [
+    {
+      "class": "",
+      "heading": "Start",
+      "text": "The pharmacy will call to let you know if the kit is covered by your health insurance plan. Once coverage is confirmed, the pharmacy will process your prescription.",
+      "buttonText": "",
+      "enumeratedSectionNumber": "1",
+      "notes": ""
+    },
+    {
+      "class": "",
+      "heading": "Maintain",
+      "text": "The pharmacy will call to let you know if the kit is covered by your health insurance plan. Once coverage is confirmed, the pharmacy will process your prescription.",
+      "enumeratedSectionNumber": "2",
+      "buttonText": "",
+      "notes": ""
+    },
+    {
+      "alt": "",
+      "imgSrcClass": "",
+      "class": "",
+      "heading": "Results",
+      "text": "The pharmacy will call to let you know if the kit is covered by your health insurance plan. Once coverage is confirmed, the pharmacy will process your prescription.",
+      "buttonText": "",
+      "enumeratedSectionNumber": "3",
+      "notes": ""
+    }
+  ]
+}
+

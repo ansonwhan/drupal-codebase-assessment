@@ -1,0 +1,90 @@
+{#specyfic types of list group#}
+{% set basic                                  = listGroup.basic %}
+{% set flush                                  = listGroup.flush %}
+{% set badges                                 = listGroup.withBadges %}
+{% set listGroupWithActive                    = listGroup.listGroupWithActive %}
+{% set listGroupWithDisabled                  = listGroup.listGroupWithDisabled %}
+{% set listGroupWithContextualClasses         = listGroup.listGroupWithContextualClasses %}
+{% set listGroupWithContextualClassesAndHover = listGroup.listGroupWithContextualClassesAndHover %}
+
+<br>
+<br>
+
+<h5>1. List Group (basic):</h5>
+<ul class="otsuka-list-group list-group">
+    {% for item in basic %}
+        <li class="list-group-item">{{ item.text }}</li>
+    {% endfor %}
+</ul>
+
+
+<br>
+
+<h5>2. List Group (flush):</h5>
+<ul class="otsuka-list-group list-group list-group-flush">
+    {% for item in flush %}
+        <li class="list-group-item">{{ item.text }}</li>
+    {% endfor %}
+</ul>
+
+
+<br>
+
+<h5>3. List Group (with badges):</h5>
+<ul class="otsuka-list-group list-group">
+    {% for item in badges %}
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            {{ item.text }}
+            <span class="badge badge-primary badge-pill text-capitalize">{{ item.badgeText }}</span>
+        </li>
+    {% endfor %}
+</ul>
+
+<br>
+
+<h5>4. List Group (with active element):</h5>
+<ul class="otsuka-list-group list-group">
+    {% for item in listGroupWithActive %}
+        {% if loop.first %}
+            <li class="list-group-item {{ item.bootstrapDefBackground }} {{ item.activeCssClass }}">{{ item.text }}</li>
+        {% else %}
+            <li class="list-group-item">{{ item.text }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<br>
+
+<h5>5. List Group (with disabled element):</h5>
+<ul class="otsuka-list-group list-group">
+    {% for item in listGroupWithDisabled %}
+        {% if loop.first %}
+            <li class="list-group-item {{ item.bootstrapDefBackground }} {{ item.disabledCssClass }}">{{ item.text }}</li>
+        {% else %}
+            <li class="list-group-item">{{ item.text }}</li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+<br>
+
+<h5>6. List Group (with contextual classes):</h5>
+<div class="col-5">
+    <ul class="otsuka-list-group list-group">
+        {% for item in listGroupWithContextualClasses %}
+            <li class="list-group-item {{ item.bootstrapDefBackground }} {{ item.contextualClass }}">{{ item.text }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<br>
+
+<h5>7. List Group (with contextual classes and hover effect):</h5>
+<ul class="otsuka-list-group list-group">
+    {% for item in listGroupWithContextualClassesAndHover %}
+        <li class="list-group-item {{ item.bootstrapDefBackground }} {{ item.contextualClass }}">{{ item.text }}</li>
+    {% endfor %}
+</ul>
+
+<br>
+<br>

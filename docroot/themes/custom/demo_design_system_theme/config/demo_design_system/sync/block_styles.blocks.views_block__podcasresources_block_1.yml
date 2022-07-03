@@ -1,0 +1,8 @@
+uuid: 9883518e-82bc-4719-bb7e-254e94ced70d
+langcode: en
+status: true
+dependencies: {  }
+id: views_block__podcasresources_block_1
+theme: ''
+text: ''
+classes: resources-views-bef-form

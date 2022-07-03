@@ -1,0 +1,77 @@
+uuid: 7e29ccad-617c-4e26-8486-bd14c8a044e0
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.card
+    - field.field.node.profile.field_custom_classes
+    - field.field.node.profile.field_custom_id
+    - field.field.node.profile.field_mobile_image
+    - field.field.node.profile.field_profile_content_bottom
+    - field.field.node.profile.field_profile_content_top
+    - field.field.node.profile.field_profile_heading
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_intro
+    - field.field.node.profile.field_profile_subheading
+    - field.field.node.profile.field_profile_video
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.profile.card
+targetEntityType: node
+bundle: profile
+mode: card
+content:
+  field_profile_content_bottom:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_content_top:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: profile_card
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_profile_intro:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_video:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_custom_classes: true
+  field_custom_id: true
+  field_mobile_image: true
+  field_profile_heading: true
+  field_profile_subheading: true
+  links: true

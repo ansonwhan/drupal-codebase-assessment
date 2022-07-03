@@ -1,0 +1,10 @@
+uuid: d8121d63-2422-431b-9e3b-8e15a1657431
+langcode: en
+status: true
+dependencies: {  }
+id: citation_group
+label: 'Citation group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

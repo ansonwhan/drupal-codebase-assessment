@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Disable cache on story book side.  -->
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="0" http-equiv="Expires"/>
+  <!-- End Disable cache  -->
+
+  <title>
+    Vertical anchor navigation
+  </title>
+
+  <meta content="noindex" name="robots">
+  <!-- start default from Drupal -->
+  <link href="/core/modules/system/css/components/ajax-progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/align.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/autocomplete-loading.module.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/fieldgroup.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/container-inline.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/clearfix.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/details.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/hidden.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/item-list.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/js.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/nowrap.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/position-container.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/reset-appearance.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/resize.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/sticky-header.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-counter.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-counters.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-general-info.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tabledrag.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tablesort.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tree-child.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/modules/contrib/extlink/extlink.css?qnzv0l" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.utility.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.navigation.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.button.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/lib/reset.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.critical.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="//cloud.typenetwork.com/projects/4216/fontface.css" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu-sticky.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-bottom.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.main.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.promo-links.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.switcher-condition.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.system-branding-block.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-middle.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-top.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.top-alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/base/focus.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/global.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.css" media="all"
+        rel="stylesheet"/>
+
+  <!--[if lte IE 8]>
+  <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+  <![endif]-->
+  <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+
+  <!-- js normally at the end but for this it should be fine -->
+  <script data-drupal-selector="drupal-settings-json" type="application/json">{
+    "path": {
+      "baseUrl": "\/",
+      "scriptPath": null,
+      "pathPrefix": "",
+      "currentPath": "node\/26",
+      "currentPathIsAdmin": false,
+      "isFront": false,
+      "currentLanguage": "en"
+    },
+    "pluralDelimiter": "\u0003",
+    "suppressDeprecationErrors": true,
+    "data": {
+      "extlink": {
+        "extTarget": false,
+        "extTargetNoOverride": false,
+        "extNofollow": false,
+        "extNoreferrer": true,
+        "extFollowNoOverride": false,
+        "extClass": "ext",
+        "extLabel": "(link is external)",
+        "extImgClass": false,
+        "extSubdomains": true,
+        "extExclude": "",
+        "extInclude": "",
+        "extCssExclude": "",
+        "extCssExplicit": "",
+        "extAlert": false,
+        "extAlertText": "This link will take you to an external web site. We are not responsible for their content.",
+        "mailtoClass": "mailto",
+        "mailtoLabel": "(link sends email)",
+        "extUseFontAwesome": false,
+        "extIconPlacement": "append",
+        "extFaLinkClasses": "fa fa-external-link",
+        "extFaMailtoClasses": "fa fa-envelope-o",
+        "whitelistedDomains": []
+      }
+    },
+    "demo_design_system_theme": {
+      "menu_behavior": "Persistent"
+    },
+    "user": {
+      "uid": 0,
+      "permissionsHash": "8d2ec1ffdc5caa0d649fcc1da8c534e361c736da51861e161ff9676396639b77"
+    }
+  }</script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.5.1"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+  <script src="/core/misc/drupalSettingsLoader.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.init.js?v=8.9.11"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.util.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.collapse.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.alert.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.button.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.dropdown.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu-sticky.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/focus.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/global.js?v=8.9.11"></script>
+  <script src="/modules/contrib/extlink/extlink.js?v=8.9.11"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu.main.js?qnzv0l"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/block/block.isi-sidebar.js?qnzv0l"></script>
+  <!-- end js -->
+
+
+  <!-- end default from Drupal -->
+
+  <!-- Start common-storybook-js -->
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/helpers/storybook-global.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/storybook.js"></script>
+  <!-- End common-storybook-js -->
+
+
+  <!-- start links to component specific CSS & JS -->
+
+  <!-- Dedicated css -->
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/component/anchor-nav/vertical-anchor-navigation.css"
+    media="all"
+    rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        media="all"
+        rel="stylesheet"/>
+  <!-- End dedicated css -->
+
+  <!-- Dedicated js -->
+  <script crossorigin="anonymous"
+          integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+          src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/anchor-navigation/vertical-anchor-navigation.js"></script>
+  <!-- End dedicated js -->
+
+    <!-- end links to component specific CSS & JS -->
+</head>
+<body data-offset="200"
+      data-spy="scroll"
+      data-target="#js-non-scrollable-container">
+
+<header>
+</header>
+
+
+<div class="page-container" id="page-container">
+    <main id="main-content">
+        <div class="region">
+            <!-- Start custom code for components -->
+          <div class="container">
+
+            <div class="notes">
+              <h1><i>Vertical anchor navigation</i> components </h1>
+            </div>
+            <div class="example">
+
+
+              <h5>1. Basic vertical anchor navigation (for scrollable container)</h5>
+              <h6 class="text-danger">Please notice this component is using Bootstrap
+                spy-scroll</h6>
+              <h6 class="text-danger">To manipulate component position and visibility please take a
+                look at css
+                modifiers: <strong>
+                  <i>
+                    .sticky-vertical-anchor-navigation,
+                    .vertical-anchor-hide-on-mobile
+                  </i>
+                </strong>
+              </h6>
+
+              <nav class="vertical-anchor-navigation nav flex-column" id="js-scrollable-container">
+                <ul class="nav">
+                  <li class="nav-item d-flex top-level">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center" href="#js-spy-anchor-1">Understanding
+                      chronic pain</a>
+                  </li>
+                  <li class="nav-item d-flex top-level">
+                    <a class="nav-link d-flex align-items-center" href="#js-spy-anchor-2">Affording
+                      Treva</a>
+                  </li>
+                  <li class="nav-item d-flex top-level">
+                    <a class="nav-link d-flex align-items-center" href="#js-spy-anchor-3">Taking
+                      Treva</a>
+                  </li>
+
+
+                  <li class="nav-item d-flex first-sublevel">
+                    <a class="nav-link d-flex align-items-center"
+                       href="#js-spy-anchor-3-1">Take Treva in the morning</a>
+                  </li>
+                  <li class="nav-item d-flex first-sublevel">
+                    <a class="nav-link d-flex align-items-center"
+                       href="#js-spy-anchor-3-2">Take Treva in the afternoon</a>
+                  </li>
+
+                  <li class="nav-item d-flex second-sublevel">
+                    <a class="nav-link d-flex align-items-center"
+                       href="#js-spy-anchor-4-1">Try Treva in the morning</a>
+                  </li>
+                  <li class="nav-item d-flex second-sublevel">
+                    <a class="nav-link d-flex align-items-center"
+                       href="#js-spy-anchor-4-2">Try Treva in the afternoon</a>
+                  </li>
+
+
+                  <li>
+                    <div class="nav-link flex-column d-flex">
+                      <i class="fa fa-chevron-up js-scrollable ods-mb-10"></i>
+                      <i class="fa fa-chevron-down js-scrollable "></i>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <div data-offset="500" data-spy="scroll"
+                   data-target="#js-scrollable-container" style="height: 350px; overflow: auto;">
+                <h4 id="js-spy-anchor-1">Understanding chronic pain</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                  blandit
+                  orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque, congue
+                  facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                  malesuada
+                  felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus orci
+                  turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio. Morbi
+                  tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                  mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris convallis
+                  elit
+                  vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                  faucibus. Praesent tincidunt sodales tempus.
+
+                  Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum in
+                  orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur neque
+                  leo,
+                  ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                  volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                  diam.
+                  Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                  massa
+                  sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                  tellus.
+                  Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                  aliquet
+                  placerat egestas. </p>
+                <h4 id="js-spy-anchor-2">Affording Treva</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                  blandit
+                  orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque, congue
+                  facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                  malesuada
+                  felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus orci
+                  turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio. Morbi
+                  tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                  mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris convallis
+                  elit
+                  vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                  faucibus. Praesent tincidunt sodales tempus.
+
+                  Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum in
+                  orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur neque
+                  leo,
+                  ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                  volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                  diam.
+                  Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                  massa
+                  sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                  tellus.
+                  Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                  aliquet
+                  placerat egestas. </p>
+                <h4 id="js-spy-anchor-3">Taking Treva</h4>
+                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                  blandit
+                  orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque, congue
+                  facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                  malesuada
+                  felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus orci
+                  turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio. Morbi
+                  tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                  mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris convallis
+                  elit
+                  vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                  faucibus. Praesent tincidunt sodales tempus.
+
+                  Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum in
+                  orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur neque
+                  leo,
+                  ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                  volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                  diam.
+                  Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                  massa
+                  sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                  tellus.
+                  Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                  aliquet
+                  placerat egestas. </p>
+                <div class="ods-ml-25">
+                  <h4 id="js-spy-anchor-3-1">Take Treva in the morning</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                  <h4 id="js-spy-anchor-3-2">Take Treva in the afternoon</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                  <div class="ods-ml-25">
+                    <h4 id="js-spy-anchor-4-1">Try Treva in the morning</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                      blandit
+                      orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                      congue
+                      facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                      malesuada
+                      felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                      orci
+                      turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                      Morbi
+                      tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros
+                      ut
+                      mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                      convallis elit
+                      vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                      faucibus. Praesent tincidunt sodales tempus.
+
+                      Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed
+                      bibendum in
+                      orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                      neque leo,
+                      ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                      volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                      diam.
+                      Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                      massa
+                      sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                      tellus.
+                      Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                      aliquet
+                      placerat egestas. </p>
+                    <h4 id="js-spy-anchor-4-2">Try Treva in the afternoon</h4>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                      blandit
+                      orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                      congue
+                      facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                      malesuada
+                      felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                      orci
+                      turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                      Morbi
+                      tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros
+                      ut
+                      mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                      convallis elit
+                      vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                      faucibus. Praesent tincidunt sodales tempus.
+
+                      Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed
+                      bibendum in
+                      orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                      neque leo,
+                      ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                      volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                      diam.
+                      Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                      massa
+                      sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                      tellus.
+                      Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                      aliquet
+                      placerat egestas. </p>
+                  </div>
+                </div>
+              </div>
+
+              <br>
+
+              <h5>2. Vertical anchor navigation collapsible on mobile resolutions (for scrollable
+                container)</h5>
+              <div class="ods-col vertical-anchor-navigation-collapse">
+                <h5 class="text-center collapse-title">Click to expand</h5>
+                <nav class="vertical-anchor-navigation nav flex-column"
+                     id="js-scrollable-container">
+                  <ul class="nav">
+                    <li class="nav-item d-flex">
+                      <a class="nav-link ods-ml-10 d-flex align-items-center"
+                         href="#js-spy-anchor-1">Understanding
+                        chronic pain</a>
+                    </li>
+                    <li class="nav-item d-flex">
+                      <a class="nav-link ods-ml-10 d-flex align-items-center"
+                         href="#js-spy-anchor-2">Affording
+                        Treva</a>
+                    </li>
+                    <li class="nav-item d-flex">
+                      <a class="nav-link ods-ml-10 d-flex align-items-center"
+                         href="#js-spy-anchor-3">Taking
+                        Treva</a>
+                    </li>
+
+
+                    <li class="nav-item d-flex first-sublevel">
+                      <a class="nav-link d-flex align-items-center"
+                         href="#js-spy-anchor-3-1">Take Treva in the morning</a>
+                    </li>
+                    <li class="nav-item d-flex first-sublevel">
+                      <a class="nav-link d-flex align-items-center"
+                         href="#js-spy-anchor-3-2">Take Treva in the afternoon</a>
+                    </li>
+
+                    <li class="nav-item d-flex second-sublevel">
+                      <a class="nav-link d-flex align-items-center"
+                         href="#js-spy-anchor-4-1">Try Treva in the morning</a>
+                    </li>
+                    <li class="nav-item d-flex second-sublevel">
+                      <a class="nav-link d-flex align-items-center"
+                         href="#js-spy-anchor-4-2">Try Treva in the afternoon</a>
+                    </li>
+
+
+                    <li>
+                      <div class="nav-link flex-column d-flex">
+                        <i class="fa fa-chevron-up js-scrollable ods-mb-10"></i>
+                        <i class="fa fa-chevron-down js-scrollable"></i>
+                      </div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+
+              <hr>
+
+              <br>
+              <br>
+
+
+              <h5>3. Sticky vertical anchor navigation (with non scrollable container)</h5>
+              <nav
+                class="vertical-anchor-navigation sticky-vertical-anchor-navigation nav flex-column"
+                id="js-non-scrollable-container">
+                <ul class="nav">
+                  <li class="nav-item d-flex">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section1">Understanding
+                      chronic pain</a>
+                  </li>
+                  <li class="nav-item d-flex">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section2">Affording
+                      Treva</a>
+                  </li>
+                  <li class="nav-item d-flex">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section3">Taking
+                      pills</a>
+                  </li>
+                  <li class="nav-item d-flex">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section4">Taking
+                      Treva</a>
+                  </li>
+
+                  <li class="nav-item d-flex first-sublevel">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center "
+                       href="#section4-1">Take Treva in the morning</a>
+                  </li>
+                  <li class="nav-item d-flex second-sublevel">
+                    <a class="nav-link ods-ml-10 d-flex align-items-center "
+                       href="#section4-2">Take Treva in the afternoon</a>
+                  </li>
+
+                  <li>
+                    <div class="nav-link flex-column d-flex">
+                      <i class="fa fa-chevron-up js-non-scrollable ods-mb-10"></i>
+                      <i class="fa fa-chevron-down js-non-scrollable"></i>
+                    </div>
+                  </li>
+                </ul>
+              </nav>
+
+              <div id="js-spied-non-scrollable-container">
+
+                <div id="section1">
+                  <h4>Understanding chronic pain</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                </div>
+
+                <div id="section2">
+                  <h4>Affording Treva</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                </div>
+
+                <div id="section3">
+                  <h4>Taking Pills</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                </div>
+
+                <div id="section4">
+                  <h4>Taking Treva</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                </div>
+
+                <aside class="ods-ml-25">
+                  <h4 id="section4-1">Take Treva in the morning</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                  <h4 id="section4-2">Take Treva in the afternoon</h4>
+                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet
+                    blandit
+                    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque,
+                    congue
+                    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui
+                    malesuada
+                    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus
+                    orci
+                    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio.
+                    Morbi
+                    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut
+                    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris
+                    convallis elit
+                    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in
+                    faucibus. Praesent tincidunt sodales tempus.
+
+                    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum
+                    in
+                    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur
+                    neque leo,
+                    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci
+                    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat
+                    diam.
+                    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus
+                    massa
+                    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod
+                    tellus.
+                    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce
+                    aliquet
+                    placerat egestas. </p>
+                </aside>
+              </div>
+
+
+              <div class="fake-footer"></div>
+
+              <br>
+              <br>
+
+
+              <!-- end example code for Drupal -->
+
+
+            </div>
+
+            </div>
+            <!-- End custom code for components -->
+        </div>
+    </main>
+</div>
+</body>
+</html>

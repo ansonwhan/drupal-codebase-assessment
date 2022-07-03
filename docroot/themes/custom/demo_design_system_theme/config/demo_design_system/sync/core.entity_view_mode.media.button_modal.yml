@@ -1,0 +1,10 @@
+uuid: 8e88c559-1016-4a34-961a-1f2b481617fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.button_modal
+label: 'Button Modal'
+targetEntityType: media
+cache: true

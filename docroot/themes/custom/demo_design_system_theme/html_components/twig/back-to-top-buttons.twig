@@ -1,0 +1,36 @@
+{% extends "./_base.twig" %}
+{% block title %}
+    Back to top buttons
+{% endblock %}
+{% block head %}
+    <!-- Dedicated css -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/buttons/back-to-top-buttons.css"/>
+    <!-- End dedicated css -->
+
+    <!-- Dedicated js -->
+    <script src="{{ basePath }}js/component/anchor-navigation/back-to-top-buttons.js"></script>
+    <!-- End dedicated js -->
+
+{% endblock %}
+
+ {% block header %}
+     {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+    <div class="notes">
+        <h1><i>Back to top buttons</i> components (different types)</h1>
+    </div>
+    <div class="example">
+        {% include './partial/_back-to-top-buttons.twig' %}
+        {% if item.notes %}
+            <div class="notes">
+                <h2>Back to top buttons</h2>
+                {{ item.notes }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}

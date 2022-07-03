@@ -1,0 +1,9 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.otsuka-breadcrumbs {
+  .breadcrumb-item {
+    font-family: "Museo Sans", serif;;
+  }
+}

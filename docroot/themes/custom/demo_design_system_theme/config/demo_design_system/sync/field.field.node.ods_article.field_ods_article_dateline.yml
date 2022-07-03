@@ -1,0 +1,21 @@
+uuid: 76732248-442b-4b13-93b9-d7dc4dee7f64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_article_dateline
+    - node.type.ods_article
+  module:
+    - datetime
+id: node.ods_article.field_ods_article_dateline
+field_name: field_ods_article_dateline
+entity_type: node
+bundle: ods_article
+label: Dateline
+description: 'This will show as the date of the article release/publication (it is separate from the actual article creation/edit dates in the CMS)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

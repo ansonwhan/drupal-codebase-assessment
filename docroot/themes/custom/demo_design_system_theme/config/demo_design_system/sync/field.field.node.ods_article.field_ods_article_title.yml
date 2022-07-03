@@ -1,0 +1,21 @@
+uuid: 8c87209d-e4e5-4a6e-8179-e047827aad01
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_article_title
+    - node.type.ods_article
+  module:
+    - text
+id: node.ods_article.field_ods_article_title
+field_name: field_ods_article_title
+entity_type: node
+bundle: ods_article
+label: Headline/Title
+description: 'Use this for the primary headline/title of your article.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

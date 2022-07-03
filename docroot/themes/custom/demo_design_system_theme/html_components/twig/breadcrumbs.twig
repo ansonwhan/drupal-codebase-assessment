@@ -1,0 +1,27 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Breadcrumbs
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/breadcrumbs/breadcrumbs.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1><i>Breadcrumbs</i> components (different types)</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_breadcrumbs.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Breadcrumbs</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

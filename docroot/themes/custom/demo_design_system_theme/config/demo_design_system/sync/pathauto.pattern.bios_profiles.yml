@@ -1,0 +1,22 @@
+uuid: d11c85da-cc02-477e-a064-1d90a8a523c0
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: bios_profiles
+label: Bios/Profiles
+type: 'canonical_entities:node'
+pattern: 'content/bio/[node:title]'
+selection_criteria:
+  6b1152b2-171a-46cc-9098-a4e3b4fd1179:
+    id: node_type
+    bundles:
+      profile: profile
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6b1152b2-171a-46cc-9098-a4e3b4fd1179
+selection_logic: and
+weight: -5
+relationships: {  }

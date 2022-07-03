@@ -1,0 +1,23 @@
+uuid: 144529e7-2121-40d9-86f1-64aed23d9c22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_position
+    - paragraphs.paragraphs_type.side_by_side_content_image
+  module:
+    - options
+id: paragraph.side_by_side_content_image.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+bundle: side_by_side_content_image
+label: 'Image Position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: L
+default_value_callback: ''
+settings: {  }
+field_type: list_string

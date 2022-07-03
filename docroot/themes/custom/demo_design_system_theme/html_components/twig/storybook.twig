@@ -1,0 +1,196 @@
+{% extends "./_base-layout.twig" %}
+{% block title %}
+    Complete Otsuka Design System Storybook
+{% endblock %}
+{% block head %}
+    <!-- SLICK carousel  CSS and JS -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+    <!-- End SLICK carousel  CSS and JS -->
+
+    <!-- Bootstrap-select  CSS and JS -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta/dist/css/bootstrap-select.min.css">
+    <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta/dist/js/bootstrap-select.min.js"></script>
+    <!-- End Bootstrap-select  CSS and JS -->
+
+    <!-- iscroll library JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll-zoom.js"></script>
+    <!-- end iscroll library JS -->
+
+    <!-- Prototypes additional JS -->
+    <script
+            src="{{ basePath }}js/component/forms/basic-form.js"></script>
+    <script
+            src="{{ basePath }}js/component/anchor-navigation/back-to-top-buttons.js"></script>
+    <script
+            src="{{ basePath }}js/component/anchor-navigation/vertical-anchor-navigation.js"></script>
+    <script
+            src="{{ basePath }}js/component/infographic-overflow-scrolling/infographic-overflow-scrolling.js"></script>
+    <script
+            src="{{ basePath }}js/component/pinch-to-zoom/pinch-to-zoom.js"></script>
+    <!-- End prototypes additional JS -->
+
+    <!-- Dedicated CSS for Storybook -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/storybook/storybook.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- End dedicated CSS -->
+
+{% endblock %}
+
+ {% block header %}
+     {% include './partial/_header.twig' %}
+ {% endblock %}
+
+{% block content %}
+
+    {% set prototypesData = [
+        '~carousels~',
+        './partial/_a-spot-hero-carousel.twig',
+        './partial/_selection-hero-video-or-image.twig',
+        '~banners~',
+        './partial/_a-spot-hero-dark-theme.twig',
+        './partial/_a-spot-hero-light-theme.twig',
+        './partial/_b-spot-hero.twig',
+        '~cards-(cta-cards)~',
+        './partial/_cta-block-cards.twig',
+        './partial/_group-of-half-people-tiles-with-buttons.twig',
+        './partial/_half-content-cards-with-buttons.twig',
+        './partial/_half-content-people-tiles-with-buttons.twig',
+        '~rows-(cta-rows)~',
+        './partial/_group-cta-rows-only-with-img.twig',
+        './partial/_group-cta-rows-without-buttons.twig',
+        './partial/_group-cta-rows.twig',
+        './partial/_individual-cta-row.twig',
+        '~forms~',
+        './partial/_basic-form.twig',
+        '~navigaton~',
+        './partial/_vertical-anchor-navigation.twig',
+        './partial/_back-to-top-buttons.twig',
+        './partial/_breadcrumbs.twig',
+        '~layouts~',
+        './partial/layouts_parts/_layout-a-spot-hero-dark-theme.twig',
+        './layouts/_layout-people-profile-cards.twig',
+        './layouts/_layout-with-banner-sidebar-header-footer-v1.twig',
+        './layouts/_layout-with-banner-sidebar-header-footer-v2.twig',
+        './layouts/_layout-with-banner-sidebar-header-footer-v3.twig',
+        '~tabs~',
+        './partial/_tabs-dropdown-variations.twig',
+        '~lists~',
+        './partial/_list-group-variations.twig',
+        '~pinch-to-zoom~',
+        './partial/_pinch-to-zoom.twig',
+        '~others~',
+        './partial/_infographic-overflow-scrolling.twig',
+        './partial/_enumerated-circle-component.twig',
+    ] %}
+
+    <div id="js-storybook-spinner" class="text-center storybook-spinner">
+        <button class="btn btn-light text-center" type="button" disabled>
+      <span class="spinner-border" style="width: 8rem; height: 8rem;" role="status"
+            aria-hidden="true"></span>
+            Loading...
+        </button>
+    </div>
+
+    <div class="row mt-5">
+        <h1 class="text-dark display-4">Complete <strong><i>Otsuka</i></strong> Design System
+            Storybook
+        </h1>
+    </div>
+
+    <div class="storybook-searchbar">
+        <input id="js-searchbar"
+               class="form-control"
+               type="text"
+               name="search"
+               placeholder="Search prototype..">
+
+        <ol class="ods-mt-10" id='list'>
+            {% for prototype in prototypesData %}
+                {% set rawFileName   = prototype|split('/').pop() %}
+                {% set clearFileName = rawFileName|replace({'.twig': '', '_' : ''}) %}
+                {% set sectionName   = clearFileName|replace({'~': '', '(': '', ')': '', ' ' : ''}) %}
+
+
+                {% if '~' in clearFileName %}
+                    <li class="js-prototype-name section-name"><a
+                                class="font-italic font-weight-bold"
+                                href="#js-anchor-for-searchbar-{{ sectionName }}">Section:
+                            {{ clearFileName|replace({'~': ''}) }}</a></li>
+                {% else %}
+                    <li class="js-prototype-name"><a
+                                href="#js-anchor-for-searchbar-{{ clearFileName }}">Go
+                            to: {{ clearFileName }}</a></li>
+                {% endif %}
+            {% endfor %}
+        </ol>
+    </div>
+
+    <div class="js-storybook-components storybook-components">
+        {% for prototype in prototypesData %}
+            {% set fileName   = prototype|split('/').pop() %}
+            {% set sectionName = fileName|replace({'~': '', '(': '', ')': '', ' ' : ''}) %}
+
+            {% set urlToGitRepo = 'https://github.com/OAPI-Commercial-IT/otsk-sandboxes/tree/theme-designsystem/themes/custom/demo_design_system_theme/html_components/' ~ fileName|replace({'.twig': '.html', '_' : ''}) %}
+
+            <br>
+            <br>
+            <br>
+
+            {% if '~' in fileName %}
+
+                <h1 class="display-4" id="js-anchor-for-searchbar-{{ sectionName }}">
+                    <strong>Section -</strong> <span
+                            class="text-success text-uppercase font-italic">{{ sectionName }}:</span>
+                </h1>
+
+            {% else %}
+                <div class="divider py-1 bg-dark font-weight-bold font-italic h2">
+                    <hr>
+                    NEXT PROTOTYPE:
+                    <h1 id="js-anchor-for-searchbar-{{ fileName|replace({'.twig': '', '_' : ''}) }}">
+                        Prototype
+                        name: {{ fileName|replace({'.twig': '', '_' : ''}) }}</h1>
+                    <h6>URL address to single component on GIT repository side:
+                        <a href="{{ urlToGitRepo }}"
+                           target="_blank">{{ fileName|replace({'.twig': '', '_' : ''}) }}</a></h6>
+                </div>
+            {% endif %}
+
+            {% if '~' not in prototype %}
+                {% include prototype %}
+            {% endif %}
+
+        {% endfor %}
+    </div>
+
+    <div class="site-navigation-container">
+        {#  Button for applying one column layout#}
+        <h5 id="js-current-mode" class="fixed-bottom text-dark current-mode">Current Layout Mode
+            <span
+                    class="badge badge-secondary text-white">Two column</span></h5>
+        <button id="js-apply-one-column-layout"
+                class="apply-one-column btn btn-success btn-sm btn-rounded fixed-bottom">
+            Apply/Remove
+            one
+            column layout
+        </button>
+
+        {#  Navigation buttons#}
+        <button id="js-scroll-up" class="scroll-up btn btn-primary btn-md btn-rounded fixed-bottom">
+            UP
+            <i
+                    class="fa fa-arrow-up"></i></button>
+        <button id="js-scroll-down"
+                class="scroll-down btn btn-primary btn-md btn-rounded fixed-bottom">
+            DOWN <i class="fa fa-arrow-down"></i></button>
+    </div>
+{% endblock %}

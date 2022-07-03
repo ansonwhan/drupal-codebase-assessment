@@ -1,0 +1,21 @@
+uuid: 0b4a529d-b3fb-4e8e-985f-329656efe5ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_group_intro_text
+    - paragraphs.paragraphs_type.tab_group
+  module:
+    - text
+id: paragraph.tab_group.field_group_intro_text
+field_name: field_group_intro_text
+entity_type: paragraph
+bundle: tab_group
+label: 'Group Intro Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

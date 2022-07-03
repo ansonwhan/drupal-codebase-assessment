@@ -1,0 +1,33 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+$defaultLabelFontFamily: "Museo Sans", sans-serif;
+
+//Start basic form, example components
+.two-checkbox-columns {
+  label {
+    font-family: $defaultLabelFontFamily;
+  }
+}
+
+//End basic form, example components
+.radio-inputs-with-text-input {
+  label {
+    font-family: $defaultLabelFontFamily;
+  }
+
+  .form-inline {
+    padding-left: remOrPercent(16px);
+
+    label {
+      padding-left: remOrPercent(11px);
+    }
+  }
+
+  input[type=text] {
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+  }
+}

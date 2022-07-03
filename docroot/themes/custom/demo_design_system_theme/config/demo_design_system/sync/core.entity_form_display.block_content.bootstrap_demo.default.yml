@@ -1,0 +1,33 @@
+uuid: b940edfd-ce63-48d4-9ce0-cd6b56da74ba
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bootstrap_demo
+    - field.field.block_content.bootstrap_demo.body
+  module:
+    - text
+id: block_content.bootstrap_demo.default
+targetEntityType: block_content
+bundle: bootstrap_demo
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 26
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

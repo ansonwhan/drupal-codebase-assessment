@@ -1,0 +1,71 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.custom--video-item {
+  padding-bottom: 25px;
+
+  .custom-video-modal-preview {
+    width: auto;
+    position: relative;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    padding-top: 55%;
+  }
+
+  .field-name-field-video-duration {
+    display: inline-block;
+  }
+
+  .custom--video-teaser {
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+
+    .field-name-field-video-teaser,
+    a {
+      font-family: "Museo Sans";
+      color: #007BFF;
+      font-size: 16px;
+      letter-spacing: 0;
+      line-height: 18px;
+    }
+  }
+
+  .custom--video-duration {
+    color: #373D42;
+    font-family: "Museo Sans";
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+
+  .field-name-field-video-blurb {
+    margin-top: 10px;
+  }
+
+  picture,
+  .blazy--thumbnail {
+    display: none;
+  }
+
+  .video-js {
+    .vjs-big-play-button {
+      top: calc(50% - 40px);
+      left: calc(50% - 35px);
+      background-image: url('../../img/icon-video-play.png');
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: contain;
+      border: none;
+      height: 80px;
+      width: 70px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+}

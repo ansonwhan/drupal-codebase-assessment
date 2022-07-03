@@ -1,0 +1,30 @@
+uuid: adb53b85-3833-4afe-8f1d-153d94eba2ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - system
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__articles_block_3
+theme: demo_design_system_theme
+region: hidden
+weight: -27
+provider: null
+plugin: 'views_block:articles-block_3'
+settings:
+  id: 'views_block:articles-block_3'
+  label: 'Load More Example Block'
+  provider: views
+  label_display: visible
+  views_label: 'Load More Example Block'
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /elements/pagination
+    negate: false
+    context_mapping: {  }

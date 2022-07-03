@@ -1,0 +1,15 @@
+theme: demo_design_system_theme
+defaults:
+  sender: swiftmailer
+  formatter: swiftmailer
+_core:
+  default_config_hash: IhwTepsVwtbtbcT5GzQKhCXDCRvbk3MNkWqPiuiZ10s
+modules:
+  swiftmailer:
+    none:
+      formatter: swiftmailer
+      sender: swiftmailer
+  otsuka_symptom_questionnaire:
+    Questionnaire:
+      formatter: swiftmailer
+      sender: swiftmailer

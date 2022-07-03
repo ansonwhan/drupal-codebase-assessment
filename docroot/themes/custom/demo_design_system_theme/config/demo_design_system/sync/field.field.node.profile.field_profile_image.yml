@@ -1,0 +1,28 @@
+uuid: 16d061e9-624d-4ba7-9831-21cee37266a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_image
+    - media.type.image
+    - node.type.profile
+id: node.profile.field_profile_image
+field_name: field_profile_image
+entity_type: node
+bundle: profile
+label: 'Desktop Image'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

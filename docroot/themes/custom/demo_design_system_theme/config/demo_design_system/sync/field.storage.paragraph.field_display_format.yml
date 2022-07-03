@@ -1,0 +1,27 @@
+uuid: c5d4d558-7dc5-4b84-bc50-e90b7874cb60
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_display_format
+field_name: field_display_format
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: row
+      label: Row
+    -
+      value: card
+      label: Card
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

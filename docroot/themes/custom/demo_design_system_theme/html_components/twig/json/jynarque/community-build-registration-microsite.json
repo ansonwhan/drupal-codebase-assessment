@@ -1,0 +1,19 @@
+{
+  "notes": "",
+  "communityBuildMicrositeImages": {
+    "tmpBackgroundImgName": "community-build-image.png",
+    "tmpBackgroundImAlt": "Jynarque community",
+    "tmpJynarqueLogo": "http://jynhccsocial.otsuka.acsitefactory.com/sites/g/files/qhldwo3401/files/images/jynarque-logo.svg",
+    "tmpJynarqueLogoAlt": "Jynarque logo",
+    "tmpAdpkdImgName": "ADPKD.png",
+    "class": ""
+  },
+  "communityBuildMicrosite": {
+    "link": "https://www.otsuka-us.com/sites/g/files/qhldwo3021/files/media/shared/01US20EUP0084OtsukaSocialMediaCommunityGuidelines.pdf",
+    "target": "_blank",
+    "cssClass": "__23",
+    "cssXsResolutionClass": "__24",
+    "textInsideBanner1": "Register now for free ADPKD",
+    "textInsideBanner2": "PEER CONVERSATION Events"
+  }
+}

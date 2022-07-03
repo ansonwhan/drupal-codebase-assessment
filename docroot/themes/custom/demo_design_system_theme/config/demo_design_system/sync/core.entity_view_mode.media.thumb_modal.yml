@@ -1,0 +1,10 @@
+uuid: d1872a02-2c9e-4adc-999b-80e11250d3f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.thumb_modal
+label: 'Thumb Modal'
+targetEntityType: media
+cache: true

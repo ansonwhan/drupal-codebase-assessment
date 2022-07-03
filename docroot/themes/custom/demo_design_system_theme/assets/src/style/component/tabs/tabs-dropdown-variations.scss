@@ -1,0 +1,341 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+//Common border
+$tabsBorder: $common-border-size solid $common-border-color !important;
+$tabsBorderBottomNone: none !important;
+
+
+//Common components spacing values (getters)
+$horizontalSpacing10: getSpacingSize($horizontal-spacing-sizes, 10px);
+$verticalAndHorizontalSpacing20: getSpacingSize($horizontal-and-vertical-sizes, 20px);
+
+//Common active tab height (is needed to hide <hr> line)
+$activeTabHeight: remOrPercent(40px);
+
+@mixin tabLinksDefStyles {
+  font-family: "Museo Sans", serif;
+  font-size: remOrPercent(14px);
+}
+
+@mixin spacerDefStyles {
+  margin: 0 remOrPercent(3px) 0 remOrPercent(3px);
+}
+
+.otsuka-tabs {
+
+  li {
+    .active {
+      height: $activeTabHeight;
+      color: $active-link-color !important;
+      border: $tabsBorder;
+      //Please notice, change these three below rules for set desired color
+      background-color: $common-light-gray;
+      border-bottom-color: $common-light-gray !important;
+      border-bottom: remOrPercent(3px) solid $common-light-gray !important;
+    }
+
+    .dropdown-toggle:after {
+      font-size: remOrPercent(20px);
+      top: remOrPercent(3px);
+      position: relative;
+    }
+
+    a {
+      @include tabLinksDefStyles;
+
+      &:hover {
+        border: $tabsBorder;
+        color: $basic-link-hover-color !important;
+        border-bottom: $tabsBorderBottomNone;
+      }
+
+      &:focus {
+        box-shadow: $primaryButtonBoxShadow;
+        color: $basic-link-hover-color !important;
+      }
+
+    }
+
+
+    #overwrite-inherited-focus {
+      &:focus {
+        box-shadow: $primaryButtonBoxShadow;
+        border-radius: $border-radius;
+      }
+    }
+
+    .overflow-squares-menu {
+      cursor: pointer;
+      width: remOrPercent(40px);
+      height: remOrPercent(40px);
+
+      &:hover {
+        border: $tabsBorder;
+        border-radius: $border-radius;
+        border-bottom: $tabsBorderBottomNone;
+      }
+
+      i {
+        font-size: remOrPercent(7px);
+        color: $blue;
+      }
+
+      .spacer {
+        @include spacerDefStyles;
+      }
+
+      &:hover {
+        i {
+          color: $basic-link-hover-color !important;
+        }
+      }
+
+    }
+
+  }
+
+}
+
+
+.otsuka-tabs-dropdowns {
+
+  li {
+    margin-right: $horizontalSpacing10 !important;
+
+    .active {
+      height: $activeTabHeight;
+      color: $basic-link-hover-color !important;
+      border: $tabsBorder;
+      //Please notice, change these three below rules for set desired color
+      background-color: $common-light-gray;
+      border-bottom-color: $common-light-gray !important;
+      border-bottom: remOrPercent(3px) solid $common-light-gray !important;
+    }
+
+    .dropdown-toggle:after {
+      font-size: remOrPercent(20px);
+      top: remOrPercent(3px);
+      position: relative;
+    }
+
+    a {
+      @include tabLinksDefStyles;
+
+      &:hover {
+        border: $tabsBorder;
+        color: $active-link-color !important;
+        border-bottom: $tabsBorderBottomNone;
+      }
+
+      &:focus {
+        box-shadow: $primaryButtonBoxShadow;
+        color: $dropdown-active-color !important;
+      }
+
+    }
+
+  }
+
+}
+
+
+.otsuka-header-tabs {
+  li {
+    padding-right: remOrPercent(3px);
+
+    .active {
+      color: $active-link-color !important;
+      border: $tabsBorder;
+      //Please notice, change these three below rules for set desired color
+      border-bottom-color: $common-light-gray !important;
+      border-bottom: remOrPercent(3px) solid $common-light-gray !important;
+    }
+
+    a {
+      @include tabLinksDefStyles;
+      padding: $verticalAndHorizontalSpacing20;
+      border: $tabsBorder;
+      background-color: $common-light-gray;
+
+      &:hover {
+        color: $basic-link-hover-color !important;
+      }
+
+      &:focus {
+        box-shadow: $primaryButtonBoxShadow;
+        color: $dropdown-active-color !important;
+      }
+    }
+
+  }
+
+  #overwrite-inherited-focus {
+    &:focus {
+      box-shadow: $primaryButtonBoxShadow;
+    }
+  }
+
+  .overflow-squares-menu {
+    cursor: pointer;
+    width: remOrPercent(60px);
+    height: remOrPercent(60px);
+    border: $tabsBorder;
+
+    &:hover {
+      color: $basic-link-hover-color !important;
+    }
+
+    i {
+      font-size: remOrPercent(7px);
+      color: $blue;
+    }
+
+    .spacer {
+      @include spacerDefStyles;
+    }
+
+    &:hover {
+      i {
+        color: $basic-link-hover-color !important;
+      }
+    }
+
+    &:focus {
+      i {
+        color: $dropdown-active-color !important;
+      }
+    }
+
+  }
+
+
+}
+
+.otsuka-header-tabs-with-dropdowns {
+  li {
+    padding-right: remOrPercent(3px);
+
+    .active {
+      color: $active-link-color !important;
+      border: $tabsBorder;
+      //Please notice, change these three below rules for set desired color
+      border-bottom-color: $common-light-gray !important;
+      border-bottom: remOrPercent(3px) solid $common-light-gray !important;
+    }
+
+    .dropdown-toggle:after {
+      font-size: remOrPercent(20px);
+      top: remOrPercent(3px);
+      position: relative;
+    }
+
+    a {
+      @include tabLinksDefStyles;
+
+      &:not(.dropdown-item) {
+        padding: $verticalAndHorizontalSpacing20;
+        border: $tabsBorder;
+        background-color: $common-light-gray;
+
+        &:hover {
+          color: $basic-link-hover-color !important;
+        }
+
+        &:focus {
+          box-shadow: $primaryButtonBoxShadow;
+          color: $basic-link-hover-color !important;
+        }
+      }
+    }
+
+  }
+
+  #overwrite-inherited-focus {
+    &:focus {
+      box-shadow: $primaryButtonBoxShadow;
+    }
+  }
+
+  .overflow-squares-menu {
+    cursor: pointer;
+    width: remOrPercent(60px);
+    height: remOrPercent(60px);
+    border: $tabsBorder;
+
+    &:hover {
+      color: $basic-link-hover-color !important;
+    }
+
+    i {
+      font-size: remOrPercent(7px);
+      color: $blue;
+    }
+
+    .spacer {
+      @include spacerDefStyles;
+    }
+
+    &:hover {
+      i {
+        color: $basic-link-hover-color !important;
+      }
+    }
+
+  }
+}
+
+//Css modifiers
+.fixed-width {
+  li {
+    width: remOrPercent(150px);
+
+    .dropdown-toggle:after {
+      top: remOrPercent(-2px);
+      float: right;
+    }
+
+    a {
+      &:not(.dropdown-item) {
+        height: remOrPercent(70px);
+        word-wrap: break-word;
+        white-space: inherit;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+  }
+}
+
+.standalone-overflow-menu {
+  .active {
+    i {
+      color: $active-link-color !important;
+    }
+  }
+}
+
+.standalone-mobile-menu {
+  .active {
+    border: $tabsBorder;
+
+    i {
+      color: $dropdown-active-color !important;
+    }
+  }
+
+  .overflow-squares-menu {
+    border: none !important;
+
+    i {
+      font-size: remOrPercent(24px) !important;
+    }
+  }
+}
+
+//End css modifiers
+
+
+

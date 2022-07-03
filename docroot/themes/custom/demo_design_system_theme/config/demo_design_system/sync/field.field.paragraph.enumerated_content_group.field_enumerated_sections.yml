@@ -1,0 +1,58 @@
+uuid: e528c117-e230-4880-9722-da0219d08600
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enumerated_sections
+    - paragraphs.paragraphs_type.enumerated_content_component
+    - paragraphs.paragraphs_type.enumerated_content_group
+  module:
+    - entity_reference_revisions
+id: paragraph.enumerated_content_group.field_enumerated_sections
+field_name: field_enumerated_sections
+entity_type: paragraph
+bundle: enumerated_content_group
+label: 'Section Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      enumerated_content_component: enumerated_content_component
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 10
+        enabled: false
+      accordion_item:
+        weight: 11
+        enabled: false
+      citation_group:
+        weight: 12
+        enabled: false
+      citation_item:
+        weight: 13
+        enabled: false
+      components_group:
+        weight: 14
+        enabled: false
+      enumerated_content_component:
+        enabled: true
+        weight: 16
+      enumerated_content_group:
+        weight: 15
+        enabled: false
+      resource_cta:
+        weight: 16
+        enabled: false
+      standard_body_copy:
+        weight: 17
+        enabled: false
+      video:
+        weight: 18
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,20 @@
+uuid: 41f5d822-e28e-46b0-9cf3-4ec05b741a50
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_resource_classification
+field_name: field_resource_classification
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

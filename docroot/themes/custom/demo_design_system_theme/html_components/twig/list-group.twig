@@ -1,0 +1,33 @@
+{% extends "./_base.twig" %}
+{% block title %}
+    List Group variations
+{% endblock %}
+{% block head %}
+    <!-- Dedicated css -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/list-group/list-group-variations.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- End dedicated css -->
+{% endblock %}
+
+ {% block header %}
+     {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+    <div class="notes">
+        <h1><i>List Group variations</i> components </h1>
+    </div>
+    <div class="example">
+        {% include './partial/_list-group-variations.twig' %}
+        {% if item.notes %}
+            <div class="notes">
+                <h2>List Group variations</h2>
+                {{ item.notes }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+

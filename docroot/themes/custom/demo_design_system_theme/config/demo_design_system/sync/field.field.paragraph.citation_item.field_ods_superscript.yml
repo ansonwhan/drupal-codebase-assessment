@@ -1,0 +1,23 @@
+uuid: 64d837f0-8d84-4246-bbf5-353d9f864502
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_superscript
+    - paragraphs.paragraphs_type.citation_item
+id: paragraph.citation_item.field_ods_superscript
+field_name: field_ods_superscript
+entity_type: paragraph
+bundle: citation_item
+label: Superscript
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

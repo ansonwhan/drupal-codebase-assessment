@@ -1,0 +1,37 @@
+name: Otsuka Design System theme
+type: theme
+description: 'Theme for the Otsuka Design System site'
+package: Otsuka
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  - demo_design_system_theme/global-styling
+
+base theme: false
+
+ckeditor_stylesheets:
+  - assets/build/css/ckeditor.css
+
+regions:
+  html_head: 'HTML Head'
+  header_top: 'Header top'
+  header_middle: 'Header middle'
+  header_1: 'Header 1'
+  header_2: 'Header 2'
+  header_bottom: 'Header bottom'
+  content_top: 'Content top'
+  highlighted: 'Highlighted'
+  content: 'Content'
+  sidebar_right: 'Sidebar right'
+  content_bottom: 'Content bottom'
+  footer_1: 'Footer 1'
+  footer_2: 'Footer 2'
+  footer_3: 'Footer 3'
+  footer_4: 'Footer 4'
+  footer_5: 'Footer 5'
+  footer_6: 'Footer 6'
+  footer_middle: 'Footer'
+  footer_7: 'Footer 7'
+  footer_8: 'Footer 8'
+  html_deferred: 'HTML deferred'
+  hidden: 'Hidden'

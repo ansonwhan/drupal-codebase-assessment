@@ -1,0 +1,14 @@
+{
+  "notesAboutComponent": "",
+  "peopleProfileCards": [
+    {
+      "alt": "Jessica",
+      "imgSrc": "/themes/custom/demo_design_system_theme/assets/build/webp/person_2.webp",
+      "class": "",
+      "heading": "",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "Watch video",
+      "notes": ""
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+uuid: 437ff2a3-d874-4721-a80f-8eb62393d00f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_custom_classes
+    - node.type.profile
+id: node.profile.field_custom_classes
+field_name: field_custom_classes
+entity_type: node
+bundle: profile
+label: 'Custom Classes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

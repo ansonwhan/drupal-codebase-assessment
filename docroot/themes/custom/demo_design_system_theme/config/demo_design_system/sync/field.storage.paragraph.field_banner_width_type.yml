@@ -1,0 +1,27 @@
+uuid: bb71514f-f4da-4648-9a49-8ab2338b7ced
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_banner_width_type
+field_name: field_banner_width_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: FullBleed
+      label: 'Full bleed, background extends full width of page'
+    -
+      value: Contained
+      label: 'Contained to content container'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

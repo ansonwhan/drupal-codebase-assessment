@@ -1,0 +1,26 @@
+uuid: 7710204a-3474-490c-9d65-d0b5a40af234
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.isi_section.field_enabled
+    - field.field.paragraph.isi_section.field_isi_text
+    - paragraphs.paragraphs_type.isi_section
+  module:
+    - text
+_core:
+  default_config_hash: mbL_SYANLzApjCp1EtBLbSYhuz14dqw8bxxtHAyjFcU
+id: paragraph.isi_section.default
+targetEntityType: paragraph
+bundle: isi_section
+mode: default
+content:
+  field_isi_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_enabled: true

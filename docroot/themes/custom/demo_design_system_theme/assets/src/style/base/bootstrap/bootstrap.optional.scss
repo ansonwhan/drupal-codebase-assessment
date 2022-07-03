@@ -1,0 +1,19 @@
+// Base variables.
+@import "variables";
+@import "mixins_functions";
+
+@import "../../../../../node_modules/bootstrap/scss/code"; // not critical
+@import "../../../../../node_modules/bootstrap/scss/tables"; // move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/card";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/breadcrumb";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/pagination";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/badge";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/jumbotron";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/alert";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/progress";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/media";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/list-group";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/toasts";// optional - move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/tooltip";// optional - move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/popover";// optional - move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/spinners"; // optional - move to separate library.

@@ -1,0 +1,20 @@
+uuid: 2a6f0af9-395c-45c1-8b12-d83125c800e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_infographic
+field_name: field_infographic
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

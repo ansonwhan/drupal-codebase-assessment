@@ -1,0 +1,24 @@
+uuid: 1f38cbaf-d1e2-4d2e-a7e6-df66c217dc57
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.directory
+  module:
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__directory_block_1
+theme: demo_design_system_theme
+region: hidden
+weight: -26
+provider: null
+plugin: 'views_block:directory-block_1'
+settings:
+  id: 'views_block:directory-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

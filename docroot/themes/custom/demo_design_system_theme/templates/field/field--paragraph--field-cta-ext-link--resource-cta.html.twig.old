@@ -1,0 +1,61 @@
+{% set current_entity = element['#object'] %}
+{% set settings_link_text_mode = current_entity.getBehaviorSetting('custom_paragraph_behaviors_paragraph_resource_cta_settings', 'link_text_mode') %}
+{% set ext_link_url = current_entity.field_cta_ext_link.value.0.uri %}
+{% set ext_link_title = current_entity.field_cta_ext_link.value.0.title %}
+{% set file_link = file_url(current_entity.field_cta_file.entity.field_media_document.entity.uri.value) %}
+{% set target = current_entity.field_cta_ext_link.0.url.external == true ? 'target=_blank' %}
+
+{% if current_entity.field_cta_ext_link.0.url.external == false and current_entity.field_cta_ext_link.0.url.routeParameters %}
+  {% set ext_link_url = path(current_entity.field_cta_ext_link.0.url.routeName, current_entity.field_cta_ext_link.0.url.routeParameters) %}
+{% endif %}
+
+{% set new_url = ext_link_url == 'route:<nolink>' ? file_link : ext_link_url %}
+
+{% if 'download' in current_entity.field_icon_type.value %}
+{% set icon_type = 'fa-download' %}
+{% elseif 'link' in current_entity.field_icon_type.value %}
+{% set icon_type = 'fa-external-link-square' %}
+{% elseif 'play' in current_entity.field_icon_type.value %}
+{% set icon_type = 'fa-play' %}
+{% else %}
+{% set icon_type = 'none' %}
+{% endif %}
+{#<pre>{{icon_type}}</pre>#}
+
+  {% if settings_link_text_mode == 'all' %}
+    <a class="btn btn-link analytics--p-cta" data-analytics-id="{{ ('cta-btn-' ~ element['#object'].id.value)|data_analytics_id }}" href="{{ new_url }}" {{ target }}>
+      {{- ext_link_title -}}
+      {% if 'none' not in icon_type %}
+      <i class="fa {{ icon_type }}" aria-hidden="true"></i>
+      {% endif %}
+    </a>
+  {% endif %}
+
+  {% if settings_link_text_mode == 'icon_only' %}
+    <a class="external-link analytics--p-cta" data-analytics-id="{{ ('cta-btn-' ~ element['#object'].id.value)|data_analytics_id }}" href="{{ new_url }}" {{ target }}>
+      {% if 'none' not in icon_type %}
+      <i class="fa {{ icon_type }}" aria-hidden="true"></i>
+      {% endif %}
+    </a>
+  {% endif %}
+
+  {% if settings_link_text_mode == 'text_only' %}
+    <a class="btn btn-link analytics--p-cta" data-analytics-id="{{ ('cta-btn-' ~ element['#object'].id.value)|data_analytics_id }}" href="{{ new_url }}" {{ target }}>
+      {{- ext_link_title -}}
+    </a>
+  {% endif %}
+
+  {% if settings_link_text_mode == 'button_text_only' %}
+    <a class="btn btn-primary btn-rounded analytics--p-cta" data-analytics-id="{{ ('cta-btn-' ~ element['#object'].id.value)|data_analytics_id }}" href="{{ new_url }}" {{ target }}>
+      {{- ext_link_title -}}
+    </a>
+  {% endif %}
+
+  {% if settings_link_text_mode == 'button_all' %}
+    <a class="btn btn-primary btn-rounded analytics--p-cta" data-analytics-id="{{ ('cta-btn-' ~ element['#object'].id.value)|data_analytics_id }}" href="{{ new_url }}" {{ target }}>
+      {% if 'none' not in icon_type %}
+      <i class="fa {{ icon_type }}" aria-hidden="true"></i>
+      {% endif %}
+      {{ ext_link_title }}
+    </a>
+  {% endif %}

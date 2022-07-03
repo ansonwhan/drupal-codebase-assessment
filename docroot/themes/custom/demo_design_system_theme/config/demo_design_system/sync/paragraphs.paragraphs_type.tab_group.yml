@@ -1,0 +1,14 @@
+uuid: d2edda20-d7c9-4277-aa73-c8a2fdcd625c
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: tab_group
+label: 'Tab Group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

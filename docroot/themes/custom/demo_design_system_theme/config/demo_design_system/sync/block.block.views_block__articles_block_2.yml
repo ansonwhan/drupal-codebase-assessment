@@ -1,0 +1,30 @@
+uuid: 0597bc0b-34fb-4f2e-b427-60ec70605884
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.articles
+  module:
+    - system
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__articles_block_2
+theme: demo_design_system_theme
+region: hidden
+weight: -29
+provider: null
+plugin: 'views_block:articles-block_2'
+settings:
+  id: 'views_block:articles-block_2'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /elements/pagination
+    negate: false
+    context_mapping: {  }

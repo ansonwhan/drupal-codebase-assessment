@@ -1,0 +1,33 @@
+uuid: 50904b34-2c01-4398-b33e-30eeb57434a8
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_infographic_behavior
+field_name: field_infographic_behavior
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: normal
+      label: 'Normal, inline graphic (no interactive capabilities)'
+    -
+      value: taptoview
+      label: 'Tap to View capability'
+    -
+      value: overflowscroll
+      label: 'Overflow scrolling (graphic has a fixed size on smaller viewports with ability to scroll to see rest of it)'
+    -
+      value: pinchzoom
+      label: 'Pinch & Zoom capability'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

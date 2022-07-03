@@ -1,0 +1,23 @@
+uuid: 4871c911-5777-4111-8bb2-4341fe0ca2b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nav_level
+    - paragraphs.paragraphs_type.link_item
+  module:
+    - options
+id: paragraph.link_item.field_nav_level
+field_name: field_nav_level
+entity_type: paragraph
+bundle: link_item
+label: 'Nav Level'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

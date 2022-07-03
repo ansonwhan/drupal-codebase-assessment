@@ -1,0 +1,159 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+$active-navigation-anchor: #0062CC;
+$horizontalSpacing5: getSpacingSize($horizontal-spacing-sizes, 5px);
+$horizontalSpacing10: getSpacingSize($horizontal-spacing-sizes, 10px);
+$horizontalSpacing30: getSpacingSize($horizontal-spacing-sizes, 30px);
+$horizontalSpacing40: getSpacingSize($horizontal-spacing-sizes, 40px);
+
+$inactiveIconColor: #868E9D;
+$activeIconColor: $dark;
+
+@mixin commonNavigationAnchorBorder($borderColor: $active-navigation-anchor) {
+  border-left: remOrPercent(2px) solid $borderColor;
+  border-radius: remOrPercent(0.5px);
+}
+
+@mixin plusOrMinus($content: "") {
+  position: relative;
+  content: $content;
+  color: $gray-700;
+  font-size: remOrPercent(29px);
+  top: remOrPercent(0px);
+  padding-left: $horizontalSpacing10;
+}
+
+//1. default vertical-anchor-navigation
+.vertical-anchor-navigation {
+  height: remOrPercent(165px);
+  width: remOrPercent(160px);
+
+  ul li {
+    height: remOrPercent(40px);
+    font-size: remOrPercent(12px);
+    line-height: remOrPercent(14px);
+    color: $blue;
+    font-family: $headings-font-family;
+    margin: 0;
+
+    a {
+      @include commonNavigationAnchorBorder;
+    }
+
+    a:not(.active) {
+      color: $gray-600;
+      @include commonNavigationAnchorBorder($gray-600);
+    }
+
+    div {
+      width: remOrPercent(70px);
+      padding-left: $horizontalSpacing5;
+
+      i {
+        cursor: pointer;
+        color: $inactiveIconColor;
+        font-size: remOrPercent(14px);
+      }
+
+      .active {
+        color: $activeIconColor;
+      }
+
+    }
+
+  }
+}
+
+// 2. Vertical anchor navigation collapsible on mobile resolutions
+.vertical-anchor-navigation-collapse {
+  .collapse-title {
+    display: none;
+
+    &:after {
+      @include plusOrMinus('+');
+    }
+  }
+
+  .expanded-collapse-title:after {
+    @include plusOrMinus('-');
+  }
+
+  $breakpoints: xs;
+  @each $breakpoint in $breakpoints {
+    @include media-breakpoint-only($breakpoint) {
+      .collapse-title {
+        display: inherit;
+      }
+      nav {
+        margin: auto;
+        display: none;
+      }
+    }
+  }
+}
+
+
+//css modifier for hiding on mobile
+$breakpoints: xs;
+@each $breakpoint in $breakpoints {
+  @include media-breakpoint-only($breakpoint) {
+    .vertical-anchor-hide-on-mobile {
+      transition: opacity 1s ease-out;
+      opacity: 0;
+    }
+  }
+}
+
+//css modifier for vertical-anchor-navigation1, please apply this class for basic component variation for nav element
+.sticky-vertical-anchor-navigation {
+  position: fixed;
+  top: remOrPercent(50%);
+  right: remOrPercent(1%);
+  z-index: 1;
+}
+
+.fake-footer {
+  height: remOrPercent(620px);
+  background-color: $gray-700;
+  width: 100vw;
+  position: relative;
+  left: remOrPercent(50%);
+  right: remOrPercent(50%);
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.content {
+  .vertical-anchor-navigation {
+    ul {
+      li {
+        margin: 0;
+      }
+    }
+  }
+}
+
+
+
+.vertical-anchor-navigation {
+  ul {
+    li {
+      margin: 0;
+      a {
+        margin-left: $horizontalSpacing10;
+      }
+      &.first-sublevel {
+        a {
+          padding-left: $horizontalSpacing30;
+        }
+      }
+      &.second-sublevel {
+        a {
+          padding-left: $horizontalSpacing40;
+        }
+      }
+    }
+  }
+}

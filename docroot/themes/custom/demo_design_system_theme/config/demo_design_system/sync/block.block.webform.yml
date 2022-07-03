@@ -1,0 +1,25 @@
+uuid: 135988d1-10ef-4939-aaed-89593bb490bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.contact_us
+  module:
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform
+theme: demo_design_system_theme
+region: hidden
+weight: -17
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: Webform
+  provider: webform
+  label_display: '0'
+  webform_id: contact_us
+  default_data: ''
+  redirect: false
+visibility: {  }

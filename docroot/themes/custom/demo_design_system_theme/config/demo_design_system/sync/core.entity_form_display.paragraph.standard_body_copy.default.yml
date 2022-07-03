@@ -1,0 +1,25 @@
+uuid: 6afb5bf5-ad63-4e64-9d42-0b6c798ee602
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.standard_body_copy.field_ods_additional_body_p
+    - paragraphs.paragraphs_type.standard_body_copy
+  module:
+    - text
+id: paragraph.standard_body_copy.default
+targetEntityType: paragraph
+bundle: standard_body_copy
+mode: default
+content:
+  field_ods_additional_body_p:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

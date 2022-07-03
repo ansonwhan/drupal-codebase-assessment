@@ -1,0 +1,26 @@
+uuid: 4dcb71dd-2dcc-468e-b129-7c8995e6f772
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_title
+  module:
+    - text
+_core:
+  default_config_hash: 7pB5zfOfxT3ppM2oA1OgQJFoQUPekVH692GVZXqLtl4
+id: block_content.isi.field_isi_title
+field_name: field_isi_title
+entity_type: block_content
+bundle: isi
+label: 'ISI title'
+description: 'Text to display in drawer handle.'
+required: true
+translatable: false
+default_value:
+  -
+    value: "<p>Important Site Information</p>\r\n"
+    format: full_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

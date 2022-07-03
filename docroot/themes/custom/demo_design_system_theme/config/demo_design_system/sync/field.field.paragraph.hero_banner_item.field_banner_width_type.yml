@@ -1,0 +1,23 @@
+uuid: 088dddaa-7227-41c1-8346-6dd47c3192a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_width_type
+    - paragraphs.paragraphs_type.hero_banner_item
+  module:
+    - options
+id: paragraph.hero_banner_item.field_banner_width_type
+field_name: field_banner_width_type
+entity_type: paragraph
+bundle: hero_banner_item
+label: 'Banner Width Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 'Contained}Contained to content container'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: 0799a201-5019-403c-90f5-a9c5e64a3ee8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_ods_classification
+field_name: field_ods_classification
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

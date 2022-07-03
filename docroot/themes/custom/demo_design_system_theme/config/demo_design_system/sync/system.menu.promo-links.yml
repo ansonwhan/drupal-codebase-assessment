@@ -1,0 +1,8 @@
+uuid: 2aaf33b7-7f76-41ce-8470-124d47f457b6
+langcode: en
+status: true
+dependencies: {  }
+id: promo-links
+label: 'Promo links'
+description: ''
+locked: false

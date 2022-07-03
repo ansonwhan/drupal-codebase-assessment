@@ -1,0 +1,16 @@
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    'enumerated-content-group',
+    settings_custom_classes ? settings_custom_classes,
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+    {% block content %}
+      {{ content }}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

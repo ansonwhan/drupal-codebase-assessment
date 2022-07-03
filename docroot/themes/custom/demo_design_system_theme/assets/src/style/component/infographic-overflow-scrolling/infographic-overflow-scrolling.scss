@@ -1,0 +1,99 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+//Common components spacing values (getters)
+$horizontalSpacing10: getSpacingSize($horizontal-spacing-sizes, 10px);
+$horizontalSpacing20: getSpacingSize($horizontal-spacing-sizes, 20px);
+$horizontalSpacing25: getSpacingSize($horizontal-spacing-sizes, 25px);
+$horizontalSpacing30: getSpacingSize($horizontal-spacing-sizes, 30px);
+
+$verticalSpacing10: getSpacingSize($vertical-spacing-sizes, 10px);
+$verticalSpacing40: getSpacingSize($vertical-spacing-sizes, 40px);
+
+//Common values
+$navigationArrowBackgroundSize: remOrPercent(10px) remOrPercent(10px);
+
+
+//BreakpointValues
+$b745: remOrPercent(745px);
+$b768: remOrPercent(768px);
+$b744: remOrPercent(744px);
+
+.infographic-overflow-scrolling {
+  img {
+    border: $common-border-size solid $common-border-color;
+    width: 100%;
+    max-width: 768px;
+  }
+
+  .after {
+    text-align: right;
+    margin-top: -$verticalSpacing40;
+    padding: $verticalSpacing10 $horizontalSpacing20 0 0;
+    font-size: 16px;
+    color: $dark;
+    background: url('../../../img/right-arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: 98.5% center;
+    background-size: $navigationArrowBackgroundSize;
+    width: 100%;
+  }
+
+  .after.before {
+    background: url('../../../img/left-arrow-icon.png');
+    background-repeat: no-repeat;
+    background-position: right remOrPercent(150px) center;
+    background-size: $navigationArrowBackgroundSize;
+    padding: $verticalSpacing10 $horizontalSpacing25 0 0;
+  }
+
+  @media (min-width: $b745) {
+    .after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $b744) {
+    .image-parent-holder {
+      width: 100%;
+      overflow-x: scroll;
+      overflow-y: hidden;
+    }
+  }
+
+  .js-scrollable-holder.scrollable {
+    position: relative;
+    overflow: hidden !important;
+    margin-bottom: $verticalSpacing40;
+  }
+
+  .js-scrollable-holder.scrollable + .after {
+    display: block;
+  }
+
+  .js-scrollable-holder:not(.scrollable) + .after {
+    margin-top: 0;
+  }
+
+  @media (min-width: $b745) {
+    .js-scrollable-holder.scrollable + .after {
+      display: none;
+    }
+  }
+
+  @media (max-width: $b768) {
+    .js-scrollable-holder.scrollable:after,
+    .js-scrollable-holder.scrollable:before {
+      content: '';
+      height: 99%;
+      width: remOrPercent(1px);
+      position: absolute;
+      top: 0;
+      right: remOrPercent(-2px);
+    }
+    .image-holder {
+      width: 725px;
+    }
+  }
+}

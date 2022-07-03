@@ -1,0 +1,23 @@
+uuid: c34d3649-cb23-4fc1-bc58-cb8184de3606
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_backdrop
+    - paragraphs.paragraphs_type.carousel_slide
+id: paragraph.carousel_slide.field_backdrop
+field_name: field_backdrop
+entity_type: paragraph
+bundle: carousel_slide
+label: Backdrop
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

@@ -1,0 +1,66 @@
+uuid: b54992a4-7182-4656-9698-916ba99d9572
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_slide.field_backdrop
+    - field.field.paragraph.carousel_slide.field_image
+    - field.field.paragraph.carousel_slide.field_link
+    - field.field.paragraph.carousel_slide.field_text
+    - field.field.paragraph.carousel_slide.field_text_position
+    - paragraphs.paragraphs_type.carousel_slide
+  module:
+    - link
+    - options
+    - text
+id: paragraph.carousel_slide.default
+targetEntityType: paragraph
+bundle: carousel_slide
+mode: default
+content:
+  field_backdrop:
+    weight: 3
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_text_position:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

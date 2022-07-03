@@ -1,0 +1,11 @@
+adobe-launch-enable: true
+target-adobe-launch-environment: staging
+adobe-launch-async: true
+init-js-array: true
+adobe-launch-prod-url: //assets.adobedtm.com/3f0d2e2dbd42/e7958891bbd8/launch-60bc83ea2a9f.min.js
+adobe-launch-staging-url: //assets.adobedtm.com/3f0d2e2dbd42/e7958891bbd8/launch-38f86dad3e1e-staging.min.js
+adobe-launch-registrant: ''
+paths: "/admin\r\n/admin/*\r\n/node/*/edit"
+paths_negate: '1'
+_core:
+  default_config_hash: wj4NAe5eIk4pX98RQcRLbVKvwBkpioYv9RlvYxYM14s

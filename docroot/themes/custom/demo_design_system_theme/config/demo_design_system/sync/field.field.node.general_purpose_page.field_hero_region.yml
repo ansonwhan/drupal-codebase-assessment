@@ -1,0 +1,78 @@
+uuid: a9bf621e-f82f-4c7d-a588-47551c77ba15
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_hero_region
+    - node.type.general_purpose_page
+    - paragraphs.paragraphs_type.hero_banner_item
+    - paragraphs.paragraphs_type.standard_body_copy
+  module:
+    - entity_reference_revisions
+id: node.general_purpose_page.field_hero_region
+field_name: field_hero_region
+entity_type: node
+bundle: general_purpose_page
+label: 'Hero Region'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      hero_banner_item: hero_banner_item
+      standard_body_copy: standard_body_copy
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 15
+        enabled: false
+      accordion_item:
+        weight: 16
+        enabled: false
+      block:
+        weight: 17
+        enabled: false
+      citation_group:
+        weight: 18
+        enabled: false
+      citation_item:
+        weight: 19
+        enabled: false
+      components_group:
+        weight: 20
+        enabled: false
+      data_table:
+        weight: 23
+        enabled: false
+      enumerated_content_component:
+        weight: 21
+        enabled: false
+      enumerated_content_group:
+        weight: 22
+        enabled: false
+      from_library:
+        weight: 23
+        enabled: false
+      hero_banner_item:
+        enabled: true
+        weight: 27
+      isi_section:
+        weight: 24
+        enabled: false
+      resource_cta:
+        weight: 25
+        enabled: false
+      side_by_side_content_image:
+        weight: 26
+        enabled: false
+      standard_body_copy:
+        enabled: true
+        weight: 27
+      video:
+        weight: 28
+        enabled: false
+field_type: entity_reference_revisions

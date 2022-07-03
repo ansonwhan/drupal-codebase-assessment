@@ -1,0 +1,31 @@
+uuid: 19ff4e67-ffbd-4d77-8567-ea5fbcb6a0c1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:isi:a6323953-fa52-4274-bacd-975820ec4052'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: isi
+theme: demo_design_system_theme
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'block_content:a6323953-fa52-4274-bacd-975820ec4052'
+settings:
+  id: 'block_content:a6323953-fa52-4274-bacd-975820ec4052'
+  label: 'MDD ISI'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/important-safety-information/tray\r\n/content/home2"
+    negate: false
+    context_mapping: {  }

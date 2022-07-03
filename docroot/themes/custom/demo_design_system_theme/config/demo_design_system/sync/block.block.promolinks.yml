@@ -1,0 +1,25 @@
+uuid: 13910814-5b36-40db-8ff2-71952bd80cdb
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.promo-links
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: promolinks
+theme: demo_design_system_theme
+region: header_2
+weight: -8
+provider: null
+plugin: 'system_menu_block:promo-links'
+settings:
+  id: 'system_menu_block:promo-links'
+  label: 'Promo links'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

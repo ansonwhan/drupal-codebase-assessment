@@ -1,0 +1,237 @@
+{#special css, html attributes#}
+{% set cssIds         = verticalAnchorNavigation.specialCssId %}
+{% set cssClasses     = verticalAnchorNavigation.specialCssClasses %}
+{% set bootstrapAttr  = verticalAnchorNavigation.specialBootstrapAttr %}
+{% set loremIpsumText = verticalAnchorNavigation.loremIpsumText %}
+
+<h5>1. Basic vertical anchor navigation (for scrollable container)</h5>
+<h6 class="text-danger">Please notice this component is using Bootstrap spy-scroll</h6>
+<h6 class="text-danger">To manipulate component position and visibility please take a look at css
+    modifiers: <strong>
+        <i>
+            .sticky-vertical-anchor-navigation,
+            .vertical-anchor-hide-on-mobile
+        </i>
+    </strong>
+</h6>
+
+<nav id="{{ cssIds.jsSpiedScrollableContainer }}" class="{{ cssClasses.anchor }} nav flex-column">
+    <ul class="nav">
+        <li class="nav-item d-flex top-level">
+            <a class="nav-link ods-ml-10 d-flex align-items-center" href="#js-spy-anchor-1">Understanding
+                chronic pain</a>
+        </li>
+        <li class="nav-item d-flex top-level">
+            <a class="nav-link d-flex align-items-center" href="#js-spy-anchor-2">Affording
+                Treva</a>
+        </li>
+        <li class="nav-item d-flex top-level">
+            <a class="nav-link d-flex align-items-center" href="#js-spy-anchor-3">Taking
+                Treva</a>
+        </li>
+
+        {#  start  nested elements#}
+        <li class="nav-item d-flex first-sublevel">
+            <a class="nav-link d-flex align-items-center"
+               href="#js-spy-anchor-3-1">Take Treva in the morning</a>
+        </li>
+        <li class="nav-item d-flex first-sublevel">
+            <a class="nav-link d-flex align-items-center"
+               href="#js-spy-anchor-3-2">Take Treva in the afternoon</a>
+        </li>
+        {#  start  double nested elements#}
+        <li class="nav-item d-flex second-sublevel">
+            <a class="nav-link d-flex align-items-center"
+               href="#js-spy-anchor-4-1">Try Treva in the morning</a>
+        </li>
+        <li class="nav-item d-flex second-sublevel">
+            <a class="nav-link d-flex align-items-center"
+               href="#js-spy-anchor-4-2">Try Treva in the afternoon</a>
+        </li>
+        {#    end double nested elements#}
+        {#    end nested elements#}
+
+        <li>
+            <div class="nav-link flex-column d-flex">
+                <i class="fa fa-chevron-up js-scrollable ods-mb-10"></i>
+                <i class="fa fa-chevron-down js-scrollable "></i>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div style="height: 350px; overflow: auto;" data-spy="{{ bootstrapAttr.dataSpy }}"
+     data-target="{{ bootstrapAttr.dataTarget }}" data-offset="{{ bootstrapAttr.dataOffset }}">
+    <h4 id="js-spy-anchor-1">Understanding chronic pain</h4>
+    <p> {{ loremIpsumText }} </p>
+    <h4 id="js-spy-anchor-2">Affording Treva</h4>
+    <p> {{ loremIpsumText }} </p>
+    <h4 id="js-spy-anchor-3">Taking Treva</h4>
+    <p> {{ loremIpsumText }} </p>
+    <div class="ods-ml-25">
+        <h4 id="js-spy-anchor-3-1">Take Treva in the morning</h4>
+        <p> {{ loremIpsumText }} </p>
+        <h4 id="js-spy-anchor-3-2">Take Treva in the afternoon</h4>
+        <p> {{ loremIpsumText }} </p>
+        <div class="ods-ml-25">
+            <h4 id="js-spy-anchor-4-1">Try Treva in the morning</h4>
+            <p> {{ loremIpsumText }} </p>
+            <h4 id="js-spy-anchor-4-2">Try Treva in the afternoon</h4>
+            <p> {{ loremIpsumText }} </p>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<h5>2. Vertical anchor navigation collapsible on mobile resolutions (for scrollable container)</h5>
+<div class="ods-col {{ cssClasses.collapsableNavigation }}">
+    <h5 class="text-center collapse-title">Click to expand</h5>
+    <nav id="{{ cssIds.jsSpiedScrollableContainer }}"
+         class="{{ cssClasses.anchor }} nav flex-column">
+        <ul class="nav">
+            <li class="nav-item d-flex">
+                <a class="nav-link ods-ml-10 d-flex align-items-center" href="#js-spy-anchor-1">Understanding
+                    chronic pain</a>
+            </li>
+            <li class="nav-item d-flex">
+                <a class="nav-link ods-ml-10 d-flex align-items-center" href="#js-spy-anchor-2">Affording
+                    Treva</a>
+            </li>
+            <li class="nav-item d-flex">
+                <a class="nav-link ods-ml-10 d-flex align-items-center" href="#js-spy-anchor-3">Taking
+                    Treva</a>
+            </li>
+
+            {#  start  nested elements#}
+            <li class="nav-item d-flex first-sublevel">
+                <a class="nav-link d-flex align-items-center"
+                   href="#js-spy-anchor-3-1">Take Treva in the morning</a>
+            </li>
+            <li class="nav-item d-flex first-sublevel">
+                <a class="nav-link d-flex align-items-center"
+                   href="#js-spy-anchor-3-2">Take Treva in the afternoon</a>
+            </li>
+            {#  start  double nested elements#}
+            <li class="nav-item d-flex second-sublevel">
+                <a class="nav-link d-flex align-items-center"
+                   href="#js-spy-anchor-4-1">Try Treva in the morning</a>
+            </li>
+            <li class="nav-item d-flex second-sublevel">
+                <a class="nav-link d-flex align-items-center"
+                   href="#js-spy-anchor-4-2">Try Treva in the afternoon</a>
+            </li>
+            {#    end double nested elements#}
+            {#    end nested elements#}
+
+            <li>
+                <div class="nav-link flex-column d-flex">
+                    <i class="fa fa-chevron-up js-scrollable ods-mb-10"></i>
+                    <i class="fa fa-chevron-down js-scrollable"></i>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+<br>
+<br>
+
+
+<h5>3. Sticky vertical anchor navigation (with non scrollable container)</h5>
+<nav id="{{ cssIds.jsNonScrollableContainer }}"
+     class="{{ cssClasses.anchor }} sticky-vertical-anchor-navigation nav flex-column">
+    <ul class="nav">
+        <li class="nav-item d-flex">
+            <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section1">Understanding
+                chronic pain</a>
+        </li>
+        <li class="nav-item d-flex">
+            <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section2">Affording
+                Treva</a>
+        </li>
+        <li class="nav-item d-flex">
+            <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section3">Taking
+                pills</a>
+        </li>
+        <li class="nav-item d-flex">
+            <a class="nav-link ods-ml-10 d-flex align-items-center" href="#section4">Taking
+                Treva</a>
+        </li>
+        {#  start  nested elements#}
+        <li class="nav-item d-flex first-sublevel">
+            <a class="nav-link ods-ml-10 d-flex align-items-center {{ cssClasses.nestedElement }}"
+               href="#section4-1">Take Treva in the morning</a>
+        </li>
+        <li class="nav-item d-flex second-sublevel">
+            <a class="nav-link ods-ml-10 d-flex align-items-center {{ cssClasses.nestedElement }}"
+               href="#section4-2">Take Treva in the afternoon</a>
+        </li>
+        {#    end nested elements#}
+        <li>
+            <div class="nav-link flex-column d-flex">
+                <i class="fa fa-chevron-up js-non-scrollable ods-mb-10"></i>
+                <i class="fa fa-chevron-down js-non-scrollable"></i>
+            </div>
+        </li>
+    </ul>
+</nav>
+
+<div id="js-spied-non-scrollable-container">
+
+    <div id="section1">
+        <h4>Understanding chronic pain</h4>
+        <p> {{ loremIpsumText }} </p>
+    </div>
+
+    <div id="section2">
+        <h4>Affording Treva</h4>
+        <p> {{ loremIpsumText }} </p>
+    </div>
+
+    <div id="section3">
+        <h4>Taking Pills</h4>
+        <p> {{ loremIpsumText }} </p>
+    </div>
+
+    <div id="section4">
+        <h4>Taking Treva</h4>
+        <p> {{ loremIpsumText }} </p>
+    </div>
+
+    <aside class="ods-ml-25">
+        <h4 id="section4-1">Take Treva in the morning</h4>
+        <p> {{ loremIpsumText }} </p>
+        <h4 id="section4-2">Take Treva in the afternoon</h4>
+        <p> {{ loremIpsumText }} </p>
+    </aside>
+</div>
+
+{#we imitate html structure on app side#}
+<div class="fake-footer"></div>
+
+<br>
+<br>
+
+
+<!-- end example code for Drupal -->

@@ -1,0 +1,148 @@
+uuid: 3294e1a5-50aa-41a6-a033-221b9bb8e256
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_paragraphs
+    - node.type.general_purpose_page
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.block
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.citation_group
+    - paragraphs.paragraphs_type.components_group
+    - paragraphs.paragraphs_type.content_reporting_divider
+    - paragraphs.paragraphs_type.data_table
+    - paragraphs.paragraphs_type.enumerated_content_group
+    - paragraphs.paragraphs_type.graphic_divider
+    - paragraphs.paragraphs_type.hero_banner_item
+    - paragraphs.paragraphs_type.infographic
+    - paragraphs.paragraphs_type.profile_node_embed
+    - paragraphs.paragraphs_type.resource_cta
+    - paragraphs.paragraphs_type.side_by_side_content_image
+    - paragraphs.paragraphs_type.standard_body_copy
+    - paragraphs.paragraphs_type.tab_group
+    - paragraphs.paragraphs_type.video
+    - paragraphs.paragraphs_type.video_group
+    - paragraphs.paragraphs_type.video_item
+  module:
+    - entity_reference_revisions
+id: node.general_purpose_page.field_paragraphs
+field_name: field_paragraphs
+entity_type: node
+bundle: general_purpose_page
+label: 'Main Body Content'
+description: 'Use this section to insert, mix & match various content components for your page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_group: accordion_group
+      standard_body_copy: standard_body_copy
+      citation_group: citation_group
+      video: video
+      block: block
+      components_group: components_group
+      enumerated_content_group: enumerated_content_group
+      data_table: data_table
+      resource_cta: resource_cta
+      content_reporting_divider: content_reporting_divider
+      hero_banner_item: hero_banner_item
+      side_by_side_content_image: side_by_side_content_image
+      carousel: carousel
+      graphic_divider: graphic_divider
+      profile_node_embed: profile_node_embed
+      infographic: infographic
+      tab_group: tab_group
+      video_item: video_item
+      video_group: video_group
+    target_bundles_drag_drop:
+      accordion_group:
+        enabled: true
+        weight: 4
+      accordion_item:
+        weight: 5
+        enabled: false
+      block:
+        enabled: true
+        weight: 16
+      carousel:
+        enabled: true
+        weight: 29
+      carousel_slide:
+        weight: 30
+        enabled: false
+      citation_group:
+        enabled: true
+        weight: 8
+      citation_item:
+        weight: 9
+        enabled: false
+      components_group:
+        enabled: true
+        weight: 19
+      content_reporting_divider:
+        enabled: true
+        weight: 25
+      data_table:
+        enabled: true
+        weight: 22
+      enumerated_content_component:
+        weight: 20
+        enabled: false
+      enumerated_content_group:
+        enabled: true
+        weight: 21
+      from_library:
+        weight: 22
+        enabled: false
+      graphic_divider:
+        enabled: true
+        weight: 30
+      hero_banner_item:
+        enabled: true
+        weight: 27
+      infographic:
+        enabled: true
+        weight: 42
+      isi_section:
+        weight: 23
+        enabled: false
+      link_item:
+        weight: 37
+        enabled: false
+      links_group:
+        weight: 36
+        enabled: false
+      profile_node_embed:
+        enabled: true
+        weight: 38
+      resource_cta:
+        enabled: true
+        weight: 24
+      side_by_side_content_image:
+        enabled: true
+        weight: 28
+      standard_body_copy:
+        enabled: true
+        weight: 6
+      tab_group:
+        enabled: true
+        weight: 48
+      tab_section:
+        weight: 49
+        enabled: false
+      video:
+        enabled: true
+        weight: 12
+      video_group:
+        enabled: true
+        weight: 55
+      video_item:
+        enabled: true
+        weight: 54
+field_type: entity_reference_revisions

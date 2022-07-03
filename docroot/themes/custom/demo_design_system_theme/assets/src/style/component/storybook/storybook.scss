@@ -1,0 +1,200 @@
+@import "../carousels/a-spot-hero-light-theme";
+@import "../carousels/a-spot-hero-dark-theme";
+@import "../carousels/a-spot-hero-dark-theme-with-img";
+@import "../carousels/a-spot-hero-carousel";
+@import "../carousels/specials-a-spot-hero-carousels/two-columns-a-spot-hero-carousel";
+@import "../carousels/b-spot-hero";
+@import "../carousels/selection-hero-video-or-image";
+
+@import "../circle-component/enumerated-circle-component";
+
+@import "../cta-block-elements/cta-block-cards";
+@import "../cta-block-elements/half-content-cards-with-buttons";
+@import "../cta-block-elements/half-content-people-tiles-with-buttons";
+@import "../cta-block-elements/group-of-half-people-tiles-with-buttons";
+@import "../layouts/layout-people-profile-cards";
+
+@import "../cta-rows/group-cta-rows";
+@import "../cta-rows/group-cta-rows-only-with-img";
+@import "../cta-rows/group-cta-rows-without-buttons";
+@import "../cta-rows/individual-cta-row";
+
+@import "../../block/block.isi-sidebar";
+@import "../../block/block.isi.scss";
+
+@import "../../paragraph/paragraph.accordion-group";
+@import "../../node/node.profile";
+
+@import "../layouts/layout-with-banner-sidebar-header-footer_v2";
+@import "../layouts/layout-with-banner-sidebar-header-footer_v3";
+@import "../layouts/layouts_parts/heading-separator-paragraph";
+@import "../layouts/layouts_parts/percent-image-text";
+@import "../layouts/layouts_parts/dark-block-with-graphs";
+@import "../layouts/layouts_parts/layout-a-spot-hero-light-theme";
+@import "../layouts/layouts_parts/layout-a-spot-hero-dark-theme";
+@import "../layouts/layouts_parts/symptoms-img-with-text";
+
+@import "../../../../../node_modules/bootstrap/scss/spinners";
+@import "../../../../../node_modules/bootstrap/scss/badge";
+@import "../../../../../node_modules/bootstrap/scss/breadcrumb";
+@import "../../../../../node_modules/bootstrap/scss/list-group";
+@import "../../base/bootstrap/bootstrap.forms";
+@import "../forms/basic-form";
+
+@import "../buttons/back-to-top-buttons";
+
+@import "../breadcrumbs/breadcrumbs";
+
+@import "../navs/navs";
+@import "../tabs/tabs-dropdown-variations";
+@import "../list-group/list-group-variations";
+@import "../infographic-overflow-scrolling/infographic-overflow-scrolling";
+@import "../pinch-to-zoom/pinch-to-zoom";
+@import "../anchor-nav/vertical-anchor-navigation";
+
+
+//common variables
+$horizontalSpacingGetter10: getSpacingSize($horizontal-spacing-sizes, 10px);
+$horizontalSpacingGetter35: getSpacingSize($horizontal-spacing-sizes, 35px);
+
+//Hide isi-sidebar on xs and sm screen resolutions
+.storybook-isi-wrapper {
+  $breakpoints: xs, sm;
+  @each $breakpoint in $breakpoints {
+    @include media-breakpoint-only($breakpoint) {
+      #inline-isi-wrapper, #drawer-isi {
+        display: none !important;
+      }
+    }
+  }
+}
+
+//End Hide isi-sidebar
+
+$breakpoints: xs, sm;
+@each $breakpoint in $breakpoints {
+  @include media-breakpoint-down($breakpoint) {
+    @if $breakpoint == xs {
+      .site-navigation-container {
+        display: none;
+      }
+    }
+
+    h1 {
+      font-size: $h1-font-size;
+    }
+
+    h3, .h3 {
+      @include h3HeadingCommonStyles($h6FontSizeModifier);
+    }
+
+    .sticky-back-to-top {
+      display: none;
+    }
+
+  }
+}
+
+
+//Storybook styles
+.storybook-searchbar {
+  margin-left: $horizontalSpacingGetter10;
+
+  input {
+    width: remOrPercent(30%);
+  }
+
+  a {
+    font-family: "Museo Sans", sans-serif;
+  }
+
+  .active-search-results {
+    margin: remOrPercent(10px);
+
+    a {
+      background-color: $cyan;
+      padding: remOrPercent(5px);
+      border-radius: remOrPercent(3px);
+      color: white;
+    }
+  }
+
+  .section-name {
+    margin-left: -$horizontalSpacingGetter35;
+
+    a {
+      background-color: $green;
+      padding: remOrPercent(5px);
+      border-radius: remOrPercent(3px);
+      color: white;
+    }
+  }
+
+}
+
+.storybook-components {
+  #js-non-scrollable-container {
+    display: none;
+  }
+}
+
+//rules only for chrome
+@media all and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: .001dpcm) {
+  .site-navigation-container {
+    .apply-one-column {
+      width: remOrPercent(300px);
+    }
+
+    .scroll-up {
+      width: remOrPercent(80px);
+    }
+
+    .scroll-down {
+      width: remOrPercent(120px);
+    }
+  }
+}
+
+.site-navigation-container {
+  .current-mode {
+    margin-left: auto;
+    bottom: remOrPercent(165px);
+    right: remOrPercent(10px);
+    width: remOrPercent(285px);
+  }
+
+  .apply-one-column {
+    margin-left: auto;
+    bottom: remOrPercent(120px);
+    right: remOrPercent(10px);
+  }
+
+  .scroll-up {
+    margin-left: auto;
+    bottom: remOrPercent(65px);
+    right: remOrPercent(10px);
+  }
+
+  .scroll-down {
+    margin-left: auto;
+    right: remOrPercent(10px);
+    bottom: remOrPercent(10px);
+  }
+}
+
+.storybook-spinner {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  top: remOrPercent(50%);
+  bottom: 0;
+
+  button {
+    background-color: transparent !important;
+    border: none;
+    border-color: unset;
+  }
+}
+
+//End storybook styles

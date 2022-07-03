@@ -1,0 +1,24 @@
+uuid: 5b5dc485-867f-4078-bc7f-da3db640f7f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.podcasresources
+  module:
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__podcasresources_block_1
+theme: demo_design_system_theme
+region: hidden
+weight: 0
+provider: null
+plugin: 'views_block:podcasresources-block_1'
+settings:
+  id: 'views_block:podcasresources-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '20'
+visibility: {  }

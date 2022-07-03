@@ -1,0 +1,25 @@
+uuid: 96435d70-a4bd-4f86-a06e-7b6e3a5a0fce
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.legal-links-footer
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: legallinksfooter
+theme: demo_design_system_theme
+region: footer_4
+weight: 0
+provider: null
+plugin: 'system_menu_block:legal-links-footer'
+settings:
+  id: 'system_menu_block:legal-links-footer'
+  label: Legal
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

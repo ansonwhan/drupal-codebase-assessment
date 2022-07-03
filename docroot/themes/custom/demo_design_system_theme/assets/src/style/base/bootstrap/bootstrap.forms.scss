@@ -1,0 +1,10 @@
+// Base variables.
+@import "variables";
+@import "mixins_functions";
+
+@import "../../../../../node_modules/bootstrap/scss/forms"; // move to form.
+@import "../../../../../node_modules/bootstrap/scss/buttons";  // move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/transitions";// move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/button-group"; // move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/input-group"; // move to separate library.
+@import "../../../../../node_modules/bootstrap/scss/custom-forms"; // move to separate library.

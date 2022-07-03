@@ -1,0 +1,10 @@
+uuid: c5676943-483c-4b26-8803-22998cecb661
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.thumb_modal
+label: 'Thumb Modal'
+targetEntityType: paragraph
+cache: true

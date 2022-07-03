@@ -1,0 +1,10 @@
+@import "../_mixins_functions";
+@import "../variables";
+
+.js--modal-open {
+  overflow: hidden;
+}
+
+.modal-open {
+  overflow: visible !important;
+}

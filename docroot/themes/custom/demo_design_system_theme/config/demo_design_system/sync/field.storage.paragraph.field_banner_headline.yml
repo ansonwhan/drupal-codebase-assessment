@@ -1,0 +1,19 @@
+uuid: 1b2641e3-f2eb-40c0-b69a-4b4c85332a3c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_banner_headline
+field_name: field_banner_headline
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,29 @@
+uuid: 4e34a0c8-c2f3-43f9-94ce-784c93e22d69
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource_classification
+    - node.type.resource
+    - taxonomy.vocabulary.resource_classification
+id: node.resource.field_resource_classification
+field_name: field_resource_classification
+entity_type: node
+bundle: resource
+label: 'RESOURCE CLASSIFICATION'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      resource_classification: resource_classification
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

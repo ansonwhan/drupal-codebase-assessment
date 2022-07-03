@@ -1,0 +1,23 @@
+uuid: 27c81f21-b04f-4adf-bd2d-d2db6549c624
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordion_row1_behavior
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - options
+id: paragraph.accordion_group.field_accordion_row1_behavior
+field_name: field_accordion_row1_behavior
+entity_type: paragraph
+bundle: accordion_group
+label: 'First Row Behavior'
+description: 'Select the desired behavior for the first accordion item row in the group.'
+required: true
+translatable: false
+default_value:
+  -
+    value: collapsed
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,19 @@
+uuid: a561249c-dd09-4b91-bbf0-624f3c77b2c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_usage_notes
+field_name: field_usage_notes
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

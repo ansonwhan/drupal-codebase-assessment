@@ -1,0 +1,24 @@
+{
+  "notesAboutComponent": "",
+  "aSpotHeroLightTheme": [
+    {
+      "imgSrc": "",
+      "class": "",
+      "heading": "Medication to manage your mental health",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "how it works",
+      "notes": "",
+      "specialCssClasses": {
+        "pageHeroImage": "page-hero-img",
+        "borderLeft": "",
+        "borderRight": "",
+        "displayLgNone": "display-lg-none",
+        "displayXsNone": "display-xs-none",
+        "marginLeft": ""
+      },
+      "imgInsideBannerProperties": {
+        "alternativeText": "home page hero"
+      }
+    }
+  ]
+}

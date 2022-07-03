@@ -1,0 +1,25 @@
+uuid: f32918e8-9bda-48a5-9d74-46f874181966
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.example_sign_up_form
+  module:
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform_2
+theme: demo_design_system_theme
+region: hidden
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Example Signup Webform'
+  provider: webform
+  label_display: '0'
+  webform_id: example_sign_up_form
+  default_data: ''
+  redirect: false
+visibility: {  }

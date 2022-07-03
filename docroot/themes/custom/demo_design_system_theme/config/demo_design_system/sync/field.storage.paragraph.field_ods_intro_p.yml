@@ -1,0 +1,19 @@
+uuid: 03da88f4-a44a-4c75-9c00-7d9e16a88686
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_ods_intro_p
+field_name: field_ods_intro_p
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

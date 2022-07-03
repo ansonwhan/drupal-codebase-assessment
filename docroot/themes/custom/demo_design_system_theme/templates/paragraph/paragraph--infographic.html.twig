@@ -1,0 +1,93 @@
+{% set infographicBehavior %}
+{{ content.field_infographic_behavior }}
+{% endset %}
+
+{% if 'overflowscroll' in infographicBehavior %}
+{{ attach_library('demo_design_system_theme/paragraph.infographic.overflowscroll') }}
+{% endif %}
+
+{% if 'pinchzoom' in infographicBehavior %}
+{{ attach_library('demo_design_system_theme/paragraph.infographic.pinchtozoom') }}
+{% endif %}
+
+{% set imgPath %}
+{{ file_url(content.field_infographic.0['#media'].field_media_image.entity.uri.value)}}
+{% endset %}
+
+{% set imgAlt %}
+{{ content.field_infographic.0['#media'].field_media_image.alt }}
+{% endset %}
+
+{% set imgMinWidth %}
+{{ content.field_infographic_min_width|render|trim }}
+{% endset %}
+
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+
+{%
+  set classes = [
+    'infographic',
+    'infographic--behavior--' ~ infographicBehavior|trim,
+    'overflowscroll' in infographicBehavior ? 'infographic-overflow-scrolling',
+    'pinchzoom' in infographicBehavior ? 'pinch-to-zoom',
+    'taptoview' in infographicBehavior ? 'tap-to-view',
+    'js-picture-bg',
+    'd-flex',
+    'flex-wrap',
+    'justify-content-center',
+    settings_custom_classes ? settings_custom_classes,
+  ]
+%}
+
+{% block paragraph %}
+  {% block content %}
+  <div {{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+
+    {% if 'overflowscroll' in infographicBehavior %}
+
+    <div class="js-scrollable-holder scrollable">
+        <div class="image-parent-holder">
+            <div class="image-holder">
+                <picture class="image-holder">
+                  <img src="{{- imgPath|trim -}}" alt="{{ imgAlt|trim }}" {% if content.infographic_min_width|render|length > 0 %}style="min-width:{{imgMinWidth|trim}}px;"{% endif %}/>
+                </picture>
+            </div>
+        </div>
+    </div>
+    <div class="after">{{- content.infographic_scroll_text -}}</div>
+
+    {% elseif 'pinchzoom' in infographicBehavior  %}
+
+    <div class="pinch-to-zoom-wrapper">
+      <div id="js-pinch-to-zoom">
+        <div class="container">
+          <div class="row d-flex flex-wrap justify-content-center">
+            <img src="{{- imgPath|trim -}}" alt="{{ imgAlt|trim }}" />
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex flex-wrap justify-content-center ods-pt-25">
+        <button id="js-reset-zoom"
+            class="enable-disable-zoom text-uppercase btn btn-primary btn-sm btn-rounded ods-p-10">
+            Enable/Disable zoom
+        </button>
+      </div>
+    </div>
+
+    {% elseif 'taptoview' in infographicBehavior  %}
+
+    <a class="infographic--image-link" href="{{- imgPath|trim -}}" aria-label="Tap to view the image in your default image viewer." target="_blank">
+      <img src="{{- imgPath|trim -}}" alt="{{ imgAlt|trim }}" />
+      <span class="visually-hidden">Tap to view the image in your default image viewer.</span>
+    </a>
+
+    {% else %}
+
+    <img src="{{- imgPath|trim -}}" alt="{{ imgAlt|trim }}" />
+
+    {% endif %}
+  </div>
+  {% endblock %}
+{% endblock paragraph %}

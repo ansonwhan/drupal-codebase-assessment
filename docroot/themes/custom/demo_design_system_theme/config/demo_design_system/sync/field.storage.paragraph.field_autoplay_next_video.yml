@@ -1,0 +1,18 @@
+uuid: 7594519f-9e4d-4bcf-88d7-c08af4b447fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_autoplay_next_video
+field_name: field_autoplay_next_video
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

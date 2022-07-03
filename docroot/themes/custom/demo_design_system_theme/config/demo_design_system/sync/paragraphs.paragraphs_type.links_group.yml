@@ -1,0 +1,10 @@
+uuid: a3370adf-dd0c-4fed-85f1-5bb01c7893ab
+langcode: en
+status: true
+dependencies: {  }
+id: links_group
+label: 'Links group'
+icon_uuid: null
+icon_default: null
+description: 'Use this paragraph type for a link list such as a secondary nav block.'
+behavior_plugins: {  }

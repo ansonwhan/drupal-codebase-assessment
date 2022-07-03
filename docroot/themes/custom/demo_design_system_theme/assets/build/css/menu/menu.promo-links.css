@@ -1,0 +1,84 @@
+.menu-promo-links {
+  font-weight: 700;
+  padding-top: 22px;
+}
+
+@media (max-width: 768.98px) {
+  .menu-promo-links {
+    display: none;
+  }
+}
+
+.menu-promo-links a {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 769px) {
+  .menu-promo-links a {
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  .menu-promo-links a {
+    text-transform: uppercase;
+    margin-left: 40px;
+  }
+}
+
+.field--discussion-guide,
+.field--savings-card,
+.field--custom-icon {
+  display: inline-block;
+  padding-left: 22px;
+  position: relative;
+}
+
+.field--discussion-guide:before,
+.field--savings-card:before,
+.field--custom-icon:before {
+  content: " ";
+  display: block;
+  width: 13px;
+  height: 13px;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+
+.field--discussion-guide:before {
+  background: url("../../img/icon-discussion-guide.png") no-repeat;
+}
+
+.field--savings-card:before {
+  background: url("../../img/icon-savings-card.png") no-repeat;
+}
+
+.field--sampling:before {
+  background: url("../../img/icon-beaker.png") no-repeat;
+  background-size: contain;
+  top: 0;
+  left: -5px;
+  width: 24px;
+  height: 24px;
+}
+
+.field--speakernet:before {
+  background: url("../../img/icon-bookmark-flag.png") no-repeat;
+  background-size: contain;
+  top: 0;
+  width: 24px;
+  height: 24px;
+}
+
+.field--request-a-rep:before {
+  background: url("../../img/icon-person.png") no-repeat;
+  background-size: contain;
+  top: 3px;
+  left: 4px;
+  width: 16px;
+  height: 16px;
+}
+
+/*# sourceMappingURL=menu.promo-links.css.map */

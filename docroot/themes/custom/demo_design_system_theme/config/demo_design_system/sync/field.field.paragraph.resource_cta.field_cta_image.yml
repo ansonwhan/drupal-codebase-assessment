@@ -1,0 +1,30 @@
+uuid: 230e694e-9586-4c59-a93e-66586459e32b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_image
+    - media.type.image
+    - media.type.svg_image
+    - paragraphs.paragraphs_type.resource_cta
+id: paragraph.resource_cta.field_cta_image
+field_name: field_cta_image
+entity_type: paragraph
+bundle: resource_cta
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg_image: svg_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

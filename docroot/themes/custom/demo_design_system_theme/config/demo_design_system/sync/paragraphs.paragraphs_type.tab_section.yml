@@ -1,0 +1,10 @@
+uuid: dc695c4b-963d-4053-8b06-b1c2637075d8
+langcode: en
+status: true
+dependencies: {  }
+id: tab_section
+label: 'Tab Section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

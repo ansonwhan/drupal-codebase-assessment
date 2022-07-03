@@ -1,0 +1,61 @@
+uuid: c75fd040-0ac6-44da-bac9-6cba403426c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_group.field_accordion_row1_behavior
+    - field.field.paragraph.accordion_group.field_accordions_autocollapse
+    - field.field.paragraph.accordion_group.field_ods_accordion_item_p
+    - field.field.paragraph.accordion_group.field_ods_exit_p
+    - field.field.paragraph.accordion_group.field_ods_intro_p
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+id: paragraph.accordion_group.default
+targetEntityType: paragraph
+bundle: accordion_group
+mode: default
+content:
+  field_accordion_row1_behavior:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_accordions_autocollapse:
+    weight: 3
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_ods_accordion_item_p:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_ods_exit_p:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_ods_intro_p:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

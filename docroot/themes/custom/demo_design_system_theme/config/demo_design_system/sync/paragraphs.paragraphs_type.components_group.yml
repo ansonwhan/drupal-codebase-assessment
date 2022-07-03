@@ -1,0 +1,16 @@
+uuid: 78bf822b-d5a3-46f1-8b35-d65e41822f2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: components_group
+label: 'Components group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_componets_group_settings:
+    enabled: true
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

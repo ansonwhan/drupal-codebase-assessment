@@ -1,0 +1,68 @@
+uuid: f0ba71d7-4d9a-4593-8e95-583c14cd0d55
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - media
+    - responsive_tables_filter
+_core:
+  default_config_hash: P8ddpAIKtawJDi5SzOwCzVnnNYqONewSTJ6Xn0dW_aQ
+name: 'Basic HTML'
+format: basic_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <p class=""> <br> <img src alt height width data-entity-type data-entity-uuid data-align data-caption> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title> <sup> <sub> <hr> <a href hreflang class=" editor--wrapped-urls"> <h1 id class="subhead-bold"> <h2 id class="subhead-bold"> <h3 id class="subhead-bold"> <h4 id class="subhead-bold"> <h5 id class="subhead-bold"> <h6 id class="subhead-bold"> <span class=" editor--time-meridian editor--footnotes h1 subhead-bold h2 h3 h4 h5 h6">'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 7
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 8
+    settings: {  }
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 11
+    settings: {  }
+  media_embed:
+    id: media_embed
+    provider: media
+    status: true
+    weight: 100
+    settings:
+      default_view_mode: default
+      allowed_media_types:
+        image: image
+        remote_video: remote_video
+        svg_image: svg_image
+        video: video
+      allowed_view_modes: {  }
+  filter_responsive_tables_filter:
+    id: filter_responsive_tables_filter
+    provider: responsive_tables_filter
+    status: false
+    weight: 0
+    settings:
+      tablesaw_type: stack
+      tablesaw_persist: '1'

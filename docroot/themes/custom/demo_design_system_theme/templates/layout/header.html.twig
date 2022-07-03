@@ -1,0 +1,47 @@
+{#
+/**
+ * @file
+ * Otsuka design system theme implementation to display a header.
+ *
+ * @see page.html.twig
+ */
+#}
+
+{% if page.header_top or page.header_middle or page.header_1 or page.header_2 or page.header_bottom %}
+  <header id="section-header" role="banner" class="header" data-analytics-position="Header">
+    {% if page.header_top %}
+      <div id="header-top" class="region--header-top">
+        <div class="container">
+          {{ page.header_top }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.header_middle %}
+      <div id="header-middle" class="region--header-middle">
+        <div class="container">
+          {{ page.header_middle }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.header_1 or page.header_2 %}
+      <div id="header-menu-top" class="region--header-1-2">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              {{ page.header_1 }}
+
+              {{ page.header_2 }}
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    {% if page.header_bottom %}
+      <div id="header-menu-bottom" class="region--header-bottom">
+        <div class="container">
+          {{ page.header_bottom }}
+        </div>
+      </div>
+    {% endif %}
+  </header>
+{% endif %}

@@ -1,0 +1,15 @@
+@import "../../common_components_mixins";
+
+.enumerated-circle-component {
+  .circle-default-styles {
+    &__one {
+      @include enumeratedCircleComponent;
+    }
+    &__two {
+      @include enumeratedCircleComponent(16px);
+    }
+    &__three {
+      @include enumeratedCircleComponent(12px);
+    }
+  }
+}

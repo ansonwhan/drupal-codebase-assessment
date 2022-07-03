@@ -1,0 +1,24 @@
+uuid: 63533c84-21eb-4022-9bd3-04777a2f8a9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.patient_bio_profiles
+  module:
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__patient_bio_profiles_block_2
+theme: demo_design_system_theme
+region: hidden
+weight: 0
+provider: null
+plugin: 'views_block:patient_bio_profiles-block_2'
+settings:
+  id: 'views_block:patient_bio_profiles-block_2'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

@@ -1,0 +1,40 @@
+{
+  "notesAboutComponent": "",
+  "twoColumnsASpotHeroCarousel": [
+    {
+      "slideImgAlt": "doctor slide",
+      "imgName": "doctor_with_mobile.webp",
+      "imgSrcInsideSlide": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Otsuka_Holdings_logo.svg/1920px-Otsuka_Holdings_logo.svg.png",
+      "altTextOfImgInsideSlide": "Otsuka logo",
+      "class": "",
+      "heading": "Two Columns Carousel #1",
+      "text": "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "buttonText": "Get Treva!",
+      "notes": ""
+    },
+    {
+      "alt": "family slide",
+      "imgName": "family_picture.webp",
+      "imgSrcInsideSlide": "https://www.otsuka.co.jp/en/nutraceutical/products/assets/img/item_im02.png",
+      "altTextOfImgInsideSlide": "First Otsuka product",
+      "class": "",
+      "heading": "Two Columns Carousel #2",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...].",
+      "buttonText": "how it works!",
+      "notes": ""
+    },
+    {
+      "alt": "painkillers slide",
+      "imgName": "photo_of_pills.webp",
+      "imgSrcInsideSlide": "https://www.otsuka.co.jp/en/nutraceutical/products/assets/img/bodymainte.png",
+      "altTextOfImgInsideSlide": "Second Otsuka product",
+      "class": "",
+      "heading": "Two Columns Carousel #3",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor[...].",
+      "buttonText": "Free money!",
+      "notes": ""
+    }
+  ]
+}
+
+

@@ -1,0 +1,8 @@
+uuid: 8609f391-27c6-4fa3-9bbf-3d683e4e25b9
+langcode: en
+status: true
+dependencies: {  }
+id: indication-b-main-menu
+label: 'Indication B Main Menu'
+description: ''
+locked: false

@@ -1,0 +1,33 @@
+uuid: e4318274-2173-4b1c-98f7-610cb56ed7b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_mobile_display_type
+field_name: field_mobile_display_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: accordion1
+      label: 'Accordion, 1st section expanded'
+    -
+      value: accordion0
+      label: 'Accordion, all sections collapsed'
+    -
+      value: h_tabbed
+      label: 'Horizontal Tabs'
+    -
+      value: v_tabbed
+      label: 'Vertical Tabs'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

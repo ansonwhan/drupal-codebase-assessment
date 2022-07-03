@@ -1,0 +1,17 @@
+header.header {
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform .5s;
+}
+
+header.header.position-fixed {
+  width: 100%;
+  z-index: 501;
+  background: #fff;
+}
+
+header.header.js--header-hidden {
+  transform: translateY(-100%);
+}
+
+/*# sourceMappingURL=menu-sticky.css.map */

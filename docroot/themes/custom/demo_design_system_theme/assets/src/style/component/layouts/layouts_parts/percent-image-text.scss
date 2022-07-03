@@ -1,0 +1,29 @@
+@import "./assets/src/style/variables";
+@import "./assets/src/style/mixins_functions";
+@import "./assets/src/style/common_components_mixins";
+
+.percent-image-text {
+  border: $common-border-size solid $common-border-color;
+
+  .circle-graph-image {
+    background: file('circle_graph.webp');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: remOrPercent(255px);
+    height: remOrPercent(255px);
+  }
+
+  h3 {
+    @include h3HeadingCommonStyles();
+    align-self: flex-end;
+  }
+
+  @include media-breakpoint-only(xs) {
+    .circle-graph-image {
+      min-width: remOrPercent(230px) !important;
+      min-height: remOrPercent(230px) !important;
+      margin-left: 0 !important;
+    }
+  }
+}

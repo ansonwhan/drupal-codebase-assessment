@@ -1,0 +1,18 @@
+uuid: fa92c777-8361-4d0c-a61f-02b86a5f09ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.field_ods_collapsed
+field_name: field_ods_collapsed
+entity_type: paragraph
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

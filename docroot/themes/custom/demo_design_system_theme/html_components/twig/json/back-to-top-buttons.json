@@ -1,0 +1,23 @@
+{
+  "notesAboutComponent": "",
+  "loremIpsumText": "\"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque\n        laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi\n        architecto\n        beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur\n        aut\n        odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi\n        nesciunt.\n        Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci\n        velit,\n        sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat\n        voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit\n        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit\n        qui\n        in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum\n        fugiat\n        quo voluptas nulla pariatur?\"",
+  "backToTopButtons": [
+    {
+      "fontAwesomeClass": "fa-chevron-up",
+      "typeOfButtonClass": "oval",
+      "text": "TOP",
+      "jsIdSelector": "js-scroll-top",
+      "additionalCssModifiers": "d-flex justify-content-center ods-mb-5"
+    },
+    {
+      "fontAwesomeClass": "fa-chevron-up",
+      "typeOfButtonClass": "square",
+      "text": "TOP",
+      "jsIdSelector": "js-sticky-back-to-top",
+      "additionalCssModifiers": "sticky-back-to-top"
+    }
+  ]
+}
+
+
+

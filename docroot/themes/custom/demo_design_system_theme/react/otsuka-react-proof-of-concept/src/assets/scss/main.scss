@@ -1,0 +1,15 @@
+@import "functions";
+@import "variables";
+
+html {
+  font-size: $baseFontSize;
+
+  body {
+    font-family: "Museo Sans", sans-serif;
+    color: $baseFontColor;
+    background: $baseBackgroundColor;
+  }
+}
+
+//imports of components scss here
+//@import "";

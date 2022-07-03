@@ -1,0 +1,30 @@
+{
+  "navsVariations": {
+    "navLinks": {
+      "defaultLinkClass": "default-link",
+      "activeLinkClass": "active",
+      "navPillLinkClass": "nav-pill",
+      "disabledLinkClass": "disabled",
+      "fontAwesomeClass": "fas fa-smile"
+    },
+    "verticalLinks": {
+      "columnClass": "flex-column"
+    },
+    "uppercaseLinks": {
+      "uppercaseClass": "text-uppercase"
+    },
+    "overflowMenuButton": {
+      "dedicatedIdSelector": "overwrite-inherited-focus",
+      "dedicatedClassSelector": "overflow-squares-menu",
+      "spacerClassSelector": "spacer",
+      "activeClassSelector": "active-menu",
+      "fontAwesomeClass": "fas fa-square-full",
+      "fontAwesomeMobileMenuClass": "fas fa-bars",
+      "tabindex": "0",
+      "ariaLabel": "Menu button",
+      "title": "Menu button",
+      "ariaHaspopup": true,
+      "ariaExpanded": false
+    }
+  }
+}

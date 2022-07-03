@@ -1,0 +1,21 @@
+uuid: e612f10a-4e26-4b5d-abf3-88c14f5145df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_blurb
+    - paragraphs.paragraphs_type.hero_banner_item
+  module:
+    - text
+id: paragraph.hero_banner_item.field_blurb
+field_name: field_blurb
+entity_type: paragraph
+bundle: hero_banner_item
+label: Blurb
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

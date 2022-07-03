@@ -1,0 +1,12 @@
+{
+  "internalGridClasses": {
+    "odsMarginAuto": "ods-m-auto",
+    "odsCol": "ods-col",
+    "odsFlexCenter": "ods-flex-justify-content-center",
+    "odsCol6": "ods-col-6",
+    "odsColXs5": "ods-col-xs-5",
+    "odsColXs7": "ods-col-xs-7",
+    "odsColSm5": "ods-col-sm-5",
+    "odsColSm7": "ods-col-sm-7"
+  }
+}

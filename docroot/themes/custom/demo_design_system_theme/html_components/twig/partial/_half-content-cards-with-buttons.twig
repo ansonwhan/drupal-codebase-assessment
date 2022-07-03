@@ -1,0 +1,38 @@
+<!-- start example code for Drupal -->
+<div class="half-content-cards-with-buttons">
+  <div class="container">
+    <div class="row ods-flex-justify-content-center">
+      {% for item in halfContentCardsWithButtons %}
+        <div class="card max-width-height common-border ods-mr-25 ods-mb-25">
+          <div role="img"
+               aria-label="{{ item.alternativeText }}"
+               title="{{ item.alternativeText }}"
+               class="photo{{ item.imgSrcClass }}"></div>
+          <div
+                  class="col-12 max-width-height">
+            <div
+                    class="card-body">
+              <div class="card-title ods-mt-15">
+                <h4>{{ item.heading }}</h4>
+              </div>
+              <div class="card-text">
+                <p>{{ item.text }}</p>
+              </div>
+              <a role="button" tabindex="0" href="#"
+                 class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-15">
+                {{ item.buttonText }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- end example code for Drupal -->
+
+
+
+
+

@@ -1,0 +1,53 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.enumerated-content-group {
+  border: 1px solid rgba(0, 0, 0, .12);
+  background: $white;
+  counter-reset: item;
+  padding: 0 20px;
+
+  .enumerated-content-item {
+
+    h1, h2, h3, h4, h5, h6 {
+      margin-bottom: 0;
+    }
+
+    p {
+      &:first-of-type {
+        margin-top: 0.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    .row:before {
+      content: counter(item);
+      counter-increment: item;
+      font-family: 'Museo Sans', sans-serif;
+      font-size: 1.875rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: $white;
+      border-radius: 110px;
+      background: $blue;
+      flex: 0 0 80px;
+      margin: 20px 15px;
+      height: 80px;
+    }
+
+    &:not(:first-child) {
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    [class*=col] {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+  }
+}

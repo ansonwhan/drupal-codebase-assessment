@@ -1,0 +1,23 @@
+uuid: 9d2be745-3383-44ae-89df-e7ec05e67d2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_in_modal
+    - paragraphs.paragraphs_type.video_item
+id: paragraph.video_item.field_video_in_modal
+field_name: field_video_in_modal
+entity_type: paragraph
+bundle: video_item
+label: 'Video in modal'
+description: 'Check to play video in a modal popup, leave unchecked to play inline on the webpage.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

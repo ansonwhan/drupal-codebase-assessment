@@ -1,0 +1,23 @@
+uuid: ccf794a0-0c4e-47ac-96ab-0d90759420f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text_position
+    - paragraphs.paragraphs_type.carousel_slide
+  module:
+    - options
+id: paragraph.carousel_slide.field_text_position
+field_name: field_text_position
+entity_type: paragraph
+bundle: carousel_slide
+label: 'Text position'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: text-center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,17 @@
+uuid: ee26612d-6141-4c89-831c-0212489019b4
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: for_row_x2_lg
+label: 'For row x2 lg'
+effects:
+  d8754707-e770-4d87-bfc8-6f412a011f91:
+    uuid: d8754707-e770-4d87-bfc8-6f412a011f91
+    id: focal_point_scale_and_crop
+    weight: 2
+    data:
+      width: 220
+      height: 200
+      crop_type: focal_point

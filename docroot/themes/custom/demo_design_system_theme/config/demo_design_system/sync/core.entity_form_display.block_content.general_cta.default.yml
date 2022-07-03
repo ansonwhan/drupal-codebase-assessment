@@ -1,0 +1,42 @@
+uuid: 45c0a2bc-68a6-40fe-8e26-392bc4791758
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.general_cta
+    - field.field.block_content.general_cta.field_cta_block_wrapper
+  module:
+    - paragraphs
+id: block_content.general_cta.default
+targetEntityType: block_content
+bundle: general_cta
+mode: default
+content:
+  field_cta_block_wrapper:
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: components_group
+      features:
+        add_above: add_above
+        collapse_edit_all: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+    type: paragraphs
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

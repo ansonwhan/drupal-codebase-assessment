@@ -1,0 +1,25 @@
+uuid: 53c6e09a-e8e1-4191-8bbc-f7297ebf99b5
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.indications-footer
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: indicationsfooter
+theme: demo_design_system_theme
+region: footer_2
+weight: 0
+provider: null
+plugin: 'system_menu_block:indications-footer'
+settings:
+  id: 'system_menu_block:indications-footer'
+  label: Sections
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

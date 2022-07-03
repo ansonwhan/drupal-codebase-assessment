@@ -1,0 +1,23 @@
+uuid: 16db54ec-5b00-436a-ab48-f1935a83240f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_otsk_block_p
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.field_otsk_block_p
+field_name: field_otsk_block_p
+entity_type: paragraph
+bundle: block
+label: 'Basic/Custom Content Block Embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

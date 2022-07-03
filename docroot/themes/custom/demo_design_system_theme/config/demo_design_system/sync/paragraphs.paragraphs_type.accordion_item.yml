@@ -1,0 +1,14 @@
+uuid: 343d550f-2450-46f8-b11a-fc7a3edaa934
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: accordion_item
+label: 'Accordion item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

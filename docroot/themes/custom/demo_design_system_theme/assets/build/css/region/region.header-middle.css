@@ -1,0 +1,68 @@
+@charset "UTF-8";
+
+.region--header-middle {
+  background: #373D42;
+  font-weight: 500;
+}
+
+.region--header-middle .region {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 577px) {
+  .region--header-middle .region {
+    text-align: initial;
+    justify-content: flex-end;
+  }
+}
+
+.region--header-middle .block-content-us-healthcare-professionals-site {
+  display: none;
+}
+
+@media (min-width: 769px) {
+  .region--header-middle .block-content-us-healthcare-professionals-site {
+    display: initial;
+  }
+}
+
+.region--header-middle .content ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  align-content: normal;
+}
+
+.region--header-middle .content ul li {
+  display: inline-block;
+  padding: 14px 10px 12px 0;
+  margin: 0 10px;
+  line-height: .9rem;
+}
+
+@media (min-width: 992px) {
+  .region--header-middle .content ul li {
+    margin: 0 0 0 38px;
+  }
+}
+
+.region--header-middle a {
+  color: #FFB740;
+  font-size: 0.75rem;
+  position: relative;
+}
+
+.region--header-middle a:after {
+  content: "›";
+  position: absolute;
+  right: -7px;
+}
+
+/*# sourceMappingURL=region.header-middle.css.map */

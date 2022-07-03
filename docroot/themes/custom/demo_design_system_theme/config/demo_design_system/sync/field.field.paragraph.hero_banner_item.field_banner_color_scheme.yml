@@ -1,0 +1,21 @@
+uuid: 70aed474-3654-4ebd-9ebb-a1d481e4ceb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_color_scheme
+    - paragraphs.paragraphs_type.hero_banner_item
+  module:
+    - options
+id: paragraph.hero_banner_item.field_banner_color_scheme
+field_name: field_banner_color_scheme
+entity_type: paragraph
+bundle: hero_banner_item
+label: 'Banner Color Scheme'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

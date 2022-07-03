@@ -1,0 +1,63 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+$verticalAndHorizontalSpacing10: getSpacingSize($horizontal-and-vertical-sizes, 10px);
+
+
+.group-cta-rows {
+  //TODO as of 2021-04-12 commented for implementation purposes
+  //max-width: remOrPercent(728px);
+  //border: $common-border-size solid $common-border-color;
+
+  .img-container {
+    padding: $verticalAndHorizontalSpacing10;
+  }
+
+  .cta-row, .img-container {
+    background-color: $common-background-light-gray;
+
+    .pain-icon, img {
+      @include commonStylesForImg('pain_icon.webp');
+    }
+
+    .graph-icon, img {
+      @include commonStylesForImg('graph_icon.webp');
+    }
+
+    .time-icon, img {
+      @include commonStylesForImg('time_icon.webp');
+    }
+
+    //wrapper for headings tags
+    .card-title {
+      @include overwriteAllHeadingTagsStyles;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .img-container {
+        margin-top: 1rem;
+      }
+      .button-container {
+        margin-bottom: 1rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .img-container {
+        margin-top: 1rem;
+      }
+      .button-container {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  //styles dedicated for app side
+  .field--link-wrapper-on .card-body:hover {
+    box-shadow: $applicationSideCtaCardsBoxShadow;
+  }
+}
+
+
+

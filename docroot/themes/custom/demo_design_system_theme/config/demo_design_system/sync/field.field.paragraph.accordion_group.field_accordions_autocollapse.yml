@@ -1,0 +1,23 @@
+uuid: 610a2bd0-fb5f-4073-8aa7-1760a4b5df0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_accordions_autocollapse
+    - paragraphs.paragraphs_type.accordion_group
+id: paragraph.accordion_group.field_accordions_autocollapse
+field_name: field_accordions_autocollapse
+entity_type: paragraph
+bundle: accordion_group
+label: Autocollapse
+description: 'Check here to enable automatic collapsing of neighboring accordion items within the same accordion group when an accordion item is expanded.  This feature is generally not recommended as it results in shifting of content on the screen, unless a site has custom Javascript to autofocus the expanded section.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

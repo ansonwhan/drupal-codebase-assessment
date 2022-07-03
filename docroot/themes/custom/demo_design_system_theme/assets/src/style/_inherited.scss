@@ -1,0 +1,8 @@
+/*
+Please notice, we are putting here styles that we want inherited
+in another (prototypes) and later we import _inherited.scss
+to _common_components_mixins.scss (which are passed to each prototype stylesheets).
+*/
+
+@import "base/main";
+

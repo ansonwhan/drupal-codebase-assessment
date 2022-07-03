@@ -1,0 +1,58 @@
+{%
+ set classes = node.field_custom_classes.value is empty ? '' : node.field_custom_classes.value|split(' ')
+ %}
+<article{{ attributes.addClass(classes).addClass('bio-profile bio-profile--detail').setAttribute('id', node.field_custom_id.value) }}>
+  <div class="half-content-people-tiles-with-buttons">
+    <div class="container">
+      <div class="row">
+          <div class="card common-border d-flex flex-wrap">
+            <div class="col-md-6 col-lg-6 ods-p-0">
+
+                <div class="media media--bundle--image media--blazy media--image">
+                  {% set mobile_image_url = file_url(content.field_mobile_image[0]['#media'].field_media_image.entity.uri.value) %}
+                  {% set image_url = file_url(content.field_profile_image[0]['#media'].field_media_image.entity.uri.value) %}
+                  {% set image_alt = content.field_profile_image[0]['#media'].field_media_image.alt %}
+                  <picture>
+                    <source srcset="{{ mobile_image_url }}" media="(max-width: 768px)">
+                    <img src="{{ image_url }}" class="img media__image media__element b-lazy img-fluid b-loaded" alt="{{ image_alt }}">
+                  </picture>
+                </div>
+
+            </div>
+            <div class="col-12 col-md-6 col-lg-6 ods-pl-25 ods-pr-25 d-flex flex-wrap align-items-center">
+              <div class="card-body">
+                {% if(content.field_profile_heading) %}
+                  <h4 class="card-title ods-mt-15">{% spaceless %}
+                  {{ content.field_profile_heading }}
+                  {% endspaceless %}</h4>
+                {% endif %}
+
+                {% if(content.field_profile_subheading) %}
+                  <h6 class="card-subtitle text-uppercase">{% spaceless %}
+                  {{ content.field_profile_subheading }}
+                  {% endspaceless %}</h6>
+                {% endif %}
+
+                {% if(content.field_profile_intro) %}
+                  <p class="card-text">{% spaceless %}
+                    {{ content.field_profile_intro }}
+                  {% endspaceless %}</p>
+                {% endif %}
+
+                {% if(content.field_profile_video) %}
+                  {{- content.field_profile_video -}}
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          {% if(content.field_profile_content_top) %}
+            <div class="col-12 ribbon-wrapper ods-mb-25">{{- content.field_profile_content_top -}}<div class="triangle"></div></div>
+          {% endif %}
+
+          {% if(content.field_profile_content_bottom) %}
+            <div class="col-12">{{- content.field_profile_content_bottom -}}</div>
+          {% endif %}
+      </div>
+    </div>
+  </div>
+</article>

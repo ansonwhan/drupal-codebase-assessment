@@ -1,0 +1,21 @@
+uuid: fdcd19f4-855c-401e-923e-cb5614c2109a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_additional_body_p
+    - paragraphs.paragraphs_type.standard_body_copy
+  module:
+    - text
+id: paragraph.standard_body_copy.field_ods_additional_body_p
+field_name: field_ods_additional_body_p
+entity_type: paragraph
+bundle: standard_body_copy
+label: Additional_body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

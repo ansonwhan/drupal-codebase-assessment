@@ -1,0 +1,30 @@
+{% extends "./_base.twig" %}
+{% block title %}
+    Pinch to Zoom
+{% endblock %}
+{% block head %}
+    <!-- Dedicated css -->
+    <link rel="stylesheet"
+          media="all"
+          href="{{ basePath }}css/component/pinch-to-zoom/pinch-to-zoom.css"/>
+    <!-- End dedicated css -->
+
+    <!-- Dedicated JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll-zoom.js"></script>
+    <script src="{{ basePath }}js/component/pinch-to-zoom/pinch-to-zoom.js"></script>
+    <!-- End dedicated JS -->
+
+{% endblock %}
+
+ {% block header %}
+     {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+    <div class="notes">
+        <h1 class="text-center">Notes about <i>"Pinch to Zoom"</i> component</h1>
+    </div>
+    <div class="example">
+        {% include './partial/_pinch-to-zoom.twig' %}
+    </div>
+{% endblock %}

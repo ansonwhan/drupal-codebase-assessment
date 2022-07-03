@@ -1,0 +1,14 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.paragraph--type--components-group {
+  padding-bottom: 30px;
+
+  @include media-breakpoint-down(xs){
+    margin: 0 10px;
+  }
+
+  &.block-border {
+    padding-bottom: 20px;
+  }
+}

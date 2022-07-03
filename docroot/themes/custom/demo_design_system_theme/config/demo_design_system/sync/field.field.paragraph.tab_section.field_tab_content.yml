@@ -1,0 +1,102 @@
+uuid: 6cc4b8f2-0dae-471d-bd91-741a2f276058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_content
+    - paragraphs.paragraphs_type.components_group
+    - paragraphs.paragraphs_type.standard_body_copy
+    - paragraphs.paragraphs_type.tab_section
+  module:
+    - entity_reference_revisions
+id: paragraph.tab_section.field_tab_content
+field_name: field_tab_content
+entity_type: paragraph
+bundle: tab_section
+label: 'Tab Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      components_group: components_group
+      standard_body_copy: standard_body_copy
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 24
+        enabled: false
+      accordion_item:
+        weight: 25
+        enabled: false
+      block:
+        weight: 26
+        enabled: false
+      carousel:
+        weight: 27
+        enabled: false
+      carousel_slide:
+        weight: 28
+        enabled: false
+      citation_group:
+        weight: 29
+        enabled: false
+      citation_item:
+        weight: 30
+        enabled: false
+      components_group:
+        enabled: true
+        weight: 31
+      content_reporting_divider:
+        weight: 32
+        enabled: false
+      data_table:
+        weight: 33
+        enabled: false
+      enumerated_content_component:
+        weight: 34
+        enabled: false
+      enumerated_content_group:
+        weight: 35
+        enabled: false
+      from_library:
+        weight: 36
+        enabled: false
+      graphic_divider:
+        weight: 37
+        enabled: false
+      hero_banner_item:
+        weight: 38
+        enabled: false
+      isi_section:
+        weight: 39
+        enabled: false
+      link_item:
+        weight: 41
+        enabled: false
+      links_group:
+        weight: 40
+        enabled: false
+      resource_cta:
+        weight: 42
+        enabled: false
+      side_by_side_content_image:
+        weight: 43
+        enabled: false
+      standard_body_copy:
+        enabled: true
+        weight: 44
+      tab_group:
+        weight: 46
+        enabled: false
+      tab_section:
+        weight: 45
+        enabled: false
+      video:
+        weight: 46
+        enabled: false
+field_type: entity_reference_revisions

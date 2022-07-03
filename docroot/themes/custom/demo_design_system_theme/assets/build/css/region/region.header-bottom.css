@@ -1,0 +1,15 @@
+.region--header-bottom {
+  font-weight: 700;
+}
+
+@media (min-width: 769px) {
+  .region--header-bottom {
+    border-bottom: 1px solid #DFE3E6;
+  }
+}
+
+.js--menu-main-expanded .region--header-bottom {
+  border-bottom: 1px solid #DFE3E6;
+}
+
+/*# sourceMappingURL=region.header-bottom.css.map */

@@ -1,0 +1,19 @@
+{
+  "verticalAnchorNavigation": {
+    "specialCssClasses": {
+      "anchor": "vertical-anchor-navigation",
+      "collapsableNavigation": "vertical-anchor-navigation-collapse",
+    },
+    "specialBootstrapAttr": {
+      "dataSpy": "scroll",
+      "dataTarget": "#js-scrollable-container",
+      "dataOffset": "500",
+      "htmlBodyOffset": "200"
+    },
+    "specialCssId": {
+      "jsSpiedScrollableContainer": "js-scrollable-container",
+      "jsNonScrollableContainer": "js-non-scrollable-container"
+    },
+    "loremIpsumText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent sit amet blandit\n    orci. Ut iaculis diam ut fringilla rutrum. Pellentesque nec eleifend neque, congue\n    facilisis nibh. Duis dignissim, tortor non consequat accumsan, mauris dui malesuada\n    felis, vitae tristique felis arcu eu neque. Aliquam erat volutpat. Phasellus orci\n    turpis, ornare a velit et, congue aliquam libero. Nunc vitae dignissim odio. Morbi\n    tellus libero, facilisis eu lectus eu, tincidunt tincidunt erat. Cras eu eros ut\n    mauris laoreet commodo. Nulla at varius tortor, eu mollis ipsum. Mauris convallis elit\n    vel leo dapibus lobortis. Interdum et malesuada fames ac ante ipsum primis in\n    faucibus. Praesent tincidunt sodales tempus.\n\n    Sed et volutpat orci. Ut sollicitudin eros lacinia mattis maximus. Sed bibendum in\n    orci sed venenatis. Cras at mi at augue egestas lobortis. Quisque efficitur neque leo,\n    ac venenatis mi suscipit in. Curabitur mollis turpis tellus, eu ultricies orci\n    volutpat et. Nulla vel mi ac est venenatis facilisis. Pellentesque a placerat diam.\n    Cras non arcu pellentesque mi imperdiet lobortis nec vitae ex. Praesent tempus massa\n    sed pharetra mattis. Mauris massa lacus, feugiat at nisi vitae, rutrum euismod tellus.\n    Aenean ultrices volutpat nisi eu posuere. Maecenas quis egestas nibh. Fusce aliquet\n    placerat egestas."
+  }
+}

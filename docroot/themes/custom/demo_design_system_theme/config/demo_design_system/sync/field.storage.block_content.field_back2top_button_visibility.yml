@@ -1,0 +1,27 @@
+uuid: 64ff8f6f-298b-4324-900a-c42ed525ffb2
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_back2top_button_visibility
+field_name: field_back2top_button_visibility
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: btm-appears-on-scroll
+      label: 'Visible only after scrolling, fixed relative position from bottom of viewport'
+    -
+      value: btm-persistent
+      label: 'Always visible, fixed relative position from bottom of viewport'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

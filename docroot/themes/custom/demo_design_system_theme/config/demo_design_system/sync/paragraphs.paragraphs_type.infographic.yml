@@ -1,0 +1,14 @@
+uuid: 150a7451-8c64-4a36-bd6c-439e220184ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: infographic
+label: Infographic
+icon_uuid: null
+icon_default: null
+description: 'Use this entity to insert an infographic with either overflow scrolling or pinch & zoom capabilities.'
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

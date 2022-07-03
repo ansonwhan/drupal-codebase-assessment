@@ -1,0 +1,32 @@
+uuid: 5f9d159e-7e5b-4a4b-8cac-f39b699d45b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_entity_block_embed
+    - field.field.paragraph.block.field_otsk_block_p
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_entity_block_embed:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_otsk_block_p:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,8 @@
+uuid: fdb56c48-3b6f-4656-aa75-31449b7d10d1
+langcode: en
+status: true
+dependencies: {  }
+id: indications-footer
+label: 'Sections Footer Menu'
+description: ''
+locked: false

@@ -1,0 +1,19 @@
+uuid: cd6caf59-67d8-48b3-8c6c-367337bd8eee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_custom_id
+    - paragraphs.paragraphs_type.link_item
+id: paragraph.link_item.field_custom_id
+field_name: field_custom_id
+entity_type: paragraph
+bundle: link_item
+label: 'Custom ID to Jump To'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

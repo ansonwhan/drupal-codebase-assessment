@@ -1,0 +1,16 @@
+uuid: de2f76b8-49a8-46b6-b823-97b910e673b7
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: resource_cta
+label: 'CTA Content Card/Row'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true
+  custom_paragraph_behaviors_paragraph_resource_cta_settings:
+    enabled: true

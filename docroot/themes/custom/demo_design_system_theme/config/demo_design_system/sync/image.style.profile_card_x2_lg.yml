@@ -1,0 +1,17 @@
+uuid: a455d3de-4f2e-4505-828c-79380c74b41c
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: profile_card_x2_lg
+label: 'Profile card x2 lg'
+effects:
+  96e0c3ae-dead-4962-bb83-87d530f6eba1:
+    uuid: 96e0c3ae-dead-4962-bb83-87d530f6eba1
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 331
+      crop_type: focal_point

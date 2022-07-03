@@ -1,0 +1,101 @@
+// Theme Mixins, Functions.
+
+// @description change default value of $nesting-level to 3
+// if you want enable img url() on storybook side.
+// You have to also disable script inside storybook.js file - function generateFakeUrl()
+
+@function file($file, $folder: 'webp', $nesting-level: 1) {
+  $default-nesting: '/';
+  @if $nesting-level > 0 {
+    $default-nesting: '';
+    @for $i from 1 through $nesting-level {
+      $default-nesting: '../' + $default-nesting;
+    }
+  }
+  @return url($default-nesting + $folder + '/' + $file);
+}
+
+@mixin subhead($name: 1) {
+  $sizes: $subhead-sizes;
+  font-family: 'Museo Sans', sans-serif;
+  text-transform: uppercase;
+  font-weight: 300;
+  color: $gray-700;
+
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+    @if $i == $name {
+      font-size: $size;
+    }
+  }
+}
+
+@mixin subhead-bold($name: 1) {
+  $sizes: $subhead-bold-sizes;
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 500;
+  color: $gray-700;
+
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+    @if $i == $name {
+      font-size: $size;
+    }
+  }
+}
+
+@mixin body($name: 1) {
+  $sizes: $body-sizes;
+  font-family: 'Whitman', serif;
+  font-weight: normal;
+  color: $gray-700;
+
+  @each $size in $sizes {
+    $i: index($sizes, $size);
+    @if $i == $name {
+      font-size: $size;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @if $pxValue == 0px {
+    @return $pxValue !important;
+  }
+  @return #{strip-unit($pxValue) / 16}rem;
+}
+
+//this value should reflects value in "px" of BS framework variable $font-size-base
+$baseFontSize: 16px;
+@function remOrPercent($unit) {
+  @if unit($unit) == 'px' {
+    @return ($unit / $baseFontSize) * 1rem;
+  }
+  @if unit($unit) == '%' {
+    @return $unit;
+  }
+  @warn "Expected argument $unit to be of type `% or px`, instead received: `#{unit($unit)}`";
+}
+
+// Input: $list: ".foo", ".bar", ".baz";
+// Will produce: .foo, .bar, .baz { //styles bla bla }
+@function classNamesUnite($list, $glue: ", ") {
+  @if length($list) == 1 {
+    @return $list;
+  } @else {
+    $string: "";
+    @each $item in $list {
+      @if $string != "" {
+        $string: $string + $glue;
+      }
+      $string: $string + $item;
+    }
+
+    @return $string;
+  }
+}
+

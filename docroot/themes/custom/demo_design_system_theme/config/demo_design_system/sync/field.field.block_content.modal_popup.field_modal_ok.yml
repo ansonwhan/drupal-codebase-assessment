@@ -1,0 +1,19 @@
+uuid: 8bc0bf23-a3d9-4d5d-b405-adb3bd1650b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.storage.block_content.field_modal_ok
+id: block_content.modal_popup.field_modal_ok
+field_name: field_modal_ok
+entity_type: block_content
+bundle: modal_popup
+label: 'Modal OK'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,244 @@
+{#
+/**
+ * @file
+ * The default template file for e-mails.
+ *
+ * Available variables:
+ * - subject: The subject.
+ * - body: The message content.
+ * - is_html: True if generating HTML output, false for plain text.
+ * - message: The $message array created and used in the mail building
+ *   procedure. Its content varies between cases, but typically contains at
+ *   least the following elements:
+ *   - id: The message identifier.
+ *   - module: The module that handles the building of the message.
+ *   - key: The key of the message.
+ *   - to: The recipient email address.
+ *   - from: The email address of the sender.
+ *   - langcode: The langcode to use to compose the e-mail.
+ *   - params: The message parameters.
+ * - base_url: The site base url including scheme, without trailing slash.
+ *
+ * This template may be overriden by module and/or mail key, using any of the
+ * following template names:
+ * - swiftmailer.html.twig: global, used by default.
+ * - swiftmailer--mymodule.html.twig: only emails sent by the module "mymodule".
+ * - swiftmailer--mymodule--test.html.twig: only emails by the module
+ *   "mymodule" with key "test".
+ *
+ * @see template_preprocess()
+ * @see template_preprocess_swiftmailer()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if is_html %}
+  <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <!--[if gte mso 9]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml><![endif]-->
+    <title>Ready to talk with your doctor?</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="format-detection" content="address=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <style type="text/css">
+      /* Remove spaces around the email design added by some email clients. */
+      html,
+      body {
+        margin: 0 auto !important;
+        padding: 0 !important;
+        height: 100% !important;
+        width: 100% !important;
+      }
+      /* Stops email clients resizing small text. */
+      * {
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+      }
+      /* Stops Outlook from adding extra spacing to tables. */
+      table,
+      td {
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+      table {
+        border-collapse: collapse !important;
+        border-spacing: 0 !important;
+        border: 0 !important;
+      }
+      table td {
+        padding: 0;
+      }
+      b {
+        font-family: Arial, Helvetica, sans-serif; font-weight: bold;
+      }
+      /* Fixes webkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-layout to the first 2 tables then removes for anything nested deeper. */
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+      }
+      table table table {
+        table-layout: auto;
+      }
+      /* Uses a better rendering method when resizing images in IE. */
+      img {
+        display: block;
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        -ms-interpolation-mode: bicubic;
+      }
+      p {
+        margin: 0;
+      }
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        outline: none !important;
+        border-bottom: 0 !important;
+      }
+    </style>
+    <!--[if mso]>
+    <style type="text/css">
+      sup {
+        font-size: 100% !important;
+      }
+    </style>
+    <![endif]-->
+  </head>
+  <body style="
+  margin:0 !important;padding:0 !important;min-width:100%;background-color:#ffffff;
+  -moz-text-size-adjust:none !important; -webkit-text-size-adjust:none !important; -ms-text-size-adjust:none !important;">
+  <div
+    style="display: none; font-size: 1px; color: #fefefe; line-height: 1px; font-family: Helvetica, Arial, sans-serif; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden;">
+    Check out your Symptom Questionnaire results. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+
+  <table
+    align="center" width="600"
+    style="max-width: 600px; margin: 0 auto; border: 0; border-spacing: 0; border-collapse: collapse; text-align: left;font-size: 12px; line-height: 15px;">
+
+    <tr>
+      <td>
+        <table border="0" cellpadding="0" cellspacing="0" width="100%"
+               style="width: 100%; text-align: left; background-color: #FFFFFF;">
+
+          <tr>
+            <td style="padding-left: 40px; padding-right: 25px; padding-top: 14px; padding-bottom: 16px;">
+              <table border="0" cellpadding="0" cellspacing="0" width="100%" style="width: 100%; text-align: left;">
+                <tr>
+                  <td style="padding-right: 15px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%"
+                           style="width: 100%; text-align: left;">
+                      <tr>
+                        <td
+                          style="padding-bottom: 10px; font-size: 1px; line-height: 1px; height: 5px; border-top: 5px solid #dce0df;"
+                          class="">&nbsp;
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td style="font-family: Arial, Helvetica, sans-serif;
+                          font-size: 20px;
+                          line-height: 24px;
+                          color: #007BFF;
+                          padding-bottom: 20px;
+                          padding-right: 30px;">
+                          Here are the results of your questionnaire. Share them with your healthcare professional on
+                          your
+                          next visit.
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="padding-bottom: 2px; font-size: 1px; line-height: 1px; height: 5px; border-top: 5px solid #dce0df;"
+                          class="">&nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding-bottom: 14px;">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%" style="text-align: left;">
+                      {% for key, row in message.params.data %}
+                        <tr>
+                          <td width="37"
+                              style="padding-bottom: 10px; vertical-align: top; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 18px; font-weight: bold; color:#060606;"
+                              class="">
+                            {{ key }}.
+                          </td>
+                          <td
+                            style="padding-bottom: 9px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 17px; color:#3d3e3d;">
+                            {{ row.question.value }}
+                            <br/>
+                            <span style="color: #3d3e3d; font-size: 15px;">{{ row.answer }}</span>
+                          </td>
+                        </tr>
+                      {% endfor %}
+                    </table>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    style="padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; color:#3d3e3d; ">
+                    Adapted from the PHQ-9 scale developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke
+                    and colleagues, with an educational grant from Pfizer, Inc.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    style="padding-bottom: 10px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; color:#3d3e3d; ">
+                    This resource is provided for informational purposes only and is not intended as a substitute for a
+                    healthcare professional’s independent judgment. Always follow the healthcare advice of your doctor.
+                    Do
+                    not change the way you take your medication without talking with your doctor.
+                  </td>
+                </tr>
+
+                <tr>
+                  <td
+                    style="padding-bottom: 15px; font-family: Arial, Helvetica, sans-serif; font-size: 14px; line-height: 19px; font-weight: bold; color:#3d3e3d; ">
+                    If you ever have suicidal thoughts, call your doctor or 911, or go to an emergency room. Take
+                    suicidal
+                    thoughts seriously and get help immediately.
+                  </td>
+                </tr>
+                <tr>
+                  <td
+                    style="padding-bottom: 2px; font-size: 1px; line-height: 1px; height: 5px; border-top: 5px solid #dce0df;"
+                    class="">&nbsp;
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+
+        </table>
+      </td>
+    </tr>
+
+  </table>
+  </body>
+  </html>
+{% else %}
+  {{ body }}
+{% endif %}
+

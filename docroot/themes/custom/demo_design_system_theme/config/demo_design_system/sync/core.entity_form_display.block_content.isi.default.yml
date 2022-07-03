@@ -1,0 +1,116 @@
+uuid: f12b4f4a-5985-4bd3-8ebe-5ccc28f13dbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.field.block_content.isi.field_isi_drawer
+    - field.field.block_content.isi.field_isi_drawer_content
+    - field.field.block_content.isi.field_isi_footer
+    - field.field.block_content.isi.field_isi_initial_visit
+    - field.field.block_content.isi.field_isi_inline_content
+    - field.field.block_content.isi.field_isi_title
+    - field.field.block_content.isi.field_isi_toggle_close
+    - field.field.block_content.isi.field_isi_toggle_open
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: j5k2xxbXjCstysobGDY6GbEt28aPj-Khb7_oB4ui1BQ
+id: block_content.isi.default
+targetEntityType: block_content
+bundle: isi
+mode: default
+content:
+  field_isi_drawer:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_isi_drawer_content:
+    type: paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: isi_section
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_isi_footer:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_isi_initial_visit:
+    weight: 6
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_isi_inline_content:
+    type: paragraphs
+    weight: 7
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed_expand_nested
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: isi_section
+      features:
+        add_above: add_above
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_isi_title:
+    weight: 1
+    settings:
+      rows: 1
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_isi_toggle_close:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_isi_toggle_open:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

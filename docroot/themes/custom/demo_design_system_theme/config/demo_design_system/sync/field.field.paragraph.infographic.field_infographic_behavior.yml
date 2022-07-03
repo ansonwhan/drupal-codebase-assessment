@@ -1,0 +1,23 @@
+uuid: 2725dfc7-ba3c-4423-b512-045831b832fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_behavior
+    - paragraphs.paragraphs_type.infographic
+  module:
+    - options
+id: paragraph.infographic.field_infographic_behavior
+field_name: field_infographic_behavior
+entity_type: paragraph
+bundle: infographic
+label: 'Infographic Behavior'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

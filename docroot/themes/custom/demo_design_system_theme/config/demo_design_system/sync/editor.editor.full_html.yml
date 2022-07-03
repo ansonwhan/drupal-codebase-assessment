@@ -1,0 +1,66 @@
+uuid: b85a91a8-2ed3-41f2-afe9-4f739985e30f
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+            - Table
+            - HorizontalRule
+        -
+          name: 'Block Formatting'
+          items:
+            - Styles
+            - Format
+        -
+          name: Tools
+          items:
+            - ShowBlocks
+            - Source
+  plugins:
+    stylescombo:
+      styles: "span.editor--time-meridian|Time meridian\r\nspan.editor--footnotes|Footnotes\r\na.editor--wrapped-urls|Big urls\r\nh1.subhead-bold|H1 Subhead bold\r\nh2.subhead-bold|H2 Subhead bold\r\nh3.subhead-bold|H3 Subhead bold\r\nh4.subhead-bold|H4 Subhead bold\r\nh5.subhead-bold|H5 Subhead bold\r\nh6.subhead-bold|H6 Subhead bold\r\nspan.h1|H1 span\r\nspan.h2|H2 span\r\nspan.h3|H3 span\r\nspan.h4|H4 span\r\nspan.h5|H5 span\r\nspan.h6|H6 span"
+    language:
+      language_list: un
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

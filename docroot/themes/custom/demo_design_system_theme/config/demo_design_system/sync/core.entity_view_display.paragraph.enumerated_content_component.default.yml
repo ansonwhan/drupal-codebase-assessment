@@ -1,0 +1,22 @@
+uuid: 020159e9-537f-4ac8-b41c-6f4f7b0a062f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enumerated_content_component.field_cta_teaser
+    - paragraphs.paragraphs_type.enumerated_content_component
+  module:
+    - text
+id: paragraph.enumerated_content_component.default
+targetEntityType: paragraph
+bundle: enumerated_content_component
+mode: default
+content:
+  field_cta_teaser:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

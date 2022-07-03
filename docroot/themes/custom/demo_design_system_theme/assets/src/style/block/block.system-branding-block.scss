@@ -1,0 +1,23 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.site-branding {
+  padding-top: 11px;
+  margin-right: 10px;
+
+  .navbar-brand {
+    margin-right: 0;
+  }
+
+  @include media-breakpoint-up(xm) {
+    margin-right: 35px;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin-right: 38px;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-right: 65px;
+  }
+}

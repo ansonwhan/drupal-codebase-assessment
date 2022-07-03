@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Disable cache on story book side.  -->
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="0" http-equiv="Expires"/>
+  <!-- End Disable cache  -->
+
+  <title>
+    Layout with banner, sidebar, header, footer v.1
+  </title>
+
+  <meta content="noindex" name="robots">
+  <!-- start default from Drupal -->
+  <link href="/core/modules/system/css/components/ajax-progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/align.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/autocomplete-loading.module.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/fieldgroup.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/container-inline.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/clearfix.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/details.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/hidden.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/item-list.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/js.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/nowrap.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/position-container.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/reset-appearance.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/resize.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/sticky-header.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-counter.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-counters.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-general-info.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tabledrag.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tablesort.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tree-child.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/modules/contrib/extlink/extlink.css?qnzv0l" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.utility.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.navigation.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.button.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/lib/reset.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.critical.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="//cloud.typenetwork.com/projects/4216/fontface.css" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu-sticky.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-bottom.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.main.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.promo-links.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.switcher-condition.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.system-branding-block.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-middle.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-top.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.top-alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/base/focus.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/global.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.css" media="all"
+        rel="stylesheet"/>
+
+  <!--[if lte IE 8]>
+  <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+  <![endif]-->
+  <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+
+  <!-- js normally at the end but for this it should be fine -->
+  <script data-drupal-selector="drupal-settings-json" type="application/json">{
+    "path": {
+      "baseUrl": "\/",
+      "scriptPath": null,
+      "pathPrefix": "",
+      "currentPath": "node\/26",
+      "currentPathIsAdmin": false,
+      "isFront": false,
+      "currentLanguage": "en"
+    },
+    "pluralDelimiter": "\u0003",
+    "suppressDeprecationErrors": true,
+    "data": {
+      "extlink": {
+        "extTarget": false,
+        "extTargetNoOverride": false,
+        "extNofollow": false,
+        "extNoreferrer": true,
+        "extFollowNoOverride": false,
+        "extClass": "ext",
+        "extLabel": "(link is external)",
+        "extImgClass": false,
+        "extSubdomains": true,
+        "extExclude": "",
+        "extInclude": "",
+        "extCssExclude": "",
+        "extCssExplicit": "",
+        "extAlert": false,
+        "extAlertText": "This link will take you to an external web site. We are not responsible for their content.",
+        "mailtoClass": "mailto",
+        "mailtoLabel": "(link sends email)",
+        "extUseFontAwesome": false,
+        "extIconPlacement": "append",
+        "extFaLinkClasses": "fa fa-external-link",
+        "extFaMailtoClasses": "fa fa-envelope-o",
+        "whitelistedDomains": []
+      }
+    },
+    "demo_design_system_theme": {
+      "menu_behavior": "Persistent"
+    },
+    "user": {
+      "uid": 0,
+      "permissionsHash": "8d2ec1ffdc5caa0d649fcc1da8c534e361c736da51861e161ff9676396639b77"
+    }
+  }</script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.5.1"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+  <script src="/core/misc/drupalSettingsLoader.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.init.js?v=8.9.11"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.util.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.collapse.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.alert.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.button.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.dropdown.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu-sticky.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/focus.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/global.js?v=8.9.11"></script>
+  <script src="/modules/contrib/extlink/extlink.js?v=8.9.11"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu.main.js?qnzv0l"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/block/block.isi-sidebar.js?qnzv0l"></script>
+  <!-- end js -->
+
+
+  <!-- end default from Drupal -->
+
+  <!-- Start common-storybook-js -->
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/helpers/storybook-global.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/storybook.js"></script>
+  <!-- End common-storybook-js -->
+
+
+  <!-- start links to component specific CSS & JS -->
+
+  <!-- SLICK carousel  CSS and JS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" media="all"
+        rel="stylesheet"/>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/carousels/a-spot-hero-carousel.js"></script>
+  <!-- End SLICK carousel  CSS and JS -->
+
+  <!-- Dedicated CSS -->
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/component/cta-rows/group-cta-rows.css"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/component/carousels/a-spot-hero-light-theme.css"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/component/layouts/layouts_parts/layout-a-spot-hero-light-theme.css"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.isi-sidebar.css"
+    media="all"
+    rel="stylesheet"/>
+  <!-- End dedicated CSS -->
+
+  <!-- end links to component specific CSS & JS -->
+</head>
+<body>
+
+
+<header class="header" id="section-header" role="banner">
+  <div class="region--header-top" id="header-top">
+    <div class="container">
+      <div class="region region-header-top clearfix">
+        <div
+          class="block-content-top-alert block-content-alert block block-block-content block-block-content8504010b-0cc4-4076-af64-b78ca1af29ff block-top-alert alert alert-light alert-dismissible fade show custom-top-alert"
+          id="block-topalert"
+          role="alert">
+          <div class="content">
+
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field--item"><p>Lorem Ipsum Banner</p></div>
+            </div>
+
+          </div>
+          <button aria-label="Close" class="close" data-dismiss="alert" type="button">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="region--header-middle" id="header-middle">
+    <div class="container">
+      <div class="region region-header-middle clearfix">
+        <div
+          class="block-content-us-full-prescribing-information block-content-basic block block-block-content block-block-contenta6463880-eb34-47a1-b0bc-8f491c6e62c8 block-us-full-prescribing-information"
+          id="block-usfullprescribinginformation">
+
+
+          <div class="content">
+
+
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field--item">
+                <ul>
+                  <li><a href="#">US Full Prescribing Information, including boxed warning</a></li>
+                  <li><a href="#">Medication guide</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+        <div
+          class="block-content-us-healthcare-professionals-site block-content-basic block block-block-content block-block-content75e91848-8ced-4906-b414-db14d0adbe42 block-us-healthcare-professionals-site"
+          id="block-ushealthcareprofessionalssite">
+
+
+          <div class="content">
+
+
+            <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+              <div class="field--item">
+                <ul>
+                  <li><a href="#">U.S. Healthcare Professionals Site</a></li>
+                </ul>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="region--header-1-2" id="header-menu-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="region region-header-1 clearfix">
+            <div class="site-branding" id="block-otsuka-design-system-theme-branding">
+              <a class="navbar-brand" href="/a/about-condition" rel="home" title="Home">
+                <img
+                  alt="Home"
+                  class="img-fluid d-inline-block align-top"
+                  src="/sites/g/files/qhldwo2971/themes/site/themes/custom/demo_design_system_theme/logo.svg">
+
+              </a>
+            </div>
+
+            <div class="block block-otsuka-condition-switcher block-otsuka-condition-switcher-block"
+                 id="block-otsukaconditionswitcher">
+
+
+              <div class="content">
+                <div class="custom--condition-switcher">
+                  <div class="dropdown">
+                    <button aria-expanded="false" aria-haspopup="true"
+                            class="btn btn-secondary dropdown-toggle" data-toggle="dropdown"
+                            id="conditionSwitcher&quot;" type="button">CONDITION A
+                    </button>
+                    <div aria-labelledby="conditionSwitcher" class="dropdown-menu">
+                      <a class="dropdown-item" href="/b/about-condition">CONDITION B</a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="region region-header-2 clearfix">
+            <nav aria-labelledby="block-promolinks-menu" id="block-promolinks" role="navigation">
+
+              <h2 class="visually-hidden" id="block-promolinks-menu">Promo links</h2>
+
+
+              <ul block="block-promolinks" class="menu menu-promo-links nav">
+                <li class="menu-item nav-item">
+                  <a class="field--discussion-guide" data-drupal-link-system-path="node/56"
+                     href="/discussion-guide"
+                     target="_self">Discussion Guide</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="field--savings-card" data-drupal-link-system-path="node/51"
+                     href="/savings-card"
+                     target="_self">Savings Card Program</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="region--header-bottom" id="header-menu-bottom">
+    <div class="container">
+      <div class="region region-header-bottom clearfix">
+        <nav aria-labelledby="block-otsuka-design-system-theme-main-menu-menu"
+             class="navbar menu-main navbar-light bg-light navbar-expand-md"
+             id="block-otsuka-design-system-theme-main-menu"
+             role="navigation">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button aria-controls="navbarTogglerblock-otsuka-design-system-theme-main-menu-menu"
+                  aria-expanded="false" aria-label="Toggle navigation"
+                  data-target="#navbarTogglerblock-otsuka-design-system-theme-main-menu-menu"
+                  class="navbar-toggler"
+                  data-toggle="collapse" type="button">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse"
+               id="navbarTogglerblock-otsuka-design-system-theme-main-menu-menu">
+
+            <ul block="block-otsuka-design-system-theme-main-menu" class="menu menu-main nav">
+              <li class="menu-item nav-item">
+                <a data-drupal-link-system-path="node/91" href="/a/home1">Home (Option 1 - ISI
+                  Sidebar)</a>
+              </li>
+              <li class="menu-item menu-item--active-trail nav-item">
+                <a class="is-active" data-drupal-link-system-path="node/6" href="/a/about-condition"
+                   target="_self">About Condition A</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a data-drupal-link-system-path="node/11" href="/a/about-medication" target="_self">About
+                  Medication</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a data-drupal-link-system-path="node/16" href="/a/faqs" target="_self">FAQs</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a data-drupal-link-system-path="node/21" href="/a/tools-resources" target="_self">Tools
+                  &amp; Resources</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a class="field--discussion-guide d-md-none d-lg-none field--border-top"
+                   data-drupal-link-system-path="node/56"
+                   href="/discussion-guide"
+                   target="_self">Discussion guide</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a class="field--savings-card d-md-none d-lg-none field--border-bottom"
+                   data-drupal-link-system-path="node/51"
+                   href="/savings-card"
+                   target="_self">Savings Card Program</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a class="d-md-none d-lg-none" href="" target="_self">U.S. HEALTHCARE PROFESSIONALS
+                  Site</a>
+              </li>
+              <li class="menu-item nav-item">
+                <a class="d-md-none d-lg-none" href="" target="_self">Safety Program</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+
+<div class="page-container" id="page-container">
+  <main id="main-content" role="main">
+    <div class="region region-content-top clearfix">
+      <!-- Start custom code for components -->
+      <div class="container mb-5">
+        <div class="">
+
+          <div class="notes fixed-bottom text-primary text-center bg-success"
+               style="background-color: azure;">
+            <h1>Notes about <i>layout-with-banner-sidebar-header-footer_v1</i> prototype</h1>
+          </div>
+
+          <div class="example">
+
+
+            <div class="row storybook-isi-wrapper">
+              <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 ods-col">
+                <div class="layout-a-spot-hero-light-theme ods-mb-15" id="layout-no-isi-sidebar">
+                  <div class="a-spot-hero-light">
+                    <div class="container ods-pl-0">
+                      <div class="row">
+                        <div class="col-12 ods-p-0">
+                          <div class="card">
+                            <div class="carousel card-block">
+
+                              <div class="slide-wrapper">
+                                <div class="card-img-top"></div>
+                                <div
+                                  class="jumbotron position-absolute text-dark text-left jumbotron-container">
+                                  <div class="row">
+                                    <div
+                                      class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 jumbotron-img-container display-lg-none">
+                                      <div
+                                        aria-label="home page hero"
+                                        class="page-hero-img"
+                                        role="img"
+                                        title="home page hero"></div>
+                                    </div>
+                                    <div
+                                      class="col-xs-12 col-sm-7 col-md-7 col-lg-6 col-xl-6 ods-px-10 banner-text-container">
+                                      <h1 class="text-dark">Medication to manage your mental
+                                        health</h1>
+                                      <p class="first-paragraph">Lorem ipsum dolor sit amet,
+                                        consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua.</p>
+                                      <p>
+                                        <a
+                                          class="text-uppercase btn btn-primary btn-sm btn-rounded ods-p-10"
+                                          href="#" role="button" tabindex="0">
+                                          how it works
+                                        </a>
+                                      </p>
+                                    </div>
+                                    <div
+                                      class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 jumbotron-img-container display-xs-none">
+                                      <div
+                                        aria-label="home page hero"
+                                        class="page-hero-img"
+                                        role="img"
+                                        title="home page hero"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+                </div>
+                <!-- start example code for Drupal -->
+                <div class="group-cta-rows ods-mt-50  ods-m-auto">
+
+                  <div class="cta-row ods-mt-15">
+                    <div class="card-body d-flex flex-wrap align-items-center">
+                      <div class="img-container col-4 col-sm-2">
+                        <!-- At the moment img src is defined in the scss stylesheet  -->
+                        <div
+                          aria-label="pain icon"
+                          class="pain-icon d-block"
+                          role="img"
+                          title="pain icon"></div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="card-title">
+                          <h4>How to get patients started?</h4>
+                        </div>
+                        <div class="card-text">
+                          <p>Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        </div>
+                      </div>
+                      <div class="button-container col-12 col-sm-4">
+                        <a
+                          class="text-uppercase btn btn-primary btn-sm btn-rounded float-lg-right float-md-right float-sm-right"
+                          role="button"
+                        >
+                          enroll now
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+
+                  <div class="cta-row ods-mt-15">
+                    <div class="card-body d-flex flex-wrap align-items-center">
+                      <div class="img-container col-4 col-sm-2">
+                        <!-- At the moment img src is defined in the scss stylesheet  -->
+                        <div
+                          aria-label="time icon"
+                          class="time-icon d-block"
+                          role="img"
+                          title="time icon"></div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="card-title">
+                          <h4>The chronic pain cycle</h4>
+                        </div>
+                        <div class="card-text">
+                          <p>Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        </div>
+                      </div>
+                      <div class="button-container col-12 col-sm-4">
+                        <a
+                          class="text-uppercase btn btn-primary btn-sm btn-rounded float-lg-right float-md-right float-sm-right"
+                          role="button"
+                        >
+                          about pain
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+
+                  <div class="cta-row ods-mt-15">
+                    <div class="card-body d-flex flex-wrap align-items-center">
+                      <div class="img-container col-4 col-sm-2">
+                        <!-- At the moment img src is defined in the scss stylesheet  -->
+                        <div
+                          aria-label="graph icon"
+                          class="graph-icon d-block"
+                          role="img"
+                          title="graph icon"></div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="card-title">
+                          <h4>Safety Information</h4>
+                        </div>
+                        <div class="card-text">
+                          <p>Some quick example text to build on the card title and make up the bulk
+                            of the card's content.</p>
+                        </div>
+                      </div>
+                      <div class="button-container col-12 col-sm-4">
+                        <a
+                          class="text-uppercase btn btn-primary btn-sm btn-rounded float-lg-right float-md-right float-sm-right"
+                          role="button"
+                        >
+                          learn more
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+
+                </div>
+                <!-- end example code for Drupal -->
+
+              </div>
+
+              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 js-storybook-remove-isi">
+                <div class="region region-sidebar-right clearfix">
+
+                  <a id="isi-top" name="isi-top"></a>
+                  <section class="inline-isi-wrapper section isi-section" id="inline-isi-wrapper">
+
+                    <div class="inline-isi-header">
+
+
+                      <div
+                        class="field field-name-field-isi-title field-type-text-long field-label-hidden">
+                        <div class="field--item"><p>IMPORTANT SAFETY INFORMATION AND INDICATIONS FOR
+                          LOREM®
+                          (LOREMIPSUM)</p>
+                        </div>
+                      </div>
+
+
+                    </div>
+
+                    <div class="scroll-wrapper isi isi-block inline-isi-scrollable"
+                         style="position: relative;">
+                      <div
+                        class="isi isi-block inline-isi-scrollable scroll-content scroll-scrolly_visible"
+                        style="height: auto; margin-bottom: -17px; margin-right: -17px; max-height: 125px;">
+                        <div class="isi-inline-inner-wrap">
+
+
+                          <div
+                            class="field field-name-field-isi-inline-content field-type-entity-reference-revisions field-label-hidden">
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-436">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><p><strong>IMPORTANT SAFETY
+                                          INFORMATION:</strong></p>
+
+                                          <hr>
+                                          <p><strong>Increased risk of death in elderly patients
+                                            with
+                                            dementia-related psychosis: Medicines like LOREM IPSUM
+                                            can raise
+                                            the risk of death in elderly people who have lost touch
+                                            with
+                                            reality (psychosis) due to confusion and memory loss
+                                            (dementia).
+                                            LOREM IPSUM is not approved to treat patients with
+                                            dementia-related psychosis. </strong></p>
+
+                                          <p><strong>Increased risk of suicidal thoughts or actions
+                                            in children
+                                            and young adults: Antidepressant medicines may increase
+                                            suicidal
+                                            thoughts or actions in some children and young adults
+                                            within the
+                                            first few months of treatment and when the dose is
+                                            changed. Pay
+                                            close attention to any changes, especially new and
+                                            sudden changes,
+                                            in mood, behaviors, thoughts, or feelings and report
+                                            them to the
+                                            healthcare provider. It is not known if LOREM IPSUM is
+                                            safe and
+                                            effective for use in children.</strong></p>
+
+                                          <hr>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-441">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><p><strong>Do not take LOREM IPSUM
+                                          if
+                                          you</strong> are allergic to aripiprazole or any of the
+                                          ingredients in LOREM IPSUM. Allergic reactions may
+                                          include: rash,
+                                          hives, itching, difficulty breathing, tightness in the
+                                          chest,
+                                          swelling of the mouth, face, lips, or tongue.</p>
+
+                                          <p><strong>LOREM IPSUM may cause serious side effects,
+                                            including:</strong></p>
+
+                                          <ul>
+                                            <li>Stroke (cerebrovascular problems) in elderly people
+                                              with
+                                              dementia-related psychosis that can lead to death.
+                                            </li>
+                                            <li>Neuroleptic malignant syndrome (NMS), a rare and
+                                              serious
+                                              condition that can lead to death. Call your healthcare
+                                              provider or
+                                              go to the nearest hospital emergency room right away
+                                              if you have
+                                              some or all of the following signs and symptoms of
+                                              NMS: high
+                                              fever, stiff muscles, confusion, sweating, changes in
+                                              pulse, heart
+                                              rate, and blood pressure.
+                                            </li>
+                                            <li>Uncontrolled body movements (tardive dyskinesia or
+                                              TD). LOREM
+                                              IPSUM may cause movements that you cannot control in
+                                              your face,
+                                              tongue, or other body parts. TD may not go away, even
+                                              if you stop
+                                              taking LOREM IPSUM. TD may also start after you stop
+                                              taking LOREM
+                                              IPSUM.
+                                            </li>
+                                            <li>Problems with your metabolism such as:
+                                              <ul>
+                                                <li>high blood sugar (hyperglycemia) and diabetes.
+                                                  Increases in
+                                                  blood sugar can happen in some people who take
+                                                  LOREM IPSUM.
+                                                  Extremely high blood sugar can lead to coma or
+                                                  death. If you
+                                                  have diabetes or risk factors for diabetes (such
+                                                  as being
+                                                  overweight or a family history of diabetes), your
+                                                  healthcare
+                                                  provider should check your blood sugar before
+                                                  starting LOREM
+                                                  IPSUM and during your treatment.
+                                                </li>
+                                                <li>Call your healthcare provider if you have any of
+                                                  these
+                                                  symptoms of high blood sugar while receiving LOREM
+                                                  IPSUM:
+                                                </li>
+                                                <li>feel very thirsty</li>
+                                                <li>need to urinate more than usual</li>
+                                                <li>feel very hungry</li>
+                                                <li>feel weak or tired</li>
+                                                <li>feel sick to your stomach</li>
+                                                <li>feel confused, or your breath smells fruity</li>
+                                                <li>increased fat levels (cholesterol and
+                                                  triglycerides) in your
+                                                  blood.
+                                                </li>
+                                                <li>weight gain. You and your healthcare provider
+                                                  should check
+                                                  your weight regularly.
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>Unusual urges. Some people taking aripiprazole have
+                                              had unusual
+                                              urges, such as gambling, binge eating or eating that
+                                              you cannot
+                                              control (compulsive), compulsive shopping and sexual
+                                              urges. If you
+                                              or your family members notice that you are having
+                                              unusual urges or
+                                              behaviors, talk to your healthcare provider.
+                                            </li>
+                                            <li>Decreased blood pressure (orthostatic hypotension).
+                                              You may feel
+                                              lightheaded or faint when you rise too quickly from a
+                                              sitting or
+                                              lying position.
+                                            </li>
+                                            <li>Falls</li>
+                                            <li>Low white blood cell count. Your healthcare provider
+                                              may do
+                                              blood tests during the first few months of treatment
+                                              with LOREM
+                                              IPSUM.
+                                            </li>
+                                            <li>Seizures (convulsions)</li>
+                                            <li>Problems with control of your body temperature so
+                                              that you feel
+                                              too warm. Do not become too hot or dehydrated during
+                                              treatment
+                                              with LOREM IPSUM. Avoid getting over-heated or
+                                              dehydrated. Do not
+                                              exercise too much. In hot weather, stay inside in a
+                                              cool place if
+                                              possible. Stay out of the sun, and do not wear too
+                                              much or heavy
+                                              clothing. Drink plenty of water.
+                                            </li>
+                                            <li>Difficulty swallowing</li>
+                                          </ul>
+                                          <p>LOREM IPSUM may make you drowsy. Do not drive, operate
+                                            heavy
+                                            machinery, or do other dangerous activities until you
+                                            know how LOREM
+                                            IPSUM affects you.</p>
+
+                                          <p><strong>Before taking LOREM IPSUM, tell your healthcare
+                                            provider if
+                                            you:</strong></p>
+
+                                          <ul>
+                                            <li>have or had diabetes or high blood sugar in you or
+                                              your family;
+                                              your healthcare provider should check your blood sugar
+                                              before
+                                              starting and during therapy with LOREM IPSUM
+                                            </li>
+                                            <li>have or had seizures (convulsions)</li>
+                                            <li>have or had low or high blood pressure</li>
+                                            <li>have or had heart problems or stroke</li>
+                                            <li>have or had low white blood cell count</li>
+                                            <li>are pregnant or have plans to become pregnant. It is
+                                              not known
+                                              if LOREM IPSUM will harm your unborn baby.
+                                              <ul>
+                                                <li>There is a pregnancy exposure registry that
+                                                  monitors
+                                                  pregnancy outcomes in women exposed to LOREM IPSUM
+                                                  during
+                                                  pregnancy. For more information contact the
+                                                  National Pregnancy
+                                                  Registry for Atypical Antipsychotics at
+                                                  1-866-961-2388 or
+                                                  visit http://womensmentalhealth.org/
+                                                  <wbr>
+                                                  clinical-and-research-programs/
+                                                  <wbr>
+                                                  pregnancyregistry/
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>are breast-feeding or have plans to breast-feed.
+                                              LOREM IPSUM can
+                                              pass into your breast milk and may harm your baby.
+                                              Talk to your
+                                              healthcare provider about the best way to feed your
+                                              baby if you
+                                              receive LOREM IPSUM
+                                            </li>
+                                            <li>have or had any other medical conditions</li>
+                                          </ul>
+                                          <p>Tell your healthcare provider about all the medicines
+                                            that you
+                                            take, including prescription and over-the-counter
+                                            medicines,
+                                            vitamins, and herbal supplements. LOREM IPSUM and other
+                                            medicines
+                                            may affect each other causing possible serious side
+                                            effects. LOREM
+                                            IPSUM may affect the way other medicines work, and other
+                                            medicines
+                                            may affect how LOREM IPSUM works. Do not start or stop
+                                            any medicines
+                                            while taking LOREM IPSUM without talking to your
+                                            healthcare provider
+                                            first.</p>
+
+                                          <p>The most common side effects of LOREM IPSUM in adults
+                                            include:
+                                            restlessness or need to move (akathisia); dizziness;
+                                            nausea;
+                                            insomnia; shaking (tremor); anxiety; constipation;
+                                            sedation</p>
+
+                                          <p>These are not all the possible side effects of LOREM
+                                            IPSUM. Call
+                                            your doctor for medical advice about side effects. You
+                                            are
+                                            encouraged to report side effects to Otsuka America
+                                            Pharmaceutical,
+                                            Inc. at 1-800-438-9927 or FDA at 1-800-FDA-1088 or
+                                            www.fda.gov/medwatch.</p>
+
+                                          <p>Please read FULL PRESCRIBING INFORMATION, including
+                                            BOXED WARNING,
+                                            and MEDICATION GUIDE.</p>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-446">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><h6><strong>INDICATIONS:</strong>
+                                        </h6>
+
+                                          <p>LOREM IPSUM is a prescription medicine of an
+                                            aripiprazole tablet
+                                            with an Ingestible Event Marker (IEM) sensor inside it
+                                            used in
+                                            adults for the:</p>
+
+                                          <ul>
+                                            <li>Treatment of schizophrenia</li>
+                                            <li>Treatment of bipolar I disorder alone or when used
+                                            </li>
+                                            <li>with the medicine lithium or valproate for:
+                                              <ul>
+                                                <li>acute (short-term) treatment of manic or mixed
+                                                  episodes
+                                                </li>
+                                                <li>maintenance treatment</li>
+                                              </ul>
+                                            </li>
+                                            <li>Treatment of major depressive disorder (MDD) along
+                                              with other
+                                              antidepressant medicines
+                                            </li>
+                                          </ul>
+                                          <p>The LOREM IPSUM System is intended to track if you have
+                                            taken your
+                                            LOREM IPSUM. There may be a delay in the detection of
+                                            the LOREM
+                                            IPSUM tablet and sometimes the detection of the tablet
+                                            might not
+                                            happen at all. If the LOREM IPSUM APP does not indicate
+                                            that you
+                                            have taken your medicine, do not repeat the dose. It is
+                                            not known if
+                                            LOREM IPSUM can improve how well you take your
+                                            aripiprazole (patient
+                                            compliance) or for changing your dose of aripiprazole.
+                                            LOREM IPSUM
+                                            is not for use as real-time or emergency monitoring.</p>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                      </div>
+                      <div class="scroll-element scroll-x scroll-scrolly_visible">
+                        <div class="scroll-element_outer">
+                          <div class="scroll-element_size"></div>
+                          <div class="scroll-element_track"></div>
+                          <div class="scroll-bar"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div
+                      class="external-scroll-y inline-external-scroll-y scroll-y scroll-scrolly_visible">
+                      <div class="scroll-element_outer">
+                        <div class="scroll-element_size"></div>
+                        <div class="scroll-element_track"></div>
+                        <div class="scroll-bar" style="top: 0px;"></div>
+                      </div>
+                    </div>
+
+                  </section>
+
+
+                  <section
+                    class="isi-tray jsIsiContainer isi-drawer-collapsed d-md-none hide-tray isi-drawer-expanded"
+                    id="drawer-isi"
+                    style="">
+
+                    <div class="isi-header">
+                      <div class="isi-header-wrap container">
+                        <div class="drawer-title">
+
+
+                          <div
+                            class="field field-name-field-isi-title field-type-text-long field-label-hidden">
+                            <div class="field--item"><p>IMPORTANT SAFETY INFORMATION AND INDICATIONS
+                              FOR LOREM®
+                              (LOREMIPSUM)</p>
+                            </div>
+                          </div>
+
+                        </div>
+                        <button class="isi-btn jsIsiMinimize btn btn-outline-primary"
+                                data-oapigtmaction="ISI" data-oapigtmcategory="Button Clicks"
+                                data-oapigtmlabel="MAXIMIZE">
+                          <span class="isi-btn-icon"></span>
+                          <span class="js-swap-text jsSwapTextExpand">MAXIMIZE</span>
+                          <span class="js-swap-text jsSwapTextCollapse hide">MINIMIZE</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="isi isi-block isi-drawer-content isi-content-wrap container">
+
+                      <div class="scroll-wrapper isi-scrollable" style="position: relative;">
+                        <div class="isi-scrollable scroll-content"
+                             style="height: 197px; margin-bottom: -17px; margin-right: -17px; max-height: none;">
+
+
+                          <div
+                            class="field field-name-field-isi-drawer-content field-type-entity-reference-revisions field-label-hidden">
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-421">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><p><strong>IMPORTANT SAFETY
+                                          INFORMATION:</strong></p>
+
+                                          <hr>
+                                          <p><strong>Increased risk of death in elderly patients
+                                            with
+                                            dementia-related psychosis: Medicines like LOREM IPSUM
+                                            can raise
+                                            the risk of death in elderly people who have lost touch
+                                            with
+                                            reality (psychosis) due to confusion and memory loss
+                                            (dementia).
+                                            LOREM IPSUM is not approved to treat patients with
+                                            dementia-related psychosis. </strong></p>
+
+                                          <p><strong>Increased risk of suicidal thoughts or actions
+                                            in children
+                                            and young adults: Antidepressant medicines may increase
+                                            suicidal
+                                            thoughts or actions in some children and young adults
+                                            within the
+                                            first few months of treatment and when the dose is
+                                            changed. Pay
+                                            close attention to any changes, especially new and
+                                            sudden changes,
+                                            in mood, behaviors, thoughts, or feelings and report
+                                            them to the
+                                            healthcare provider. It is not known if LOREM IPSUM is
+                                            safe and
+                                            effective for use in children.</strong></p>
+
+                                          <hr>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-426">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><p><strong>Do not take LOREM IPSUM
+                                          if
+                                          you</strong> are allergic to aripiprazole or any of the
+                                          ingredients in LOREM IPSUM. Allergic reactions may
+                                          include: rash,
+                                          hives, itching, difficulty breathing, tightness in the
+                                          chest,
+                                          swelling of the mouth, face, lips, or tongue.</p>
+
+                                          <p><strong>LOREM IPSUM may cause serious side effects,
+                                            including:</strong></p>
+
+                                          <ul>
+                                            <li>Stroke (cerebrovascular problems) in elderly people
+                                              with
+                                              dementia-related psychosis that can lead to death.
+                                            </li>
+                                            <li>Neuroleptic malignant syndrome (NMS), a rare and
+                                              serious
+                                              condition that can lead to death. Call your healthcare
+                                              provider or
+                                              go to the nearest hospital emergency room right away
+                                              if you have
+                                              some or all of the following signs and symptoms of
+                                              NMS: high
+                                              fever, stiff muscles, confusion, sweating, changes in
+                                              pulse, heart
+                                              rate, and blood pressure.
+                                            </li>
+                                            <li>Uncontrolled body movements (tardive dyskinesia or
+                                              TD). LOREM
+                                              IPSUM may cause movements that you cannot control in
+                                              your face,
+                                              tongue, or other body parts. TD may not go away, even
+                                              if you stop
+                                              taking LOREM IPSUM. TD may also start after you stop
+                                              taking LOREM
+                                              IPSUM.
+                                            </li>
+                                            <li>Problems with your metabolism such as:
+                                              <ul>
+                                                <li>high blood sugar (hyperglycemia) and diabetes.
+                                                  Increases in
+                                                  blood sugar can happen in some people who take
+                                                  LOREM IPSUM.
+                                                  Extremely high blood sugar can lead to coma or
+                                                  death. If you
+                                                  have diabetes or risk factors for diabetes (such
+                                                  as being
+                                                  overweight or a family history of diabetes), your
+                                                  healthcare
+                                                  provider should check your blood sugar before
+                                                  starting LOREM
+                                                  IPSUM and during your treatment.
+                                                </li>
+                                                <li>Call your healthcare provider if you have any of
+                                                  these
+                                                  symptoms of high blood sugar while receiving LOREM
+                                                  IPSUM:
+                                                </li>
+                                                <li>feel very thirsty</li>
+                                                <li>need to urinate more than usual</li>
+                                                <li>feel very hungry</li>
+                                                <li>feel weak or tired</li>
+                                                <li>feel sick to your stomach</li>
+                                                <li>feel confused, or your breath smells fruity</li>
+                                                <li>increased fat levels (cholesterol and
+                                                  triglycerides) in your
+                                                  blood.
+                                                </li>
+                                                <li>weight gain. You and your healthcare provider
+                                                  should check
+                                                  your weight regularly.
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>Unusual urges. Some people taking aripiprazole have
+                                              had unusual
+                                              urges, such as gambling, binge eating or eating that
+                                              you cannot
+                                              control (compulsive), compulsive shopping and sexual
+                                              urges. If you
+                                              or your family members notice that you are having
+                                              unusual urges or
+                                              behaviors, talk to your healthcare provider.
+                                            </li>
+                                            <li>Decreased blood pressure (orthostatic hypotension).
+                                              You may feel
+                                              lightheaded or faint when you rise too quickly from a
+                                              sitting or
+                                              lying position.
+                                            </li>
+                                            <li>Falls</li>
+                                            <li>Low white blood cell count. Your healthcare provider
+                                              may do
+                                              blood tests during the first few months of treatment
+                                              with LOREM
+                                              IPSUM.
+                                            </li>
+                                            <li>Seizures (convulsions)</li>
+                                            <li>Problems with control of your body temperature so
+                                              that you feel
+                                              too warm. Do not become too hot or dehydrated during
+                                              treatment
+                                              with LOREM IPSUM. Avoid getting over-heated or
+                                              dehydrated. Do not
+                                              exercise too much. In hot weather, stay inside in a
+                                              cool place if
+                                              possible. Stay out of the sun, and do not wear too
+                                              much or heavy
+                                              clothing. Drink plenty of water.
+                                            </li>
+                                            <li>Difficulty swallowing</li>
+                                          </ul>
+                                          <p>LOREM IPSUM may make you drowsy. Do not drive, operate
+                                            heavy
+                                            machinery, or do other dangerous activities until you
+                                            know how LOREM
+                                            IPSUM affects you.</p>
+
+                                          <p><strong>Before taking LOREM IPSUM, tell your healthcare
+                                            provider if
+                                            you:</strong></p>
+
+                                          <ul>
+                                            <li>have or had diabetes or high blood sugar in you or
+                                              your family;
+                                              your healthcare provider should check your blood sugar
+                                              before
+                                              starting and during therapy with LOREM IPSUM
+                                            </li>
+                                            <li>have or had seizures (convulsions)</li>
+                                            <li>have or had low or high blood pressure</li>
+                                            <li>have or had heart problems or stroke</li>
+                                            <li>have or had low white blood cell count</li>
+                                            <li>are pregnant or have plans to become pregnant. It is
+                                              not known
+                                              if LOREM IPSUM will harm your unborn baby.
+                                              <ul>
+                                                <li>There is a pregnancy exposure registry that
+                                                  monitors
+                                                  pregnancy outcomes in women exposed to LOREM IPSUM
+                                                  during
+                                                  pregnancy. For more information contact the
+                                                  National Pregnancy
+                                                  Registry for Atypical Antipsychotics at
+                                                  1-866-961-2388 or
+                                                  visit http://womensmentalhealth.org/
+                                                  <wbr>
+                                                  clinical-and-research-programs/
+                                                  <wbr>
+                                                  pregnancyregistry/
+                                                </li>
+                                              </ul>
+                                            </li>
+                                            <li>are breast-feeding or have plans to breast-feed.
+                                              LOREM IPSUM can
+                                              pass into your breast milk and may harm your baby.
+                                              Talk to your
+                                              healthcare provider about the best way to feed your
+                                              baby if you
+                                              receive LOREM IPSUM
+                                            </li>
+                                            <li>have or had any other medical conditions</li>
+                                          </ul>
+                                          <p>Tell your healthcare provider about all the medicines
+                                            that you
+                                            take, including prescription and over-the-counter
+                                            medicines,
+                                            vitamins, and herbal supplements. LOREM IPSUM and other
+                                            medicines
+                                            may affect each other causing possible serious side
+                                            effects. LOREM
+                                            IPSUM may affect the way other medicines work, and other
+                                            medicines
+                                            may affect how LOREM IPSUM works. Do not start or stop
+                                            any medicines
+                                            while taking LOREM IPSUM without talking to your
+                                            healthcare provider
+                                            first.</p>
+
+                                          <p>The most common side effects of LOREM IPSUM in adults
+                                            include:
+                                            restlessness or need to move (akathisia); dizziness;
+                                            nausea;
+                                            insomnia; shaking (tremor); anxiety; constipation;
+                                            sedation</p>
+
+                                          <p>These are not all the possible side effects of LOREM
+                                            IPSUM. Call
+                                            your doctor for medical advice about side effects. You
+                                            are
+                                            encouraged to report side effects to Otsuka America
+                                            Pharmaceutical,
+                                            Inc. at 1-800-438-9927 or FDA at 1-800-FDA-1088 or
+                                            www.fda.gov/medwatch.</p>
+
+                                          <p>Please read FULL PRESCRIBING INFORMATION, including
+                                            BOXED WARNING,
+                                            and MEDICATION GUIDE.</p>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                            <div class="field--item">
+                              <div
+                                class="paragraph paragraph--type--from-library paragraph--view-mode--default"
+                                id="paragraph-431">
+
+
+                                <div
+                                  class="field field-name-paragraphs field-type-entity-reference-revisions field-label-hidden">
+                                  <div class="field--item">
+                                    <div
+                                      class="paragraph paragraph--type--isi-section paragraph--view-mode--default">
+
+
+                                      <div
+                                        class="field field-name-field-isi-text field-type-text-long field-label-hidden">
+                                        <div class="field--item"><h6><strong>INDICATIONS:</strong>
+                                        </h6>
+
+                                          <p>LOREM IPSUM is a prescription medicine of an
+                                            aripiprazole tablet
+                                            with an Ingestible Event Marker (IEM) sensor inside it
+                                            used in
+                                            adults for the:</p>
+
+                                          <ul>
+                                            <li>Treatment of schizophrenia</li>
+                                            <li>Treatment of bipolar I disorder alone or when used
+                                            </li>
+                                            <li>with the medicine lithium or valproate for:
+                                              <ul>
+                                                <li>acute (short-term) treatment of manic or mixed
+                                                  episodes
+                                                </li>
+                                                <li>maintenance treatment</li>
+                                              </ul>
+                                            </li>
+                                            <li>Treatment of major depressive disorder (MDD) along
+                                              with other
+                                              antidepressant medicines
+                                            </li>
+                                          </ul>
+                                          <p>The LOREM IPSUM System is intended to track if you have
+                                            taken your
+                                            LOREM IPSUM. There may be a delay in the detection of
+                                            the LOREM
+                                            IPSUM tablet and sometimes the detection of the tablet
+                                            might not
+                                            happen at all. If the LOREM IPSUM APP does not indicate
+                                            that you
+                                            have taken your medicine, do not repeat the dose. It is
+                                            not known if
+                                            LOREM IPSUM can improve how well you take your
+                                            aripiprazole (patient
+                                            compliance) or for changing your dose of aripiprazole.
+                                            LOREM IPSUM
+                                            is not for use as real-time or emergency monitoring.</p>
+                                        </div>
+                                      </div>
+
+
+                                    </div>
+                                  </div>
+                                </div>
+
+
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div>
+                        <div class="scroll-element scroll-x">
+                          <div class="scroll-element_outer">
+                            <div class="scroll-element_size"></div>
+                            <div class="scroll-element_track"></div>
+                            <div class="scroll-bar"></div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="external-scroll-y scroll-y">
+                        <div class="scroll-element_outer">
+                          <div class="scroll-element_size"></div>
+                          <div class="scroll-element_track"></div>
+                          <div class="scroll-bar"></div>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </div>
+      <!-- End custom code for components -->
+    </div>
+  </main>
+</div>
+
+<footer id="section-footer" role="contentinfo">
+  <div id="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-12">
+          <div class="region region-footer-1 clearfix">
+            <div
+              class="block-content-prefooter-content block-content-basic block block-block-content block-block-content3c0ca396-833f-4c03-8859-a212d7fd25a2 block-prefooter-content"
+              id="block-prefootercontent">
+
+              <h2>Pre Footer Space</h2>
+
+              <div class="content">
+
+
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                  <div class="field--item"><p>Optional text area that can be applied to the footer.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <div class="region region-footer-2 clearfix">
+            <nav aria-labelledby="block-indicationsfooter-menu" id="block-indicationsfooter"
+                 role="navigation">
+
+              <h2 id="block-indicationsfooter-menu">Indications</h2>
+
+
+              <ul block="block-indicationsfooter" class="menu menu-indications-footer nav">
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">For treatment of
+                    Condition A</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">For treatment of
+                    Condition B</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">For treatment of
+                    Condition C</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <div class="region region-footer-3 clearfix">
+            <nav aria-labelledby="block-indicationamainmenu-menu" id="block-indicationamainmenu"
+                 role="navigation">
+
+              <h2 id="block-indicationamainmenu-menu">HCP Site Links</h2>
+
+
+              <ul block="block-indicationamainmenu" class="menu menu-main nav">
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="node/91" href="/a/home1">Home (Option 1 - ISI
+                    Sidebar)</a>
+                </li>
+                <li class="menu-item menu-item--active-trail nav-item">
+                  <a class="is-active" data-drupal-link-system-path="node/6"
+                     href="/a/about-condition"
+                     target="_self">About Condition A</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="node/11" href="/a/about-medication"
+                     target="_self">About Medication</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="node/16" href="/a/faqs" target="_self">FAQs</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="node/21" href="/a/tools-resources"
+                     target="_self">Tools &amp; Resources</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="field--discussion-guide d-md-none d-lg-none field--border-top"
+                     data-drupal-link-system-path="node/56"
+                     href="/discussion-guide"
+                     target="_self">Discussion guide</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="field--savings-card d-md-none d-lg-none field--border-bottom"
+                     data-drupal-link-system-path="node/51"
+                     href="/savings-card"
+                     target="_self">Savings Card Program</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="d-md-none d-lg-none" href="" target="_self">U.S. HEALTHCARE
+                    PROFESSIONALS Site</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="d-md-none d-lg-none" href="" target="_self">Safety Program</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+        </div>
+        <div class="col-lg-3 col-sm-4">
+          <div class="region region-footer-4 clearfix">
+            <nav aria-labelledby="block-legallinksfooter-menu" id="block-legallinksfooter"
+                 role="navigation">
+
+              <h2 id="block-legallinksfooter-menu">Legal</h2>
+
+
+              <ul block="block-legallinksfooter" class="menu menu-legal-links-footer nav">
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Important Safety
+                    Information</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">US Full
+                    Prescribing Information</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Medication
+                    Guide</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Federal
+                    Communications Commission (FCC) Statement</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="region region-footer-5 clearfix">
+            <div
+              class="block-content-oapi-logo-footer block-content-basic block block-block-content block-block-contenta1aad739-9031-4646-b64a-57bf5e5ccfac block-oapi-logo-footer"
+              id="block-oapilogofooter">
+
+
+              <div class="content">
+
+
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                  <div class="field--item">
+                    <div>
+
+
+                      <div
+                        class="blazy blazy--field blazy--field-media-image blazy--field-media-image--default field field-name-field-media-image field-type-image field-label-hidden blazy--on blazy--first"
+                        data-blazy="">
+                        <div class="field--item">
+
+
+                          <div
+                            class="media media--bundle--image media--blazy media--image is-b-loaded">
+
+
+                            <img alt="Footer logo"
+                                 class="media__image media__element b-lazy img-fluid b-loaded"
+                                 loading="lazy"
+                                 src="/sites/g/files/qhldwo2971/files/fields/2021-01/otsuka-logo-footer.png"
+                                 height="35" typeof="foaf:Image" width="173"></div>
+
+
+                        </div>
+                      </div>
+
+
+                    </div>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-lg-8 col-12">
+          <div class="region region-footer-6 clearfix">
+            <nav aria-labelledby="block-footerutility-menu" id="block-footerutility"
+                 role="navigation">
+
+              <h2 class="visually-hidden" id="block-footerutility-menu">Footer Utility</h2>
+
+
+              <ul block="block-footerutility" class="menu menu-footer-utility nav">
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Privacy
+                    Policy</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Site Map</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a data-drupal-link-system-path="<front>" href="/" target="_self">Terms of Use</a>
+                </li>
+              </ul>
+
+
+            </nav>
+            <nav aria-labelledby="block-sociallinksfooter-menu" id="block-sociallinksfooter"
+                 role="navigation">
+
+              <h2 class="visually-hidden" id="block-sociallinksfooter-menu">Social Links Footer</h2>
+
+
+              <ul block="block-sociallinksfooter" class="menu menu-social-links-footer nav">
+                <li class="menu-item nav-item">
+                  <a class="link-fb" href="https://fb.com" rel="noreferrer"
+                     target="_blank">Facebook</a>
+                </li>
+                <li class="menu-item nav-item">
+                  <a class="link-tw" href="https://twitter.com" rel="noreferrer" target="_blank">Twitter</a>
+                </li>
+              </ul>
+
+
+            </nav>
+
+          </div>
+
+        </div>
+        <div class="col-12">
+          <div class="region region-footer-middle clearfix">
+            <div
+              class="block-content-footer-text block-content-basic block block-block-content block-block-content5fd145f2-9878-4093-9d57-f0175738128c block-footer-text"
+              id="block-footertext">
+
+              <div class="content">
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                  <div class="field--item"><p>Unless otherwise specified, all product and service
+                    names appearing on this Internet site are trademarks owned by or licensed to
+                    Otsuka Patient Assistance Foundation, Inc. No use of any trademark, trade
+                    name, or trade dress in this site may be made without the prior written
+                    authorization of Otsuka Patient Assistance Foundation, Inc. except to identify
+                    the product or services of the company.</p>
+
+                    <p>This site is intended for use by residents of the United States.</p></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-8">
+          <div class="region region-footer-7 clearfix">
+            <div
+              class="block-content-copyright-text block-content-basic block block-block-content block-block-content5c03b5e8-59c6-435b-903a-b6d29c2e0802 block-copyright-text"
+              id="block-copyrighttext">
+              <div class="content">
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                  <div class="field--item"><p>© 2020 Otsuka America Pharmaceutical, Inc., Rockville,
+                    MD</p></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-4">
+          <div class="region region-footer-8 clearfix">
+            <div
+              class="block-content-content-changed-id block-content-basic block block-block-content block-block-content5f48f76d-08be-48ec-8cf0-ab4fd1291e25 block-content-changed-id"
+              id="block-contentchangedid">
+              <div class="content">
+                <div class="field field-name-body field-type-text-with-summary field-label-hidden">
+                  <div class="field--item"><p>September 2020 12US20EBC0007</p></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

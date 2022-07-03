@@ -1,0 +1,26 @@
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    settings_custom_classes ? settings_custom_classes,
+    'nav-item',
+    'd-flex',
+    content.field_nav_level|render|striptags|trim|lower|clean_class,
+  ]
+%}
+
+{% set label_text %}
+{{ content.field_nav_label }}
+{% endset %}
+
+
+{% block paragraph %}
+  <li{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+    {% block content %}
+      <a class="nav-link d-flex align-items-center analytics--n-anchor" href="#{{ content.field_custom_id|render|striptags|trim|lower }}" data-analytics-id="{{ content.field_custom_id|render|striptags|trim|lower|data_analytics_id }}" data-analytics-position="Right Rail">
+      {% spaceless %}{{- label_text|replace({'<p>':'','</p>':''})|convert_encoding('UTF-8', 'HTML-ENTITIES')|raw -}}{% endspaceless %}
+      </a>
+    {% endblock %}
+  </li>
+{% endblock paragraph %}

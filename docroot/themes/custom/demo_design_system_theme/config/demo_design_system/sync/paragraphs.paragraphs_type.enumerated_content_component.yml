@@ -1,0 +1,14 @@
+uuid: 7061e745-cf99-4eca-8f38-a90bb1a524ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: enumerated_content_component
+label: 'Enumerated Content Component'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

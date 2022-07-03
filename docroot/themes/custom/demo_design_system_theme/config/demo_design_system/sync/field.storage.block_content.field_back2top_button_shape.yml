@@ -1,0 +1,30 @@
+uuid: d799e25e-214a-43f9-b774-d6186eba2bd8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_back2top_button_shape
+field_name: field_back2top_button_shape
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: oval
+      label: 'Circular Button'
+    -
+      value: square
+      label: 'Square Button'
+    -
+      value: custom
+      label: 'Custom Shape (defined in your custom css)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

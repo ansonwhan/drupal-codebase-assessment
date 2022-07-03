@@ -1,0 +1,36 @@
+uuid: bf3687f0-8d11-445f-8755-6c55c65fc1fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.profile_row_x1_lg
+    - image.style.profile_row_x1_xs
+    - image.style.profile_row_x2_lg
+    - image.style.profile_row_x2_xs
+  theme:
+    - demo_design_system_theme
+id: profile_row
+label: 'Profile row'
+image_style_mappings:
+  -
+    breakpoint_id: demo_design_system_theme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: profile_row_x1_lg
+  -
+    breakpoint_id: demo_design_system_theme.screen-sm-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: profile_row_x2_lg
+  -
+    breakpoint_id: demo_design_system_theme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: profile_row_x1_xs
+  -
+    breakpoint_id: demo_design_system_theme.screen-xs-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: profile_row_x2_xs
+breakpoint_group: demo_design_system_theme
+fallback_image_style: profile_row_x1_lg

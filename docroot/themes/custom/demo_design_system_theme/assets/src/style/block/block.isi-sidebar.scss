@@ -1,0 +1,107 @@
+@import "../variables";
+@import "../mixins_functions";
+@import "../base/scrollbar";
+
+.region-sidebar-right {
+  position: relative;
+  height: 100%;
+  z-index: 1;
+
+  .inline-isi-wrapper {
+    width: 100%;
+    border: 1px solid #E1E1E1;
+    border-top: 6px solid #005E83;
+    background: #ffffff;
+    padding: 19px 30px 10px 20px;
+    margin-bottom: 0;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    bottom: auto;
+    -webkit-transition: all 0.35s linear;
+    -moz-transition: all 0.35s linear;
+    -o-transition: all 0.35s linear;
+    transition: all 0.35s linear;
+
+    @include media-breakpoint-down(sm) {
+      position: initial;
+      height: initial;
+      padding-bottom: 20px;
+    }
+
+    .isi-block {
+      height: calc(100% - 80px);
+      margin-top: 15px;
+      //padding-bottom: 80px !important;
+    }
+
+    .field-name-field-isi-inline-content {
+      border: none;
+      padding: 0;
+    }
+
+    .inline-isi-header {
+      p {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 700;
+        color: #005E83;
+      }
+    }
+
+    .isi-inline-inner-wrap {
+      padding: 0;
+      .field--item {
+        margin-bottom: 15px;
+      }
+
+      ul, ol, dl {
+        padding-left: 15px;
+      }
+    }
+  }
+
+  .inline-external-scroll-y {
+    &.scroll-scrolly_visible {
+      width: 7px;
+      border: none;
+      z-index: 0;
+    }
+
+    div {
+      height: calc(100% - 80px);
+      top: auto;
+      bottom: 5px;
+    }
+
+    .scroll-bar {
+      background: #7F7F7F;
+      border-radius: 4px;
+      height: 38px;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .inline-external-scroll-y {
+      div {
+        &.scroll-bar {
+          height: 38px;
+        }
+      }
+    }
+  }
+
+  .isi-header {
+    .drawer-title {
+      padding-right: 35px;
+
+      @media all and (min-width: 576px) {
+        padding-right: 115px;
+      }
+    }
+  }
+}

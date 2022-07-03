@@ -1,0 +1,47 @@
+@import "./assets/src/style/variables";
+@import "./assets/src/style/mixins_functions";
+@import "./assets/src/style/common_components_mixins";
+
+.dark-block-with-graphs {
+  background: $common-background-dark-blue;
+  height: remOrPercent(340px);
+  width: auto;
+
+  h3 {
+    @include h3HeadingCommonStyles(null, null, $inheritedBoldClass);
+  }
+
+  .diagnosis-chart-img {
+    @include commonStylesForHalfCardsImg('diagnosis_chart.webp', 180px, 180px);
+  }
+
+  .treatment-chart-img {
+    @include commonStylesForHalfCardsImg('treatment_chart.webp', 180px, 180px);
+  }
+
+  //The problem with the interpretation of the sass function responsible for breakpoint (xs),
+  // for the moment I leave the usual @mediaquery
+  @media (max-width: 575.98px) {
+    height: remOrPercent(740px);
+    .treatment-chart-img {
+      margin-left: auto;
+      @include commonStylesForHalfCardsImg('treatment_chart.webp', 225px, 225px);
+    }
+    .diagnosis-chart-img {
+      @include commonStylesForHalfCardsImg('diagnosis_chart.webp', 165px, 165px);
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    h4 {
+      @include h4HeadingCommonStyles(19.2px, null, $inheritedBoldClass);
+    }
+    .treatment-chart-img {
+      @include commonStylesForHalfCardsImg('treatment_chart.webp', 165px, 165px);
+    }
+    .diagnosis-chart-img {
+      @include commonStylesForHalfCardsImg('diagnosis_chart.webp', 165px, 165px);
+    }
+
+  }
+}

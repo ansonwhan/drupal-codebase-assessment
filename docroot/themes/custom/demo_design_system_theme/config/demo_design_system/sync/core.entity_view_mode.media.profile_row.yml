@@ -1,0 +1,10 @@
+uuid: d42a5dc1-7b9d-4c00-9619-b04ee600357b
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.profile_row
+label: 'Profile row'
+targetEntityType: media
+cache: true

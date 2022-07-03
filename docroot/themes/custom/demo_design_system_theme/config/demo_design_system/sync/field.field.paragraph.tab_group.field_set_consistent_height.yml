@@ -1,0 +1,23 @@
+uuid: 97c5ac30-615a-47eb-801c-458b507541da
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_set_consistent_height
+    - paragraphs.paragraphs_type.tab_group
+id: paragraph.tab_group.field_set_consistent_height
+field_name: field_set_consistent_height
+entity_type: paragraph
+bundle: tab_group
+label: 'Set Consistent Height'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

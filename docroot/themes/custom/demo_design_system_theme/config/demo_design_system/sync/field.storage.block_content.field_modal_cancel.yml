@@ -1,0 +1,21 @@
+uuid: 1031c89f-e31c-43bb-a13c-d40d875f6fa1
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_modal_cancel
+field_name: field_modal_cancel
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

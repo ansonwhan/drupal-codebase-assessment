@@ -1,0 +1,52 @@
+uuid: b5156fdc-40ca-4b50-a076-ec6613963f16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.components_group.field_background_color
+    - field.field.paragraph.components_group.field_border
+    - field.field.paragraph.components_group.field_components_group
+    - field.field.paragraph.components_group.field_nesting_display
+    - paragraphs.paragraphs_type.components_group
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.components_group.default
+targetEntityType: paragraph
+bundle: components_group
+mode: default
+content:
+  field_background_color:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_border:
+    weight: 2
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_components_group:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_nesting_display:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

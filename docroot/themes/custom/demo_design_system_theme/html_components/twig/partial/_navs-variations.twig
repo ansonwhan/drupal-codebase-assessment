@@ -1,0 +1,123 @@
+{#special css, html attributes#}
+{% set navLinksAttr         = navsVariations.navLinks %}
+{% set verticalNavLinksAttr = navsVariations.verticalLinks %}
+{% set menuButtonAttr       = navsVariations.overflowMenuButton %}
+{% set uppercaseLinks       = navsVariations.uppercaseLinks %}
+
+<!-- start example code for Drupal -->
+<h5>1. Navs Links</h5>
+<nav class="nav otsuka-nav__links">
+  <a class="nav-link {{ navLinksAttr.defaultLinkClass }} ods-mr-10" href="#">Link</a>
+  <a class="nav-link {{ navLinksAttr.activeLinkClass }} ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.navPillLinkClass }} ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mr-10" href="#">Disabled</a>
+</nav>
+
+<br>
+
+<h5>2. Links with Active-Pill</h5>
+<nav class="nav otsuka-nav__links">
+  <a class="nav-link {{ navLinksAttr.navPillLinkClass }} ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.defaultLinkClass }} ods-mr-10" href="#">Link</a>
+  <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mr-10" href="#">Disabled</a>
+</nav>
+
+<br>
+
+<h5>3. Links with Active-Underline </h5>
+<nav class="nav otsuka-nav__links">
+  <a class="nav-link {{ navLinksAttr.activeLinkClass }} ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.defaultLinkClass }} ods-mr-10" href="#">Link</a>
+  <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mr-10" href="#">Disabled</a>
+</nav>
+
+<br>
+
+<h5>4. Links with icons </h5>
+<nav class="nav otsuka-nav__links">
+  <a class="nav-link {{ navLinksAttr.defaultLinkClass }} ods-mr-10" href="#">
+    <i class="{{ navLinksAttr.fontAwesomeClass }} ods-mr-10"></i>
+    Link
+  </a>
+  <a class="nav-link {{ navLinksAttr.activeLinkClass }} ods-mr-10" href="#">
+    <i class="{{ navLinksAttr.fontAwesomeClass }} ods-mr-10"></i>
+    Active
+  </a>
+  <a class="nav-link {{ navLinksAttr.navPillLinkClass }} ods-mr-10" href="#">
+    <i class="{{ navLinksAttr.fontAwesomeClass }} ods-mr-10"></i>
+    Active Pill
+  </a>
+  <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mr-10" href="#">
+    <i class="{{ navLinksAttr.fontAwesomeClass }} ods-mr-10"></i>
+    Disabled
+  </a>
+</nav>
+
+<br>
+
+<h5>5. Default overflow menu button </h5>
+<div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+     class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+     tabindex="{{ menuButtonAttr.tabindex }}"
+     aria-label="{{ menuButtonAttr.ariaLabel }}"
+     title="{{ menuButtonAttr.title }}"
+     aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+     aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+</div>
+
+<br>
+
+<h6>Button with active class:</h6>
+<div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+     class="{{ menuButtonAttr.dedicatedClassSelector }} {{ menuButtonAttr.activeClassSelector }} d-flex justify-content-center align-items-center"
+     tabindex="{{ menuButtonAttr.tabindex }}"
+     aria-label="{{ menuButtonAttr.ariaLabel }}"
+     title="{{ menuButtonAttr.title }}"
+     aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+     aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+  <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+</div>
+
+<br>
+
+<h5>6. Vertical links, vertical links with icons </h5>
+<h6 class="text-danger">Please notice, for vertical links please add dedicated BS class
+  (verticalNavLinksAttr.columnClass, ods-mt-"desired value"),
+  example:</h6>
+
+<div class="col-2">
+  <nav class="nav otsuka-nav__links {{ verticalNavLinksAttr.columnClass }}">
+    <a class="nav-link {{ navLinksAttr.defaultLinkClass }} ods-mt-10 ods-mr-10" href="#">Link</a>
+    <a class="nav-link {{ navLinksAttr.activeLinkClass }} ods-mt-10 ods-mr-10" href="#">Active</a>
+    <a class="nav-link {{ navLinksAttr.navPillLinkClass }} ods-mt-10 ods-mr-10" href="#">Active</a>
+    <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mt-10 ods-mr-10"
+       href="#">Disabled</a>
+  </nav>
+</div>
+
+<br>
+
+<h5>7. Header Horizontal links, Header links with icons (uppercase links) </h5>
+<h6 class="text-danger">Please notice, for uppercase links please add dedicated BS class
+  (uppercaseLinks.uppercaseClass),
+  example:</h6>
+
+<nav class="nav otsuka-nav__links {{ uppercaseLinks.uppercaseClass }}">
+  <a class="nav-link {{ navLinksAttr.defaultLinkClass }}  ods-mr-10" href="#">Link</a>
+  <a class="nav-link {{ navLinksAttr.activeLinkClass }} ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.navPillLinkClass }}  ods-mr-10" href="#">Active</a>
+  <a class="nav-link {{ navLinksAttr.disabledLinkClass }} ods-mr-10" href="#">Disabled</a>
+</nav>
+
+<br>
+<!-- end example code for Drupal -->
+
+
+

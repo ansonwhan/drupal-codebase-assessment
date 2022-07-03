@@ -1,0 +1,61 @@
+{%
+  set classes = [
+  'node-type-' ~ node.bundle|clean_class,
+  not node.isPublished() ? 'node--unpublished',
+]
+%}
+
+{% set buttonAttributesAriaLabel = content.field_ods_article_link.0['#url'].options.attributes['aria-label'] %}
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="container" {{ content_attributes }}>
+    <div class="row">
+      <div class="teaser-container ods-p-10">
+        <div class="news-icon"></div>
+        <div class="article-content">
+          <div class="article-title">
+
+            {% set field_title_text %}
+              {{ content.field_ods_article_title }}
+            {% endset %}
+
+            {{ field_title_text | striptags('<sup><sub><i><em>')|trim|raw }}
+          </div>
+
+          <div class="time-source">
+            <div class="article-time">
+              {{ content.field_ods_article_dateline }}
+            </div>
+            {% if(content.field_ods_article_source.0['#context']['value'] is not null and content.field_ods_article_source.0['#context']['value']|trim is not empty ) %}
+              <div class="article-source">
+                {{ content.field_ods_article_source }}
+              </div>
+            {% endif %}
+          </div>
+
+          <div class="article-body">
+              {{ content.body }}
+          </div>
+          <div class="store-link ods-mt-20 ods-mb-20">
+            {% if(content.field_ods_article_link.0['#url']) %}
+              <a class="btn btn-primary btn-rounded analytics--p-cta analytics--o-exit-open " href="{{ content.field_ods_article_link.0['#url'] }}" title="{{ content.field_ods_article_link.0['#title'] }}" aria-label="{{ content.field_ods_article_link_label.value }}" target="_blank" data-analytics-id="{{ ('store-link-' ~ content.field_ods_article_link.0['#url']|render|trim)|data_analytics_id }}"
+                  {{ buttonAttributesAriaLabel ? ('aria-label="' ~ buttonAttributesAriaLabel ~ '"')|raw }}
+              >Go to story</a>
+            {% else %}
+              <a class="btn btn-primary btn-rounded analytics--p-cta " href="{{ url }}" data-analytics-id="{{ ('store-link-' ~ url|render|trim)|data_analytics_id }}"
+                  {{ buttonAttributesAriaLabel ? ('aria-label="' ~ buttonAttributesAriaLabel ~ '"')|raw }}
+              >Go to Story</a>
+            {% endif %}
+          </div>
+
+          {% if(content.addtoany) %}
+            <div class="ods-mt-20 ods-mb-40 teaser-addtoany ods-a2a-icons-{{ content.field_ods_add2any_widget_icons.0['#markup'] }}">
+              {{ content.addtoany }}
+            </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>

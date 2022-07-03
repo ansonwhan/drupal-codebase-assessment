@@ -1,0 +1,10 @@
+uuid: f9030959-2fe2-42a3-a784-e64c4319f0de
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: bK3M4fUJql-nCddm0xL-Lft_d3vci4oEo6yeXj57dns
+id: isi
+label: ISI
+revision: 1
+description: 'Block for the Important Site Information module. Provides the functionality of a site tray.'

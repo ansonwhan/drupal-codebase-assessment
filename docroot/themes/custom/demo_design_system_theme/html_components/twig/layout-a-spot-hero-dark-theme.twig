@@ -1,0 +1,36 @@
+{% extends "./_base-layout.twig" %}
+{% block title %}
+  layout-a-spot-hero-dark-theme, ISI sidebar, header, footer v.1
+{% endblock %}
+{% block head %}
+    <!-- SLICK carousel  CSS and JS -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+
+    <!-- End SLICK carousel  CSS and JS -->
+
+    <!-- Dedicated CSS -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layouts_parts/layout-a-spot-hero-dark-theme.css"/>
+    <!-- End dedicated CSS -->
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_header.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div style="background-color: azure;"
+       class="notes fixed-bottom text-primary text-center bg-success">
+    <h1>Notes about <i> layout-a-spot-hero-dark-theme, ISI sidebar, header, footer
+      </i> prototype</h1>
+  </div>
+
+  <div class="example">
+    {% include './partial/layouts_parts/_layout-a-spot-hero-dark-theme.twig' %}
+  </div>
+{% endblock %}

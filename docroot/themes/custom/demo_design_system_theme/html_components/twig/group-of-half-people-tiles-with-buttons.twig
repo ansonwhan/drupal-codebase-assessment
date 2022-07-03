@@ -1,0 +1,25 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Group of half people tiles with buttons (merged tiles after changing the screen resolution)
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet"
+          media="all"
+          href="{{ basePath }}css/component/cta-block-elements/group-of-half-people-tiles-with-buttons.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1 style="color:red">Please notice this component is specific, because technical specification
+      is specific,
+      when you change the screen resolution, the HTML structure also changes (see css classes
+      "display-lg-none", "display-xs-none")</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_group-of-half-people-tiles-with-buttons.twig' %}
+  </div>
+{% endblock %}

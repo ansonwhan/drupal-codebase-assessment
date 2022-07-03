@@ -1,0 +1,34 @@
+{
+  "notesAboutComponent": "",
+  "aSpotHeroCarousel": [
+    {
+      "alt": "doctor slide",
+      "imgName": "doctor_with_mobile.webp",
+      "class": "",
+      "heading": "Medication to manage your mental health",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "how it works",
+      "notes": ""
+    },
+    {
+      "alt": "family slide",
+      "imgName": "family_picture.webp",
+      "class": "",
+      "heading": "Medication to manage your mental health",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "how it works",
+      "notes": ""
+    },
+    {
+      "alt": "painkillers slide",
+      "imgName": "photo_of_pills.webp",
+      "class": "",
+      "heading": "Medication to manage your mental health",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "how it works",
+      "notes": ""
+    }
+  ]
+}
+
+

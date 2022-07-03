@@ -1,0 +1,19 @@
+uuid: c5047d34-9467-415c-8088-c25f0f094bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_article_link_label
+    - node.type.ods_article
+id: node.ods_article.field_ods_article_link_label
+field_name: field_ods_article_link_label
+entity_type: node
+bundle: ods_article
+label: 'ARIA Label'
+description: 'Use this field for descriptive text to be applied ot your link for assistive technologies'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

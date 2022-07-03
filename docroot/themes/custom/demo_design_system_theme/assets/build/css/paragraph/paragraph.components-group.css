@@ -1,0 +1,15 @@
+.paragraph--type--components-group {
+  padding-bottom: 30px;
+}
+
+@media (max-width: 376.98px) {
+  .paragraph--type--components-group {
+    margin: 0 10px;
+  }
+}
+
+.paragraph--type--components-group.block-border {
+  padding-bottom: 20px;
+}
+
+/*# sourceMappingURL=paragraph.components-group.css.map */

@@ -1,0 +1,49 @@
+uuid: 751ec5ed-f3cb-4e02-9776-532c411245a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.general_purpose_page.body
+    - field.field.node.general_purpose_page.field_classes
+    - field.field.node.general_purpose_page.field_hero_region
+    - field.field.node.general_purpose_page.field_metatags
+    - field.field.node.general_purpose_page.field_ods_add2any_widget_icons
+    - field.field.node.general_purpose_page.field_ods_add2any_widgetposition
+    - field.field.node.general_purpose_page.field_ods_classification
+    - field.field.node.general_purpose_page.field_paragraphs
+    - field.field.node.general_purpose_page.field_secondary_nav
+    - field.field.node.general_purpose_page.field_usage_notes
+    - node.type.general_purpose_page
+  module:
+    - text
+    - user
+id: node.general_purpose_page.teaser
+targetEntityType: node
+bundle: general_purpose_page
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_classes: true
+  field_hero_region: true
+  field_metatags: true
+  field_ods_add2any_widget_icons: true
+  field_ods_add2any_widgetposition: true
+  field_ods_classification: true
+  field_paragraphs: true
+  field_secondary_nav: true
+  field_usage_notes: true

@@ -1,0 +1,43 @@
+uuid: 92612f3c-c862-4931-86cf-9eaa2a6b3314
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_citation_item_p
+    - paragraphs.paragraphs_type.citation_group
+    - paragraphs.paragraphs_type.citation_item
+  module:
+    - entity_reference_revisions
+id: paragraph.citation_group.field_ods_citation_item_p
+field_name: field_ods_citation_item_p
+entity_type: paragraph
+bundle: citation_group
+label: 'Citation item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      citation_item: citation_item
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 6
+        enabled: false
+      accordion_item:
+        weight: 7
+        enabled: false
+      citation_group:
+        weight: 8
+        enabled: false
+      citation_item:
+        enabled: true
+        weight: 9
+      standard_body_copy:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

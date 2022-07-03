@@ -1,0 +1,29 @@
+.field-name-field-media-oembed-video:not(.blazy) .field--item {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.field-name-field-media-oembed-video:not(.blazy) .field--item iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.field-name-field-media-oembed-video.blazy .media--video {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.field-name-field-media-oembed-video.blazy .media--video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*# sourceMappingURL=field.media-oembed-video.css.map */

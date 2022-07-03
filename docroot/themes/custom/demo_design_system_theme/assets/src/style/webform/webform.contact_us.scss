@@ -1,0 +1,193 @@
+@import "../variables";
+@import "../mixins_functions";
+@import "../component/forms/basic-form";
+@import "../_loader";
+
+.webform-submission-contact-us-form, .ui-dialog {
+  div.form-item {
+    width: 80%;
+    max-width: 600px;
+    &.js-form-type-processed-text {
+      width: auto;
+    }
+    margin-bottom: 40px;
+    label {
+      height: 30px;
+      width: 538px;
+      color: #212529;
+      font-family: $defaultLabelFontFamily;
+      font-size: 20px;
+      letter-spacing: 0;
+      line-height: 30px;
+    }
+
+    input {
+      box-sizing: border-box;
+      height: 48px;
+      border: 1px solid $gray-400;
+      border-radius: 4px;
+      background-color: #FFFFFF;
+    }
+
+    .error {
+      border: 1px solid red;
+    }
+
+    .form-item--error-message{
+      color: red;
+    }
+
+    .webform-email-confirm--wrapper {
+      margin-bottom: 40px;
+    }
+
+    &.custom-control.custom-checkbox {
+      .form-item--error-message {
+        position: relative;
+        left: -25px;
+      }
+    }
+
+    @include media-breakpoint-down(xm) {
+      width: auto;
+    }
+  }
+
+  .form-managed-file {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .messages--error.file-upload-js-error {
+    color: red;
+  }
+  fieldset.form-composite {
+    margin-bottom: 40px;
+  }
+
+  fieldset.form-item {
+    .fieldset-wrapper {
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      display: flex;
+      .alert-danger {
+        order: -1;
+        padding: 0;
+        background-color: transparent;
+        border-color: transparent;
+        position: relative;
+        top: 42px;
+        left: -15px;
+        strong {
+          font-weight: 100;
+          color: red;
+        }
+      }
+
+      .form-item-contact-email-mail-2 {
+        order: -1;
+        margin-top: 40px;
+        @include media-breakpoint-down(xm) {
+          width: 100%;
+        }
+      }
+      .form-item-contact-email-mail-1 {
+        margin-bottom: 0px;
+        @include media-breakpoint-down(xm) {
+          width: 100%;
+        }
+      }
+    }
+
+    &.error {
+      width: 80%;
+      max-width: 600px;
+      .fieldset-wrapper {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 15px;
+        padding-bottom: 0;
+        div.form-item {
+          width: 100%;
+          .error {
+            border: 1px solid $gray-400;
+          }
+        }
+      }
+
+      @include media-breakpoint-down(xm) {
+        width: 100%;
+      }
+    }
+  }
+
+  .webform-actions {
+    .btn {
+      border-radius: 20px;
+      @include media-breakpoint-up(sm){
+        width: 120px;
+      }
+
+      @include media-breakpoint-down(xm){
+        width: 100%;
+      }
+    }
+  }
+
+  .webform-required {
+    display: none;
+  }
+
+  > .captcha {
+    margin-bottom: 40px;
+  }
+}
+
+.ui-dialog {
+  z-index: 999 !important;
+  div.form-item {
+    width: 100%;
+  }
+
+  .ui-dialog-titlebar {
+    background: transparent;
+    border: none;
+    font-size: 22px;
+    padding-left: 15px;
+    border-bottom: 1px solid #ced4da;
+    border-radius: 0;
+  }
+
+  .ui-dialog-titlebar-close {
+    border: none;
+    background: white;
+    &::after{
+      content: "\00d7";
+      color: #000;
+      position: relative;
+      top: -25px;
+      font-size: 35px;
+      right: 5px;
+    }
+  }
+
+  fieldset.form-item {
+    &.error {
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+      @include media-breakpoint-up(md) {
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 65% !important;
+  }
+
+  @include media-breakpoint-down(sm) {
+    width: 65% !important;
+  }
+}

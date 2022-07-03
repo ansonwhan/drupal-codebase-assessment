@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{{ attach_library('demo_design_system_theme/bootstrap.breadcrumb') }}
+
+{% if breadcrumb %}
+  <nav role="navigation" aria-label="breadcrumb" class="analytics--n-breadcrumbs">
+    <ol class="breadcrumb">
+    {% for item in breadcrumb %}
+      {% if item.url %}
+        <li class="breadcrumb-item">
+          <a href="{{ item.url }}" tabindex="0" data-analytics-id="{{ ('breadcrumb-lnk-' ~ item.id)|data_analytics_id }}">{{ item.text }}</a>
+        </li>
+      {% else %}
+        <li class="breadcrumb-item active">
+          {{ item.text }}
+        </li>
+      {% endif %}
+    {% endfor %}
+    </ol>
+  </nav>
+{% endif %}

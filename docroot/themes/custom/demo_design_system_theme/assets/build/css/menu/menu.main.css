@@ -1,0 +1,153 @@
+.menu-main .navbar-toggler {
+  border: 1px solid #DFE3E6;
+  border-radius: 0;
+  border-top: none;
+  border-bottom: none;
+  height: 4.375rem;
+  padding: 0.3125rem 0.9375rem;
+}
+
+@media (max-width: 425px) {
+  .menu-main .navbar-toggler {
+    right: -0.9375rem;
+  }
+}
+
+@media (max-width: 768.98px) {
+  .menu-main .navbar-toggler {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.menu-main .navbar-toggler-icon {
+  background-image: url("../../img/icon-menu-toggle-blue.png");
+  background-size: inherit;
+}
+
+@media (max-width: 768.98px) {
+  .menu-main.navbar {
+    margin-top: -4.375rem;
+  }
+}
+
+.menu-main .field--border-top {
+  border-top: 1px solid #DFE3E6;
+  margin-top: 0.625rem;
+  padding-top: 1.25rem;
+}
+
+.menu-main .field--border-bottom {
+  border-bottom: 1px solid #DFE3E6;
+  margin-bottom: 0.625rem;
+  padding-bottom: 1.25rem;
+}
+
+.region-header-2 {
+  display: flex;
+}
+
+.region-header-2 nav {
+  margin-left: auto;
+}
+
+.region--header-1-2 {
+  border-bottom: 1px solid #DFE3E6;
+}
+
+.region-header-bottom nav {
+  padding: 0;
+}
+
+.region-header-bottom nav ul {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  overflow-y: auto;
+  height: calc(100vh - 150px);
+  max-height: 26.875rem;
+  margin-top: 0.625rem;
+}
+
+@media (max-width: 768.98px) {
+  .region-header-bottom nav ul {
+    margin-top: 0.3125rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .region-header-bottom nav ul {
+    flex-direction: row;
+    height: auto;
+    margin-top: 0;
+  }
+}
+
+.region-header-bottom nav ul li {
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .region-header-bottom nav ul li {
+    width: auto;
+  }
+}
+
+.region-header-bottom nav ul li.show-only-in-footer {
+  display: none;
+}
+
+.region-header-bottom nav ul a {
+  display: block;
+  padding: 0.625rem 1.25rem 0.625rem 1.25rem;
+  font-size: 0.9375rem;
+}
+
+.region-header-bottom nav ul a.field--discussion-guide, .region-header-bottom nav ul a.field--savings-card, .region-header-bottom nav ul a.field--custom-icon {
+  padding-left: 2.8125rem;
+}
+
+.region-header-bottom nav ul a.field--discussion-guide:before, .region-header-bottom nav ul a.field--savings-card:before, .region-header-bottom nav ul a.field--custom-icon:before {
+  left: 1.25rem;
+  top: 0.9375rem;
+}
+
+.region-header-bottom nav ul a.field--discussion-guide:before {
+  top: 1.5625rem;
+}
+
+@media (max-width: 768.98px) {
+  .region-header-bottom nav ul a.field--border-top, .region-header-bottom nav ul a.field--border-bottom {
+    padding-left: 1.875rem;
+  }
+
+  .region-header-bottom nav ul a.field--border-top:before, .region-header-bottom nav ul a.field--border-bottom:before {
+    left: 0.625rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .region-header-bottom nav ul a {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .region-header-bottom nav ul a {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
+  }
+}
+
+.region-header-bottom .navbar-brand {
+  visibility: hidden;
+}
+
+@media (min-width: 769px) {
+  .region-header-bottom .navbar-brand {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=menu.main.css.map */

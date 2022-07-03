@@ -1,0 +1,174 @@
+@import "../variables";
+@import "../mixins_functions";
+@import "../component/layouts/layout-people-profile-cards";
+
+
+.bio-profile {
+  border: 1px solid $gray-300;
+
+  &--teaser {
+
+  }
+  &--detail {
+
+    .ribbon-wrapper {
+      background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+      margin-left: -13px;
+      padding-left: 13px;
+      color: $white;
+
+      h6 {
+        text-transform: uppercase;
+        font-weight: 700;
+        color: $white;
+      }
+
+      .field--item {
+        > div {
+          padding: 20px 30px;
+        }
+      }
+
+      .triangle {
+        border-top-color: transparent;
+        border-right-color: rgb(0, 0, 0);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+        border-style: solid;
+        border-width: 0 14px 14px 0;
+        border-image: none 100% / 1 / 0 stretch;
+        top: 13px;
+        position: relative;
+        width: 15PX;
+        left: -14PX;
+      }
+    }
+
+    .card {
+      .media--image {
+          img {
+            padding-right: 15px !important;
+            width: 100%;
+          }
+      }
+    }
+
+  }
+}
+// View of teasers.
+.group-of-half-people-tiles-with-buttons {
+
+  .views-row {
+    display: table;
+
+    &:not(:last-child) {
+      margin-bottom: -1px;
+    }
+
+    .column-second > div {
+      padding: 20px 30px;
+    }
+
+    .profile-head {
+      margin: 0;
+
+      [class*=col] {
+        padding: 0;
+      }
+    }
+
+    &.even {
+      .profile-head {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+
+  .field-name-field-profile-content-bottom {
+
+    > .field--item {
+      padding: 1.5rem 15px;
+
+      + .field--item {
+        border-top: 1px solid $gray-300;
+      }
+    }
+  }
+
+  .field-name-field-profile-image {
+    height: 100%;
+
+    *:not(.contextual-links) {
+      height: 100%;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+
+  .field-name-field-ods-additional-body-p {
+
+    h6 {
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+  }
+
+}
+
+.views-row {
+
+  .half-content-people-tiles-with-buttons {
+    background: transparent;
+    .max-width-height {
+      background: white;
+      &.ods-mb-25 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.even {
+    .max-width-height {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .bio-profile.bio-profile--teaser {
+    border: none;
+  }
+}
+
+.group-of-half-people-tiles-with-buttons {
+  .max-width-height {
+    background: transparent;
+    border: none;
+
+    &.views-row.odd.first.last{
+      border: none;
+    }
+  }
+}
+
+.node-view-mode-full {
+  .block-border {
+    border: none;
+  }
+}
+
+.half-content-people-tiles-with-buttons {
+  & > .container {
+    padding-right:0;
+  }
+}
+
+.bio-profile--detail {
+  .paragraph.paragraph--type--standard-body-copy.paragraph--view-mode--default{
+    @include media-breakpoint-down(sm) {
+      padding-right: 15px;
+    }
+  }
+}

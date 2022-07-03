@@ -1,0 +1,19 @@
+uuid: fa4b9f07-aef5-4da0-b723-422e67c13655
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.storage.block_content.field_custom_id
+id: block_content.modal_popup.field_custom_id
+field_name: field_custom_id
+entity_type: block_content
+bundle: modal_popup
+label: 'Custom ID'
+description: 'Use this field to provide a custom Identifier for the DOM element.  Be sure to only use alphanumeric characters and dashes (-); it must start with a letter.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

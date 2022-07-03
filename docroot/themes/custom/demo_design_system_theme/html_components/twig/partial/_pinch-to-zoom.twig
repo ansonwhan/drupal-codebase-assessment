@@ -1,0 +1,41 @@
+{% set loremIpsumText     = loremIpsumText %}
+{% set firstPinchedImage  = pinchToZoom[0] %}
+{% set secondPinchedImage = pinchToZoom[1] %}
+
+{% set setPathToImg = pathsToDependencies.isDockerLocalHost ? "/themes/custom/otsk-sandboxes/themes/custom/demo_design_system_theme/html_components/temp/img/" : "/themes/custom/demo_design_system_theme/html_components/temp/img/" %}
+
+<br>
+
+<h5 class="text-center text-danger">Please notice this component need <i>iscroll-zoom.js</i>
+    library, except conventional dependencies</h5>
+<br>
+
+<button id="js-reset-zoom"
+        class="enable-disable-zoom text-uppercase btn btn-primary btn-sm btn-rounded ods-p-10">
+    Enable/Disable zoom
+</button>
+
+<div class="pinch-to-zoom js-picture-bg d-flex flex-wrap justify-content-center">
+    <div id="js-pinch-to-zoom">
+        <div class="container">
+            <article class="row single-post ods-mt-50 d-flex flex-wrap justify-content-center">
+                <div class="col-md-6">
+                    <div class="float-left ods-pr-15">
+                        <img src="{{ setPathToImg }}{{ firstPinchedImage.tmpImgName }}"
+                             alt="{{ firstPinchedImage.alt }}">
+                    </div>
+                    <div class="ods-p-15">
+                        {{ loremIpsumText }}
+                    </div>
+                    <div class="float-right ods-pl-15">
+                        <img src="{{ setPathToImg }}{{ secondPinchedImage.tmpImgName }}"
+                             alt="{{ secondPinchedImage.alt }}">
+                    </div>
+                    <div class="ods-p-15">
+                        {{ loremIpsumText }}
+                    </div>
+                </div>
+            </article>
+        </div>
+    </div>
+</div>

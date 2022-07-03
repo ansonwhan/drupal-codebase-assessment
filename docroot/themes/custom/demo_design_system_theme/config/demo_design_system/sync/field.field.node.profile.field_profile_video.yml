@@ -1,0 +1,58 @@
+uuid: 4bc4b4fe-7284-4c10-89b9-f9a904536f8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_profile_video
+    - node.type.profile
+    - paragraphs.paragraphs_type.video
+  module:
+    - entity_reference_revisions
+id: node.profile.field_profile_video
+field_name: field_profile_video
+entity_type: node
+bundle: profile
+label: Video
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      video: video
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 11
+        enabled: false
+      accordion_item:
+        weight: 12
+        enabled: false
+      citation_group:
+        weight: 13
+        enabled: false
+      citation_item:
+        weight: 14
+        enabled: false
+      components_group:
+        weight: 15
+        enabled: false
+      enumerated_content_component:
+        weight: 16
+        enabled: false
+      enumerated_content_group:
+        weight: 17
+        enabled: false
+      resource_cta:
+        weight: 18
+        enabled: false
+      standard_body_copy:
+        weight: 19
+        enabled: false
+      video:
+        enabled: true
+        weight: 20
+field_type: entity_reference_revisions

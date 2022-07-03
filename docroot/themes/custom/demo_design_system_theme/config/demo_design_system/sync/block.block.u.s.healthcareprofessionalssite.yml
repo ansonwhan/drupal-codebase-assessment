@@ -1,0 +1,25 @@
+uuid: 7ffe468b-4289-4c2b-8185-3425aeba4188
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:75e91848-8ced-4906-b414-db14d0adbe42'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: u.s.healthcareprofessionalssite
+theme: demo_design_system_theme
+region: header_middle
+weight: 0
+provider: null
+plugin: 'block_content:75e91848-8ced-4906-b414-db14d0adbe42'
+settings:
+  id: 'block_content:75e91848-8ced-4906-b414-db14d0adbe42'
+  label: 'U.S. Healthcare Professionals Site'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

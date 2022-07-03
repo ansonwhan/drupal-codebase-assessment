@@ -1,0 +1,19 @@
+uuid: b329ba9d-31b9-4a6b-81ab-31d770010cec
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_ods_article_title
+field_name: field_ods_article_title
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,48 @@
+.eu-cookie-compliance-banner {
+  min-height: 80px;
+  padding: 10px;
+  background: #343A40;
+  color: #FFFFFF;
+  font-family: "Museo Sans";
+  font-size: 16px;
+  letter-spacing: 0;
+  line-height: 24px;
+  width: 100%;
+
+  .eu-cookie-compliance-content {
+    max-width: 100%;
+    padding: 0 20px;
+
+    .eu-cookie-compliance-message {
+      h2 {
+        font-weight: 400;
+      }
+      p {
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 25px;
+      }
+      .eu-cookie-compliance-more-button {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+
+    .agree-button.eu-cookie-compliance-default-button {
+      background: #FFC107;
+      color: #343A40;
+      border-radius: 20px;
+      box-shadow: none;
+      text-shadow: none;
+      border: none;
+      font-family: "Museo Sans";
+      font-size: 16px;
+      letter-spacing: 0;
+      text-align: center;
+      height: 30px;
+      text-transform: uppercase;
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+  }
+}

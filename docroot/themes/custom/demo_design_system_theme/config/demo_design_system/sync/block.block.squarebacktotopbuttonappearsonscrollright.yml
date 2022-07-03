@@ -1,0 +1,31 @@
+uuid: 1dbbcee8-30cf-4d8a-8021-5db617591d6e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:back_to_top:ab83f276-73a3-4025-a65a-635966d8737f'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: squarebacktotopbuttonappearsonscrollright
+theme: demo_design_system_theme
+region: html_deferred
+weight: -33
+provider: null
+plugin: 'block_content:ab83f276-73a3-4025-a65a-635966d8737f'
+settings:
+  id: 'block_content:ab83f276-73a3-4025-a65a-635966d8737f'
+  label: 'Square Back to Top button, Appears on Scroll, Right'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /nav/back-to-top/square-side-on-scroll
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,47 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  A spot hero carousel
+{% endblock %}
+{% block head %}
+
+    <!-- Dedicated js and css -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/a-spot-hero-carousel.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/specials-a-spot-hero-carousels/two-columns-a-spot-hero-carousel.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!--  Dedicated js and css  -->
+
+    <!-- Slick carousel js and css -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+    <!--  End Slick carousel js and css  -->
+
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>A spot hero carousels (multiple types):</h1>
+    <h2 style="color: red;">Please notice it may be necessary to add this library (slick.js) on the
+      CMS
+      side.</h2>
+  </div>
+  <div class="example">
+    {% include './partial/_a-spot-hero-carousel.twig' %}
+    {% if item.notes %}
+      <div style="margin-bottom: 20px" class="notes">
+        <h3>A spot hero carousels:</h3>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+uuid: d1c37220-c8c7-47b7-adae-21018f60e58e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bootstrap_demo
+    - field.field.block_content.bootstrap_demo.body
+  module:
+    - text
+id: block_content.bootstrap_demo.default
+targetEntityType: block_content
+bundle: bootstrap_demo
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

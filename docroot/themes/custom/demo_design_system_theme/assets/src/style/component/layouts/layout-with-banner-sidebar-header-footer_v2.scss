@@ -1,0 +1,11 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.layout-with-banner-sidebar-header-footer_v2 {
+  .storybook-paragraph-type-accordion-group-wrapper {
+    border: $common-border-size solid $common-border-color;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}

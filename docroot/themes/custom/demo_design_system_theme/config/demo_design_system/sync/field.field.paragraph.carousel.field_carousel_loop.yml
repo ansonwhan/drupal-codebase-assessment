@@ -1,0 +1,23 @@
+uuid: 7c079a7d-76f2-4f51-ad62-f11b8bf80881
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel_loop
+    - paragraphs.paragraphs_type.carousel
+id: paragraph.carousel.field_carousel_loop
+field_name: field_carousel_loop
+entity_type: paragraph
+bundle: carousel
+label: 'Carousel Loop'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

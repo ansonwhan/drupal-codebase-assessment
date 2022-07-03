@@ -1,0 +1,31 @@
+uuid: 2ad2fa4b-73c7-4c6d-b5bf-967fa2848007
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.basic_form_disabled_states_examp
+  module:
+    - system
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform_3
+theme: demo_design_system_theme
+region: hidden
+weight: -24
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Basic Form Disabled States Example'
+  provider: webform
+  label_display: visible
+  webform_id: basic_form_disabled_states_examp
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/346
+    negate: false
+    context_mapping: {  }

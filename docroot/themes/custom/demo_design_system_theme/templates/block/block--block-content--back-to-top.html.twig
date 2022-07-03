@@ -1,0 +1,65 @@
+{#
+/**
+ * Available css/js classes (modifiers):
+ * - css modifiers (horizontal): .sticky-back-to-top-to-left ; .sticky-back-to-top-to-right (it changes horizontal position of this element)
+ * - css modifiers (bottom of parent container, horizontally centered): .absolute-centered-back-to-top (it move element to bottom of parent container and center it)
+ * - css modifiers (it have position fixed, bottom of parent container, horizontally centered): .fixed-centered-back-to-top ( is positioned relative to the viewport, it move element to bottom of viewport and center it horizontally)
+ *
+ * - js modifiers .js-show-button: JS functionality that cover condition  - "if page content length is longer than the height of viewport"
+ * - js modifiers .js-fade-in-or-out: JS functionality that is responsible for appearing elemnt on scroll event
+ * - js modifiers .js-scroll-top, .js-sticky-back-to-top: JS functionalities that are responsible for smooth scrolling to the top of viewport
+ */
+#}
+{% set visibilityType %}
+{{ content.field_back2top_button_visibility|render|trim }}
+{% endset %}
+
+{% set typeOfButtonClass %}
+{{ content.field_back2top_button_shape|render|trim }}
+{% endset %}
+
+{% set buttonPosition %}
+  {{ content.field_back2top_button_position|render|trim }}
+{% endset %}
+
+{% set jsIdSelector %}
+  {% if 'btm-appears-on-scroll' in visibilityType %}
+    js-scroll-top
+  {% else %}{# btm-persistent #}
+    js-sticky-back-to-top
+  {% endif %}
+{% endset %}
+
+{% set isJsFadeInOrOutClass =
+  ('btm-appears-on-scroll' in visibilityType and 'bottom' not in buttonPosition) ?
+  'js-fade-in-or-out' %}
+
+{% set absolutePositionedCssClass =
+  ('btm-persistent' in visibilityType and 'bottom' in buttonPosition) ?
+  'fixed-centered-back-to-top' :
+  ('bottom' in buttonPosition and 'btm-persistent' not in buttonPosition) ?
+  'absolute-centered-back-to-top' %}
+
+{% set classes = [
+  'back-to-top-buttons',
+  'right' in buttonPosition ? 'button-position--right sticky-back-to-top-to-right' : absolutePositionedCssClass,
+  'btm-persistent' in visibilityType ? 'sticky-back-to-top-to-right',
+  'btm-appears-on-scroll' in visibilityType ? 'appears-on-scroll-back-to-top',
+  'd-flex',
+  'justify-content-center',
+  'ods-mb-5',
+] %}
+
+
+<div{{ attributes.addClass(classes) }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    <button id="{{- jsIdSelector|render|trim -}}"
+            class="js-show-button btn-secondary text-uppercase analytics-n-jump back-to-top-button__{{- typeOfButtonClass|render|trim }} {{ isJsFadeInOrOutClass }}"
+            data-analytics-id="{{ ('btn-to-top')|data_analytics_id }}">
+      <span class="text-center"><i class="fa fa-chevron-up"></i></span>
+      <span class="text-span">{{- content.field_back2top_button_text|render|trim -}}</span>
+    </button>
+  {% endblock %}
+</div>

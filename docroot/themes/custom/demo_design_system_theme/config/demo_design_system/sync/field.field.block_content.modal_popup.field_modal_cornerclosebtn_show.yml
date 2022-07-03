@@ -1,0 +1,23 @@
+uuid: 786a0f90-a85a-4542-93f9-8a309c38f29a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.storage.block_content.field_modal_cornerclosebtn_show
+id: block_content.modal_popup.field_modal_cornerclosebtn_show
+field_name: field_modal_cornerclosebtn_show
+entity_type: block_content
+bundle: modal_popup
+label: 'Show Close Button in top right corner'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Show/Include Corner Close Icon'
+  off_label: 'Hide Corner Close Icon'
+field_type: boolean

@@ -1,0 +1,19 @@
+uuid: 0231824d-32b6-4e77-9705-bf59ee3e9909
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_teaser
+    - paragraphs.paragraphs_type.video
+id: paragraph.video.field_video_teaser
+field_name: field_video_teaser
+entity_type: paragraph
+bundle: video
+label: 'Video Teaser'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,28 @@
+uuid: 3c59f2ee-5e51-469e-b00e-e9f314a6d3fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_profile_nodes
+    - node.type.profile
+    - paragraphs.paragraphs_type.profile_node_embed
+id: paragraph.profile_node_embed.field_profile_nodes
+field_name: field_profile_nodes
+entity_type: paragraph
+bundle: profile_node_embed
+label: 'Profile Nodes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      profile: profile
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

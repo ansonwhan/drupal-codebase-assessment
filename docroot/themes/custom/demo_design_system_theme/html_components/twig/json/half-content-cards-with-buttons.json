@@ -1,0 +1,33 @@
+{
+  "notesAboutComponent": "",
+  "halfContentCardsWithButtons": [
+    {
+      "alternativeText": "pills photo",
+      "imgSrcClass": "__one",
+      "class": "",
+      "heading": "Card title",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "button",
+      "notes": ""
+    },
+    {
+      "alternativeText": "doctor call",
+      "imgSrcClass": "__two",
+      "class": "",
+      "heading": "Card title",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "button",
+      "notes": ""
+    },
+    {
+      "alternativeText": "test tubes photo",
+      "imgSrcClass": "__three",
+      "class": "",
+      "heading": "Card title",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "button",
+      "notes": ""
+    }
+  ]
+}
+

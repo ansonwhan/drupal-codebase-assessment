@@ -1,0 +1,23 @@
+uuid: 3fdda289-afad-4da4-95d4-be99762d692c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_carousel_arrows
+    - paragraphs.paragraphs_type.carousel
+id: paragraph.carousel.field_carousel_arrows
+field_name: field_carousel_arrows
+entity_type: paragraph
+bundle: carousel
+label: 'Carousel Arrows'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

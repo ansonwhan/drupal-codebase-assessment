@@ -1,0 +1,39 @@
+{% extends "./_base.twig" %}
+{% block title %}
+    Infographic overflow scrolling
+{% endblock %}
+{% block head %}
+    <!-- Dedicated css -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/infographic-overflow-scrolling/infographic-overflow-scrolling.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- End dedicated css -->
+
+    <!-- Dedicated js -->
+    <script
+            src="{{ basePath }}js/component/infographic-overflow-scrolling/infographic-overflow-scrolling.js"></script>
+    <!-- End dedicated js -->
+
+{% endblock %}
+
+ {% block header %}
+     {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+    <div class="notes">
+        <h1><i>Infographic overflow scrolling</i> component </h1>
+    </div>
+    <div class="example">
+        {% include './partial/_infographic-overflow-scrolling.twig' %}
+        {% if item.notes %}
+            <div class="notes">
+                <h2>Infographic overflow scrolling</h2>
+                {{ item.notes }}
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+

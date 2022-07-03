@@ -1,0 +1,69 @@
+uuid: 5b3e196c-ede7-4097-9110-84f9b8e823de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel.field_carousel_arrows
+    - field.field.paragraph.carousel.field_carousel_arrows_disabling
+    - field.field.paragraph.carousel.field_carousel_autoplay
+    - field.field.paragraph.carousel.field_carousel_dots
+    - field.field.paragraph.carousel.field_carousel_loop
+    - field.field.paragraph.carousel.field_paragraph
+    - paragraphs.paragraphs_type.carousel
+  module:
+    - paragraphs
+id: paragraph.carousel.default
+targetEntityType: paragraph
+bundle: carousel
+mode: default
+content:
+  field_carousel_arrows:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_carousel_arrows_disabling:
+    weight: 4
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_carousel_autoplay:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_carousel_dots:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_carousel_loop:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_paragraph:
+    type: entity_reference_paragraphs
+    weight: 5
+    settings:
+      title: Slide
+      title_plural: Slides
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: carousel_slide
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

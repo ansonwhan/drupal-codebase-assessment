@@ -1,0 +1,109 @@
+uuid: 83a4f77e-27db-4958-8bea-7921afd87eef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.general_purpose_page.body
+    - field.field.node.general_purpose_page.field_classes
+    - field.field.node.general_purpose_page.field_hero_region
+    - field.field.node.general_purpose_page.field_metatags
+    - field.field.node.general_purpose_page.field_ods_add2any_widget_icons
+    - field.field.node.general_purpose_page.field_ods_add2any_widgetposition
+    - field.field.node.general_purpose_page.field_ods_classification
+    - field.field.node.general_purpose_page.field_paragraphs
+    - field.field.node.general_purpose_page.field_secondary_nav
+    - field.field.node.general_purpose_page.field_usage_notes
+    - node.type.general_purpose_page
+  module:
+    - entity_reference_revisions
+    - metatag
+    - options
+    - text
+    - user
+id: node.general_purpose_page.default
+targetEntityType: node
+bundle: general_purpose_page
+mode: default
+content:
+  addtoany:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_classes:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_hero_region:
+    type: entity_reference_revisions_entity_view
+    weight: 6
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_metatags:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_ods_add2any_widget_icons:
+    weight: 9
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_ods_add2any_widgetposition:
+    weight: 8
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_paragraphs:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_secondary_nav:
+    type: entity_reference_revisions_entity_view
+    weight: 7
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_usage_notes:
+    weight: 5
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_ods_classification: true

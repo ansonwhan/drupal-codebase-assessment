@@ -1,0 +1,46 @@
+{{ attach_library('demo_design_system_theme/paragraph.accordion-group') }}
+
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+
+{%
+  set classes = [
+    paragraph.bundle|clean_class,
+    settings_custom_classes ? settings_custom_classes,
+    'pt-5',
+    'pb-5',
+    'pl-3',
+    'pr-3',
+    'mb-0',
+    'block-border',
+    'bg-white',
+  ]
+%}
+
+{% set custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set accordion_group_id = custom_id ? custom_id : 'accordion-group--id-' ~ paragraph.id() %}
+
+{% set group_attribute = create_attribute() %}
+{% set auto_collapse = content.field_accordions_autocollapse|render|trim %}
+{% set first_row_behavior = content.field_accordion_row1_behavior|render|trim %}
+{% set accordion_group_classes = [
+  '1' in auto_collapse ? 'auto-collapse',
+  first_row_behavior|replace('_','-'),
+  'accordion-group--accordions',
+]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).setAttribute('id', accordion_group_id) }}>
+    {% block content %}
+    {% if content.field_ods_intro_p %}
+    <div class="accordion-group--lead-in">{{- content.field_ods_intro_p -}}</div>
+    {% endif %}
+    <div {{ group_attribute.addClass(accordion_group_classes) }}>
+    {{- content.field_ods_accordion_item_p -}}
+    </div>
+    {% if content.field_ods_exit_p %}
+    <div class="accordion-group--lead-out">{{- content.field_ods_exit_p -}}</div>
+    {% endif %}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

@@ -1,0 +1,24 @@
+uuid: ce091b0a-ce54-4e84-9065-31188cfea922
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.symptom_questionnaire_results
+  module:
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__symptom_questionnaire_results_block_1
+theme: demo_design_system_theme
+region: hidden
+weight: -19
+provider: null
+plugin: 'views_block:symptom_questionnaire_results-block_1'
+settings:
+  id: 'views_block:symptom_questionnaire_results-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility: {  }

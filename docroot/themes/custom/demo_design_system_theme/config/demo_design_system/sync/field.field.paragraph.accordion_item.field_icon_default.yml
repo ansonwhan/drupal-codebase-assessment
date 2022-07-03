@@ -1,0 +1,30 @@
+uuid: aa40b562-7f81-4811-995c-7f20762cdfdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_icon_default
+    - media.type.image
+    - media.type.svg_image
+    - paragraphs.paragraphs_type.accordion_item
+id: paragraph.accordion_item.field_icon_default
+field_name: field_icon_default
+entity_type: paragraph
+bundle: accordion_item
+label: 'Icon (Default State)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg_image: svg_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

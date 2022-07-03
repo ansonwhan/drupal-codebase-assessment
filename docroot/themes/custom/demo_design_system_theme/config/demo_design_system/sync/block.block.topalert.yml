@@ -1,0 +1,31 @@
+uuid: fc1b9c93-9779-47ae-ad18-785cf8f3f66e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:alert:8504010b-0cc4-4076-af64-b78ca1af29ff'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: topalert
+theme: demo_design_system_theme
+region: header_top
+weight: -29
+provider: null
+plugin: 'block_content:8504010b-0cc4-4076-af64-b78ca1af29ff'
+settings:
+  id: 'block_content:8504010b-0cc4-4076-af64-b78ca1af29ff'
+  label: 'Top alert'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /elements/alerts
+    negate: false
+    context_mapping: {  }

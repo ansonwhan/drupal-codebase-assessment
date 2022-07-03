@@ -1,0 +1,8 @@
+uuid: 5a482558-c957-43ea-b2b6-72e19287c72f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Language'
+vid: resource_language
+description: ''
+weight: 0

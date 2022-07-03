@@ -1,0 +1,30 @@
+uuid: a677c4c0-741b-4b88-9a12-fb281afb7c14
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.indication-b-main-menu
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: indicationbmainmenu_2
+theme: demo_design_system_theme
+region: footer_3
+weight: -26
+provider: null
+plugin: 'system_menu_block:indication-b-main-menu'
+settings:
+  id: 'system_menu_block:indication-b-main-menu'
+  label: 'HCP Site Links'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: "/b\r\n/b/*"
+    negate: false
+    context_mapping: {  }

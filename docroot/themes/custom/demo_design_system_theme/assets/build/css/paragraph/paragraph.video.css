@@ -1,0 +1,72 @@
+.paragraph--type--video > .field {
+  padding-bottom: 1rem;
+}
+
+.paragraph--type--video .field-name-field-ods-video-p {
+  position: relative;
+  display: table;
+}
+
+.paragraph--type--video .field-name-field-video-duration {
+  font-family: 'Museo Sans', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.paragraph--type--video .field--media--thumbnail--default,
+.paragraph--type--video .field--media--field-video-thumb--default,
+.paragraph--type--video .field--media--field-video-thumb--modal-player,
+.paragraph--type--video .field--media--thumbnail--modal-player {
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.paragraph--type--video .field--media--thumbnail--default i,
+.paragraph--type--video .field--media--field-video-thumb--default i,
+.paragraph--type--video .field--media--field-video-thumb--modal-player i,
+.paragraph--type--video .field--media--thumbnail--modal-player i {
+  transition: opacity 0.25s linear;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -1.714375rem;
+  margin-top: -1.9953125rem;
+  color: white;
+  opacity: 0.7;
+  z-index: 1;
+  font-size: 4rem;
+}
+
+.paragraph--type--video .field--media--thumbnail--default:hover i,
+.paragraph--type--video .field--media--field-video-thumb--default:hover i,
+.paragraph--type--video .field--media--field-video-thumb--modal-player:hover i,
+.paragraph--type--video .field--media--thumbnail--modal-player:hover i {
+  opacity: 1;
+}
+
+.paragraph--type--video .field--media--thumbnail--default,
+.paragraph--type--video .field--media--field-video-thumb--default {
+  transition: opacity .25s linear;
+}
+
+.paragraph--type--video.paragraph--view-mode--default .field-name-field-media-video-file,
+.paragraph--type--video.paragraph--view-mode--default .field-name-field-media-oembed-video {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.paragraph--type--video.paragraph--view-mode--button-modal .field-name-field-video-button-title {
+  padding-top: 1rem;
+}
+
+.paragraph--type--video.thumb-hidden .field--media--thumbnail--default,
+.paragraph--type--video.thumb-hidden .field--media--field-video-thumb--default {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/*# sourceMappingURL=paragraph.video.css.map */

@@ -1,0 +1,8 @@
+uuid: 413d3037-21c9-403e-a4a1-488c0a15f419
+langcode: en
+status: true
+dependencies: {  }
+id: footer-utility
+label: 'Footer Utility'
+description: ''
+locked: false

@@ -1,0 +1,31 @@
+uuid: d64581a1-d0cf-4867-83b5-12c1d3b4c71b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:back_to_top:2908c9dd-a550-4ca3-956b-0e1200e14115'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: squarebacktotopbuttonpersistentright
+theme: demo_design_system_theme
+region: html_deferred
+weight: -31
+provider: null
+plugin: 'block_content:2908c9dd-a550-4ca3-956b-0e1200e14115'
+settings:
+  id: 'block_content:2908c9dd-a550-4ca3-956b-0e1200e14115'
+  label: 'Square Back to Top button, Persistent, Right'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /nav/back-to-top/square-side-persistent
+    negate: false
+    context_mapping: {  }

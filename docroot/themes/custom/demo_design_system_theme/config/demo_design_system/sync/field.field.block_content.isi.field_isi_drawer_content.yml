@@ -1,0 +1,41 @@
+uuid: 5ae3c907-f39e-48cf-a4dd-85540f017a8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_drawer_content
+    - paragraphs.paragraphs_type.from_library
+    - paragraphs.paragraphs_type.isi_section
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: HNv9sxg--UzJCC6_HYP9F8lNFz6t_32z__oAiC-AXN4
+id: block_content.isi.field_isi_drawer_content
+field_name: field_isi_drawer_content
+entity_type: block_content
+bundle: isi
+label: 'ISI drawer content'
+description: 'Create a new section or select from the existing library of items.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      from_library: from_library
+      isi_section: isi_section
+    target_bundles_drag_drop:
+      from_library:
+        enabled: true
+        weight: 4
+      isi_section:
+        enabled: true
+        weight: 5
+      standard_body_copy:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

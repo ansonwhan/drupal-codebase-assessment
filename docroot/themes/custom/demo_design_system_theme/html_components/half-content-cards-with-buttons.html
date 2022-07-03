@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <!-- Disable cache on story book side.  -->
+  <meta content="no-cache, no-store, must-revalidate" http-equiv="Cache-Control"/>
+  <meta content="no-cache" http-equiv="Pragma"/>
+  <meta content="0" http-equiv="Expires"/>
+  <!-- End Disable cache  -->
+
+  <title>
+    Half content cards with buttons (tiles)
+  </title>
+
+  <meta content="noindex" name="robots">
+  <!-- start default from Drupal -->
+  <link href="/core/modules/system/css/components/ajax-progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/align.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/autocomplete-loading.module.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/fieldgroup.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/container-inline.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/clearfix.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/details.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/hidden.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/item-list.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/js.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/nowrap.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/position-container.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/progress.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/reset-appearance.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/resize.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/sticky-header.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-counter.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-counters.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/system-status-report-general-info.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tabledrag.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tablesort.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/core/modules/system/css/components/tree-child.module.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link href="/modules/contrib/extlink/extlink.css?qnzv0l" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.utility.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.navigation.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.button.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/lib/reset.css?qnzv0l" media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/base/bootstrap/bootstrap.critical.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="//cloud.typenetwork.com/projects/4216/fontface.css" media="all" rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu-sticky.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-bottom.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.main.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/menu/menu.promo-links.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.switcher-condition.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.system-branding-block.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-middle.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/region/region.header-top.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/block/block.top-alert.css?qnzv0l"
+    media="all"
+    rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/base/focus.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="/themes/custom/demo_design_system_theme/assets/build/css/global.css?qnzv0l"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.css"
+        media="all"
+        rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/css/drawer.css" media="all"
+        rel="stylesheet"/>
+
+  <!--[if lte IE 8]>
+  <script src="/core/assets/vendor/html5shiv/html5shiv.min.js?v=3.7.3"></script>
+  <![endif]-->
+  <script src="/core/assets/vendor/modernizr/modernizr.min.js?v=3.3.1"></script>
+
+
+  <!-- js normally at the end but for this it should be fine -->
+  <script data-drupal-selector="drupal-settings-json" type="application/json">{
+    "path": {
+      "baseUrl": "\/",
+      "scriptPath": null,
+      "pathPrefix": "",
+      "currentPath": "node\/26",
+      "currentPathIsAdmin": false,
+      "isFront": false,
+      "currentLanguage": "en"
+    },
+    "pluralDelimiter": "\u0003",
+    "suppressDeprecationErrors": true,
+    "data": {
+      "extlink": {
+        "extTarget": false,
+        "extTargetNoOverride": false,
+        "extNofollow": false,
+        "extNoreferrer": true,
+        "extFollowNoOverride": false,
+        "extClass": "ext",
+        "extLabel": "(link is external)",
+        "extImgClass": false,
+        "extSubdomains": true,
+        "extExclude": "",
+        "extInclude": "",
+        "extCssExclude": "",
+        "extCssExplicit": "",
+        "extAlert": false,
+        "extAlertText": "This link will take you to an external web site. We are not responsible for their content.",
+        "mailtoClass": "mailto",
+        "mailtoLabel": "(link sends email)",
+        "extUseFontAwesome": false,
+        "extIconPlacement": "append",
+        "extFaLinkClasses": "fa fa-external-link",
+        "extFaMailtoClasses": "fa fa-envelope-o",
+        "whitelistedDomains": []
+      }
+    },
+    "demo_design_system_theme": {
+      "menu_behavior": "Persistent"
+    },
+    "user": {
+      "uid": 0,
+      "permissionsHash": "8d2ec1ffdc5caa0d649fcc1da8c534e361c736da51861e161ff9676396639b77"
+    }
+  }</script>
+  <script
+    crossorigin="anonymous"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="/core/assets/vendor/jquery/jquery.min.js?v=3.5.1"></script>
+  <script src="/core/assets/vendor/jquery-once/jquery.once.min.js?v=2.2.3"></script>
+  <script src="/core/misc/drupalSettingsLoader.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.js?v=8.9.11"></script>
+  <script src="/core/misc/drupal.init.js?v=8.9.11"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.util.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.collapse.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.alert.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.button.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/bootstrap/bootstrap.dropdown.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu-sticky.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/base/focus.js?qnzv0l"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/global.js?v=8.9.11"></script>
+  <script src="/modules/contrib/extlink/extlink.js?v=8.9.11"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/menu/menu.main.js?qnzv0l"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery.scrollbar/0.2.11/jquery.scrollbar.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.2/js/drawer.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/block/block.isi-sidebar.js?qnzv0l"></script>
+  <!-- end js -->
+
+
+  <!-- end default from Drupal -->
+
+  <!-- Start common-storybook-js -->
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/helpers/storybook-global.js"></script>
+  <script
+    src="/themes/custom/demo_design_system_theme/assets/build/js/component/storybook/storybook.js"></script>
+  <!-- End common-storybook-js -->
+
+
+  <!-- start links to component specific CSS & JS -->
+
+  <link
+    href="/themes/custom/demo_design_system_theme/assets/build/css/component/cta-block-elements/half-content-cards-with-buttons.css"
+    media="all"
+    rel="stylesheet"/>
+
+  <!-- end links to component specific CSS & JS -->
+</head>
+<body data-offset="200"
+      data-spy="scroll"
+      data-target="#js-non-scrollable-container">
+
+<header>
+</header>
+
+
+<div class="page-container" id="page-container">
+  <main id="main-content">
+    <div class="region">
+      <!-- Start custom code for components -->
+      <div class="container">
+
+        <div class="notes">
+          <h1>Notes about half content cards with buttons (tiles)</h1>
+        </div>
+        <div class="example">
+          <!-- start example code for Drupal -->
+          <div class="half-content-cards-with-buttons">
+            <div class="container">
+              <div class="row ods-flex-justify-content-center">
+
+                <div class="card max-width-height common-border ods-mr-25 ods-mb-25">
+                  <div aria-label="pills photo"
+                       class="photo__one"
+                       role="img"
+                       title="pills photo"></div>
+                  <div
+                    class="col-12 max-width-height">
+                    <div
+                      class="card-body">
+                      <div class="card-title ods-mt-15">
+                        <h4>Card title</h4>
+                      </div>
+                      <div class="card-text">
+                        <p>Some quick example text to build on the card title and make up the bulk
+                          of the card's content.</p>
+                      </div>
+                      <a class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-15"
+                         href="#" role="button"
+                         tabindex="0">
+                        button
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card max-width-height common-border ods-mr-25 ods-mb-25">
+                  <div aria-label="doctor call"
+                       class="photo__two"
+                       role="img"
+                       title="doctor call"></div>
+                  <div
+                    class="col-12 max-width-height">
+                    <div
+                      class="card-body">
+                      <div class="card-title ods-mt-15">
+                        <h4>Card title</h4>
+                      </div>
+                      <div class="card-text">
+                        <p>Some quick example text to build on the card title and make up the bulk
+                          of the card's content.</p>
+                      </div>
+                      <a class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-15"
+                         href="#" role="button"
+                         tabindex="0">
+                        button
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card max-width-height common-border ods-mr-25 ods-mb-25">
+                  <div aria-label="test tubes photo"
+                       class="photo__three"
+                       role="img"
+                       title="test tubes photo"></div>
+                  <div
+                    class="col-12 max-width-height">
+                    <div
+                      class="card-body">
+                      <div class="card-title ods-mt-15">
+                        <h4>Card title</h4>
+                      </div>
+                      <div class="card-text">
+                        <p>Some quick example text to build on the card title and make up the bulk
+                          of the card's content.</p>
+                      </div>
+                      <a class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-15"
+                         href="#" role="button"
+                         tabindex="0">
+                        button
+                      </a>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- end example code for Drupal -->
+
+
+        </div>
+
+      </div>
+      <!-- End custom code for components -->
+    </div>
+  </main>
+</div>
+</body>
+</html>

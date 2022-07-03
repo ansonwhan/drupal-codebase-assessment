@@ -1,0 +1,39 @@
+uuid: 7db71645-b3e2-4f56-b68f-a4a1bd65fba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.thumb_modal
+    - field.field.paragraph.video.field_ods_video_p
+    - field.field.paragraph.video.field_video_blurb
+    - field.field.paragraph.video.field_video_button_title
+    - field.field.paragraph.video.field_video_duration
+    - field.field.paragraph.video.field_video_teaser
+    - paragraphs.paragraphs_type.video
+  module:
+    - text
+id: paragraph.video.thumb_modal
+targetEntityType: paragraph
+bundle: video
+mode: thumb_modal
+content:
+  field_ods_video_p:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: thumb_modal
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_video_blurb:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_video_button_title: true
+  field_video_duration: true
+  field_video_teaser: true

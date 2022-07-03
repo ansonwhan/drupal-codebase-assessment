@@ -1,0 +1,30 @@
+uuid: 61466948-4ad0-47cf-8cd1-74763eea302c
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_nav_level
+field_name: field_nav_level
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '0'
+      label: 'Top Level'
+    -
+      value: '1'
+      label: 'First Sublevel'
+    -
+      value: '2'
+      label: 'Second Sublevel'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

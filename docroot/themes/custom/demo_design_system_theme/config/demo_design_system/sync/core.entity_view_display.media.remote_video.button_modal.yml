@@ -1,0 +1,42 @@
+uuid: 46ced364-0d3c-4fd2-ad2b-b1593216453c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.button_modal
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - blazy
+_core:
+  default_config_hash: gUaDZKMQD3lmLKWPn727X3JHVdKJ525g4EJCCcDVAqk
+id: media.remote_video.button_modal
+targetEntityType: media
+bundle: remote_video
+mode: button_modal
+content:
+  field_media_oembed_video:
+    type: blazy_oembed
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      media_switch: ''
+      ratio: ''
+      background: false
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      caption: {  }
+      responsive_image_style: ''
+      box_style: ''
+      thumbnail_style: ''
+      _uri: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

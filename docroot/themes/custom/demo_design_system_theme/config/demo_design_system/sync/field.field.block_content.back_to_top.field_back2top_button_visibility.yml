@@ -1,0 +1,23 @@
+uuid: 203fd845-bf8a-4971-9a0e-360c18bd91ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - field.storage.block_content.field_back2top_button_visibility
+  module:
+    - options
+id: block_content.back_to_top.field_back2top_button_visibility
+field_name: field_back2top_button_visibility
+entity_type: block_content
+bundle: back_to_top
+label: 'Button Visibility Behavior'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: btm-persistent
+default_value_callback: ''
+settings: {  }
+field_type: list_string

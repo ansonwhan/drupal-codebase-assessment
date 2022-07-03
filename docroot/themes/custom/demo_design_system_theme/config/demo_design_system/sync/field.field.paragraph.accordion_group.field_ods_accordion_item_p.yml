@@ -1,0 +1,82 @@
+uuid: 8f22a0d3-26e5-462c-989b-3d7505f6cbc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_accordion_item_p
+    - paragraphs.paragraphs_type.accordion_group
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - entity_reference_revisions
+id: paragraph.accordion_group.field_ods_accordion_item_p
+field_name: field_ods_accordion_item_p
+entity_type: paragraph
+bundle: accordion_group
+label: 'Accordion items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      accordion_item: accordion_item
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 4
+        enabled: false
+      accordion_item:
+        enabled: true
+        weight: 5
+      block:
+        weight: 21
+        enabled: false
+      citation_group:
+        weight: 22
+        enabled: false
+      citation_item:
+        weight: 23
+        enabled: false
+      components_group:
+        weight: 24
+        enabled: false
+      content_reporting_divider:
+        weight: 25
+        enabled: false
+      data_table:
+        weight: 26
+        enabled: false
+      enumerated_content_component:
+        weight: 27
+        enabled: false
+      enumerated_content_group:
+        weight: 28
+        enabled: false
+      from_library:
+        weight: 29
+        enabled: false
+      graphic_divider:
+        weight: 30
+        enabled: false
+      hero_banner_item:
+        weight: 31
+        enabled: false
+      isi_section:
+        weight: 32
+        enabled: false
+      resource_cta:
+        weight: 33
+        enabled: false
+      side_by_side_content_image:
+        weight: 34
+        enabled: false
+      standard_body_copy:
+        weight: 6
+        enabled: false
+      video:
+        weight: 36
+        enabled: false
+field_type: entity_reference_revisions

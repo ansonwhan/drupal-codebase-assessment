@@ -1,0 +1,24 @@
+uuid: a9c682aa-fe44-421a-be3e-85968a94cdf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+    - paragraphs_viewmode
+id: video
+label: Video
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true
+  paragraphs_viewmode_behavior:
+    enabled: true
+    override_mode: default
+    override_available:
+      default: default
+      button_modal: button_modal
+      teaser: teaser
+      thumb_modal: thumb_modal
+    override_default: default

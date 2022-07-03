@@ -1,0 +1,23 @@
+uuid: bdd7eca5-4a36-45f2-baeb-bd9d5b8e13eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_add2any_widget_icons
+    - node.type.general_purpose_page
+  module:
+    - options
+id: node.general_purpose_page.field_ods_add2any_widget_icons
+field_name: field_ods_add2any_widget_icons
+entity_type: node
+bundle: general_purpose_page
+label: 'Social Share Icons'
+description: 'Select whether you want to use the traditional icons provided by AddToAny or custom icons in your design.'
+required: false
+translatable: true
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

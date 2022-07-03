@@ -1,0 +1,31 @@
+uuid: 06ca5aac-fe8a-45c2-a485-572abf605738
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:bootstrap_demo:03868ac7-11c8-41f6-a09e-d9267954cf77'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: bootstrapstyleguide_2
+theme: demo_design_system_theme
+region: content
+weight: -3
+provider: null
+plugin: 'block_content:03868ac7-11c8-41f6-a09e-d9267954cf77'
+settings:
+  id: 'block_content:03868ac7-11c8-41f6-a09e-d9267954cf77'
+  label: 'Bootstrap Styleguide'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /styleguide
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,23 @@
+uuid: ee324714-03e5-4981-ab3f-0c4fd49d9357
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.ods_article
+  module:
+    - text
+id: node.ods_article.body
+field_name: body
+entity_type: node
+bundle: ods_article
+label: Body
+description: 'Set the main body copy of the article here, if desired you can also set a distinct summary/teaser'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

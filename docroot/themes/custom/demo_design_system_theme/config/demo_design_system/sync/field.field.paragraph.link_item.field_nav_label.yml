@@ -1,0 +1,21 @@
+uuid: 5f4cbe9c-87c4-4079-9983-19ecb4fee79f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nav_label
+    - paragraphs.paragraphs_type.link_item
+  module:
+    - text
+id: paragraph.link_item.field_nav_label
+field_name: field_nav_label
+entity_type: paragraph
+bundle: link_item
+label: 'Nav Label'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

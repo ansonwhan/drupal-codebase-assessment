@@ -1,0 +1,21 @@
+{% extends "./_base-jynarque.twig" %}
+{% block title %}
+    Jynarque community build registration microsite
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/jynarque/community-build-registration-microsite.css"/>
+{% endblock %}
+
+ {% block header %}
+     {% include '../partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+    <div class="notes">
+        <h1>Notes about Community Build Registration Microsite</h1>
+    </div>
+    <div class="example">
+        {% include '../partial/jynarque/_community-build-registration-microsite.twig' %}
+    </div>
+{% endblock %}

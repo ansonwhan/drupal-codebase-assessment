@@ -1,0 +1,31 @@
+uuid: df092aa8-3c1f-4bac-8dcf-ec057f5fad4e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:isi:eaced86b-88ed-4dde-bcff-b1a5ea5d16a6'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: isisidebar
+theme: demo_design_system_theme
+region: sidebar_right
+weight: 0
+provider: null
+plugin: 'block_content:eaced86b-88ed-4dde-bcff-b1a5ea5d16a6'
+settings:
+  id: 'block_content:eaced86b-88ed-4dde-bcff-b1a5ea5d16a6'
+  label: 'ISI sidebar'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: "/important-safety-information/sidebar\r\n/content/home1\r\n/content/home3\r\n/a/tools-resources\r\n/b/tools-resources\r\n/forms/examples/contact"
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,50 @@
+uuid: c02ffd01-8ea2-4dc8-b082-63bfcfb35335
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - field.field.block_content.back_to_top.field_back2top_button_position
+    - field.field.block_content.back_to_top.field_back2top_button_shape
+    - field.field.block_content.back_to_top.field_back2top_button_text
+    - field.field.block_content.back_to_top.field_back2top_button_visibility
+id: block_content.back_to_top.default
+targetEntityType: block_content
+bundle: back_to_top
+mode: default
+content:
+  field_back2top_button_position:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_back2top_button_shape:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_back2top_button_text:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_back2top_button_visibility:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

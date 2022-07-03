@@ -1,0 +1,30 @@
+uuid: 03b31b5b-c08b-49be-9843-f0a93a35952e
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_cta_link_display
+field_name: field_cta_link_display
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: text
+      label: 'Link displayed only as text'
+    -
+      value: button
+      label: 'Link displayed as button'
+    -
+      value: icon
+      label: 'Link displayed as icon only (no text, no button treatment)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,24 @@
+uuid: 940704c5-e8fb-4767-9ea6-9dee2c321375
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.resources
+  module:
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__resources_block_1
+theme: demo_design_system_theme
+region: hidden
+weight: 0
+provider: null
+plugin: 'views_block:resources-block_1'
+settings:
+  id: 'views_block:resources-block_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: '20'
+visibility: {  }

@@ -1,0 +1,112 @@
+uuid: 77a93f8a-8a71-4441-921c-8f8bd32cbf19
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.profile.field_custom_classes
+    - field.field.node.profile.field_custom_id
+    - field.field.node.profile.field_mobile_image
+    - field.field.node.profile.field_profile_content_bottom
+    - field.field.node.profile.field_profile_content_top
+    - field.field.node.profile.field_profile_heading
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_intro
+    - field.field.node.profile.field_profile_subheading
+    - field.field.node.profile.field_profile_video
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.profile.default
+targetEntityType: node
+bundle: profile
+mode: default
+content:
+  field_custom_classes:
+    type: string
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_custom_id:
+    type: string
+    weight: 9
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_mobile_image:
+    type: entity_reference_entity_view
+    weight: 10
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_profile_content_bottom:
+    type: entity_reference_revisions_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_content_top:
+    type: entity_reference_revisions_entity_view
+    weight: 4
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_heading:
+    weight: 6
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_profile_intro:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_subheading:
+    weight: 7
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_profile_video:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: button_modal
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  links: true

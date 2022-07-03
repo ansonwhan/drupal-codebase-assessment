@@ -1,0 +1,23 @@
+uuid: fbbad988-a88a-4d5f-988b-f73fa8702bbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - field.storage.block_content.field_back2top_button_shape
+  module:
+    - options
+id: block_content.back_to_top.field_back2top_button_shape
+field_name: field_back2top_button_shape
+entity_type: block_content
+bundle: back_to_top
+label: 'Button Shape'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: oval
+default_value_callback: ''
+settings: {  }
+field_type: list_string

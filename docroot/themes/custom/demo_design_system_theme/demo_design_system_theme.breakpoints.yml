@@ -1,0 +1,49 @@
+demo_design_system_theme.screen-xs-max:
+  label: xs-max
+  mediaQuery: '(max-width: 576.98px)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-sm-min:
+  label: sm-min
+  mediaQuery: '(min-width: 577px)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-sm-max:
+  label: sm-max
+  mediaQuery: '(max-width: 768.98px)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-md-min:
+  label: md-min
+  mediaQuery: '(min-width: 769px)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-md-max:
+  label: md-max
+  mediaQuery: '(max-width: 992.98px)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-lg-min:
+  label: lg-min
+  mediaQuery: '(min-width: 993px)'
+  weight: 6
+  multipliers:
+    - 1x
+    - 2x
+demo_design_system_theme.screen-lg-max:
+  label: lg-max
+  mediaQuery: '(max-width: 1200.98px)'
+  weight: 7
+  multipliers:
+    - 1x
+    - 2x

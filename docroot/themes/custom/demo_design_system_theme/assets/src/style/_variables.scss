@@ -1,0 +1,96 @@
+// Theme variables.
+// Base variables.
+@import "./base/bootstrap/variables";
+@import "./base/bootstrap/mixins_functions";
+
+// Set other directories relative to theme root.
+$images-path: '../img/';
+$webp-path: '../webp/';
+$fonts-path: '../fonts/';
+
+// Set title sizes.
+$subhead-sizes: 2rem, 1.75rem, 1.5rem, 1.25rem, 1rem;
+$subhead-bold-sizes: 2.25rem, 2rem, 1.75rem, 1.25rem, 1rem, 0.875rem;
+$body-sizes: 1rem, 1.125rem, 1.5rem;
+
+//Set common background.
+$common-background-light-gray: #ffffff;
+$common-background-dark-blue: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+
+//Set common box-shadow
+$standardButtonBoxShadow: 0 0 0 .2rem rgba(108, 117, 125, .5) !important;
+$primaryButtonBoxShadow: 0 0 0 .2rem rgba(0, 123, 255, .5) !important;
+$applicationSideCtaCardsBoxShadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.75);
+
+//Set common border
+$common-border-color: rgba(0, 0, 0, 0.12);
+$common-border-size: 1px;
+
+//Set common colors
+$common-light-gray: #ffffff;
+
+$basic-link-hover-color: #0056b3;
+$active-link-color: $gray-700;
+
+$dropdown-active-color: #0069D9;
+
+//Slick carousel z-index
+$zIndexNavigationArrow: 1;
+
+$zIndexColMd4: 3;
+//slick carousel z-index end
+
+//Default border radius value for buttons/links etc.
+$defaultBorderRadiusValue: 4px;
+
+
+// Vertical spacing sizes.
+$vertical-spacing-sizes: (
+  0px,
+  5px,
+  10px,
+  15px,
+  20px,
+  25px,
+  30px,
+  35px,
+  40px,
+  45px,
+  50px,
+  55px,
+  60px,
+);
+
+// Horizontal spacing sizes.
+$horizontal-spacing-sizes: (
+  0px,
+  5px,
+  10px,
+  15px,
+  20px,
+  25px,
+  30px,
+  35px,
+  40px,
+  45px,
+  50px,
+  55px,
+  60px,
+);
+
+// Horizontal and vertical spacing sizes.
+$horizontal-and-vertical-sizes: (
+  0px,
+  5px,
+  10px,
+  15px,
+  20px,
+  25px,
+  30px,
+  35px,
+  40px,
+  45px,
+  50px,
+  55px,
+  60px,
+);

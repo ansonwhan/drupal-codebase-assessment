@@ -1,0 +1,12 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.enable-disable-zoom {
+  position: relative;
+  z-index: $zIndexNavigationArrow;
+}
+
+.pinch-to-zoom {
+
+}

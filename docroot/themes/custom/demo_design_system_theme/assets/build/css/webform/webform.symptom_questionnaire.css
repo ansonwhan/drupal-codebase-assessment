@@ -1,0 +1,247 @@
+.webform-submission-symptom-questionnaire-form .webform-progress__status {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-wrapper {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+  padding: 20px 0 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-wrapper {
+    padding: 30px 0 20px 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-wrapper {
+    padding: 30px 30px 19px 30px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-wrapper:after {
+  content: '';
+  background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+  position: absolute;
+  left: -999em;
+  right: -999em;
+  top: -1px;
+  bottom: -1px;
+  z-index: -1;
+}
+
+@media (min-width: 992px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-wrapper:after {
+    display: none;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-header {
+  color: #fff;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-header h2 {
+  color: #fff;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-header h2 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-bottom: 20px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-header p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner {
+  padding: 14px 20px;
+  margin-top: 20px;
+  font-family: "Museo Sans", sans-serif;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  background: #fff;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner {
+    padding: 23px 51px;
+  }
+}
+
+@media (min-width: 992px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner {
+    padding: 23px 38px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .js-form-type-processed-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .js-form-type-processed-text {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .custom-control {
+  margin-top: 39px;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner label {
+  font-weight: 300;
+  padding-left: 1.5rem;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner label:before, .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner label:after {
+  left: 0;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .form-actions {
+  text-align: right;
+  margin-top: 29px;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .form-actions {
+    text-align: center;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner input {
+  display: inline;
+  width: auto;
+  border-radius: 40px;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .webform-progress {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner > .js-form-type-processed-text {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .webform-options-display-side-by-side {
+  display: block;
+  max-width: 900px;
+  margin-top: 0.4em;
+  -moz-column-count: 1;
+  -webkit-column-count: 1;
+  column-count: 1;
+}
+
+@media (min-width: 577px) {
+  .webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .webform-options-display-side-by-side {
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .custom-form-symptom-inner .webform-options-display-side-by-side > div {
+  display: block;
+}
+
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .progress-step:after {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before,
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-after {
+  height: 17px;
+  width: 26px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../../img/icon-arrow.png");
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before,
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-after {
+    margin-left: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before,
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-after {
+    margin-left: 25px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before.custom-arrow-disabled,
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-after.custom-arrow-disabled {
+  cursor: auto;
+  pointer-events: none;
+  background-image: url("../../img/icon-arrow-disabled.png");
+}
+
+.webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before {
+  transform: rotateY(180deg) scale(1);
+  -webkit-transform: rotate(180deg) scale(1);
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before {
+    margin-left: 0;
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 992px) {
+  .webform-submission-symptom-questionnaire-form .webform-progress-tracker .custom-arrow-before {
+    margin-right: 25px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .progress-step {
+  height: 3px;
+  background: #fff;
+  margin: 7px 5px;
+}
+
+.webform-submission-symptom-questionnaire-form .progress-step.is-active {
+  background: #FF5F3B;
+}
+
+.webform-submission-symptom-questionnaire-form .progress-step span {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .symptom-questionnaire-previous-question,
+.webform-submission-symptom-questionnaire-form .symptom-questionnaire-next-question {
+  margin-left: 5px;
+}
+
+@media (min-width: 769px) {
+  .webform-submission-symptom-questionnaire-form .symptom-questionnaire-previous-question,
+  .webform-submission-symptom-questionnaire-form .symptom-questionnaire-next-question {
+    margin: 0 5px;
+  }
+}
+
+.webform-submission-symptom-questionnaire-form .alert-wrapper {
+  display: none;
+}
+
+.webform-submission-symptom-questionnaire-form .form-item--error-message {
+  padding-top: 15px;
+  color: #DC3545;
+}
+
+/*# sourceMappingURL=webform.symptom_questionnaire.css.map */

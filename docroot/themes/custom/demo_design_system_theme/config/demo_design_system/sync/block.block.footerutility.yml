@@ -1,0 +1,25 @@
+uuid: c2c02979-b4fc-4714-85f0-bd56d92db66f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.footer-utility
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: footerutility
+theme: demo_design_system_theme
+region: footer_6
+weight: 0
+provider: null
+plugin: 'system_menu_block:footer-utility'
+settings:
+  id: 'system_menu_block:footer-utility'
+  label: 'Footer Utility'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

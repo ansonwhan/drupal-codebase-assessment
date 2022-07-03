@@ -1,0 +1,20 @@
+uuid: 63708141-4f17-4f35-a658-27e6ef8868f3
+langcode: en
+status: true
+dependencies:
+  module:
+    - isi
+    - paragraphs_library
+third_party_settings:
+  paragraphs_library:
+    allow_library_conversion: true
+_core:
+  default_config_hash: BMBdyAHoDi3zLf1oPQDIEJSAYeqFyR3ZMPyGztUYjfc
+id: isi_section
+label: 'ISI section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_isi_settings:
+    enabled: true

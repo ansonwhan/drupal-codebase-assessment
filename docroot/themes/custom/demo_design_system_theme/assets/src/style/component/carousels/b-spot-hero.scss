@@ -1,0 +1,361 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.b-spot-hero {
+  $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+  $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+  $paragraphMediumResolutionsFontSize: remOrPercent(18px);
+
+  //Spacing "getters"
+  $verticalSpacingGetter15: getSpacingSize($vertical-spacing-sizes, 15px);
+  $verticalSpacingGetter25: getSpacingSize($vertical-spacing-sizes, 25px);
+  $horizontalSpacingGetter35: getSpacingSize($horizontal-spacing-sizes, 35px);
+  > .container {
+    @include media-breakpoint-up(md) {
+      width: calc(100% + 30px) !important;
+      margin-right: -30px;
+    }
+  }
+  > .container, .hero-fullbleed-wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  > .container > .row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .hero-fullbleed-wrapper {
+    &:before {
+      position: absolute;
+      height: 100%;
+      display: block;
+      content: '';
+      background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+      width: 150vw;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  //Common styles for each slide
+  .card {
+    .carousel {
+      .slick-list {
+        .slide-wrapper {
+          position: relative;
+
+          .card-img-top {
+            box-sizing: border-box;
+          }
+
+          .jumbotron-container {
+            width: 100%;
+
+            > .row {
+              margin-left: 0;
+              margin-right: 0;
+            }
+
+            .ods-col-6 {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+              min-width: 0;
+            }
+
+            .text-container {
+              padding-left: 0 !important;
+              padding-right: 0 !important;
+              padding-top: 0 !important;
+            }
+
+            .ods-col-sm-7.ods-col-6 {
+              flex: 0 0 60% !important;
+              max-width: 60% !important;
+              justify-self: flex-start;
+              align-self: center;
+              padding-top: 0 !important;
+            }
+
+            .ods-col-sm-5.ods-col-6 {
+              flex: 0 0 40% !important;
+              max-width: 40% !important;
+              justify-self: flex-end;
+              align-self: center;
+            }
+
+            h1 {
+              @extend .subhead-bold;
+            }
+            div[role=img] {
+              width: 100%;
+              height: 100%;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  //End common styles for each slide
+
+
+  //The problem with the interpretation of the sass function responsible for breakpoint (xs),
+  // for the moment I leave the usual @mediaquery
+  @media (max-width: 575.98px) {
+    .card {
+      .carousel {
+        .slick-list {
+          $xsContainerSize: remOrPercent(250px);
+          height: $xsContainerSize;
+          max-width: remOrPercent(100%);
+
+          .slide-wrapper {
+            .card-img-top {
+              min-height: $xsContainerSize;
+              width: auto;
+            }
+
+            .jumbotron-container {
+              top: 0 !important;
+              left: 0 !important;
+              //left: remOrPercent(50%) !important;
+              //transform: translate(-50%, 0);
+              min-height: remOrPercent(206px);
+              width: remOrPercent(100%) !important;
+
+              .first-paragraph {
+                padding: 0 !important;
+              }
+
+              .text-container {
+                //padding-top: $verticalSpacingGetter15 !important;
+              }
+
+              .jumbotron-img-container {
+                padding: 0;
+
+                .doctor-hero, .about-disease-img {
+                  height: remOrPercent(250px);
+                  width: remOrPercent(100%);
+                  background: file('doctor_hero.webp');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+
+              h1 {
+                $h1Padding: 0 !important;
+                @include h1HeadingCommonStyles($h3FontSizeModifier, $h1Padding);
+              }
+
+              a {
+                margin-left: remOrPercent(17.6px);
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-only(sm) {
+    .card {
+      .carousel {
+        .slick-list {
+          $smContainerSize: remOrPercent(250px);
+          height: $smContainerSize;
+          max-width: remOrPercent(769px);
+
+          .slide-wrapper {
+            .card-img-top {
+              min-height: $smContainerSize;
+              width: auto;
+            }
+
+            .jumbotron-container {
+              top: 0;
+              left: 0;
+              //left: remOrPercent(52%);
+              //transform: translate(-50%, 0);
+              max-height: remOrPercent(202px);
+              width: remOrPercent(100%);
+
+              .text-container {
+                //padding-top: $verticalSpacingGetter25 !important;
+                //padding-left: $horizontalSpacingGetter35 !important;;
+              }
+
+              .jumbotron-img-container {
+                .doctor-hero, .about-disease-img {
+                  height: $smContainerSize;
+                  width: remOrPercent(100%);
+                  background: file('doctor_hero.webp');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+
+              h1 {
+                @include h1HeadingCommonStyles($h3FontSizeModifier);
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+    .card {
+      .carousel {
+        .slick-list {
+          $mdContainerSize: remOrPercent(220px);
+          height: $mdContainerSize;
+          max-width: remOrPercent(769px);
+
+          .slide-wrapper {
+            .card-img-top {
+              min-height: $mdContainerSize;
+              width: auto;
+            }
+
+            .jumbotron-container {
+              top: 0;
+              left: 0;
+              min-height: $mdContainerSize;
+              min-width: remOrPercent(464px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h2FontSizeModifier);
+              }
+
+              .text-container {
+                //padding-top: $verticalSpacingGetter15 !important;
+              }
+
+              .jumbotron-img-container {
+                .doctor-hero, .about-disease-img {
+                  height: remOrPercent(200px) !important;
+                  width: remOrPercent(100%) !important;
+                  background: file('doctor_hero.webp');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $commonLgSlickListWidth: remOrPercent(1440px);
+  $commonLgJumbotronContainerWidth: remOrPercent(1100px);
+
+  @include media-breakpoint-up(lg) {
+    .card {
+      .carousel {
+        .slick-list {
+          $lgContainerSize: remOrPercent(300px);
+          height: $lgContainerSize;
+          max-width: $commonLgSlickListWidth;
+
+          .slide-wrapper {
+            .card-img-top {
+              min-height: $lgContainerSize;
+              width: auto;
+            }
+
+            .jumbotron-container {
+              top: 0;
+              left: 0!important; //remOrPercent(5%) !important;
+              max-width: $commonLgJumbotronContainerWidth !important;
+              color: red;
+
+              h1 {
+                @include h1HeadingCommonStyles();
+              }
+
+              .first-paragraph {
+                font-size: $paragraphMediumResolutionsFontSize;
+              }
+
+
+              .jumbotron-img-container {
+                .doctor-hero, .about-disease-img {
+                  height: $lgContainerSize;
+                  max-width: remOrPercent(340px);
+                  background: file('doctor_hero.webp');
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-only(xl) {
+    .card {
+      .carousel {
+        .slick-list {
+          $xlContainerSize: remOrPercent(300px);
+          height: $xlContainerSize;
+          max-width: $commonLgSlickListWidth;
+
+          .slide-wrapper {
+            .card-img-top {
+              min-height: remOrPercent(300px);
+              width: auto;
+            }
+
+            .jumbotron-container {
+              top: remOrPercent(0%);
+              left: remOrPercent(12%);
+              max-width: $commonLgJumbotronContainerWidth;
+              color: blue;
+
+              h1 {
+                @include h1HeadingCommonStyles();
+              }
+
+              .first-paragraph {
+                font-size: $paragraphMediumResolutionsFontSize;
+              }
+
+
+            }
+
+            .jumbotron-img-container {
+              .doctor-hero, .about-disease-img {
+                height: $xlContainerSize;
+                max-width: remOrPercent(450px);
+                background: file('doctor_hero.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+
+          }
+        }
+      }
+    }
+  }
+}
+
+body {
+  overflow-x: hidden;
+}

@@ -1,0 +1,59 @@
+.resources-views-bef-form form {
+  width: 100%;
+  padding: 0 15px;
+}
+
+.anchor-button-container a {
+  margin: 15px !important;
+  border-radius: 1.1875rem;
+  height: 30px;
+  font-size: .9rem;
+  padding: 0.55rem 0.9375rem;
+  color: #fff;
+  background-color: #007BFF;
+  border-color: #007BFF;
+  display: inline-block;
+  font-family: "Museo Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  line-height: 1;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.anchor-button-container a:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+  text-decoration: none;
+}
+
+.node-type-resource .field--item .call-to-action {
+  margin-right: 10px !important;
+  margin-left: 10px !important;
+}
+
+.node-type-resource .custom--video-item {
+  margin: 0 10px;
+}
+
+.node-type-resource .custom--video-item .custom--video-teaser {
+  height: auto !important;
+  margin: 15px;
+}
+
+.node-type-resource .custom--video-item .custom--video-teaser .field--item {
+  font-family: "Whitman",serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #373D42;
+  text-align: left;
+}
+
+.node-type-resource .custom--video-duration {
+  display: none;
+}
+
+/*# sourceMappingURL=view.resources.css.map */

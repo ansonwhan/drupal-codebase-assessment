@@ -1,0 +1,21 @@
+uuid: f9ebfff2-b892-4298-bbac-fe5d47f82290
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_text
+    - paragraphs.paragraphs_type.video_group
+  module:
+    - text
+id: paragraph.video_group.field_text
+field_name: field_text
+entity_type: paragraph
+bundle: video_group
+label: Text
+description: 'Text will be shown before the video list.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

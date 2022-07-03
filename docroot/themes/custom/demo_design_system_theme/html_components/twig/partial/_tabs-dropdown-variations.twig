@@ -1,0 +1,313 @@
+{#special css, html attributes#}
+{% set tabsAttr                = tabsDropdownVariations.otsukaTabs %}
+{% set tabsDropdowns           = tabsDropdownVariations.otsukaTabsDropdowns %}
+{% set headerTabs              = tabsDropdownVariations.otsukaHeaderTabs %}
+{% set headerTabsWithDropdowns = tabsDropdownVariations.otsukaHeaderTabsWithDropdowns %}
+
+{#css modifiers#}
+{% set cssModifiers = tabsDropdownVariations.cssModifiers %}
+
+{#Common (navs and tabs) special css, html attributes#}
+{% set menuButtonAttr = navsVariations.overflowMenuButton %}
+{% set navLinksAttr   = navsVariations.navLinks %}
+{% set uppercaseLinks = navsVariations.uppercaseLinks %}
+
+<br>
+<br>
+
+<h5>1. Tab states examples:</h5>
+
+<ul class="{{ tabsAttr.mainContainerClass }} nav nav-tabs {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Default Link</a>
+  </li>
+  <li class="nav-item">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ navLinksAttr.activeLinkClass }}" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ navLinksAttr.disabledLinkClass }}" href="#">Disabled</a>
+  </li>
+</ul>
+
+
+<br>
+
+<h5>2. Tabs-dropdowns examples:</h5>
+
+<ul class="{{ tabsDropdowns.mainContainerClass }} nav nav-tabs {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Default Dropdown
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle {{ navLinksAttr.activeLinkClass }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown with active class
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item dropdown">
+    <a
+      class="nav-link dropdown-toggle {{ navLinksAttr.disabledLinkClass }}"
+      data-toggle="dropdown"
+      href="#"
+      role="button"
+      aria-haspopup="true"
+      aria-expanded="false">
+      Disabled Dropdown
+    </a>
+  </li>
+</ul>
+
+<br>
+
+<h5>3. Header tabs examples:</h5>
+
+<ul class="{{ headerTabs.mainContainerClass }} nav {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <a class="nav-link {{ otsukaHeaderTabs.odsP20 }}" href="#">Default link with long name</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ navLinksAttr.activeLinkClass }} {{ otsukaHeaderTabs.odsP20 }}" href="#">Active
+      link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Overflow link</a>
+  </li>
+  <li class="nav-item">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link {{ navLinksAttr.disabledLinkClass }}" href="#">Disabled Link</a>
+  </li>
+</ul>
+
+<br>
+
+<h5>4. Header tabs with dropdowns (adjustable width)</h5>
+
+<ul class="{{ headerTabsWithDropdowns.mainContainerClass }} nav {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ otsukaHeaderTabs.odsP20 }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Default link with long name
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ navLinksAttr.activeLinkClass }} {{ otsukaHeaderTabs.odsP20 }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Active link
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ navLinksAttr.disabledLinkClass }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Disabled Link
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+</ul>
+
+<br>
+
+<h6>Header tabs with dropdowns (fixed width)</h6>
+<ul class="otsuka-header-tabs-with-dropdowns {{ cssModifiers.fixedWidth }} nav {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ otsukaHeaderTabs.odsP20 }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Long name
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ navLinksAttr.activeLinkClass }} {{ otsukaHeaderTabs.odsP20 }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Active link
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link dropdown-toggle {{ navLinksAttr.disabledLinkClass }}"
+       data-toggle="dropdown"
+       href="#"
+       role="button"
+       aria-haspopup="true"
+       aria-expanded="false">
+      Dropdown Disabled Link
+    </a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+  </li>
+</ul>
+
+<br>
+
+<h5>5. Header tab overflow menu (with many states - <i>active, hover</i> etc.)</h5>
+<ul class="{{ headerTabs.mainContainerClass }} {{ cssModifiers.standaloneOverflowMenu }} nav {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+    </div>
+  </li>
+  <li class="nav-item {{ navLinksAttr.activeLinkClass }}">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }} {{ menuButtonAttr.spacerClassSelector }}"></i>
+      <i class="{{ menuButtonAttr.fontAwesomeClass }}"></i>
+    </div>
+  </li>
+</ul>
+
+<br>
+
+<h5>6. Header tab mobile menu (with many states - <i>active, hover</i> etc.)</h5>
+<ul class="{{ headerTabs.mainContainerClass }} {{ cssModifiers.standaloneMobileMenu }} nav {{ uppercaseLinks.uppercaseClass }}">
+  <li class="nav-item">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeMobileMenuClass }}"></i>
+    </div>
+  </li>
+  <li class="nav-item {{ navLinksAttr.activeLinkClass }}">
+    <div id="{{ menuButtonAttr.dedicatedIdSelector }}"
+         class="{{ menuButtonAttr.dedicatedClassSelector }} d-flex justify-content-center align-items-center"
+         tabindex="{{ menuButtonAttr.tabindex }}"
+         aria-label="{{ menuButtonAttr.ariaLabel }}"
+         title="{{ menuButtonAttr.title }}"
+         aria-haspopup="{{ menuButtonAttr.ariaHaspopup }}"
+         aria-expanded="{{ menuButtonAttr.ariaExpanded }}"
+    >
+      <i class="{{ menuButtonAttr.fontAwesomeMobileMenuClass }}"></i>
+    </div>
+  </li>
+</ul>
+
+<br>
+<br>

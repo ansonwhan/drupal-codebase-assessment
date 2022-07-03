@@ -1,0 +1,7 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.region--header-top {
+  background: $primary;
+  font-weight: 500;
+}

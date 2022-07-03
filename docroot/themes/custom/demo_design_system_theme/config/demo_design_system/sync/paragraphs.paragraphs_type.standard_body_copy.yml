@@ -1,0 +1,14 @@
+uuid: 9c57ed42-9a70-4d27-8121-24a430b3c287
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: standard_body_copy
+label: 'Standard Body Copy'
+icon_uuid: null
+icon_default: null
+description: 'Use this component to insert rich formatted text.'
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

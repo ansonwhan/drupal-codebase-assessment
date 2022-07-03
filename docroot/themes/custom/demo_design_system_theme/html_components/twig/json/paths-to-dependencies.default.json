@@ -1,0 +1,7 @@
+{
+  "pathsToDependencies": {
+    "isDockerLocalHost": false,
+    "localhostDockerContainerPath": "/themes/custom/otsk-sandboxes/themes/custom/demo_design_system_theme/assets/build/",
+    "repositoryPath": "/themes/custom/demo_design_system_theme/assets/build/"
+  }
+}

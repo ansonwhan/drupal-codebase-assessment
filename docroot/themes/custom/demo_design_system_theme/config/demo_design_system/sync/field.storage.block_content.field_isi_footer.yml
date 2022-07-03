@@ -1,0 +1,20 @@
+uuid: 74ec41a8-a314-44af-bf3e-eb0c54efc697
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: 5TI9Sjj4ktePlOzG_WrEAwxH5FVm6T2ZqLccNqHZKf8
+id: block_content.field_isi_footer
+field_name: field_isi_footer
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 3348a897-db18-408a-b9ad-bc035bd88767
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_accordion_row1_behavior
+field_name: field_accordion_row1_behavior
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: collapsed
+      label: 'Collapsed by default'
+    -
+      value: expanded_always
+      label: 'Expand first row for all viewports on page load'
+    -
+      value: expanded_desktop
+      label: 'Expand first row by default on desktop layouts/viewports'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

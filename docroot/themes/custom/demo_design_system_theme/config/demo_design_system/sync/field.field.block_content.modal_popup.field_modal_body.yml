@@ -1,0 +1,21 @@
+uuid: 8723d376-98dc-4daa-a2af-eda1a9030e75
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.storage.block_content.field_modal_body
+  module:
+    - text
+id: block_content.modal_popup.field_modal_body
+field_name: field_modal_body
+entity_type: block_content
+bundle: modal_popup
+label: 'Modal body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

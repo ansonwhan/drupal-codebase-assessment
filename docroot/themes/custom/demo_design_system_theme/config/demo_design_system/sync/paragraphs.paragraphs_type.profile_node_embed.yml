@@ -1,0 +1,14 @@
+uuid: bc11525d-53b0-4241-992f-7ff0972b8a40
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: profile_node_embed
+label: 'Profile Node Embed'
+icon_uuid: null
+icon_default: null
+description: 'Use this to embed a full view of a bio/profile'
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

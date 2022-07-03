@@ -1,0 +1,27 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  CTA block cards
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/cta-block-elements/cta-block-cards.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>Notes about CTA block cards (with images)</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_cta-block-cards.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>CTA block cards</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,31 @@
+uuid: 3049d80e-595e-4186-b8f9-2efc9d49e0d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.advanced_form_elements_example
+  module:
+    - system
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform_4
+theme: demo_design_system_theme
+region: hidden
+weight: -25
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Advanced Form Elements Example'
+  provider: webform
+  label_display: visible
+  webform_id: advanced_form_elements_example
+  default_data: ''
+  redirect: false
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/341
+    negate: false
+    context_mapping: {  }

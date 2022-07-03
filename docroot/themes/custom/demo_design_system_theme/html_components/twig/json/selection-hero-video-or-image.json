@@ -1,0 +1,38 @@
+{
+  "notesAboutComponent": "",
+  "selectionHeroVideoOrImage": [
+    {
+      "alt": "",
+      "videoOrImgName": "mov_bbb.mp4",
+      "videoType": "video/mp4",
+      "class": "",
+      "heading": "Manage your mental health.",
+      "text": "",
+      "buttonText": "",
+      "notes": ""
+    },
+    {
+      "alt": "doctor with mobile photo",
+      "videoOrImgName": "doctor_with_mobile.webp",
+      "videoType": "",
+      "class": "",
+      "heading": "Combined video and img carousel",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "buttonText": "About Treva",
+      "notes": ""
+    },
+    {
+      "alt": "pills photo",
+      "videoOrImgName": "photo_of_pills.webp",
+      "videoType": "",
+      "class": "",
+      "heading": "Combined video and img carousel",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "buttonText": "About Treva",
+      "notes": ""
+    }
+  ]
+}
+
+
+

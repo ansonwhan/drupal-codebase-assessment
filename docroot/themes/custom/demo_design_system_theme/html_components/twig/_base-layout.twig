@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Disable cache on story book side.  -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+  <meta http-equiv="Pragma" content="no-cache"/>
+  <meta http-equiv="Expires" content="0"/>
+  <!-- End Disable cache  -->
+
+  <title>{% block title %}{% endblock %}</title>
+  {% set basePath = pathsToDependencies.isDockerLocalHost ? pathsToDependencies.localhostDockerContainerPath : pathsToDependencies.repositoryPath %}
+  {% include './partial/_drupal-files.twig' %}
+  {% include './partial/_common-storybook-js.twig' %}
+  <!-- start links to component specific CSS & JS -->
+  {% block head %}{% endblock %}
+  <!-- end links to component specific CSS & JS -->
+</head>
+<body>
+
+{% block header %}{% endblock %}
+
+<div class="page-container" id="page-container">
+  <main id="main-content" role="main">
+    <div class="region region-content-top clearfix">
+      <!-- Start custom code for components -->
+      <div class="container mb-5">
+        <div class="">
+          {% block content %}{% endblock %}
+        </div>
+      </div>
+      <!-- End custom code for components -->
+    </div>
+  </main>
+</div>
+
+{% include './partial/_footer.twig' %}
+
+</body>
+</html>
+

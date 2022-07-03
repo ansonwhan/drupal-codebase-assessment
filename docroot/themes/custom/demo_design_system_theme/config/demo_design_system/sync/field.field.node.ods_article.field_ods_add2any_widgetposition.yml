@@ -1,0 +1,23 @@
+uuid: 05fcd26f-453b-43c5-bd57-5c2edcc3d933
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_add2any_widgetposition
+    - node.type.ods_article
+  module:
+    - options
+id: node.ods_article.field_ods_add2any_widgetposition
+field_name: field_ods_add2any_widgetposition
+entity_type: node
+bundle: ods_article
+label: 'Social Share Widget Location'
+description: 'Select the position for the AddToAny social sharing widget. (Only appears if module is enabled for this content type)'
+required: false
+translatable: false
+default_value:
+  -
+    value: header
+default_value_callback: ''
+settings: {  }
+field_type: list_string

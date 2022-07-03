@@ -1,0 +1,47 @@
+// Font Family Museo Sans.
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 100;
+  font-display: swap;
+  src: url("#{$fonts-path}museo_sans/MuseoSans_100-webfont.woff") format("woff"),
+  url("#{$fonts-path}museo_sans/MuseoSans_100.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: url("#{$fonts-path}museo_sans/MuseoSans_300-webfont.woff") format("woff"),
+  url("#{$fonts-path}museo_sans/MuseoSans_300.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("#{$fonts-path}museo_sans/MuseoSans_500-webfont.woff") format("woff"),
+  url("#{$fonts-path}museo_sans/MuseoSans_500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fonts-path}museo_sans/MuseoSans_700-webfont.woff") format("woff"),
+  url("#{$fonts-path}museo_sans/MuseoSans_700.otf") format("opentype");
+}
+
+// Font Family Whitman.
+@font-face {
+  font-family: "Whitman";
+  font-weight: 400;
+  font-display: swap;
+  src: url("#{$fonts-path}whitman/Whitman-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whitman";
+  font-weight: 700;
+  font-display: swap;
+  src: url("#{$fonts-path}whitman/Whitman-Bold.otf") format("opentype");
+}

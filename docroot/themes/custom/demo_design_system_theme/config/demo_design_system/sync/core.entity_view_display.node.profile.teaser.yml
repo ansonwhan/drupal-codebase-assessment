@@ -1,0 +1,93 @@
+uuid: 43238dea-a41c-4d43-8d2c-ea9d35374b66
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.profile.field_custom_classes
+    - field.field.node.profile.field_custom_id
+    - field.field.node.profile.field_mobile_image
+    - field.field.node.profile.field_profile_content_bottom
+    - field.field.node.profile.field_profile_content_top
+    - field.field.node.profile.field_profile_heading
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_intro
+    - field.field.node.profile.field_profile_subheading
+    - field.field.node.profile.field_profile_video
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.profile.teaser
+targetEntityType: node
+bundle: profile
+mode: teaser
+content:
+  field_custom_classes:
+    type: string
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_custom_id:
+    type: string
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_profile_heading:
+    type: string
+    weight: 6
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_profile_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  field_profile_intro:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_profile_subheading:
+    type: string
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_profile_video:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: content
+    label: above
+    settings:
+      view_mode: button_modal
+      link: ''
+    third_party_settings: {  }
+  links:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_mobile_image: true
+  field_profile_content_bottom: true
+  field_profile_content_top: true

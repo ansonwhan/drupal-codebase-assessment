@@ -1,0 +1,40 @@
+{% extends "./_base-layout.twig" %}
+{% block title %}
+  Layout with banner, sidebar, header, footer v.3
+{% endblock %}
+{% block head %}
+    <!-- SLICK carousel  CSS and JS -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+    <!-- End SLICK carousel  CSS and JS -->
+
+    <!-- Dedicated CSS -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/a-spot-hero-light-theme.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layout-with-banner-sidebar-header-footer_v3.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/cta-block-elements/cta-block-cards.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/block/block.isi-sidebar.css"/>
+    <!-- End dedicated CSS -->
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_header.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div style="background-color: azure;"
+       class="notes fixed-bottom text-primary text-center bg-success">
+    <h1>Notes about <i>layout-with-banner-sidebar-header-footer_v3</i> prototype</h1>
+  </div>
+
+  <div class="example">
+    {% include 'layouts/_layout-with-banner-sidebar-header-footer-v3.twig' %}
+  </div>
+{% endblock %}

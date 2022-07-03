@@ -1,0 +1,23 @@
+uuid: fd03ce88-6d99-48fb-987f-bfcb4be65f28
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.bootstrap_demo
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.bootstrap_demo.body
+field_name: body
+entity_type: block_content
+bundle: bootstrap_demo
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

@@ -1,0 +1,21 @@
+uuid: fa11de52-eb9b-4669-a81d-01f6a1861e4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+id: block_content.field_cta_block_wrapper
+field_name: field_cta_block_wrapper
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

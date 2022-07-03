@@ -1,0 +1,31 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Tabs dropdown variations
+{% endblock %}
+{% block head %}
+    <!-- Dedicated css -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/tabs/tabs-dropdown-variations.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+    <!-- End dedicated css -->
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1><i>Tabs dropdown variations</i> components </h1>
+  </div>
+  <div class="example">
+    {% include './partial/_tabs-dropdown-variations.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Notes about tabs variations</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

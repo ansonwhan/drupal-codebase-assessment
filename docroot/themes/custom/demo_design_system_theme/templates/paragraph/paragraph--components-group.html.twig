@@ -1,0 +1,51 @@
+
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    settings_custom_classes ? settings_custom_classes,
+    content.field_background_color['#items'].value ? content.field_background_color['#items'].value : 'custom--background-transparent',
+    content.field_border|render|striptags|trim|lower == 'true' ? 'block-border',
+    'side-by-side' in content.field_nesting_display|render|striptags|trim|lower ? 'row',
+    content.field_nesting_display|render|striptags|trim|lower|length > 0 ? 'render-' ~ content.field_nesting_display|render|striptags|trim|lower : 'render-stacked',
+  ]
+%}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+
+    {% if 'side-by-side' in content.field_nesting_display|render|striptags|trim|lower %}
+    <div class="half-content-cards-with-buttons container d-flex flex-wrap justify-content-center">
+      <div class="row ods-ods-flex-justify-content-center justify-content-md-center">
+        {% endif %}
+
+    {% block content %}
+      {% if 'stacked' in content.field_nesting_display|render|striptags|trim|lower %}
+        {% if content.field_components_group['#items']|length > 1 %}
+
+        <div class="group-cta-rows ods-mt-5 ods-m-auto">
+        {% for item in range(0, content.field_components_group['#items']|length - 1) %}
+          {{ content.field_components_group[item] }}
+          <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+        {% endfor %}
+        </div>
+
+        {% else %}
+
+          {{ content|without(['field_background_color', 'field_border', 'field_nesting_display']) }}
+
+        {% endif %}
+
+      {% else %}
+        {{ content|without(['field_background_color', 'field_border', 'field_nesting_display']) }}
+      {% endif %}
+    {% endblock %}
+
+    {% if 'side-by-side' in content.field_nesting_display|render|striptags|trim|lower %}
+      </div>
+    </div>
+    {% endif %}
+  </div>
+{% endblock paragraph %}

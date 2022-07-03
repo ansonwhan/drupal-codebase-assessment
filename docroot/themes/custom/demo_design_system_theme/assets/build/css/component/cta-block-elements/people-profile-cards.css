@@ -1,0 +1,78 @@
+/* @desciption change default value of $nesting-level to 3
+if you want enable img url() on storybook side.
+You have to also disable script inside storybook.js file - function generateFakeUrl()
+*/
+.people-profile-card {
+  height: 1020px;
+  width: 740px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.people-profile-card .people-data {
+  background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+  margin-left: -13px;
+  padding-left: 13px;
+  color: #fff;
+}
+
+.people-profile-card .people-data h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+}
+
+.people-profile-card .people-data .field--item > div {
+  padding: 20px 30px;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row {
+  display: table;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row:not(:last-child) {
+  margin-bottom: -1px;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row .column-second > div {
+  padding: 20px 30px;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row .profile-head {
+  margin: 0;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row .profile-head [class*=col] {
+  padding: 0;
+}
+
+.group-of-half-people-tiles-with-buttons .views-row.even .profile-head {
+  flex-direction: row-reverse;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-profile-content-bottom > .field--item {
+  padding: 1.5rem 15px;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-profile-content-bottom > .field--item + .field--item {
+  border-top: 1px solid #dee2e6;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-profile-image {
+  height: 100%;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-profile-image *:not(.contextual-links) {
+  height: 100%;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-profile-image img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.group-of-half-people-tiles-with-buttons .field-name-field-ods-additional-body-p h6 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=people-profile-cards.css.map */

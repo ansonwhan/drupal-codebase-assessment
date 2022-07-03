@@ -1,0 +1,21 @@
+uuid: 873608fd-f43e-42b6-813b-e5ba90d70770
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_usage_notes
+    - node.type.general_purpose_page
+  module:
+    - text
+id: node.general_purpose_page.field_usage_notes
+field_name: field_usage_notes
+entity_type: node
+bundle: general_purpose_page
+label: 'Usage Notes'
+description: 'Provide usage notes for this type of layout or the components depicted on the page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

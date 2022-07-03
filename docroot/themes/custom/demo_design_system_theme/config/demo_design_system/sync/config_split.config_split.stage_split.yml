@@ -1,0 +1,15 @@
+uuid: 79d0f863-eb74-486b-a7d8-390ab7d274f1
+langcode: en
+status: true
+dependencies: {  }
+id: stage_split
+label: stage_split
+description: ''
+folder: sites/g/files/qhldwo2971/themes/site/config/demo_design_system
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0

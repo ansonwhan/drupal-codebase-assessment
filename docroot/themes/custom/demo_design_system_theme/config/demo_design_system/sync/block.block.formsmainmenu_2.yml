@@ -1,0 +1,30 @@
+uuid: c8f6ebf0-3f7f-46dd-9ac6-f2248604cd4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.forms
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: formsmainmenu_2
+theme: demo_design_system_theme
+region: footer_3
+weight: -22
+provider: null
+plugin: 'system_menu_block:forms'
+settings:
+  id: 'system_menu_block:forms'
+  label: 'Forms Main Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    pages: '/forms/*'
+    negate: false
+    context_mapping: {  }

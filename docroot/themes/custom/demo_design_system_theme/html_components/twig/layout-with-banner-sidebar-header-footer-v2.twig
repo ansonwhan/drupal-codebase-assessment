@@ -1,0 +1,46 @@
+{% extends "./_base-layout.twig" %}
+{% block title %}
+  Layout with banner, sidebar, header, footer v.2
+{% endblock %}
+{% block head %}
+    <!-- SLICK carousel  CSS and JS -->
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+    <!-- End SLICK carousel  CSS and JS -->
+
+    <!-- Dedicated CSS -->
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/b-spot-hero.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layout-with-banner-sidebar-header-footer_v2.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layouts_parts/heading-separator-paragraph.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layouts_parts/percent-image-text.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layouts_parts/dark-block-with-graphs.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/layouts/layouts_parts/symptoms-img-with-text.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/block/block.isi-sidebar.css"/>
+    <!-- End dedicated CSS -->
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_header.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div style="background-color: azure;"
+       class="notes fixed-bottom text-primary text-center bg-success">
+    <h1>Notes about <i>layout-with-banner-sidebar-header-footer_v2</i> prototype</h1>
+  </div>
+
+  <div class="example">
+    {% include 'layouts/_layout-with-banner-sidebar-header-footer-v2.twig' %}
+  </div>
+{% endblock %}

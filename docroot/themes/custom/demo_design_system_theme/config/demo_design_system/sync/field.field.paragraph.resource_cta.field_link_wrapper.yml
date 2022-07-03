@@ -1,0 +1,23 @@
+uuid: b13c8d8d-5093-43c6-9254-aa4a90354b78
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_wrapper
+    - paragraphs.paragraphs_type.resource_cta
+id: paragraph.resource_cta.field_link_wrapper
+field_name: field_link_wrapper
+entity_type: paragraph
+bundle: resource_cta
+label: 'Should the entire CTA be clickable?'
+description: 'Click here to allow the entire CTA row or card to be clickable.  Leave unchecked to allow only the actual link or button to be clickable.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: field--link-wrapper-on
+  off_label: field--link-wrapper-off
+field_type: boolean

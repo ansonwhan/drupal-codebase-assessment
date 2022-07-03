@@ -1,0 +1,24 @@
+uuid: addb8a4d-75d6-461d-ad2c-51db62b649e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.resource_cta
+    - field.field.block_content.resource_cta.field_cta_block_wrapper
+  module:
+    - entity_reference_revisions
+id: block_content.resource_cta.default
+targetEntityType: block_content
+bundle: resource_cta
+mode: default
+content:
+  field_cta_block_wrapper:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

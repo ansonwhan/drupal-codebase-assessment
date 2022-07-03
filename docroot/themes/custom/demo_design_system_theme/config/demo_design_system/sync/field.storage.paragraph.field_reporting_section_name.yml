@@ -1,0 +1,30 @@
+uuid: 58953b45-d7ca-426a-9892-c7a0cbbe2aeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_reporting_section_name
+field_name: field_reporting_section_name
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: primary_content
+      label: 'Primary Content'
+    -
+      value: secondary_content
+      label: 'Secondary Content'
+    -
+      value: tertiary_content
+      label: 'Tertiary Content'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

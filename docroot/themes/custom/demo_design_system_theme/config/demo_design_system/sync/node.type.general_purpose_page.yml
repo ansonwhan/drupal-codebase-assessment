@@ -1,0 +1,24 @@
+uuid: 53f7d9b4-8a31-4477-b174-bcef84c0f109
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - content-patterns
+      - elements
+      - forms
+      - global
+      - main
+      - indication-b-main-menu
+      - nav
+    parent: 'main:'
+name: 'General Purpose Page'
+type: general_purpose_page
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,26 @@
+uuid: c2feb50d-a484-413a-9306-f8ac7a67aa49
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_toggle_open
+  module:
+    - text
+_core:
+  default_config_hash: zPotbIn4V1iKRwdPKMT8cNOFSu35JMUypXjfPDYG_U4
+id: block_content.isi.field_isi_toggle_open
+field_name: field_isi_toggle_open
+entity_type: block_content
+bundle: isi
+label: 'ISI toggle open'
+description: 'Text to display as an indicator to show more appears when the drawer is closed.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 'See more'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

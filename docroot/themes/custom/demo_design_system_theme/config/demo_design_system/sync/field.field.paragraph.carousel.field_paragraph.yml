@@ -1,0 +1,88 @@
+uuid: d748943b-a456-4fad-836b-a82b640d2d85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_paragraph
+    - paragraphs.paragraphs_type.carousel
+    - paragraphs.paragraphs_type.carousel_slide
+  module:
+    - entity_reference_revisions
+id: paragraph.carousel.field_paragraph
+field_name: field_paragraph
+entity_type: paragraph
+bundle: carousel
+label: Paragraph
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      carousel_slide: carousel_slide
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 21
+        enabled: false
+      accordion_item:
+        weight: 22
+        enabled: false
+      block:
+        weight: 23
+        enabled: false
+      carousel:
+        weight: 24
+        enabled: false
+      carousel_slide:
+        enabled: true
+        weight: 25
+      citation_group:
+        weight: 26
+        enabled: false
+      citation_item:
+        weight: 27
+        enabled: false
+      components_group:
+        weight: 28
+        enabled: false
+      content_reporting_divider:
+        weight: 29
+        enabled: false
+      data_table:
+        weight: 30
+        enabled: false
+      enumerated_content_component:
+        weight: 31
+        enabled: false
+      enumerated_content_group:
+        weight: 32
+        enabled: false
+      from_library:
+        weight: 33
+        enabled: false
+      graphic_divider:
+        weight: 34
+        enabled: false
+      hero_banner_item:
+        weight: 35
+        enabled: false
+      isi_section:
+        weight: 36
+        enabled: false
+      resource_cta:
+        weight: 37
+        enabled: false
+      side_by_side_content_image:
+        weight: 38
+        enabled: false
+      standard_body_copy:
+        weight: 39
+        enabled: false
+      video:
+        weight: 40
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,30 @@
+.modal {
+  text-align: center;
+}
+
+.modal .modal-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+@media (min-width: 769px) {
+  .modal:before {
+    display: inline-block;
+    vertical-align: middle;
+    content: " ";
+    height: 100%;
+  }
+}
+
+.modal .modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal .modal-body {
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 300;
+}
+
+/*# sourceMappingURL=modal.css.map */

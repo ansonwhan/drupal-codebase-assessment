@@ -1,0 +1,23 @@
+//Bootstrap scss
+@import "../../../../../node_modules/bootstrap/scss/_functions";
+@import "../../../../../node_modules/bootstrap/scss/_variables";
+@import "../../../../../node_modules/bootstrap/scss/_mixins";
+@import "../../../../../node_modules/bootstrap/scss/_list-group";
+@import "../../../../../node_modules/bootstrap/scss/_badge";
+
+//Internal scss
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+@mixin commonListGroupStyles {
+  font-family: "Museo Sans", serif;
+  li:not(.bs-default-background) {
+    background-color: $common-light-gray;
+  }
+}
+
+.otsuka-list-group {
+  max-width: remOrPercent(400px);
+  @include commonListGroupStyles;
+}

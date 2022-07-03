@@ -1,0 +1,63 @@
+.custom--symptom-questionnaire-block h2 {
+  display: none;
+}
+
+.custom--symptom-questionnaire-block h2 + p {
+  display: none;
+}
+
+.custom--symptom-questionnaire-block h2.symptom-questionnaire-views-block-title-element {
+  display: block;
+}
+
+.custom--symptom-questionnaire-block summary {
+  display: none;
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire {
+  counter-reset: questionnaire-counter 0;
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details {
+  counter-increment: questionnaire-counter 1;
+  position: relative;
+  padding-left: 23px;
+  margin-bottom: 10px;
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details:before {
+  content: counter(questionnaire-counter) ". ";
+  position: absolute;
+  left: 0;
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 769px) {
+  .custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper {
+    flex-direction: row;
+  }
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper p, .custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper .webform-element {
+  display: flex;
+}
+
+@media (min-width: 769px) {
+  .custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper .webform-element {
+    margin-left: auto;
+  }
+}
+
+.custom--symptom-questionnaire-block .webform-submission-data--webform-symptom-questionnaire details .details-wrapper label {
+  display: none;
+}
+
+.custom--symptom-questionnaire-block .symptom-questionnaire-views-block-header-elements-wrapper a + .ajax-progress {
+  display: none;
+}
+
+/*# sourceMappingURL=view.symptom-questionnaire-results.css.map */

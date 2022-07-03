@@ -1,0 +1,176 @@
+{#
+/**
+ * @file
+ * Theme override for a field.
+ *
+ * To override output, copy the "field.html.twig" from the templates directory
+ * to your theme's directory and customize it, just like customizing other
+ * Drupal templates such as page.html.twig or node.html.twig.
+ *
+ * Instead of overriding the theming for all fields, you can also just override
+ * theming for a subset of fields using
+ * @link themeable Theme hook suggestions. @endlink For example,
+ * here are some theme hook suggestions that can be used for a field_foo field
+ * on an article node type:
+ * - field--node--field-foo--article.html.twig
+ * - field--node--field-foo.html.twig
+ * - field--node--article.html.twig
+ * - field--field-foo.html.twig
+ * - field--text-with-summary.html.twig
+ * - field.html.twig
+ *
+ * Available variables:
+ * - attributes: HTML attributes for the containing element.
+ * - label_hidden: Whether to show the field label or not.
+ * - title_attributes: HTML attributes for the title.
+ * - label: The label for the field.
+ * - multiple: TRUE if a field can contain multiple items.
+ * - items: List of all the field items. Each item contains:
+ *   - attributes: List of HTML attributes for each item.
+ *   - content: The field item's content.
+ * - entity_type: The entity type to which the field belongs.
+ * - field_name: The name of the field.
+ * - field_type: The type of the field.
+ * - label_display: The display settings for the label.
+ *
+ *
+ * @see template_preprocess_field()
+ */
+#}
+
+{% set wrapperless_fields = {
+  'field_names': [
+    'body',
+    'field_accordion_row1_behavior',
+    'field_accordions_autocollapse',
+    'field_back2top_button_position',
+    'field_back2top_button_shape',
+    'field_back2top_button_text',
+    'field_back2top_button_visibility',
+    'field_banner_color_scheme',
+    'field_banner_headline',
+    'field_banner_image',
+    'field_banner_link',
+    'field_banner_width_type',
+    'field_blurb',
+    'field_citations_type',
+    'field_components_group',
+    'field_cta_ext_link',
+    'field_cta_file',
+    'field_cta_image',
+    'field_cta_link_display',
+    'field_cta_teaser',
+    'field_custom_classes',
+    'field_custom_id',
+    'field_default_icon',
+    'field_display_format',
+    'field_divider_type',
+    'field_entity_block_embed',
+    'field_enumerated_sections',
+    'field_heading',
+    'field_hero_region',
+    'field_hover_icon',
+    'field_icon_default',
+    'field_icon_hover',
+    'field_icon_type',
+    'field_image',
+    'field_image_position',
+    'field_infographic',
+    'field_infographic_behavior',
+    'field_infographic_min_width',
+    'field_infographic_scroll_text',
+    'field_link',
+    'field_link_item',
+    'field_link_wrapper',
+    'field_media_image',
+    'field_modal_cornerclosebtn_show',
+    'field_nav_label',
+    'field_nav_level',
+    'field_nesting_display',
+    'field_ods_accordion_item_p',
+    'field_ods_additional_body_p',
+    'field_ods_exit_p',
+    'field_ods_icon_p',
+    'field_ods_intro_p',
+    'field_ods_title_p',
+    'field_otsk_block_p',
+    'field_paragraphs',
+    'field_profile_content_bottom',
+    'field_profile_content_top',
+    'field_profile_heading',
+    'field_profile_image',
+    'field_profile_intro',
+    'field_profile_subheading',
+    'field_profile_teaser',
+    'field_profile_video',
+    'field_reporting_section_name',
+    'field_secondary_nav',
+    'field_side_by_side_proportions',
+    'field_sticky_nav_location',
+    'field_tab_content',
+    'field_tab_title',
+    'field_table',
+    'field_title',
+    'field_usage_notes',
+    'field_profile_image',
+    'field_profile_heading',
+    'field_profile_subheading',
+    'field_profile_teaser',
+    'field_profile_intro',
+    'field_profile_video',
+    'field_profile_content_top',
+    'field_profile_content_bottom',
+    'field_link_item',
+    'field_nav_level',
+    'field_nav_label',
+    'field_link',
+    'field_tab_title',
+    'field_tab_content',
+    'field_default_icon',
+    'field_hover_icon',
+    'field_ods_article_title',
+    'field_ods_article_dateline',
+    'field_ods_article_source',
+    'field_ods_article_img',
+  ]
+} %}
+
+{% set classes = [
+  'field',
+  'field-name-' ~ field_name|clean_class,
+  'field-type-' ~ field_type|clean_class,
+  'field-label-' ~ label_display,
+] %}
+
+{% set title_classes = [
+  'field__label',
+  label_display == 'visually_hidden' ? 'visually-hidden',
+] %}
+
+
+{% for wrapperless_field, keys in wrapperless_fields %}
+  {% if field_name in keys %}
+    {% for item in items %}
+      {{ item.content }}
+    {% endfor %}
+  {% else %}
+
+    {% if label_hidden %}
+      {% block content %}
+        <div {{ attributes.addClass(classes) }}>
+          {% for item in items %}
+            <div{{ item.attributes.addClass('field--item') }}>{{ item.content }}</div>
+          {% endfor %}
+        </div>
+      {% endblock %}
+    {% else %}
+      <div {{ attributes.addClass(classes) }}>
+        <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+        {% for item in items %}
+          <div{{ item.attributes.addClass('field--item') }}>{{ item.content }}</div>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+  {% endif %}
+{% endfor %}

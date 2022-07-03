@@ -1,0 +1,30 @@
+uuid: e58213b0-8391-49ff-897d-9566ba923ec7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_thumbs_display_mode
+field_name: field_thumbs_display_mode
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: teaser_grid
+      label: 'Teaser Grid'
+    -
+      value: teaser_carousel
+      label: 'Teaser Carousel'
+    -
+      value: short_list
+      label: 'Short List (Title & Duration)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

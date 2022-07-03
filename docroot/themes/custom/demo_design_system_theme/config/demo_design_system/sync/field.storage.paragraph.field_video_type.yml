@@ -1,0 +1,30 @@
+uuid: f7f60a57-c386-49cb-83b1-60ffe7fe76ad
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_video_type
+field_name: field_video_type
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: inline
+      label: 'Poster (image only)'
+    -
+      value: teaser
+      label: 'Teaser (poster with title, duration)'
+    -
+      value: full
+      label: 'Detailed (poster with title, duration, description)'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

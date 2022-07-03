@@ -1,0 +1,22 @@
+uuid: e1c0cde6-c897-4569-9f96-17305ee349f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.graphic_divider.field_divider_type
+    - paragraphs.paragraphs_type.graphic_divider
+  module:
+    - options
+id: paragraph.graphic_divider.default
+targetEntityType: paragraph
+bundle: graphic_divider
+mode: default
+content:
+  field_divider_type:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

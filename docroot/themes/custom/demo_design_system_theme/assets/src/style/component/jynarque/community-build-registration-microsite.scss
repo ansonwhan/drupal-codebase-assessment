@@ -1,0 +1,286 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+$defaultLabelFontFamily: "Museo Sans", sans-serif;
+
+$yellow: #F7C12F;
+$commonLightBlue: #3B8094;
+$commonWhite: white;
+
+$commonContainersWidth: remOrPercent(415px);
+$commonContainersHeight: remOrPercent(500px);
+
+$commonYellowBorder: remOrPercent(13px) solid $yellow;
+
+//Spacing "getters"
+$verticalSpacingGetter50: getSpacingSize($vertical-spacing-sizes, 50px);
+$verticalSpacingGetter30: getSpacingSize($vertical-spacing-sizes, 30px);
+$verticalSpacingGetter10: getSpacingSize($vertical-spacing-sizes, 10px);
+
+$horizontalSpacingGetter10: getSpacingSize($horizontal-spacing-sizes, 10px);
+
+$fakeBackground: #52514D;
+$objectFitProperty: contain;
+
+@mixin commonFocus($isAdditionalStyles:true) {
+  border: remOrPercent(3px) solid $commonWhite;
+  @if $isAdditionalStyles {
+    background: rgba(255, 255, 255, 0.3);
+  }
+}
+
+
+.community-build-registration-microsite {
+  //reset css
+  a {
+    color: transparent !important;
+  }
+  //end reset css
+
+  .containers-wrapper-large-screen {
+    border-bottom: $commonYellowBorder;
+    display: flex;
+
+    .trapezoid-background {
+      background: $commonLightBlue;
+      height: $commonContainersHeight;
+      position: relative;
+      display: inline-block;
+      width: 45%;
+      color: white;
+
+      &::before {
+        background: $commonLightBlue none repeat scroll 0 0;
+        content: "";
+        height: inherit;
+        position: absolute;
+        right: - remOrPercent(95px);
+        transform: skew(20deg);
+        width: remOrPercent(190px);
+      }
+
+      .container--logo {
+        position: relative;
+        text-align: left;
+        padding-top: $verticalSpacingGetter50;
+        float: right;
+        display: block;
+        width: $commonContainersWidth;
+
+        a {
+          padding: remOrPercent(8px);
+          border: remOrPercent(3px) solid transparent;
+          border-radius: remOrPercent(20px);
+
+        }
+
+        img {
+          cursor: pointer;
+          max-width: remOrPercent(360px);
+          width: remOrPercent(360px);
+          height: auto;
+
+          &:hover, &:focus {
+            @include commonFocus;
+          }
+        }
+      }
+
+
+      .container--adpkd-image {
+        position: relative;
+        text-align: left;
+        padding-top: $verticalSpacingGetter50;
+        float: right;
+        clear: both;
+        width: $commonContainersWidth;
+
+        a {
+          padding: remOrPercent(8px);
+          border: remOrPercent(3px) solid transparent;
+          border-radius: remOrPercent(20px);
+        }
+
+        img {
+          cursor: pointer;
+          max-width: remOrPercent(240px);
+          width: remOrPercent(240px);
+          height: auto;
+
+          &:hover, &:focus {
+            @include commonFocus;
+          }
+        }
+      }
+
+      .container--text {
+        position: relative;
+        text-align: left;
+        padding-top: $verticalSpacingGetter50;
+        float: right;
+        clear: both;
+        width: $commonContainersWidth;
+
+        p {
+          font-family: $defaultLabelFontFamily;
+          font-weight: bold;
+          font-size: remOrPercent(30px);
+          line-height: remOrPercent(31px);
+
+          &:focus {
+            @include commonFocus(false);
+          }
+        }
+      }
+    }
+
+
+    .container--community-img {
+      display: inline-block;
+      width: 54.99%;
+
+      .background-image {
+        height: $commonContainersHeight;
+        width: 100%;
+        display: block;
+        object-fit: contain;
+        background-color: $fakeBackground;
+      }
+    }
+
+  }
+
+  //breakpoints for small screen resolutions
+  $smallBreakpoints: xs, sm, md;
+  @each $smallBreakpoint in $smallBreakpoints {
+    @include media-breakpoint-down($smallBreakpoint) {
+      .containers-wrapper-large-screen {
+        display: none;
+      }
+      .containers-wrapper--small-medium-screen {
+        border-bottom: $commonYellowBorder;
+        display: inherit !important;
+
+
+        .container--wrapper-for-images {
+          position: relative;
+
+          .container--community-img {
+            width: 100%;
+
+            .background-image {
+              height: auto;
+              width: 100%;
+              display: block;
+              object-fit: cover;
+            }
+          }
+
+          .container--logo {
+            top: 5%;
+            position: absolute;
+            width: $commonContainersWidth;
+
+            a {
+              padding: remOrPercent(8px);
+              border: remOrPercent(3px) solid transparent;
+              border-radius: remOrPercent(20px);
+            }
+
+            $imgWidth: remOrPercent(265px);
+
+            img {
+              cursor: pointer;
+              @if $smallBreakpoint == 'xs' {
+                $xsImgWidth: remOrPercent(185px);
+                max-width: $xsImgWidth !important;
+                width: $xsImgWidth !important;
+              }
+              max-width: $imgWidth;
+              width: $imgWidth;
+              height: auto;
+            }
+          }
+        }
+
+
+        .conventional-background {
+          color: $commonWhite;
+          height: remOrPercent(200px);
+          display: flex;
+          background: $commonLightBlue;
+
+          .container--adpkd-image {
+            padding-top: $verticalSpacingGetter30;
+            width: $commonContainersWidth;
+            justify-content: center;
+            display: flex;
+
+            a {
+              padding: remOrPercent(8px);
+              border: remOrPercent(3px) solid transparent;
+              border-radius: remOrPercent(20px);
+            }
+
+            $xsImgWidth: remOrPercent(145px) !important;
+            $mdImgWidth: remOrPercent(200px);
+
+            img {
+              cursor: pointer;
+              height: auto;
+
+              @if $smallBreakpoint == 'xs' {
+                max-width: $xsImgWidth;
+                width: $xsImgWidth;
+              } @else if $smallBreakpoint == 'md' {
+                max-width: $mdImgWidth;
+                width: $mdImgWidth;
+              }
+
+              &:hover, &:focus {
+                @include commonFocus;
+              }
+            }
+          }
+
+          .container--text {
+            padding: $verticalSpacingGetter30 $horizontalSpacingGetter10 $verticalSpacingGetter10 $horizontalSpacingGetter10;
+            position: relative;
+            text-align: left;
+            float: right;
+            clear: both;
+            width: $commonContainersWidth;
+
+            p {
+              font-family: $defaultLabelFontFamily;
+              font-weight: bold;
+              line-height: remOrPercent(28px);
+              @if $smallBreakpoint == 'sm' {
+                font-size: remOrPercent(17px) !important;
+              } @else if $smallBreakpoint == 'md' {
+                font-size: remOrPercent(25px);
+              }
+            }
+          }
+
+        }
+      }
+
+
+    }
+
+  }
+
+  //breakpoints for large screen resolutions
+  $largeBreakpoints: lg, xl;
+  @each $largeBreakpoint in $largeBreakpoints {
+    @include media-breakpoint-down($largeBreakpoint) {
+      .containers-wrapper--small-medium-screen {
+        display: none;
+      }
+    }
+  }
+
+}
+

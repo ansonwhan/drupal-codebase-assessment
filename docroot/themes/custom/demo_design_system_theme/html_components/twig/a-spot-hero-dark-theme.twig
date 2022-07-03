@@ -1,0 +1,44 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  a-spot-hero (dark theme) variations
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/a-spot-hero-dark-theme.css"/>
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/carousels/a-spot-hero-dark-theme-with-img.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
+    <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+
+    <!-- Please notice. This script is needed to build html in proper way.   -->
+    <script
+            src="{{ basePath }}js/component/carousels/a-spot-hero-carousel.js"></script>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div style="margin: 30px" class="notes">
+    <h1>a spot-hero (dark theme) variations</h1>
+  </div>
+  <div class="example">
+    <h2>1. basic a-spot-hero (dark theme)</h2>
+    {% include './partial/_a-spot-hero-dark-theme.twig' %}
+    <br>
+    <br>
+    <br>
+    <br>
+    <h2>2. a-spot-hero (dark theme) with ISI sidebar and img</h2>
+    {% include './partial/_a-spot-hero-dark-theme-with-img.twig' %}
+    {% if item.notes %}
+      <div style="margin-bottom: 20px" class="notes">
+        <h3>a-spot-hero (dark theme) variations</h3>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,48 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.back-to-top-buttons {
+  .back-to-top-button {
+    &__oval {
+      @include backToTopButton(16px);
+    }
+
+    &__square {
+      @include backToTopButton(16px, 58px, 53px, $defaultBorderRadiusValue);
+    }
+  }
+}
+
+//positions modifiers
+@mixin stickyPositionedHorizontally($isDefaultHorizontalPosition: true) {
+  position: fixed;
+  top: remOrPercent(50%);
+  @if ($isDefaultHorizontalPosition) {
+    right: remOrPercent(1%);
+  } @else {
+    left: remOrPercent(1%);
+  }
+}
+
+.sticky-back-to-top-to-right {
+  @include stickyPositionedHorizontally();
+}
+
+.sticky-back-to-top-to-left {
+  @include stickyPositionedHorizontally(false);
+}
+
+.absolute-centered-back-to-top, .fixed-centered-back-to-top {
+  position: fixed;
+  top: inherit;
+  left: 0;
+  right: 0;
+  bottom: remOrPercent(10px);
+
+  $shadowModifier: remOrPercent(8px);
+
+  button {
+    box-shadow: 0 0 $shadowModifier $shadowModifier rgba($white, 0.8);
+  }
+}

@@ -1,0 +1,58 @@
+uuid: 6f4be88e-19aa-437a-a089-9e3c9f4a1c89
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.components_group.field_background_color
+    - field.field.paragraph.components_group.field_border
+    - field.field.paragraph.components_group.field_components_group
+    - field.field.paragraph.components_group.field_nesting_display
+    - paragraphs.paragraphs_type.components_group
+  module:
+    - paragraphs
+id: paragraph.components_group.default
+targetEntityType: paragraph
+bundle: components_group
+mode: default
+content:
+  field_background_color:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_border:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_components_group:
+    type: paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: modal
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_nesting_display:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,68 @@
+{
+  "notesAboutComponent": [
+    {
+      "notesAboutComponent": "Please notice this component is specific, because technical specification is specific,#}\n      when you change the screen resolution, the HTML structure also changes (see css classes \"display-lg-none\", \"display-xs-none\")"
+    }
+  ],
+  "firstCard": {
+    "basicData": {
+      "alternativeText": "Daniel",
+      "imgSrcClass": "__one",
+      "class": "",
+      "heading": "Chronic pain",
+      "subHeading": "Daniel, 26",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "view profile",
+      "notes": ""
+    },
+    "specialCssClasses": {
+      "borderLeft": "",
+      "displayLgNone": "",
+      "displayXsNone": "",
+      "marginLeft": ""
+    }
+  },
+  "secondCard": {
+    "basicData": {
+      "alternativeText": "Jessica",
+      "imgSrcClass": "__two",
+      "class": "",
+      "heading": "Card title",
+      "subHeading": "Jessica, 26",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "view profile",
+      "notes": ""
+    },
+    "specialCssClasses": {
+      "borderRight": "",
+      "displayLgNone": "display-lg-none",
+      "displayXsNone": "display-xs-none",
+      "marginLeft": "ml-3"
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

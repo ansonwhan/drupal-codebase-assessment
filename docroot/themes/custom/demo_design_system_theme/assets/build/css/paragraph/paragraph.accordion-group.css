@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.accordion-group {
+  margin-bottom: 2rem;
+}
+
+.accordion-group .accordion-item {
+  border-bottom: 1px solid #ced4da;
+  padding: 0.9375rem 1.25rem 0.625rem 0;
+}
+
+.accordion-group .accordion-item.ods-accordion-item-expended {
+  border: none;
+}
+
+.accordion-group .accordion-item.ods-accordion-item-expended .card-header {
+  border-bottom: 1px solid #ccc;
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
+.accordion-group .accordion-item.ods-accordion-item-expended .card-header .accordion-item--title {
+  padding-left: 20px;
+  padding-bottom: 13px;
+}
+
+.accordion-group .accordion-item.ods-accordion-item-expended .card-header .accordion-item--title + span:before {
+  position: relative;
+  right: 20px;
+}
+
+.accordion-group .card {
+  padding-left: 1.25rem;
+}
+
+.accordion-group .card-link {
+  display: block;
+}
+
+.accordion-group .card-link .accordion-item--icon {
+  position: relative;
+  text-align: center;
+  max-width: 80px;
+  display: inline-block;
+}
+
+.accordion-group .card-link .accordion-item--icon img {
+  width: 100%;
+  height: auto;
+}
+
+.accordion-group .card-link .accordion-item--icon img:first-child {
+  transition: opacity 0.25s linear;
+  position: relative;
+  z-index: 1;
+}
+
+.accordion-group .card-link .accordion-item--icon img:last-child {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+.accordion-group .card-link:hover .accordion-item--icon img:first-child {
+  opacity: 0;
+}
+
+.accordion-group .card-link:hover .accordion-item--icon img:last-child {
+  opacity: 1;
+}
+
+.accordion-group .card-link .accordion-item--title {
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 500;
+  color: #373D42;
+  font-size: 0.875rem;
+  display: inline-block;
+  color: #007BFF;
+  max-width: calc(90% - 50px);
+}
+
+.accordion-group .card-link .accordion-item--title + span {
+  font-family: Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.25rem;
+  font-size: 2rem;
+  float: right;
+}
+
+.accordion-group .card-link .accordion-item--title + span:before {
+  opacity: 0;
+  content: '–';
+}
+
+.accordion-group .card-link .accordion-item--title > * {
+  display: inline-block;
+}
+
+.accordion-group .card-link:not(.collapsed) .accordion-item--title + span {
+  font-size: 0;
+}
+
+.accordion-group .card-link:not(.collapsed) .accordion-item--title + span:before {
+  font-size: 2rem;
+  opacity: 1;
+}
+
+.accordion-group .card-body {
+  margin-top: 1.25rem;
+}
+
+/*# sourceMappingURL=paragraph.accordion-group.css.map */

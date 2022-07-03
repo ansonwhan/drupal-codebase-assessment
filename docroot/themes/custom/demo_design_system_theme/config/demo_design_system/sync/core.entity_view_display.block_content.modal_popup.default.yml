@@ -1,0 +1,69 @@
+uuid: f305d2d8-809e-44ac-b089-0e2a36035182
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.field.block_content.modal_popup.field_custom_id
+    - field.field.block_content.modal_popup.field_modal_body
+    - field.field.block_content.modal_popup.field_modal_cancel
+    - field.field.block_content.modal_popup.field_modal_cornerclosebtn_show
+    - field.field.block_content.modal_popup.field_modal_ok
+    - field.field.block_content.modal_popup.field_modal_title
+  module:
+    - text
+id: block_content.modal_popup.default
+targetEntityType: block_content
+bundle: modal_popup
+mode: default
+content:
+  field_custom_id:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_modal_body:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_modal_cancel:
+    weight: 3
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_modal_cornerclosebtn_show:
+    weight: 4
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_modal_ok:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_modal_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

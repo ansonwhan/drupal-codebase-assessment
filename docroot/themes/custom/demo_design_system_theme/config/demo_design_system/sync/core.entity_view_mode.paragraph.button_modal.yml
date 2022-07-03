@@ -1,0 +1,10 @@
+uuid: d00b4a78-002b-424d-961b-d68caaf118dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.button_modal
+label: 'Button Modal'
+targetEntityType: paragraph
+cache: true

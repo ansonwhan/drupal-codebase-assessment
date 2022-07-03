@@ -1,0 +1,56 @@
+uuid: 5d4a3972-c499-48f1-9f42-b996dc319ff0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.row
+    - field.field.media.svg_image.field_media_image
+    - media.type.svg_image
+  module:
+    - blazy
+id: media.svg_image.row
+targetEntityType: media
+bundle: svg_image
+mode: row
+content:
+  field_media_image:
+    label: hidden
+    weight: 0
+    settings:
+      image_style: ''
+      responsive_image_style: ''
+      media_switch: ''
+      thumbnail_style: ''
+      ratio: ''
+      current_view_mode: default
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: 0
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+    type: blazy
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

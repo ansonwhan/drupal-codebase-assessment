@@ -1,0 +1,23 @@
+uuid: 29c49c0d-497c-4817-bdf0-7f46fa00c5bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_border
+    - paragraphs.paragraphs_type.components_group
+id: paragraph.components_group.field_border
+field_name: field_border
+entity_type: paragraph
+bundle: components_group
+label: Border
+description: 'Check to enable a border around the component wrapper.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: d6002bd3-0d6f-4cef-b6b6-bc61c5ca3978
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_collapsed
+    - paragraphs.paragraphs_type.citation_group
+id: paragraph.citation_group.field_ods_collapsed
+field_name: field_ods_collapsed
+entity_type: paragraph
+bundle: citation_group
+label: Collapsed
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

@@ -1,0 +1,19 @@
+{% set dividerType %}
+{{ content.field_divider_type }}
+{% endset %}
+{%
+  set classes = [
+    'graphic-divider',
+    'graphic-divider--type--' ~ dividerType|trim,
+  ]
+%}
+
+{% block paragraph %}
+  {% block content %}
+  <div {{ attributes.addClass(classes) }}>
+  {% if 'hr' in content.field_divider_type.0 %}
+  <hr>
+  {% endif %}
+  </div>
+  {% endblock %}
+{% endblock paragraph %}

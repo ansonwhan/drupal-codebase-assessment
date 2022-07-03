@@ -1,0 +1,36 @@
+uuid: e6308648-d92f-4a7e-ad29-1db1975b737c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enumerated_content_group.field_enumerated_sections
+    - paragraphs.paragraphs_type.enumerated_content_group
+  module:
+    - paragraphs
+id: paragraph.enumerated_content_group.default
+targetEntityType: paragraph
+bundle: enumerated_content_group
+mode: default
+content:
+  field_enumerated_sections:
+    type: paragraphs
+    weight: 0
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: add_above
+        collapse_edit_all: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

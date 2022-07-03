@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * The views infinite scroll pager template.
+ */
+#}
+{{ attach_library('demo_design_system_theme/component.pagination') }}
+
+{% if items.next %}
+<ul{{ attributes }}>
+  <li class="pager__item d-flex justify-content-center">
+    <a class="button btn btn-primary analytics--p-pagination-more" data-analytics-id="{{ ('show-more-' ~ heading_id)|data_analytics_id }}" href="{{ items.next.href }}" title="{{ 'Go to next page'|t }}" rel="next">
+      {{ options.button_text }}
+    </a>
+  </li>
+</ul>
+{% endif %}

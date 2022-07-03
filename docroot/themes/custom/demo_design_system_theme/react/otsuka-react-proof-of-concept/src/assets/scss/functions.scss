@@ -1,0 +1,8 @@
+@import "variables";
+
+@function pxToRem($unit) {
+  @if unit($unit) == 'px' {
+    @return ($unit / $baseFontSize) * 1rem;
+  }
+  @warn "Expected argument $unit to be of type `px`, instead received: `#{unit($unit)}`";
+}

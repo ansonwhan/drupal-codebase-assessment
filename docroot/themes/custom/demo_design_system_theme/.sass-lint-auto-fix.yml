@@ -1,0 +1,11 @@
+files:
+  include: "**/*.s+(a|c)ss"
+  ignore:
+    - node_modules/**
+syntax:
+  include:
+    - scss
+    - sass
+resolvers:
+  quotes: 1
+  no-color-literals: 1

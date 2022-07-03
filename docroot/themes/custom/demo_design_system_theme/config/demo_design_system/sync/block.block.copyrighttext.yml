@@ -1,0 +1,25 @@
+uuid: 35563d3e-aea6-4a03-8540-92d7ad1cd62e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:5c03b5e8-59c6-435b-903a-b6d29c2e0802'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: copyrighttext
+theme: demo_design_system_theme
+region: footer_7
+weight: 0
+provider: null
+plugin: 'block_content:5c03b5e8-59c6-435b-903a-b6d29c2e0802'
+settings:
+  id: 'block_content:5c03b5e8-59c6-435b-903a-b6d29c2e0802'
+  label: 'Copyright Text'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

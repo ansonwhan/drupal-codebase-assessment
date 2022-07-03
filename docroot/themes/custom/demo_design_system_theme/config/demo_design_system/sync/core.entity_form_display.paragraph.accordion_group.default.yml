@@ -1,0 +1,70 @@
+uuid: d79516f9-c6bc-4aec-a452-cba2e32ab202
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.accordion_group.field_accordion_row1_behavior
+    - field.field.paragraph.accordion_group.field_accordions_autocollapse
+    - field.field.paragraph.accordion_group.field_ods_accordion_item_p
+    - field.field.paragraph.accordion_group.field_ods_exit_p
+    - field.field.paragraph.accordion_group.field_ods_intro_p
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - paragraphs
+    - text
+id: paragraph.accordion_group.default
+targetEntityType: paragraph
+bundle: accordion_group
+mode: default
+content:
+  field_accordion_row1_behavior:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_accordions_autocollapse:
+    weight: 1
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_ods_accordion_item_p:
+    type: paragraphs
+    weight: 3
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: accordion_item
+      features:
+        add_above: add_above
+        collapse_edit_all: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_ods_exit_p:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ods_intro_p:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

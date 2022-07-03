@@ -1,0 +1,27 @@
+uuid: 4c5f09fd-f0d3-4459-9df3-77bab88efe03
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_sticky_nav_location
+field_name: field_sticky_nav_location
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: L
+      label: 'Anchored to LEFT side of viewport/window'
+    -
+      value: R
+      label: 'Anchored to RIGHT side of viewport/window'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

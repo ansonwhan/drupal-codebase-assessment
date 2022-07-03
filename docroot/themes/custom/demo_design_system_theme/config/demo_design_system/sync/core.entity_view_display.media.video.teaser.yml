@@ -1,0 +1,60 @@
+uuid: ac834751-25dd-46cd-b26e-f6aa73dae2f9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.teaser
+    - field.field.media.video.field_media_video_file
+    - field.field.media.video.field_video_thumb
+    - media.type.video
+    - responsive_image.styles.video_thumbnail
+  module:
+    - blazy
+_core:
+  default_config_hash: dQR0mYK5NNg27OigHrxZrHSsnwewnNZcPJKjKIO0cpA
+id: media.video.teaser
+targetEntityType: media
+bundle: video
+mode: teaser
+content:
+  field_video_thumb:
+    type: blazy
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: ''
+      responsive_image_style: video_thumbnail
+      media_switch: ''
+      thumbnail_style: ''
+      ratio: ''
+      current_view_mode: teaser
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      view_mode: ''
+      cache: 0
+      skin: ''
+      fx: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_media_style: ''
+      box_style: ''
+      _uri: ''
+      breakpoints: {  }
+      sizes: ''
+      grid_header: ''
+      grid: 0
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_video_file: true
+  name: true
+  thumbnail: true
+  uid: true

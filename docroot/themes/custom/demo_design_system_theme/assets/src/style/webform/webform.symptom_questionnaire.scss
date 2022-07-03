@@ -1,0 +1,223 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.webform-submission-symptom-questionnaire-form {
+  .webform-progress__status {
+    display: none;
+  }
+
+  .custom-form-symptom-wrapper {
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+    padding: 20px 0 10px 0;
+    position: relative;
+    z-index: 1;
+
+    @include media-breakpoint-up(md) {
+      padding: 30px 0 20px 0;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 30px 30px 19px 30px;
+    }
+
+    &:after {
+      content: '';
+      background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+      position: absolute;
+      left: -999em;
+      right: -999em;
+      top: -1px;
+      bottom: -1px;
+      z-index: -1;
+
+      @include media-breakpoint-up(lg) {
+        display: none;
+      }
+    }
+  }
+
+  .custom-form-symptom-header {
+    color: #fff;
+
+    h2 {
+      color: #fff;
+      font-size: 24px;
+      line-height: 29px;
+      margin-bottom: 10px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 32px;
+        line-height: 38px;
+        margin-bottom: 20px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  .custom-form-symptom-inner {
+    padding: 14px 20px;
+    margin-top: 20px;
+    font-family: $headings-font-family;
+
+    @include media-breakpoint-up(md) {
+      padding: 23px 51px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding: 23px 38px;
+    }
+
+    .js-form-type-processed-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 21px;
+
+      @include media-breakpoint-up(md) {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    .custom-control {
+      margin-top: 39px;
+    }
+
+    label {
+      font-weight: 300;
+      padding-left: 1.5rem;
+
+      &:before,
+      &:after {
+        left: 0;
+      }
+    }
+
+    .form-actions {
+      text-align: right;
+      margin-top: 29px;
+
+      @include media-breakpoint-up(md) {
+        text-align: center;
+      }
+    }
+
+    input {
+      display: inline;
+      width: auto;
+      border-radius: 40px;
+    }
+
+    .webform-progress {
+      display: none;
+    }
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    background: #fff;
+
+    & > .js-form-type-processed-text {
+      display: none;
+    }
+
+    .webform-options-display-side-by-side {
+      display: block;
+      max-width: 900px;
+      margin-top: 0.4em;
+      -moz-column-count: 1;
+      -webkit-column-count: 1;
+      column-count: 1;
+
+      @include media-breakpoint-up(sm) {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+      }
+
+      & > div {
+        display: block;
+      }
+    }
+  }
+
+  .webform-progress-tracker {
+    .progress-step {
+      &:after {
+        display: none;
+      }
+    }
+    .custom-arrow-before,
+    .custom-arrow-after {
+      height: 17px;
+      width: 26px;
+      cursor: pointer;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../../img/icon-arrow.png');
+
+      @include media-breakpoint-up(md) {
+        margin-left: 35px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-left: 25px;
+      }
+
+      &.custom-arrow-disabled {
+        cursor: auto;
+        pointer-events: none;
+        background-image: url('../../img/icon-arrow-disabled.png');
+      }
+    }
+
+    .custom-arrow-before {
+      transform: rotateY(180deg) scale(1);
+      -webkit-transform: rotate(180deg) scale(1);
+
+      @include media-breakpoint-up(md) {
+        margin-left: 0;
+        margin-right: 35px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-right: 25px;
+      }
+    }
+  }
+
+  .progress-step {
+    height: 3px;
+    background: #fff;
+    margin: 7px 5px;
+
+    &.is-active {
+      background: #FF5F3B;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  .symptom-questionnaire-previous-question,
+  .symptom-questionnaire-next-question {
+    margin-left: 5px;
+
+    @include media-breakpoint-up(md) {
+      margin: 0 5px;
+    }
+  }
+
+  .alert-wrapper {
+    display: none;
+  }
+
+  .form-item--error-message {
+    padding-top: 15px;
+    color: $red;
+  }
+}

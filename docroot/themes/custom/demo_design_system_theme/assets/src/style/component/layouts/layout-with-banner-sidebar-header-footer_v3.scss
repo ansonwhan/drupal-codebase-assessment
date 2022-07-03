@@ -1,0 +1,53 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+body:not(.has-isi-side-bar) #layout-no-isi-sidebar, .layout-with-banner-sidebar-header-footer_v3 {
+  $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+
+  .a-spot-hero-light .card .carousel .slick-list .slide-wrapper .jumbotron-container {
+    width: remOrPercent(100%) !important;
+    left: remOrPercent(53%) !important;
+  }
+
+  .a-spot-hero-dark .card .carousel .slick-list .slide-wrapper .jumbotron-container {
+    width: remOrPercent(100%) !important;
+    left: remOrPercent(53%) !important;
+  }
+
+  $smallBreakpoints: sm;
+  @each $smallBreakpoint in $smallBreakpoints {
+    @include media-breakpoint-only($smallBreakpoint) {
+      .card-img-top {
+        height: remOrPercent(310px) !important;
+      }
+    }
+  }
+
+  $largeBreakpoints: lg, xl;
+  @each $largeBreakpoint in $largeBreakpoints {
+    @include media-breakpoint-only($largeBreakpoint) {
+      .slick-list {
+        max-width: inherit;
+
+        .jumbotron-container {
+          h1 {
+            @include h1HeadingCommonStyles($h1Display4SizeModifier, null, null, !important);
+          }
+
+          .first-paragraph {
+            font-size: $paragraphLargeResolutionsFontSize !important;
+          }
+        }
+      }
+
+      .a-spot-hero-dark .card .carousel .slick-list {
+        max-height: remOrPercent(450px) !important;
+      }
+
+    }
+  }
+
+}
+
+

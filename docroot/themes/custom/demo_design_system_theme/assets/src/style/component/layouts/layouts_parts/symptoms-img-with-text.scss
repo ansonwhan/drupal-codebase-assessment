@@ -1,0 +1,33 @@
+@import "./assets/src/style/variables";
+@import "./assets/src/style/mixins_functions";
+@import "./assets/src/style/common_components_mixins";
+
+.symptoms-img-with-text {
+  background-color: $common-background-light-gray;
+  border: $common-border-size solid $common-border-color;
+
+  h6 {
+    @include h6HeadingCommonStyles(null, null, $inheritedBoldClass);
+  }
+
+  .img {
+    &__migraine {
+      @include commonStylesForImg('migrane_pain.webp', 95px, 100px);
+    }
+
+    &__ankle-sprain {
+      @include commonStylesForImg('ankle_pain.webp', 100px, 91px);
+    }
+
+    &__dental-pain {
+      @include commonStylesForImg('dental_pain.webp', 100px, 100px);
+    }
+
+    &__postsurgical-pain {
+      @include commonStylesForImg('hand_pain.webp', 100px, 100px);
+    }
+  }
+}
+
+
+

@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'node-type-' ~ node.bundle|clean_class,
+    not node.isPublished() ? 'node--unpublished',
+  ]
+%}
+
+<article{{ attributes.addClass(classes) }}>
+
+  {{ title_prefix }}
+  {{ title_suffix }}
+
+  <div{{ content_attributes }}>
+    {{ content|without('field_resource_classification','field_resource_language','field_resource_type') }}
+  </div>
+
+</article>

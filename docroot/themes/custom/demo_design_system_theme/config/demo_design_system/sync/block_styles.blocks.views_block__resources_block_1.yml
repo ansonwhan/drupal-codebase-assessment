@@ -1,0 +1,8 @@
+uuid: 596866e2-1930-4e24-9e45-2f80b17c765a
+langcode: en
+status: true
+dependencies: {  }
+id: views_block__resources_block_1
+theme: ''
+text: ''
+classes: resources-views-bef-form

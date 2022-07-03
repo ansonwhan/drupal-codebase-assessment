@@ -1,0 +1,37 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.individual-cta-row {
+  border: $common-border-size solid $common-border-color;
+  background-color: $common-background-light-gray;
+
+  .treva-icon {
+    @include commonStylesForImg('treva_crop.webp');
+  }
+
+  //wrappers for headings tags
+  .card-title {
+    @include overwriteAllHeadingTagsStyles;
+  }
+
+  @include media-breakpoint-down(xs) {
+    .img-container {
+      margin-top: 1rem;
+    }
+    .button-container {
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .img-container {
+      margin-top: 1rem;
+    }
+    .button-container {
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+

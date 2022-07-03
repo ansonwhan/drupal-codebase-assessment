@@ -1,0 +1,21 @@
+uuid: 6ffec3ab-3ace-4cf0-9c56-dcab2f3af4c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_headline
+    - paragraphs.paragraphs_type.hero_banner_item
+  module:
+    - text
+id: paragraph.hero_banner_item.field_banner_headline
+field_name: field_banner_headline
+entity_type: paragraph
+bundle: hero_banner_item
+label: 'Banner Headline'
+description: 'Your headline should be one phrase/sentence, with no linebreaks or paragraph breaks.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

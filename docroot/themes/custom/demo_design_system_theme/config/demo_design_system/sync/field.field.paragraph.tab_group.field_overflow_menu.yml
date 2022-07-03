@@ -1,0 +1,23 @@
+uuid: 92badc95-77cd-4a50-bab3-03012889966b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overflow_menu
+    - paragraphs.paragraphs_type.tab_group
+id: paragraph.tab_group.field_overflow_menu
+field_name: field_overflow_menu
+entity_type: paragraph
+bundle: tab_group
+label: 'Overflow menu'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'true'
+  off_label: 'false'
+field_type: boolean

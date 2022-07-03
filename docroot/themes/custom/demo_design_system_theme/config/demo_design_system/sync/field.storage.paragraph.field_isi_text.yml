@@ -1,0 +1,21 @@
+uuid: f8f1f40a-e862-4587-b1a1-21e08b2ddb22
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: ovSIOYQbEauR1wC8D0dAX5r_rhhbSDlzCfDl1TT3BMA
+id: paragraph.field_isi_text
+field_name: field_isi_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

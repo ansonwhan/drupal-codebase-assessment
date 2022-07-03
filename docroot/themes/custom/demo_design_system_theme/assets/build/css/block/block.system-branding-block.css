@@ -1,0 +1,28 @@
+.site-branding {
+  padding-top: 11px;
+  margin-right: 10px;
+}
+
+.site-branding .navbar-brand {
+  margin-right: 0;
+}
+
+@media (min-width: 377px) {
+  .site-branding {
+    margin-right: 35px;
+  }
+}
+
+@media (min-width: 577px) {
+  .site-branding {
+    margin-right: 38px;
+  }
+}
+
+@media (min-width: 769px) {
+  .site-branding {
+    margin-right: 65px;
+  }
+}
+
+/*# sourceMappingURL=block.system-branding-block.css.map */

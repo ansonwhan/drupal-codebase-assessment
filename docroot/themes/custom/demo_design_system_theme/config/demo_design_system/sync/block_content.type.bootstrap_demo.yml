@@ -1,0 +1,8 @@
+uuid: a0672104-b642-48a5-b17a-49a57ad32da7
+langcode: en
+status: true
+dependencies: {  }
+id: bootstrap_demo
+label: 'Bootstrap demo'
+revision: 0
+description: ''

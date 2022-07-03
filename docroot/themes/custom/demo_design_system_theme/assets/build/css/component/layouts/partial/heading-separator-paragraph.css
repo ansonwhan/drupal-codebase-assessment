@@ -1,0 +1,101 @@
+/*
+Please notice, we are putting here styles that we want inherited
+in another (prototypes) and later we import _inherited.scss
+to _common_components_mixins.scss (which are passed to each prototype stylesheets).
+*/
+ul, ol, dl {
+  padding-left: 2.5rem;
+}
+
+table {
+  font-family: "Museo Sans", sans-serif;
+}
+
+table td {
+  font-weight: 300;
+}
+
+blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.btn {
+  text-transform: uppercase;
+  height: auto;
+}
+
+.btn-rounded {
+  border-radius: 1.1875rem;
+}
+
+.btn-rounded.btn-lg {
+  border-radius: 1.5rem;
+}
+
+.btn-rounded.btn-sm {
+  border-radius: 0.96875rem;
+}
+
+.form-label {
+  font-family: "Museo Sans", sans-serif;
+  font-size: 1rem;
+}
+
+.form-label.form-label-lg {
+  font-size: 1.25rem;
+}
+
+.form-label.form-label-sm {
+  font-size: .875rem;
+}
+
+.editor--time-meridian {
+  font-size: 0.8rem;
+}
+
+.editor--wrapped-urls {
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+}
+
+.subhead-bold {
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 500;
+}
+
+.dialog-off-canvas-main-canvas {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+#page-container {
+  flex: 1 0 auto;
+}
+
+#section-footer {
+  flex-shrink: 0;
+}
+
+.field-label-inline > * {
+  display: inline;
+}
+
+.field-label-inline .field__label:after {
+  content: ':';
+}
+
+.heading-separator-paragraph h1 {
+  font-size: 2.25rem !important;
+}
+
+.heading-separator-paragraph p {
+  font-family: Whitman, serif;
+  font-size: 1.5rem !important;
+}
+
+/*# sourceMappingURL=heading-separator-paragraph.css.map */

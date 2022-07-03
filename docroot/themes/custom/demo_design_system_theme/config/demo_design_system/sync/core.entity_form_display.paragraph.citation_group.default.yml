@@ -1,0 +1,45 @@
+uuid: d8a2f497-aeae-46f1-87b8-d80bfad889bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.citation_group.field_ods_citation_item_p
+    - field.field.paragraph.citation_group.field_ods_collapsed
+    - paragraphs.paragraphs_type.citation_group
+  module:
+    - paragraphs
+id: paragraph.citation_group.default
+targetEntityType: paragraph
+bundle: citation_group
+mode: default
+content:
+  field_ods_citation_item_p:
+    type: paragraphs
+    weight: 1
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: closed
+      closed_mode: summary
+      autocollapse: all
+      closed_mode_threshold: 0
+      add_mode: button
+      form_display_mode: default
+      default_paragraph_type: citation_item
+      features:
+        add_above: add_above
+        collapse_edit_all: '0'
+        duplicate: duplicate
+    third_party_settings: {  }
+    region: content
+  field_ods_collapsed:
+    weight: 0
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+hidden:
+  created: true
+  field_citations_type: true
+  status: true

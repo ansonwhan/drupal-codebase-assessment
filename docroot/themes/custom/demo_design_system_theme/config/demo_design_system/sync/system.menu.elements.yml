@@ -1,0 +1,8 @@
+uuid: dc2680d1-88db-49bb-b250-86fc8ec49386
+langcode: en
+status: true
+dependencies: {  }
+id: elements
+label: 'Elements Main Menu'
+description: ''
+locked: false

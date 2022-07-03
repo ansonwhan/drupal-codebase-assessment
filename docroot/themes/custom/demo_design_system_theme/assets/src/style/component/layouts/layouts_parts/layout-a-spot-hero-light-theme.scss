@@ -1,0 +1,305 @@
+@import "./assets/src/style/variables";
+@import "./assets/src/style/mixins_functions";
+@import "./assets/src/style/common_components_mixins";
+
+.layout-a-spot-hero-light-theme {
+  .a-spot-hero-light {
+    $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+    $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+
+    //Common styles for each slide
+    .card {
+      .carousel {
+        .slick-list {
+          background: $white;
+
+          .slide-wrapper {
+            position: relative;
+
+            .card-img-top {
+              box-sizing: border-box;
+              min-height: remOrPercent(450px);
+              width: 100%;
+            }
+
+            .jumbotron-container {
+              h1 {
+                @include h1HeadingCommonStyles(null, null, $inheritedBoldClass);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //End common styles for each slide
+
+    //The problem with the interpretation of BS framework sass function responsible for breakpoint (xs),
+    // for the moment I leave the usual @mediaquery
+    @media (max-width: 575.98px) {
+      .card {
+        .carousel {
+          .slick-list {
+            min-height: remOrPercent(540px);
+            max-width: remOrPercent(100%);
+
+            .slide-wrapper {
+              img {
+                height: inherit;
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(10%) !important;
+                left: remOrPercent(50%) !important;
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(206px);
+                width: remOrPercent(293px) !important;
+
+                h1 {
+                  $h1Padding: 0 remOrPercent(16px) 0 remOrPercent(16px) !important;
+                  @include h1HeadingCommonStyles(null, $h1Padding);
+                }
+
+                .first-paragraph {
+                  padding: 0 remOrPercent(19px) 0 remOrPercent(19px) !important;
+                }
+
+                .jumbotron-img-container {
+                  .page-hero-img {
+                    min-height: remOrPercent(214px);
+                    max-width: remOrPercent(268px);
+                    @include commonStylesForA_SpotHeroThemeImg('homepage_hero.webp', 100%);
+                    background-size: contain;
+                  }
+
+                  .display-xs-none {
+                    display: none;
+                  }
+                }
+
+                h1 {
+                  @include h1HeadingCommonStyles($h3FontSizeModifier);
+                }
+
+                a {
+                  margin-left: remOrPercent(17.6px);
+                }
+
+                .display-xs-none {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(sm) {
+      .card {
+        .carousel {
+          .slick-list {
+            max-height: remOrPercent(415px);
+            max-width: remOrPercent(100%);
+
+            .slide-wrapper {
+
+              .card-img-top {
+                min-height: remOrPercent(245px);
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(9%);
+                left: remOrPercent(52%);
+                transform: translate(-50%, 0);
+                max-height: remOrPercent(202px);
+                width: remOrPercent(525px);
+
+                h1 {
+                  @include h1HeadingCommonStyles($h3FontSizeModifier);
+                }
+
+                .jumbotron-img-container {
+                  .page-hero-img {
+                    min-height: remOrPercent(214px);
+                    max-width: remOrPercent(268px);
+                    @include commonStylesForA_SpotHeroThemeImg('homepage_hero.webp', 100%);
+                  }
+                }
+
+                .display-lg-none {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(md) {
+      .card {
+        .carousel {
+          .slick-list {
+            max-height: remOrPercent(340px);
+            max-width: remOrPercent(768px);
+
+            .slide-wrapper {
+
+              .card-img-top {
+                min-height: remOrPercent(335px);
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(10%);
+                left: remOrPercent(48%);
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(219px);
+                min-width: remOrPercent(464px);
+
+                .banner-text-container {
+                  left: remOrPercent(1.5%);
+                }
+
+                .jumbotron-img-container {
+                  .page-hero-img {
+                    max-height: remOrPercent(225px);
+                    min-width: remOrPercent(250px);
+                    @include commonStylesForA_SpotHeroThemeImg('homepage_hero.webp', 100%);
+                  }
+                }
+
+                .display-lg-none {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    $lgXlSlickListHeight: remOrPercent(415px);
+    $lgXlSlickListWidth: remOrPercent(768px);
+
+    @include media-breakpoint-only(lg) {
+      .card {
+        .carousel {
+          .slick-list {
+            max-height: $lgXlSlickListHeight;
+            max-width: $lgXlSlickListWidth;
+
+            .slide-wrapper {
+              .jumbotron-container {
+                top: remOrPercent(10%);
+                left: remOrPercent(40%);
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(219px);
+                min-width: remOrPercent(464px);
+
+                .jumbotron-img-container {
+                  .page-hero-img {
+                    max-height: remOrPercent(288px);
+                    min-width: remOrPercent(413px);
+                    @include commonStylesForA_SpotHeroThemeImg('homepage_hero.webp', 100%);
+                  }
+                }
+
+                .display-lg-none {
+                  display: none;
+                }
+
+                .first-paragraph {
+                  font-size: initial;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(xl) {
+      .card {
+        .carousel {
+          .slick-list {
+            max-height: $lgXlSlickListHeight;
+            max-width: $lgXlSlickListWidth;
+
+            .slide-wrapper {
+              .jumbotron-container {
+                top: remOrPercent(10%);
+                left: remOrPercent(35%);
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(219px);
+                min-width: remOrPercent(464px);
+
+                .jumbotron-img-container {
+                  .page-hero-img {
+                    max-height: remOrPercent(288px);
+                    min-width: remOrPercent(413px);
+                    @include commonStylesForA_SpotHeroThemeImg('homepage_hero.webp', 100%);
+                  }
+                }
+
+                .display-lg-none {
+                  display: none;
+                }
+
+                .first-paragraph {
+                  font-size: initial;
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.paragraph--type--hero-banner-item {
+      @media screen and (max-width: 345px) { // like iphone 5/SE
+        > .container {
+          margin: 0 !important;
+        }
+      }
+      @include media-breakpoint-down(sm) {
+        > .container {
+          padding: 0;
+          margin: 0 -15px;
+        }
+        .card {
+          .carousel {
+            .slick-list {
+              background: transparent;
+              .slide-wrapper {
+                .card-img-top {
+                  background: transparent;
+                }
+                .jumbotron-container{
+                  .banner-text-container {
+                    h1 {
+                      padding: 0 10px !important;
+                    }
+                    .first-paragraph {
+                      padding: 0 10px !important;
+                    }
+                    a {
+                      margin-left: 10px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm){
+    margin-bottom: -40px !important;
+  }
+}

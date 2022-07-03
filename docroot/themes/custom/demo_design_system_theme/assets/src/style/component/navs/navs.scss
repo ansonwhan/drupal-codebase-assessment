@@ -1,0 +1,106 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+
+//Common link styles
+$verticalSpacingGetter: getSpacingSize($vertical-spacing-sizes, 10px);
+$horizontalSpacingGetter: getSpacingSize($horizontal-spacing-sizes, 20px);
+
+
+@mixin commonLinksStyles($isNavPill:false, $isNavLink:false) {
+  @if ($isNavPill) {
+    .nav-pill {
+      color: $common-light-gray;
+      background-color: $blue;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  @if ($isNavLink) {
+    .nav-link {
+      font-family: "Museo Sans", serif;
+      font-size: remOrPercent(14px);
+      padding: $verticalSpacingGetter $horizontalSpacingGetter;
+      border-radius: remOrPercent($defaultBorderRadiusValue);
+
+      &:focus {
+        box-shadow: $primaryButtonBoxShadow;
+      }
+    }
+  }
+}
+
+.otsuka-nav {
+  &__links {
+
+    @include commonLinksStyles(true, true);
+
+    .default-link, .disabled {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .active {
+      color: $active-link-color;
+
+      &:after {
+        content: '';
+        height: remOrPercent(3.2px);
+        background: $yellow;
+        display: block;
+      }
+
+      i {
+        margin-top: remOrPercent(3px);
+      }
+    }
+  }
+}
+
+//End common link styles
+
+
+//Menu button styles
+#overwrite-inherited-focus {
+  &:focus {
+    box-shadow: $primaryButtonBoxShadow;
+  }
+}
+
+.active-menu {
+  border: $common-border-size solid $common-border-color;
+  background-color: $common-light-gray;
+
+  i {
+    color: $gray-900 !important;
+  }
+}
+
+.overflow-squares-menu {
+  cursor: pointer;
+  width: remOrPercent(40px);
+  height: remOrPercent(40px);
+
+  i {
+    font-size: remOrPercent(7px);
+    color: $blue;
+  }
+
+  .spacer {
+    margin: 0 remOrPercent(3px) 0 remOrPercent(3px);
+  }
+
+  &:hover {
+    i {
+      color: $basic-link-hover-color;
+    }
+  }
+
+}
+
+//End Menu button styles
+
+

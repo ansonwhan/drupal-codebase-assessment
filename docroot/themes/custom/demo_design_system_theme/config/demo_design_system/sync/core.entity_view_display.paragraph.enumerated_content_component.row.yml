@@ -1,0 +1,80 @@
+uuid: 8f44883e-3f93-40d7-a043-fc0601fd0757
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.row
+    - field.field.paragraph.enumerated_content_component.field_cta_teaser
+    - paragraphs.paragraphs_type.enumerated_content_component
+  module:
+    - field_group
+    - text
+third_party_settings:
+  field_group:
+    group_column_second:
+      children:
+        - group_column_item
+      parent_name: group_row
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-second col d-flex align-items-center'
+      label: column_second
+    group_row:
+      children:
+        - group_column_second
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+    group_column_item:
+      children:
+        - field_cta_teaser
+      parent_name: group_column_second
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column_item
+id: paragraph.enumerated_content_component.row
+targetEntityType: paragraph
+bundle: enumerated_content_component
+mode: row
+content:
+  field_cta_teaser:
+    type: text_default
+    weight: 21
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

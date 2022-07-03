@@ -1,0 +1,47 @@
+uuid: ff8c0863-8ca2-418a-9481-49990ff5744a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.back_to_top
+    - field.field.block_content.back_to_top.field_back2top_button_position
+    - field.field.block_content.back_to_top.field_back2top_button_shape
+    - field.field.block_content.back_to_top.field_back2top_button_text
+    - field.field.block_content.back_to_top.field_back2top_button_visibility
+  module:
+    - options
+id: block_content.back_to_top.default
+targetEntityType: block_content
+bundle: back_to_top
+mode: default
+content:
+  field_back2top_button_position:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_back2top_button_shape:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+  field_back2top_button_text:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_back2top_button_visibility:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

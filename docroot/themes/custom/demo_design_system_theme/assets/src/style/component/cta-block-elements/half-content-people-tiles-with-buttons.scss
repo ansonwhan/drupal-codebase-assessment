@@ -1,0 +1,80 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+@mixin commonHeadings {
+  //wrappers for headings tags
+  .card-title {
+    @include overwriteAllHeadingTagsStyles;
+  }
+  .card-subtitle {
+    @include overwriteAllHeadingTagsStyles(false);
+  }
+}
+
+.half-content-people-tiles-with-buttons {
+  background-color: $common-background-light-gray;
+
+  $smallBreakpoints: xs, sm;
+  @each $smallBreakpoint in $smallBreakpoints {
+    @include media-breakpoint-up($smallBreakpoint) {
+
+      .max-width-height {
+        max-height: remOrPercent(413px);
+        max-width: remOrPercent(335px);
+      }
+
+      .common-border {
+        border: $common-border-size solid $common-border-color;
+        border-radius: $border-radius;
+      }
+
+      .card {
+        .photo {
+          &__one {
+            @include commonStylesForHalfCardsImg('person_1.webp', 146px);
+          }
+
+          &__two {
+            @include commonStylesForHalfCardsImg('person_2.webp', 146px);
+          }
+        }
+
+        @include commonHeadings;
+      }
+
+    }
+  }
+
+  $largeBreakpoints: md, lg, xl;
+  @each $largeBreakpoint in $largeBreakpoints {
+    @include media-breakpoint-up($largeBreakpoint) {
+
+      .max-width-height {
+        height: remOrPercent(314px);
+        max-width: remOrPercent(662px);
+      }
+
+      .common-border {
+        border: $common-border-size solid $common-border-color;
+        border-radius: $border-radius;
+      }
+
+      .card {
+        .photo {
+          &__one {
+            @include commonStylesForHalfCardsImg('person_1.webp', 100%);
+          }
+
+          &__two {
+            @include commonStylesForHalfCardsImg('person_2.webp', 100%);
+          }
+        }
+
+        @include commonHeadings;
+      }
+
+    }
+  }
+
+}

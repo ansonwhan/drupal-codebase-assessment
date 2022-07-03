@@ -1,0 +1,25 @@
+@import "../variables";
+@import "../mixins_functions";
+
+// Adding modal style for bootstrap.
+.modal-dialog-centered {
+  min-height: 100%;
+  margin: 0 30px;
+
+  @include media-breakpoint-up(sm) {
+    margin: 0 auto;
+  }
+}
+
+.modal-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.modal-body {
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 300;
+  max-height: 70vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

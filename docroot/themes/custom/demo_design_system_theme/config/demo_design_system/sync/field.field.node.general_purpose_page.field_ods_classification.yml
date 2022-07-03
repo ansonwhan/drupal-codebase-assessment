@@ -1,0 +1,29 @@
+uuid: 8b7a2b8c-6f8a-49da-9c60-2b1c92aa8201
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_classification
+    - node.type.general_purpose_page
+    - taxonomy.vocabulary.tags
+id: node.general_purpose_page.field_ods_classification
+field_name: field_ods_classification
+entity_type: node
+bundle: general_purpose_page
+label: 'Design System Classification'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      tags: tags
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

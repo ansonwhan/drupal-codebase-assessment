@@ -1,0 +1,28 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Group CTA rows without buttons
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/cta-rows/group-cta-rows-without-buttons.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1> Group CTA rows without buttons
+      (without buttons)</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_group-cta-rows-without-buttons.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Group CTA rows without buttons</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

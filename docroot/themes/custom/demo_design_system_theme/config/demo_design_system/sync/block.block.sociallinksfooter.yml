@@ -1,0 +1,25 @@
+uuid: 4b17bdbd-0193-4cb5-b020-d5155ce8d6d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.social-links-footer
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: sociallinksfooter
+theme: demo_design_system_theme
+region: footer_6
+weight: 0
+provider: null
+plugin: 'system_menu_block:social-links-footer'
+settings:
+  id: 'system_menu_block:social-links-footer'
+  label: 'Social Links Footer'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }

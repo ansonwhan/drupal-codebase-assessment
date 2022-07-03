@@ -1,0 +1,227 @@
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 100;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_100-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_100.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_300-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_300.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_500-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_500.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Museo Sans";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/museo_sans/MuseoSans_700-webfont.woff") format("woff"), url("../fonts/museo_sans/MuseoSans_700.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whitman";
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/whitman/Whitman-Roman.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Whitman";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/whitman/Whitman-Bold.otf") format("opentype");
+}
+
+.usage button.btn-usage {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+  background-color: #495057;
+  border-color: #495057;
+}
+
+.usage button.btn-usage:hover, .usage button.btn-usage:focus {
+  background-color: #343a40;
+  border-color: #343a40;
+}
+
+.node-content {
+  position: relative;
+}
+
+.node-content .block-border {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.node-content .bg-white {
+  background: #ffffff;
+}
+
+.node-content .bg-white.paragraph--type--components-group {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 575.98px) {
+  .node-content .bg-white.paragraph--type--components-group {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+
+.node-content .bg-navy {
+  background: linear-gradient(180deg, #497C98 0%, #2F617D 100%);
+}
+
+.node-content .bg-navy * {
+  color: #ffffff;
+}
+
+.node-content .bg-charcoal {
+  background: #495057;
+}
+
+.node-content .bg-charcoal * {
+  color: #ffffff;
+}
+
+.node-content .paragraph--type--links-group.vertical-anchor-to-left.nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .node-content .paragraph--type--links-group.vertical-anchor-to-left.nav {
+    display: block;
+    position: fixed;
+    top: 40vh;
+    left: 0;
+    padding: 20px 0;
+    height: auto;
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+.node-content .paragraph--type--links-group.vertical-anchor-to-right.nav {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .node-content .paragraph--type--links-group.vertical-anchor-to-right.nav {
+    display: block;
+    position: fixed;
+    top: 40vh;
+    right: 0;
+    padding: 20px 0;
+    height: auto;
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
+#page-container #main-content {
+  background: #f8f9fa;
+}
+
+#page-container #main-content .paragraph p:last-child {
+  margin-bottom: 0;
+}
+
+.infographic--behavior--taptoview .infographic--image-link a {
+  display: inline-block;
+}
+
+.infographic--behavior--taptoview .infographic--image-link img {
+  max-width: 100%;
+}
+
+.infographic--behavior--inline img {
+  max-width: 100%;
+}
+
+/** Custom demo site css starts here **/
+.tablefield-wrapper table {
+  width: 100%;
+}
+
+.tablefield-wrapper table tr {
+  border-bottom: 3px solid #ccc;
+}
+
+@media (max-width: 639px) {
+  .tablefield-wrapper table .tablesaw-cell-label {
+    background: black;
+    color: white;
+  }
+
+  .tablefield-wrapper table .tablesaw-cell-label, .tablefield-wrapper table .tablesaw-cell-content {
+    padding: 3px 0.7rem;
+    display: inline-block;
+  }
+
+  .tablefield-wrapper table.tablesaw td {
+    padding: 0;
+    background: white;
+  }
+
+  .tablefield-wrapper table tr {
+    display: inline-block;
+  }
+
+  .tablefield-wrapper table tr:first-of-type {
+    border-top: 3px solid #ccc;
+  }
+}
+
+@media (min-width: 640px) {
+  .tablefield-wrapper table th {
+    background: black;
+    color: white;
+  }
+
+  .tablefield-wrapper table tr {
+    border-bottom: 3px solid #ccc;
+  }
+}
+
+#table-safety-1 table tr, #table-dosing table tr, .table-focusable table tr {
+  background: white;
+}
+
+#table-safety-1 table tr:hover, #table-dosing table tr:hover, .table-focusable table tr:hover {
+  background: #dedede;
+}
+
+#table-safety-1 table td:first-child, #table-dosing table td:first-child, .table-focusable table td:first-child {
+  font-weight: bold;
+}
+
+.table-alternating table tr {
+  background: white;
+}
+
+.table-alternating table tr:nth-child(even) {
+  background: #dedede;
+}
+
+#table-safety-2 table th {
+  border-left: 1px solid #ccc;
+}
+
+#table-safety-2 table th:first-of-type {
+  border-left: none;
+}
+
+#table-safety-2 table tbody tr {
+  background: white;
+}
+
+/** Custom demo site css ends here **/
+
+/*# sourceMappingURL=node.general-purpose-page.css.map */

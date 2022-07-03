@@ -1,0 +1,74 @@
+{% set setPathToImg       = pathsToDependencies.isDockerLocalHost ? "/themes/custom/otsk-sandboxes/themes/custom/demo_design_system_theme/assets/build/webp/" : "/themes/custom/demo_design_system_theme/assets/build/webp/" %}
+{% set setPathToTempVideo = pathsToDependencies.isDockerLocalHost ? "/themes/custom/otsk-sandboxes/themes/custom/demo_design_system_theme/html_components/temp/video/" : "/themes/custom/demo_design_system_theme/html_components/temp/video/" %}
+<!-- start example code for Drupal -->
+<div class="selection-hero-video-or-image">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="carousel card-block">
+                        {% for item in selectionHeroVideoOrImage %}
+                            <div class="slide-wrapper">
+                                {% if item.videoType != "" %}
+                                    <video preload autoplay loop muted class="multimedia-container">
+                                        <source
+                                                src="{{ setPathToTempVideo }}{{ item.videoOrImgName }}"
+                                                type="{{ item.videoType }}">
+                                    </video>
+                                    <div
+                                            class="jumbotron position-absolute text-white text-center jumbotron-container-for-video">
+                                        <h1 class="text-white">{{ item.heading }}</h1>
+                                        <select class="selectpicker dropdown" data-size="5"
+                                                data-width="fit"
+                                                data-dropup-auto="false">
+                                            <option>Choose a condition</option>
+                                            <option data-divider="true"></option>
+                                            <option data-subtext="ASTHMA">Uncontrolled
+                                                Moderate-to-Severe (Eczema)
+                                            </option>
+                                            <option data-divider="true"></option>
+                                            <option data-subtext="ATOPIC DERMATITIS">Add-on
+                                                Maintenance Treatment for
+                                                Uncontrolled Moderate-to-Severe Eosinophilic
+                                            </option>
+                                            <option data-divider="true"></option>
+                                            <option data-subtext="CHRONIC RHINOSINUSITIS WITH NASAL POLYPOSIS (CRSwNP)">
+                                                Add-on Maintenance Treatment for Uncontrolled
+                                            </option>
+                                        </select>
+                                    </div>
+                                {% else %}
+                                    <div class="slide-wrapper">
+                                        <img alt="{{ item.alt }}"
+                                             src="{{ setPathToImg }}{{ item.videoOrImgName }}"
+                                             class="card-img-top"/>
+                                        <div
+                                                class="jumbotron position-absolute text-white text-center jumbotron-container-for-img">
+                                            <h1 class="text-white">{{ item.heading }}</h1>
+                                            <p class="first-paragraph">{{ item.text }}</p>
+                                            <p>
+                                                <a class="text-uppercase btn btn-primary btn-sm btn-rounded ods-p-10"
+                                                   href="#" role="button">{{ item.buttonText }}</a>
+                                            </p>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Please notice this condition is for single slide (selection-hero-video-or-image) -->
+                    {% if selectionHeroVideoOrImage.length > 1 %}
+                        <div class="carousel-nav card-block indicators position-absolute">
+                            <div class="rectangle__one" role="button" tabindex="0"></div>
+                            <div class="rectangle__two" role="button" tabindex="0"></div>
+                            <div class="rectangle__three" role="button" tabindex="0"></div>
+                        </div>
+                    {% endif %}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end example code for Drupal -->

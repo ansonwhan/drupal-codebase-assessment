@@ -1,0 +1,25 @@
+uuid: 8b1b0528-bc42-46f1-a915-a1901f7a70e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_drawer
+_core:
+  default_config_hash: 6NpTRHylDzSDRkxfwbQ1W2BPWmAbqdrLTyivPPugQZo
+id: block_content.isi.field_isi_drawer
+field_name: field_isi_drawer
+entity_type: block_content
+bundle: isi
+label: 'ISI drawer'
+description: 'Check to show ISI as an expanding drawer at bottom of the viewport; leave unchecked to show a jump link as a sticky footer on the viewport.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,8 @@
+uuid: 11f0b8a9-fa6b-48ef-b8bc-dc48695176a2
+langcode: en
+status: true
+dependencies: {  }
+id: content-patterns
+label: 'Content Patterns Main Menu'
+description: ''
+locked: false

@@ -1,0 +1,25 @@
+uuid: fca0f144-746f-4fbc-9ca6-85258282154e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a1aad739-9031-4646-b64a-57bf5e5ccfac'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: oapilogofooter
+theme: demo_design_system_theme
+region: footer_5
+weight: 0
+provider: null
+plugin: 'block_content:a1aad739-9031-4646-b64a-57bf5e5ccfac'
+settings:
+  id: 'block_content:a1aad739-9031-4646-b64a-57bf5e5ccfac'
+  label: 'OAPI Logo Footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

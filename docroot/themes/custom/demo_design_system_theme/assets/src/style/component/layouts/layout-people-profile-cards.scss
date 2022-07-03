@@ -1,0 +1,110 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+//Common components spacing values (getters)
+$verticalSpacing45: getSpacingSize($vertical-spacing-sizes, 45px);
+$verticalSpacing30: getSpacingSize($vertical-spacing-sizes, 30px);
+$verticalSpacing20: getSpacingSize($vertical-spacing-sizes, 20px);
+
+$horizontalSpacing30: getSpacingSize($horizontal-spacing-sizes, 30px);
+
+.people-profile-card {
+  border: $common-border-size solid $common-border-color;
+  min-height: remOrPercent(1020px);
+  max-width: remOrPercent(740px);
+
+  li {
+    list-style-type: none;
+    position: relative;
+  }
+
+  li::before {
+    content: '•';
+    position: absolute;
+    left: - remOrPercent(25px);
+    font-size: remOrPercent(17.5px);
+  }
+
+  .half-content-people-tiles-with-buttons {
+    border: 0;
+
+    button i {
+      margin-right: remOrPercent(10px);
+    }
+  }
+
+  .card {
+    border-radius: 0;
+    height: remOrPercent(315px);
+
+    div[role=img] {
+      min-width: remOrPercent(365px);
+    }
+  }
+
+
+  .people-data {
+    background: $common-background-dark-blue;
+    color: $white;
+    margin-left: - remOrPercent(14px);
+    margin-right: 0;
+
+    h6 {
+      @include h6HeadingCommonStyles(remOrPercent(14px), null, $inheritedBoldClass);
+      color: $white;
+    }
+
+    .triangle {
+      $commonBorderWidth: remOrPercent(14px);
+      border-color: transparent $black transparent transparent;
+      border-style: solid;
+      border-width: 0 $commonBorderWidth $commonBorderWidth 0;
+      border-image: none 100% / 1 / 0 stretch;
+      top: remOrPercent(13px);
+      position: relative;
+    }
+
+    .field--item {
+      > div {
+        padding: $verticalSpacing20 0 $horizontalSpacing30 $horizontalSpacing30;
+      }
+    }
+
+  }
+
+  .second-people-data {
+    h6 {
+      @include h6HeadingCommonStyles(remOrPercent(14px), null, $inheritedBoldClass);
+    }
+
+    ul:nth-of-type(2n) {
+      margin-bottom: $verticalSpacing30
+    }
+
+    hr {
+      margin-left: - remOrPercent(15px);
+      width: 100%;
+    }
+  }
+
+  $breakpoints: xs, sm;
+  @each $breakpoint in $breakpoints {
+    @include media-breakpoint-down($breakpoint) {
+      .half-content-people-tiles-with-buttons {
+        margin-bottom: $verticalSpacing45;
+
+        @if $breakpoint == xs {
+          .card div[role="img"] {
+            min-width: unset;
+          }
+        }
+
+      }
+
+    }
+  }
+
+
+}
+

@@ -1,0 +1,25 @@
+uuid: 4c05b8d2-5c3b-4cd4-b8c4-d68f6af02848
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_initial_visit
+_core:
+  default_config_hash: 2Jckhqs3CxUbdTe75-hr3JqIUUo9k6yXtXfnSv3635k
+id: block_content.isi.field_isi_initial_visit
+field_name: field_isi_initial_visit
+entity_type: block_content
+bundle: isi
+label: 'ISI initial visit'
+description: 'Check here to force users to view ISI on the initial visit of the site by scrolling the ISI into view (regardless of the page of entry). A cookie is used to determine if they''ve been on the site already.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,72 @@
+{#
+/**
+ * @file
+ * Otsuka design system theme implementation to display a footer.
+ *
+ * @see page.html.twig
+ */
+#}
+
+<footer id="section-footer" role="contentinfo" data-analytics-position="Footer">
+  {% if page.footer_1 or page.footer_2 or page.footer_3 or page.footer_4 %}
+    <div id="footer-top">
+      <div class="container">
+        <div class="row">
+          {% if page.footer_1 %}
+            <div class="col-lg-3 col-12">
+              {{ page.footer_1 }}
+            </div>
+          {% endif %}
+          {% if page.footer_2 %}
+            <div class="col-lg-3 col-sm-4">
+              {{ page.footer_2 }}
+            </div>
+          {% endif %}
+          {% if page.footer_3 %}
+            <div class="col-lg-3 col-sm-4">
+              {{ page.footer_3 }}
+            </div>
+          {% endif %}
+          {% if page.footer_4 %}
+            <div class="col-lg-3 col-sm-4">
+              {{ page.footer_4 }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+  {% if page.footer_5 or page.footer_6 or page.footer_middle or page.footer_7 or page.footer_8 %}
+    <div id="footer-bottom">
+      <div class="container">
+        <div class="row">
+          {% if page.footer_5 %}
+            <div class="col-lg-4 col-12">
+              {{ page.footer_5 }}
+            </div>
+          {% endif %}
+          {% if page.footer_6 %}
+            <div class="col-lg-8 col-12">
+              {{ page.footer_6 }}
+            </div>
+          {% endif %}
+          {% if page.footer_middle %}
+            <div class="col-12">
+              {{ page.footer_middle }}
+            </div>
+          {% endif %}
+          {% if page.footer_7 %}
+            <div class="col-8">
+              {{ page.footer_7 }}
+            </div>
+          {% endif %}
+          {% if page.footer_8 %}
+            <div class="col-4">
+              {{ page.footer_8 }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</footer>

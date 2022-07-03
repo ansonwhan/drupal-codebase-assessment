@@ -1,0 +1,38 @@
+uuid: e9fc2add-2a9e-410f-9f1b-849faa194865
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_video_thumb
+    - media.type.video
+  module:
+    - image
+id: media.video.field_video_thumb
+field_name: field_video_thumb
+entity_type: media
+bundle: video
+label: Thumb
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: 'fields/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: 2560x2560
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image

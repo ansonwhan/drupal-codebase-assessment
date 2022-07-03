@@ -1,0 +1,25 @@
+uuid: 11400228-c400-445f-a86f-a8480f512f97
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.isi
+    - field.storage.block_content.field_isi_footer
+_core:
+  default_config_hash: EZFiMVqMzTjLqDL41qOUkINVwv5Fnm6HqCXXL3oxWAE
+id: block_content.isi.field_isi_footer
+field_name: field_isi_footer
+entity_type: block_content
+bundle: isi
+label: 'ISI footer'
+description: 'Check here to use this module to show a prominent ISI callout sticky to the bottom of the viewport until the ISI content inline in the page is scrolled into view.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

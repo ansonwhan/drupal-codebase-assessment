@@ -1,0 +1,30 @@
+uuid: 8fc22398-f016-435f-90c4-529729a003d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.url
+    - field.field.media.document.field_media_document
+    - media.type.document
+  module:
+    - file
+_core:
+  default_config_hash: DXitcriWmE5QHvGvk2OzWouaSnXD5uipkRdAG6_pnkg
+id: media.document.url
+targetEntityType: media
+bundle: document
+mode: url
+content:
+  field_media_document:
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: file_url_plain
+    weight: 1
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

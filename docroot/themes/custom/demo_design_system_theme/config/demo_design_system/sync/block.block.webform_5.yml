@@ -1,0 +1,25 @@
+uuid: d5fe38ae-c8f3-45bf-a94f-fd76aff7c723
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.symptom_questionnaire
+  module:
+    - webform
+  theme:
+    - demo_design_system_theme
+id: webform_5
+theme: demo_design_system_theme
+region: hidden
+weight: -20
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Symptom Questionnaire Webform'
+  provider: webform
+  label_display: '0'
+  webform_id: symptom_questionnaire
+  default_data: ''
+  redirect: false
+visibility: {  }

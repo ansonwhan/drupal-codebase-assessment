@@ -1,0 +1,334 @@
+@import "../_mixins_functions";
+@import "../variables";
+
+// Adding default list styles for bootstrap.
+ul, ol, dl {
+  padding-left: 2.5rem;
+}
+
+// Adding default table styles for bootstrap.
+table {
+  font-family: "Museo Sans", sans-serif;
+
+  td {
+    font-weight: 300;
+  }
+}
+
+// Adding default blockquote styles for bootstrap.
+blockquote {
+  margin-bottom: $spacer;
+  @include font-size($blockquote-font-size);
+}
+
+// Adding default button styles for bootstrap.
+.btn {
+  text-transform: uppercase;
+  height: auto;
+}
+
+// Adding rounded button styles for bootstrap.
+.btn-rounded {
+  border-radius: 1.1875rem;
+
+  &.btn-lg {
+    border-radius: 1.5rem;
+  }
+
+  &.btn-sm {
+    border-radius: 0.96875rem;
+  }
+}
+
+// Adding form label styles for bootstrap.
+.form-label {
+  font-family: "Museo Sans", sans-serif;
+  font-size: 1rem;
+
+  &.form-label-lg {
+    font-size: 1.25rem;
+  }
+
+  &.form-label-sm {
+    font-size: .875rem;
+  }
+}
+
+// Adding new ckeditor styles.
+.editor--time-meridian {
+  font-size: $font-size-base * .8;
+}
+
+.editor--wrapped-urls {
+  white-space: nowrap;
+  display: inline-block;
+  overflow: hidden;
+  max-width: 18.75rem;
+  text-overflow: ellipsis;
+}
+
+
+@mixin inheritedBoldStyles {
+  font-family: 'Museo Sans', sans-serif;
+  font-weight: 500;
+}
+
+.subhead-bold {
+  @include inheritedBoldStyles;
+}
+
+// Global theme styles.
+.dialog-off-canvas-main-canvas {
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+}
+
+#page-container {
+  flex: 1 0 auto;
+}
+
+#section-footer {
+  flex-shrink: 0;
+}
+
+// Added inline field settings support.
+.field-label-inline {
+  > * {
+    display: inline;
+  }
+
+  .field__label:after {
+    content: ':';
+  }
+}
+
+// Added default list styles for content.
+.content {
+  ul {
+    li {
+      margin: 1rem 0;
+    }
+  }
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function getSpacingSize($spacing-size-list, $specific-spacing-size) {
+  @each $single-spacing-size in $spacing-size-list {
+    @if ($single-spacing-size == $specific-spacing-size) {
+      @return remOrPercent($single-spacing-size);
+    }
+  }
+  @warn "There is no `#{$specific-spacing-size}` size on the list : `#{$spacing-size-list}`";
+}
+
+/*!
+@description Functionalities of internal spacing/grid .
+Please notice if you change one of this values the change will impact whole storybook and application, so beware :)
+ */
+
+// Added classes for vertical and horizontal spacing system.
+@each $vertical-spacing-size in $vertical-spacing-sizes {
+  .ods-pt-#{strip-unit($vertical-spacing-size)} {
+    padding-top: rem($vertical-spacing-size);
+  }
+
+  .ods-pb-#{strip-unit($vertical-spacing-size)} {
+    padding-bottom: rem($vertical-spacing-size);
+  }
+
+  .ods-mt-#{strip-unit($vertical-spacing-size)} {
+    margin-top: rem($vertical-spacing-size) !important;
+  }
+
+  .ods-mb-#{strip-unit($vertical-spacing-size)} {
+    margin-bottom: rem($vertical-spacing-size);
+  }
+}
+
+@each $horizontal-spacing-size in $horizontal-spacing-sizes {
+  .ods-pl-#{strip-unit($horizontal-spacing-size)} {
+    padding-left: rem($horizontal-spacing-size);
+  }
+
+  .ods-pr-#{strip-unit($horizontal-spacing-size)} {
+    padding-right: rem($horizontal-spacing-size);
+  }
+
+  .ods-px-#{strip-unit($horizontal-spacing-size)} {
+    padding-left: rem($horizontal-spacing-size);
+    padding-right: rem($horizontal-spacing-size);
+  }
+
+  .ods-ml-#{strip-unit($horizontal-spacing-size)} {
+    margin-left: rem($horizontal-spacing-size);
+  }
+
+  .ods-mr-#{strip-unit($horizontal-spacing-size)} {
+    margin-right: rem($horizontal-spacing-size);
+  }
+
+  .ods-mx-#{strip-unit($horizontal-spacing-size)} {
+    margin-left: rem($horizontal-spacing-size);
+    margin-right: rem($horizontal-spacing-size);
+  }
+}
+
+@each $horizontal-and-vertical-size in $horizontal-and-vertical-sizes {
+  .ods-m-#{strip-unit($horizontal-and-vertical-size)} {
+    margin: rem($horizontal-and-vertical-size);
+  }
+  .ods-p-#{strip-unit($horizontal-and-vertical-size)} {
+    padding: rem($horizontal-and-vertical-size);
+  }
+}
+
+// Ending classes for vertical and horizontal spacing system.
+
+
+.col-md-4 {
+  z-index: $zIndexColMd4;
+}
+
+//Start Bootstrap headings modifiers
+$h1Display4SizeModifier: $display4-size;
+$h1_36pxSizeModifier: remOrPercent(36px);
+
+$h2FontSizeModifier: $h2-font-size;
+$h3FontSizeModifier: $h3-font-size;
+$h5FontSizeModifier: $h5-font-size;
+$h6FontSizeModifier: $h6-font-size;
+
+$inheritedBoldClass: true;
+//End Bootstrap headings modifiers
+
+//Headings generic mixins
+@mixin h1HeadingCommonStyles($fontSize: $h1-font-size, $padding: null, $inheritedClass: null, $important: null) {
+  @if ($fontSize != null) {
+    font-size: $fontSize $important;
+  } @else {
+    font-size: $h1-font-size;
+  }
+  @if ($inheritedClass) {
+    @include inheritedBoldStyles;
+  }
+  @if ($padding) {
+    padding: $padding;
+  }
+}
+
+@mixin h3HeadingCommonStyles($fontSize: $h3-font-size, $padding: null, $inheritedClass: null) {
+  @if ($fontSize != null) {
+    font-size: $fontSize;
+  } @else {
+    font-size: $h3-font-size;
+  }
+  @if ($inheritedClass) {
+    @include inheritedBoldStyles;
+  }
+  @if ($padding) {
+    padding: $padding;
+  }
+}
+
+@mixin h4HeadingCommonStyles($fontSize: $h4-font-size, $padding: null, $inheritedClass: null) {
+  @if ($fontSize != null) {
+    font-size: $fontSize;
+  } @else {
+    font-size: $h4-font-size;
+  }
+  @if ($inheritedClass) {
+    @include inheritedBoldStyles;
+  }
+  @if ($padding) {
+    padding: $padding;
+  }
+}
+
+@mixin h6HeadingCommonStyles($fontSize: $h6-font-size, $padding: null, $inheritedClass: null) {
+  @if ($fontSize != null) {
+    font-size: $fontSize !important;
+  } @else {
+    font-size: $h6-font-size !important;
+  }
+  @if ($inheritedClass) {
+    @include inheritedBoldStyles;
+  }
+  @if ($padding) {
+    padding: $padding;
+  }
+}
+
+@mixin overwriteAllHeadingTagsStyles($isDefaultHeading:true) {
+  @for $index from 1 through 6 {
+    h#{$index} {
+      @if $isDefaultHeading {
+        @include h4HeadingCommonStyles(null, null, $inheritedBoldClass);
+      } @else {
+        @include h6HeadingCommonStyles(null, null, $inheritedBoldClass);
+      }
+    }
+  }
+}
+
+//End headings generic mixins
+
+@mixin ifNotIsiSidebarOverwriteDefGrid() {
+  body:not(.has-isi-side-bar) {
+    .ods-col {
+      flex: 0 0 remOrPercent(100%) !important;
+      width: remOrPercent(100%) !important;
+      max-width: remOrPercent(100%) !important;
+      position: relative;
+      min-height: remOrPercent(1px);
+      padding-right: remOrPercent(15px);
+      padding-left: remOrPercent(15px);
+    }
+
+    .ods-m-auto {
+      margin: 0 auto 0 auto;
+    }
+
+    .ods-flex-justify-content-center {
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+      display: flex !important;
+    }
+
+  }
+}
+
+@include ifNotIsiSidebarOverwriteDefGrid();
+
+
+@mixin ifIsiSidebarEnableOverwriteDefGrid() {
+  body.has-isi-side-bar {
+    .ods-col-6 {
+      flex: 0 0 remOrPercent(50%) !important;
+      max-width: remOrPercent(50%) !important;
+    }
+
+    $smallBreakpoints: xs, sm;
+    @each $smallBreakpoint in $smallBreakpoints {
+      @include media-breakpoint-down($smallBreakpoint) {
+        .ods-col-#{$smallBreakpoint}-7 {
+          flex: 0 0 remOrPercent(58.33333%) !important;
+          max-width: remOrPercent(58.33333%) !important;
+        }
+
+        .ods-col-#{$smallBreakpoint}-5 {
+          flex: 0 0 remOrPercent(41.66667%) !important;
+          max-width: remOrPercent(41.66667%) !important;
+        }
+      }
+    }
+
+  }
+}
+
+@include ifIsiSidebarEnableOverwriteDefGrid();
+
+/*! End Functionalities of internal spacing/grid */

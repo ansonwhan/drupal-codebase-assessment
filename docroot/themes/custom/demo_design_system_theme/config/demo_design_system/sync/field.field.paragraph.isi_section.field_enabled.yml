@@ -1,0 +1,25 @@
+uuid: ffaae67f-7362-45c6-aa3c-c3f834f011d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_enabled
+    - paragraphs.paragraphs_type.isi_section
+_core:
+  default_config_hash: 43XrZAMgvq9kCkrpF2JJFDa2YStEBb1u-6wOuWzsVU8
+id: paragraph.isi_section.field_enabled
+field_name: field_enabled
+entity_type: paragraph
+bundle: isi_section
+label: Enabled
+description: 'Whether this section will be shown.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

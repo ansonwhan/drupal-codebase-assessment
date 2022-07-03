@@ -1,0 +1,38 @@
+{% set sticky_nav_location %}
+  {{ content.field_sticky_nav_location }}
+{% endset %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+
+{#
+/**
+ * Available variables:
+ * - css modifiers: .vertical-anchor-to-left ; .vertical-anchor-to-right (it changes horizontal position of this element)
+ */
+#}
+{% set classes = [
+  'paragraph--type--' ~ paragraph.bundle|clean_class,
+  settings_custom_classes ? settings_custom_classes,
+  'vertical-anchor-navigation',
+  'L' in sticky_nav_location ? 'vertical-anchor-to-left' : 'vertical-anchor-to-right',
+  'nav',
+  'flex-column',
+] %}
+{% block paragraph %}
+  <nav{{ attributes.addClass(classes).setAttribute('id', 'js-non-scrollable-container').setAttribute(' data-analytics-position=', 'Right Rail') }}>
+    <ul class="nav">
+      {% block content %}
+        {{ content|without(['field_sticky_nav_location']) }}
+      {% endblock %}
+      <li>
+        <div class="nav-link flex-column d-flex">
+          <i class="fa fa-chevron-up js-non-scrollable ods-mb-10 analytics-n-jump"
+             data-analytics-position="Right Rail"
+             data-analytics-id="{{ ('js-scroll-spy-up-' ~ paragraph.id())|data_analytics_id }}"></i>
+          <i class="fa fa-chevron-down js-non-scrollable analytics-n-jump"
+             data-analytics-position="Right Rail"
+             data-analytics-id="{{ ('js-scroll-spy-down-' ~ paragraph.id())|data_analytics_id }}"></i>
+        </div>
+      </li>
+    </ul>
+  </nav>
+{% endblock paragraph %}

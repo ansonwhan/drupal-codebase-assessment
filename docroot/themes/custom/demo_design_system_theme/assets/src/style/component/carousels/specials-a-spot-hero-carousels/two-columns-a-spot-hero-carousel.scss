@@ -1,0 +1,351 @@
+@import "../../../variables";
+@import "../../../mixins_functions";
+@import "../../../common_components_mixins";
+
+$specialMultipleCarouselTypeNames: ".carousel-seventh-type", ".carousel-eighth-type";
+$specialCarouselTypeNamesWithArrowsNav: ".carousel-seventh-type", ".carousel-eighth-type";
+
+$specialCarouselBasicNav: ".carousel-seventh-nav", ".carousel-eighth-nav";
+
+.two-columns-a-spot-hero-carousel {
+  $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+  $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+  $paragraphSmallResolutionsFontSize: remOrPercent(12px);
+
+  //Common styles for each slide
+  .card {
+    #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+      .slick-list {
+        .slide-wrapper {
+          position: relative;
+
+          img {
+            width: inherit;
+          }
+
+          .jumbotron-container {
+            width: remOrPercent(90%) !important;
+
+            h1 {
+              @include h1HeadingCommonStyles(null, null, $inheritedBoldClass);
+              margin-top: getSpacingSize($vertical-spacing-sizes, 10px);
+            }
+
+            .img-inside-slide {
+              width: remOrPercent(70%);
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //End common styles for each slide
+
+  //Special modifiers
+  .opaque-background {
+    //will produce opacity 0.7
+    background: transparentize($common-background-light-gray, 0.3);
+  }
+
+  //End special modifiers
+
+
+  @include media-breakpoint-down(xs) {
+    .card {
+      #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+        .slick-list {
+          $xsContainerHeight: remOrPercent(240px);
+          min-height: $xsContainerHeight;
+          max-width: remOrPercent(375px);
+
+          .slide-wrapper {
+            img {
+              height: $xsContainerHeight !important;
+            }
+
+            .jumbotron-container {
+              top: remOrPercent(8%) !important;
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(206px) !important;
+
+              .img-inside-slide {
+                height: auto !important;;
+                width: remOrPercent(100%);
+              }
+
+              .text-container {
+                h1 {
+                  @include h6HeadingCommonStyles(null, null, null);
+                }
+
+                .first-paragraph {
+                  font-size: $paragraphSmallResolutionsFontSize;
+                }
+              }
+            }
+
+            .one-column-jumbotron-container {
+              h1 {
+                @include h3HeadingCommonStyles(null, null, null);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .card {
+      #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+        .slick-list {
+          $smContainerHeight: remOrPercent(300px);
+          max-height: $smContainerHeight;
+          max-width: remOrPercent(576px);
+
+          .slide-wrapper {
+            img {
+              height: $smContainerHeight;
+            }
+
+            .jumbotron-container {
+              top: remOrPercent(9%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(202px);
+
+              .img-inside-slide {
+                height: auto !important;;
+                width: remOrPercent(100%);
+              }
+
+              .text-container {
+                h1 {
+                  @include h3HeadingCommonStyles(null, null, null);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card {
+      #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+        .slick-list {
+          max-height: remOrPercent(350px);
+          max-width: remOrPercent(768px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(10%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(219px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  $largeContainersHeights: remOrPercent(450px);
+  @include media-breakpoint-up(lg) {
+    .card {
+      #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+        .slick-list {
+          max-height: $largeContainersHeights;
+          max-width: remOrPercent(992px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(5%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(265px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .card {
+      #{classNamesUnite($specialMultipleCarouselTypeNames)} {
+        .slick-list {
+          max-height: $largeContainersHeights;
+          max-width: remOrPercent(1440px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(8%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(268px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //.slick navigation style start
+  $navigationButtonSize: remOrPercent(30px);
+
+  #{classNamesUnite($specialCarouselBasicNav)} {
+    height: remOrPercent(23px);
+    width: remOrPercent(130px) !important; //change it if you wan't to change size on navigation bar
+    left: remOrPercent(50%);
+    transform: translate(-50%, 0);
+    bottom: remOrPercent(2%);
+
+    .slick-list {
+      width: 100% !important;
+      padding: unset !important;
+
+      .slick-track {
+        width: inherit !important;
+
+        .slick-current {
+          width: $navigationButtonSize !important;
+
+          .rectangle {
+            &__one {
+              background-color: $common-background-light-gray;
+            }
+
+            &__two {
+              background-color: $common-background-light-gray;
+            }
+
+            &__three {
+              background-color: $common-background-light-gray;
+            }
+          }
+        }
+
+        .slick-slide {
+          width: $navigationButtonSize !important;
+        }
+
+        .rectangle {
+          &__one {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 0%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+
+          &__two {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 50%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+
+          &__three {
+            @include commonStylesForSlickSlideNavigation($slickInactiveNavButtons, 100%);
+
+            &:hover {
+              background-color: $common-background-light-gray;
+            }
+
+            &:focus {
+              background-color: $common-background-light-gray;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #{classNamesUnite($specialCarouselTypeNamesWithArrowsNav)} {
+    $customSlickArrowsOpacity: 0.9;
+    $absoluteLeftRightPosition: remOrPercent(3%);
+
+    .custom-slick-prev, .custom-slick-next {
+      position: absolute;
+      cursor: pointer;
+      background: transparent;
+      color: transparent;
+      top: remOrPercent(50%);
+      border: none;
+      outline: none;
+    }
+
+    .custom-slick-prev:hover, .custom-slick-next:hover {
+      opacity: $customSlickArrowsOpacity;
+    }
+
+    .custom-slick-prev:focus, .custom-slick-next:focus {
+      outline: none;
+    }
+
+    .custom-slick-prev.slick-disabled:before, .custom-slick-next.slick-disabled:before {
+      display: none;
+    }
+
+    .custom-slick-prev:before, .custom-slick-next:before {
+      font-family: 'Font Awesome\ 5 Free', sans-serif;
+      font-size: remOrPercent(30px);
+      line-height: 1;
+      color: $common-light-gray;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 900;
+    }
+
+    .custom-slick-prev {
+      left: $absoluteLeftRightPosition;
+      z-index: $zIndexNavigationArrow;
+    }
+
+    .custom-slick-prev:before {
+      content: '\f137';
+    }
+
+    .custom-slick-next {
+      right: $absoluteLeftRightPosition;
+    }
+
+    .custom-slick-next:before {
+      content: '\f138';
+    }
+  }
+
+  //.slick navigation style end
+
+
+}

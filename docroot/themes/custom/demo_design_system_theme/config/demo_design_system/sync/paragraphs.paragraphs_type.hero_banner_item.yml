@@ -1,0 +1,14 @@
+uuid: 9fd9812a-c97b-49a1-b6dc-a73517c3e8cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: hero_banner_item
+label: 'Hero/Banner Item (Slide)'
+icon_uuid: null
+icon_default: null
+description: 'Use this entity type for a single banner/hero block'
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

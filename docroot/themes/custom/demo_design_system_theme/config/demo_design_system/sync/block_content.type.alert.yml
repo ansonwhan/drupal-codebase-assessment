@@ -1,0 +1,8 @@
+uuid: 3df30293-5c0e-4ba4-b553-8ee37d3ced15
+langcode: en
+status: true
+dependencies: {  }
+id: alert
+label: Alert
+revision: 0
+description: ''

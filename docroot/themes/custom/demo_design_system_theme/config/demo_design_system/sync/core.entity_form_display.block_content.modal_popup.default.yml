@@ -1,0 +1,75 @@
+uuid: 494ef065-8613-4fa4-80c2-2689d6e3578c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.field.block_content.modal_popup.field_custom_id
+    - field.field.block_content.modal_popup.field_modal_body
+    - field.field.block_content.modal_popup.field_modal_cancel
+    - field.field.block_content.modal_popup.field_modal_cornerclosebtn_show
+    - field.field.block_content.modal_popup.field_modal_ok
+    - field.field.block_content.modal_popup.field_modal_title
+  module:
+    - text
+id: block_content.modal_popup.default
+targetEntityType: block_content
+bundle: modal_popup
+mode: default
+content:
+  field_custom_id:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_modal_body:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_modal_cancel:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_modal_cornerclosebtn_show:
+    weight: 26
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_modal_ok:
+    weight: 4
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_modal_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

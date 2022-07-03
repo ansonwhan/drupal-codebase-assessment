@@ -1,0 +1,33 @@
+uuid: 0378f79c-3de4-47e1-98dc-16990a57b063
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.citation_item.field_ods_citation_symbol_p
+    - field.field.paragraph.citation_item.field_ods_superscript
+    - field.field.paragraph.citation_item.field_ods_text_p
+    - paragraphs.paragraphs_type.citation_item
+  module:
+    - text
+id: paragraph.citation_item.default
+targetEntityType: paragraph
+bundle: citation_item
+mode: default
+content:
+  field_ods_citation_symbol_p:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_ods_text_p:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_ods_superscript: true

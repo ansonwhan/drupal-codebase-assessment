@@ -1,0 +1,21 @@
+uuid: f1191278-c0b7-4dd7-a432-8da8bb425cd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_teaser
+    - paragraphs.paragraphs_type.resource_cta
+  module:
+    - text
+id: paragraph.resource_cta.field_cta_teaser
+field_name: field_cta_teaser
+entity_type: paragraph
+bundle: resource_cta
+label: Teaser
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

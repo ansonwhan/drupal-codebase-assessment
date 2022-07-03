@@ -1,0 +1,28 @@
+uuid: b8b6aeaa-4d5a-49ac-b0d1-764a8c2dbeca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ods_article_img
+    - media.type.image
+    - node.type.ods_article
+id: node.ods_article.field_ods_article_img
+field_name: field_ods_article_img
+entity_type: node
+bundle: ods_article
+label: 'Featured Image'
+description: 'Use this for the article’s featured image/thumbnail'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

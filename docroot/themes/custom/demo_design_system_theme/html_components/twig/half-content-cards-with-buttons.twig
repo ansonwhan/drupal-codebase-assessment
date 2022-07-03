@@ -1,0 +1,28 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Half content cards with buttons (tiles)
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet"
+          media="all"
+          href="{{ basePath }}css/component/cta-block-elements/half-content-cards-with-buttons.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>Notes about half content cards with buttons (tiles)</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_half-content-cards-with-buttons.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Half content cards with buttons (tiles)</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

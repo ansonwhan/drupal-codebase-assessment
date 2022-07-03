@@ -1,0 +1,30 @@
+{
+  "notesAboutComponent": "",
+  "enumeratedCircleComponent": [
+    {
+      "class": "__one",
+      "heading": "",
+      "text": "11",
+      "buttonText": "",
+      "enumeratedSectionNumber": "1",
+      "notes": ""
+    },
+    {
+      "class": "__two",
+      "heading": "",
+      "text": "hEllO",
+      "enumeratedSectionNumber": "2",
+      "buttonText": "",
+      "notes": ""
+    },
+    {
+      "class": "__three",
+      "heading": "",
+      "text": "nice wrapped text",
+      "buttonText": "",
+      "enumeratedSectionNumber": "3",
+      "notes": ""
+    }
+  ]
+}
+

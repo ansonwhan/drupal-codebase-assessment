@@ -1,0 +1,10 @@
+uuid: c047bf13-40a5-48c6-8f70-f0f82623af5e
+langcode: en
+status: true
+dependencies: {  }
+id: graphic_divider
+label: 'Graphic Divider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

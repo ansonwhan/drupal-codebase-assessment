@@ -1,0 +1,718 @@
+global-styling:
+  version: VERSION
+  js:
+    assets/build/js/global.js: {}
+    assets/build/js/component/storybook/helpers/storybook-global.js: {}
+  css:
+    base:
+      assets/lib/reset.css: {}
+      assets/build/css/base/bootstrap/bootstrap.critical.css: { }
+      assets/build/css/menu/menu-ods.css: {}
+      assets/build/css/webform/webform.contact_us.css: {}
+    theme:
+      assets/build/css/global.css: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - demo_design_system_theme/analytics
+    - demo_design_system_theme/font-awesome
+    - demo_design_system_theme/popper
+    - demo_design_system_theme/bootstrap.navigation
+    - demo_design_system_theme/bootstrap.alert
+    - demo_design_system_theme/bootstrap.button
+    - demo_design_system_theme/bootstrap.dropdown
+    - demo_design_system_theme/menu-sticky
+    - demo_design_system_theme/menu-overflow
+    - demo_design_system_theme/focus
+    - demo_design_system_theme/fix-bootstrap-extrenal-link-popup
+    - demo_design_system_theme/eu-cookie-compliance-banner
+
+analytics:
+  js:
+    assets/build/js/analytics/analytics.js: {}
+  dependencies:
+    - core/jquery
+    - demo_design_system_theme/md5
+
+block.back-to-top:
+  css:
+    component:
+      assets/build/css/component/buttons/back-to-top-buttons.css: {}
+  js:
+    assets/build/js/component/anchor-navigation/back-to-top-buttons.js: { }
+
+block.bootstrap-styleguide:
+  js:
+    assets/build/js/block/block.bootstrap-styleguide.js: { }
+  dependencies:
+    - demo_design_system_theme/global-styling
+
+block.isi-sidebar:
+  js:
+    assets/build/js/block/block.isi-sidebar.js: { }
+  css:
+    component:
+      assets/build/css/block/block.isi.css: { }
+      assets/build/css/block/block.isi-sidebar.css: { }
+  dependencies:
+    - isi/drawer
+
+block.otsuka-condition-switcher-block:
+  css:
+    component:
+      assets/build/css/block/block.otsuka-condition-switcher-block.css: { }
+
+block.system-branding-block:
+  css:
+    component:
+      assets/build/css/block/block.system-branding-block.css: { }
+
+block.top-alert:
+  js:
+    assets/build/js/block/block.top-alert.js: { }
+  css:
+    component:
+      assets/build/css/block/block.top-alert.css: { }
+  dependencies:
+    - core/drupal
+    - core/js-cookie
+
+block.tray--in-page-isi:
+  css:
+    component:
+      assets/build/css/block/block.isi.css: { }
+
+block.tray--in-page-isi-condition-a-mdd:
+  css:
+    component:
+      assets/build/css/block/block.isi.css: { }
+
+bootstrap:
+  version: 4.5.0
+  remote: https://getbootstrap.com/
+  license:
+    name: MIT
+    url: https://github.com/twbs/bootstrap/blob/main/LICENSE
+  js:
+    assets/build/js/base/bootstrap/bootstrap.js: {}
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.css: {}
+  dependencies:
+    - core/jquery
+
+bootstrap.alert:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.alert.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.alert.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.button:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.button.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.button.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.carousel:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.carousel.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.carousel.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.collapse:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.collapse.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.collapse.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.dropdown:
+  js:
+    assets/build/js/base/bootstrap/bootstrap.dropdown.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.button
+
+bootstrap.forms:
+  css:
+    component:
+      assets/build/css/base/bootstrap/bootstrap.forms.css: {}
+  dependencies:
+    - demo_design_system_theme/webform.ajax_modal_fix
+
+bootstrap.modal:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.modal.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.modal.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.navigation:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.navigation.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.collapse.js: { }
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.pagination:
+  css:
+    component:
+      assets/build/css/base/bootstrap/bootstrap.pagination.css: {}
+
+bootstrap.breadcrumb:
+  css:
+    component:
+      assets/build/css/base/bootstrap/bootstrap.breadcrumb.css: {}
+
+bootstrap.print:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.print.css: {}
+
+bootstrap.tabbed:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.tabs.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.tab.js: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.utility
+
+bootstrap.utility:
+  css:
+    base:
+      assets/build/css/base/bootstrap/bootstrap.utility.css: {}
+  js:
+    assets/build/js/base/bootstrap/bootstrap.util.js: {}
+
+component.modal:
+  js:
+    assets/build/js/component/component.modal.js: { }
+  css:
+    component:
+      assets/build/css/component/component.modal.css: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.modal
+
+component.pagination:
+  css:
+    component:
+      assets/build/css/component/component.pagination.css: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.pagination
+
+focus:
+  css:
+    component:
+      assets/build/css/base/focus.css: { weight: 10 }
+  js:
+    assets/build/js/base/focus.js: {}
+  dependencies:
+    - core/jquery
+
+font-awesome:
+  version: 4.7.0
+  remote: https://fontawesome.com/
+  license:
+    url: https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css: { type: external, minified: true }
+
+font-awesome-5:
+  version: 5.15.2
+  remote: https://fontawesome.com/
+  license:
+    url: https://github.com/FortAwesome/Font-Awesome/blob/master/LICENSE.txt
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css: { type: external, minified: true }
+
+iscroll:
+  version: 5.2.0
+  remote: //cdnjs.cloudflare.com/ajax/libs/iScroll
+  license:
+    name: MIT
+    url: http://creativecommons.org/licenses/MIT/
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/iScroll/5.2.0/iscroll-zoom.js: { type: external, minified: false }
+
+md5:
+  version: 3.1.2
+  remote: https://github.com/placemarker/jQuery-MD5
+  license:
+    name: MIT
+    url: http://creativecommons.org/licenses/MIT/
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/md5.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+highlight:
+  version: 9.0.12
+  remote: https://highlightjs.org/
+  license:
+    name: MIT
+    url: https://github.com/highlightjs/highlight.js/blob/master/LICENSE
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js: { type: external, minified: true }
+  css:
+    theme:
+      //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+holder:
+  version: 2.9.4
+  remote: http://holderjs.com/
+  license:
+    name: MIT
+    url: https://github.com/imsky/holder/blob/master/LICENSE
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/holder/2.9.4/holder.min.js: { type: external, minified: true }
+  dependencies:
+    - core/jquery
+
+menu.main:
+  js:
+    assets/build/js/menu/menu.main.js: { }
+  css:
+    component:
+      assets/build/css/menu/menu.main.css: { }
+  dependencies:
+    - core/jquery
+
+menu.promo-links:
+  css:
+    component:
+      assets/build/css/menu/menu.promo-links.css: { }
+
+menu-sticky:
+  css:
+    component:
+      assets/build/css/menu/menu-sticky.css: {}
+  js:
+    assets/build/js/menu/menu-sticky.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+
+menu-overflow:
+  css:
+    component:
+      assets/build/css/menu/menu-overflow.css: {}
+  js:
+    assets/build/js/menu/menu-overflow.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+    - core/drupalSettings
+    - demo_design_system_theme/font-awesome-5
+
+node.general-purpose-page:
+  css:
+    component:
+      assets/build/css/node/node.general-purpose-page.css: {}
+  dependencies:
+    - demo_design_system_theme/ods_addtoany
+
+node.profile:
+  css:
+    component:
+      assets/build/css/node/node.profile.css: { }
+      assets/build/css/components/half-content-people-tiles-with-buttons.css: { }
+      assets/build/css/components/group-of-half-people-tiles-with-buttons.css: { }
+
+node.ods-article:
+  css:
+    component:
+      assets/build/css/node/node.ods-article.css: {}
+  dependencies:
+    - demo_design_system_theme/ods_addtoany
+
+paragraph.accordion-group:
+  js:
+    assets/build/js/paragraph/paragraph.accordion-group.js: {}
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.accordion-group.css: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.collapse
+
+paragraph.tab-group:
+  js:
+    assets/build/js/paragraph/paragraph.tab-group.js: {}
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.tab-group.css: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.collapse
+    - demo_design_system_theme/bootstrap.tabbed
+
+paragraph.components-group:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.components-group.css: {}
+      assets/build/css/component/cta-rows/group-cta-rows.css: {}
+
+paragraph.standard-body-copy:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.standard-body-copy.css: {}
+
+paragraph.citation-group:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.citation-group.css: {}
+  dependencies:
+    - demo_design_system_theme/bootstrap.collapse
+
+paragraph.enumerated-content-group:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.enumerated-content-group.css: {}
+
+paragraph.graphic-divider:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.graphic-divider.css: {}
+
+paragraph.hero-banner--a-spot-light:
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-light-theme.css: {}
+      assets/build/css/component/layouts/layouts_parts/layout-a-spot-hero-light-theme.css: {}
+      assets/build/css/component/layouts/layout-with-banner-sidebar-header-footer_v3.css: {}
+  js:
+    assets/build/js/component/carousels/a-spot-hero-carousel.js: {}
+  dependencies:
+    - demo_design_system_theme/slick
+
+paragraph.hero-banner--a-spot-dark:
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-dark-theme.css: {}
+      assets/build/css/component/layouts/layout-with-banner-sidebar-header-footer_v3.css: {}
+  js:
+    assets/build/js/component/carousels/a-spot-hero-carousel.js: {}
+  dependencies:
+    - demo_design_system_theme/slick
+
+paragraph.hero-banner--b-spot:
+  css:
+    component:
+      assets/build/css/component/carousels/b-spot-hero.css: {}
+  js:
+    assets/build/js/component/carousels/a-spot-hero-carousel.js: {}
+  dependencies:
+    - demo_design_system_theme/slick
+
+paragraph.resource-cta:
+  #  css:
+  #    component:
+  #      assets/build/css/paragraph/paragraph.resource-cta.css: {}
+  js:
+    assets/build/js/paragraph/paragraph.resource-cta.js: { }
+
+paragraph.side-by-side-content-image:
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.side-by-side-content-image.css: {}
+
+paragraph.text:
+  css:
+    component:
+      assets/build/css/component/paragraphs/paragraphs.text.css: {}
+
+paragraph.video:
+  js:
+    assets/build/js/paragraph/paragraph.video.js: {}
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.video.css: {}
+
+paragraph.video-item:
+  js:
+    assets/build/js/paragraph/paragraph.video-item.js: {}
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.video-item.css: {}
+  dependencies:
+    - demo_design_system_theme/videojs
+
+paragraph.video-group:
+  js:
+    assets/build/js/paragraph/paragraph.video-group.js: {}
+  css:
+    component:
+      assets/build/css/paragraph/paragraph.video-group.css: {}
+
+paragraph.carousel:
+  js:
+    assets/build/js/paragraph/paragraph.carousel.js: {}
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-carousel.css: {}
+      assets/build/css/component/carousels/specials-a-spot-hero-carousels/two-columns-a-spot-hero-carousel.css: {}
+      assets/build/css/paragraph/paragraph.carousel.css: {}
+  dependencies:
+    - demo_design_system_theme/slick
+    - demo_design_system_theme/font-awesome-5
+    - demo_design_system_theme/md5
+
+paragraph.infographic.overflowscroll:
+  css:
+    component:
+      assets/build/css/component/infographic-overflow-scrolling/infographic-overflow-scrolling.css: {}
+  js:
+    assets/build/js/component/infographic-overflow-scrolling/infographic-overflow-scrolling.js: {}
+  dependencies:
+    - demo_design_system_theme/font-awesome-5
+
+paragraph.infographic.pinchtozoom:
+  css:
+    component:
+      assets/build/css/component/pinch-to-zoom/pinch-to-zoom.css: {}
+  js:
+    assets/build/js/component/pinch-to-zoom/pinch-to-zoom.js: {}
+  dependencies:
+    - demo_design_system_theme/font-awesome-5
+    - demo_design_system_theme/iscroll
+
+paragraph.links-group:
+  css:
+    component:
+      assets/build/css/component/anchor-nav/vertical-anchor-navigation.css: {}
+  js:
+    assets/build/js/component/anchor-navigation/vertical-anchor-navigation.js: {}
+    //maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js: { type: external, minified: true }
+  dependencies:
+    - demo_design_system_theme/font-awesome-5
+
+popper:
+  version: 1.14.7
+  remote: https://popper.js.org/
+  license:
+    name: MIT
+    url: https://github.com/popperjs/popper-core/blob/master/LICENSE.md
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js: { type: external }
+  dependencies:
+    - core/jquery
+
+region.header-bottom:
+  css:
+    component:
+      assets/build/css/region/region.header-bottom.css: {}
+
+region.header-middle:
+  css:
+    component:
+      assets/build/css/region/region.header-middle.css: {}
+
+region.header-top:
+  css:
+    component:
+      assets/build/css/region/region.header-top.css: {}
+
+slick:
+  version: VERSION
+  css:
+    component:
+      //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css: { type: external }
+  js:
+    //cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js: { type: external }
+  dependencies:
+    - core/jquery
+
+view.symptom-questionnaire-results:
+  css:
+    component:
+      assets/build/css/view/view.symptom-questionnaire-results.css: { }
+  js:
+    assets/build/js/view/view.symptom-questionnaire-results.js: { }
+    dependencies:
+      - core/jquery
+      - core/drupal.ajax
+      - core/drupal
+      - core/js-cookie
+      - core/jquery.once
+
+view.resources:
+  css:
+    component:
+      assets/build/css/view/view.resources.css: { }
+
+view.otsuka-articles-custom-view:
+  js:
+    assets/build/js/view/view.ods-articles-list-masonrygrid.js: {}
+  dependencies:
+    - core/jquery
+
+webform.symptom_questionnaire:
+  css:
+    component:
+      assets/build/css/webform/webform.symptom_questionnaire.css: { }
+  js:
+    assets/build/js/webform/webform.symptom_questionnaire.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/js-cookie
+    - core/jquery.once
+
+webform.ajax_modal_fix:
+  js:
+    assets/build/js/webform/webform.ajax_modal_fix.js: { }
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+    - core/drupal
+    - core/jquery.once
+
+webform.example_request_a_rep:
+  css:
+    component:
+      assets/build/css/webform/webform.styles.css: { }
+      assets/build/css/webform/webform.example_request_a_rep.css: { }
+
+webform.example_sign_up_form:
+  css:
+    component:
+      assets/build/css/webform/webform.styles.css: { }
+
+field.field-media-oembed-video:
+  css:
+    component:
+      assets/build/css/field/field.media-oembed-video.css: { }
+
+field.field-media-video-file:
+  css:
+    component:
+      assets/build/css/field/field.media-video-file.css: { }
+
+individual-cta-row:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-rows/individual-cta-row.css: {}
+
+group-cta-rows:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-rows/group-cta-rows.css: {}
+
+cta-block-cards:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-block-elements/cta-block-cards.css: {}
+
+group-cta-rows-without-buttons:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-rows/group-cta-rows-without-buttons.css: {}
+
+enumerated-circle-component:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/circle-component/enumerated-circle-component.css: {}
+
+group-cta-rows-only-with-img:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-rows/group-cta-rows-only-with-img.css: {}
+
+half-content-cards-with-buttons:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-block-elements/half-content-cards-with-buttons.css: {}
+
+half-content-people-tiles-with-buttons:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-block-elements/half-content-people-tiles-with-buttons.css: {}
+
+group-of-half-people-tiles-with-buttons:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/cta-block-elements/group-of-half-people-tiles-with-buttons.css: {}
+
+a-spot-hero-carousels:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-carousel.css: {}
+  js:
+    assets/build/js/component/carousels/a-spot-hero-carousel.js: {}
+  dependencies:
+    - core/jquery
+
+a-spot-hero-dark-theme:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-dark-theme.css: {}
+
+a-spot-hero-light-theme:
+  version: VERSION
+  css:
+    component:
+      assets/build/css/component/carousels/a-spot-hero-light-theme.css: {}
+
+videojs:
+  remote: https//vjs.zencdn.net/7.11.4/video.js
+  version: 7.11.4
+  license:
+    name: Apache 2.0
+    url: https://github.com/videojs/video.js/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    //vjs.zencdn.net/7.11.4/video.min.js: { type: external, minified: true }
+  css:
+    component:
+      //vjs.zencdn.net/7.11.4/video-js.min.css: { type: external, minified: true }
+
+ods_addtoany:
+  css:
+    component:
+      assets/build/css/component/addtoany.css: { }
+  js:
+    assets/build/js/component/addtoany.js: {}
+
+fix-bootstrap-extrenal-link-popup:
+  js:
+    assets/build/js/fix-bootstrap-extrenal-link-popup.js: {}
+  dependencies:
+    - bootstrap_external_link_popup/dialog
+
+eu-cookie-compliance-banner:
+  css:
+    component:
+      assets/build/css/component/eu-cookie-compliance-banner/eu-cookie-compliance-banner.css: { }

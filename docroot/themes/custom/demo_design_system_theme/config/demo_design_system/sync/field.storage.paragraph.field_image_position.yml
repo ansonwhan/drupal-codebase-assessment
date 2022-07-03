@@ -1,0 +1,27 @@
+uuid: 79b5c562-470f-474c-b16b-7b9b53cb0f37
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_image_position
+field_name: field_image_position
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: L
+      label: 'Image to left, content to right'
+    -
+      value: R
+      label: 'Image to right, content to left'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

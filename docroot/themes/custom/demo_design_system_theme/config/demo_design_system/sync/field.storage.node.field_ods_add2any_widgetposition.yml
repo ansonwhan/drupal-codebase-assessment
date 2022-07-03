@@ -1,0 +1,33 @@
+uuid: 023fdc32-e317-4b9a-aa5e-d6253e6be36a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_ods_add2any_widgetposition
+field_name: field_ods_add2any_widgetposition
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: header
+      label: 'Near the headline of the content'
+    -
+      value: footer
+      label: 'Near the end of the content'
+    -
+      value: left
+      label: 'Anchored to left of viewport'
+    -
+      value: right
+      label: 'Anchored to right of viewport'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

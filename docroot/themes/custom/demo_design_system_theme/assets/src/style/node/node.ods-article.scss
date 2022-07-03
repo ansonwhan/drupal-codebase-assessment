@@ -1,0 +1,185 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.node-type-ods-article {
+  .header {
+    width: 100%;
+  }
+  .article-img {
+    float: right;
+    max-width: 275px;
+    margin-left: 10px;
+    @include media-breakpoint-down(xs) {
+      float: none;
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin-left: 0;
+    }
+  }
+
+  .time-source {
+    display: flex;
+    margin: 25px 0 10px 0;
+    padding: 10px 0;
+    line-height: 1.25rem;
+    font-size: 1.2rem;
+    @include media-breakpoint-down(sm) {
+      flex-wrap: wrap;
+    }
+    .article-time {
+      padding: 0 10px 0 0;
+
+      @include media-breakpoint-down(sm) {
+        flex-basis: 100%;
+      }
+    }
+    .article-source {
+      padding: 0 0 0 10px;
+      border-left: 2px solid $gray-400;
+
+      @include media-breakpoint-down(sm) {
+        border-left: none;
+        flex-basis: 100%;
+        padding: 15px 0 0 0;
+      }
+    }
+  }
+
+  .news-icon {
+    background-image: url("../../img/news.png");
+    height: 75px;
+    min-width: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.item-rows {
+  .node-type-ods-article {
+    border-bottom: 1px solid $gray-400;
+    margin-bottom: 40px;
+    .teaser-container {
+      display: flex;
+      width: 100%;
+      .article-content {
+        flex-basis: 90%;
+
+        .article-title {
+          font-size: 1.25rem;
+          font-family: "Museo Sans", sans-serif;
+          font-weight: 500;
+          line-height: 1.2;
+          h1, h2, h3, h4, h5, p {
+            font-size: 1.2rem;
+            font-family: "Museo Sans", sans-serif;
+            font-weight: 500;
+            line-height: 1.2;
+          }
+        }
+
+        .time-source {
+          margin: 15px 0;
+          font-size: 1rem;
+          padding: 0;
+        }
+      }
+      .news-icon {
+        flex-basis: 10%;
+        margin: 0 20px 0 0;
+      }
+      @include media-breakpoint-down(xs) {
+        display: block;
+        .article-content, .news-icon {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}
+
+.item-cards {
+  &.ods-articles-grid {
+    display: flex;
+    flex-flow: column wrap;
+    margin-left: 0;
+    width: 100%;
+    .views-row {
+      flex-basis: 33%;
+      .time-source {
+        margin: 15px 0;
+        font-size: 1rem;
+      }
+      @include media-breakpoint-down(sx) {
+        flex-basis: 100%;
+      }
+      @include media-breakpoint-up(sm) {
+        flex: auto;
+        margin: 0 8px 8px 0;
+        width: 50%;
+        position: relative;
+        vertical-align: baseline;
+        overflow: hidden;
+      }
+      @include media-breakpoint-up(md) {
+        flex: auto;
+        margin: 0 8px 8px 0;
+        width: 33.3333333%;
+        position: relative;
+        vertical-align: baseline;
+        overflow: hidden;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-flow: wrap;
+    }
+  }
+
+  .node-type-ods-article {
+    border: 1px solid $gray-400;
+    .teaser-container {
+      display: block;
+      width: 100%;
+      .article-title {
+        font-size: 1.25rem;
+        font-family: "Museo Sans", sans-serif;
+        font-weight: 500;
+        line-height: 1.2;
+        h1, h2, h3, h4, h5, p {
+          font-size: 1.25rem;
+          font-family: "Museo Sans", sans-serif;
+          font-weight: 500;
+          line-height: 1.2;
+        }
+      }
+      .article-content {
+        text-align: center;
+        margin-bottom: 40px;
+        .time-source {
+          align-items: center;
+          justify-content: center;
+          margin: 15px 0;
+        }
+      }
+
+      .article-body {
+        text-align: left;
+        max-width: 85%;
+        margin: 0 auto;
+      }
+
+      .news-icon {
+        text-align: center;
+        background-position-x: 50%;
+        margin: 15px auto;
+      }
+
+      @include media-breakpoint-down(xs) {
+        display: block;
+        .article-content, .news-icon {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+uuid: 582d9fbe-b0fe-462c-8ab8-1dbe7df99ad7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_infographic_min_width
+    - paragraphs.paragraphs_type.infographic
+id: paragraph.infographic.field_infographic_min_width
+field_name: field_infographic_min_width
+entity_type: paragraph
+bundle: infographic
+label: 'Infographic Min Width'
+description: 'If you intend to use the overflow scroll behavior for this infographic on mobile and tablet viewports, please specify the minimum width of the graphic on mobile.  (Should the graphic already have a dimension larger than this, then you can leave it blank).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 768
+  max: 2400
+  prefix: ''
+  suffix: ''
+field_type: integer

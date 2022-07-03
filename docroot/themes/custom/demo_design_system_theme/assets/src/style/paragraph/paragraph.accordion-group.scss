@@ -1,0 +1,121 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.accordion-group {
+  margin-bottom: 2rem;
+
+  .accordion-item {
+    border-bottom: 1px solid $gray-400;
+    padding: 0.9375rem 1.25rem 0.625rem 0;
+
+    &.ods-accordion-item-expended {
+      border: none;
+
+      .card-header {
+        border-bottom: 1px solid #ccc;
+        margin-right: -20px;
+        margin-left: -20px;
+
+        .accordion-item--title {
+          padding-left: 20px;
+          padding-bottom: 13px;
+          + span {
+            &:before {
+              position: relative;
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card {
+    padding-left: 1.25rem;
+  }
+
+  .card-link {
+    display: block;
+
+    .accordion-item--icon {
+      position: relative;
+      text-align: center;
+      max-width: 80px;
+      display: inline-block;
+
+      img {
+        width: 100%;
+        height: auto;
+        &:first-child {
+          transition: opacity 0.25s linear;
+          position: relative;
+          z-index: 1;
+        }
+        &:last-child {
+          position: absolute;
+          width: 100%;
+          top: 0;
+          left: 0;
+          opacity: 0;
+        }
+      }
+    }
+
+    &:hover {
+      .accordion-item--icon {
+        img{
+          &:first-child {
+           opacity: 0;
+          }
+          &:last-child {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .accordion-item--title {
+      @include subhead-bold(6);
+      display: inline-block;
+      color: $blue;
+      max-width: calc(90% - 50px);
+
+      + span {
+        font-family: Arial, sans-serif;
+        font-weight: 600;
+        line-height: 1.25rem;
+        font-size: 2rem;
+        float: right;
+
+        &:before {
+          opacity: 0;
+          content: '–';
+        }
+      }
+
+      > * {
+        display: inline-block;
+      }
+    }
+
+    &:not(.collapsed) {
+
+      .accordion-item--title {
+        + span {
+          font-size: 0;
+
+          &:before {
+            font-size: 2rem;
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  .card-body {
+    margin-top: 1.25rem;
+  }
+
+}

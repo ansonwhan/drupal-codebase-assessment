@@ -1,0 +1,21 @@
+uuid: dba6bfe9-3669-46ec-843c-1d38526428a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_additional_body_p
+    - paragraphs.paragraphs_type.accordion_item
+  module:
+    - text
+id: paragraph.accordion_item.field_ods_additional_body_p
+field_name: field_ods_additional_body_p
+entity_type: paragraph
+bundle: accordion_item
+label: 'Additional body'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,300 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+#a-spot-hero-dark-theme-with-img {
+  .a-spot-hero-dark {
+    $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+    $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+    $paragraphMediumResolutionsFontSize: remOrPercent(18px);
+
+    //Common styles for each slide
+    .hero-fullbleed-wrapper {
+      &:before {
+        @include pseudoElementFullWindowWidth($gray-700);
+      }
+    }
+
+    .card {
+      .carousel {
+        .slick-list {
+          .slide-wrapper {
+            position: relative;
+
+            .card-img-top {
+              box-sizing: border-box;
+            }
+
+            .jumbotron-container {
+              h1 {
+                @extend .subhead-bold;
+              }
+
+              div[role=img] {
+                width: 100%;
+                height: 100%;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //End common styles for each slide
+
+
+    //The problem with the interpretation of the sass function responsible for breakpoint (xs),
+    // for the moment I leave the usual @mediaquery
+    @media (max-width: 575.98px) {
+      .card {
+        .carousel {
+          .slick-list {
+            $xsContainerSize: remOrPercent(320px);
+            height: $xsContainerSize;
+            max-width: remOrPercent(376px);
+
+            .slide-wrapper {
+              .card-img-top {
+                min-height: $xsContainerSize;
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(7%) !important;
+                left: remOrPercent(55%) !important;
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(206px);
+                width: remOrPercent(260px) !important;
+
+                .first-paragraph {
+                  padding: 0 0 0 remOrPercent(19px) !important;
+                }
+
+                .text-container {
+                  padding-top: remOrPercent(16px) !important;
+                }
+
+                .jumbotron-img-container {
+                  padding: 0;
+
+                  .image-class {
+                    height: remOrPercent(300px);
+                    width: remOrPercent(360px);
+                    background: file('patient_profile_illustration.webp');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+
+                h1 {
+                  $h1Padding: 0 remOrPercent(16px) 0 remOrPercent(16px) !important;
+                  @include h1HeadingCommonStyles($h3FontSizeModifier, $h1Padding);
+                }
+
+                a {
+                  margin-left: remOrPercent(17.6px);
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(sm) {
+      .card {
+        .carousel {
+          .slick-list {
+            $smContainerSize: remOrPercent(250px);
+            height: $smContainerSize;
+            max-width: remOrPercent(769px);
+
+            .slide-wrapper {
+              .card-img-top {
+                min-height: $smContainerSize;
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(0%);
+                left: remOrPercent(52%);
+                transform: translate(-50%, 0);
+                max-height: remOrPercent(202px);
+                width: remOrPercent(525px);
+
+                .text-container {
+                  padding-top: remOrPercent(48px) !important;
+                  padding-left: remOrPercent(32px) !important;;
+                }
+
+                .jumbotron-img-container {
+                  .image-class {
+                    height: $smContainerSize;
+                    width: remOrPercent(376px);
+                    background: file('patient_profile_illustration.webp');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+
+                h1 {
+                  @include h1HeadingCommonStyles($h3FontSizeModifier);
+                }
+
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(md) {
+      .card {
+        .carousel {
+          .slick-list {
+            $mdContainerSize: remOrPercent(250px);
+            height: $mdContainerSize;
+            max-width: remOrPercent(769px);
+
+            .slide-wrapper {
+              .card-img-top {
+                min-height: $mdContainerSize;
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(10%);
+                left: remOrPercent(53%);
+                transform: translate(-50%, 0);
+                min-height: remOrPercent(219px);
+                min-width: remOrPercent(464px);
+
+                h1 {
+                  @include h1HeadingCommonStyles($h2FontSizeModifier);
+                }
+
+                .text-container {
+                  padding-top: remOrPercent(16px) !important;
+                }
+
+                .jumbotron-img-container {
+                  .image-class {
+                    height: remOrPercent(200px) !important;
+                    width: remOrPercent(250px) !important;
+                    background: file('patient_profile_illustration.webp');
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    $commonLgSlickListWidth: remOrPercent(1440px);
+    $commonLgJumbotronContainerWidth: remOrPercent(1100px);
+
+    @include media-breakpoint-up(lg) {
+      .card {
+        .carousel {
+          .slick-list {
+            $lgContainerSize: remOrPercent(300px);
+            height: $lgContainerSize;
+            max-width: $commonLgSlickListWidth;
+
+            .slide-wrapper {
+              .card-img-top {
+                min-height: $lgContainerSize;
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(0%);
+                left: remOrPercent(50%) !important;
+                max-width: $commonLgJumbotronContainerWidth !important;
+                color: red;
+
+                h1 {
+                  @include h1HeadingCommonStyles();
+                }
+
+                .first-paragraph {
+                  font-size: $paragraphMediumResolutionsFontSize;
+                }
+
+
+                .jumbotron-img-container {
+                  .image-class {
+                    height: $lgContainerSize;
+                    max-width: remOrPercent(340px);
+                    background: file('patient_profile_illustration.webp');
+                    background-size: 100% 70%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    @include media-breakpoint-only(xl) {
+      .card {
+        .carousel {
+          .slick-list {
+            $xlContainerSize: remOrPercent(300px);
+            height: $xlContainerSize;
+            max-width: $commonLgSlickListWidth;
+
+            .slide-wrapper {
+              .card-img-top {
+                min-height: remOrPercent(300px);
+                width: auto;
+              }
+
+              .jumbotron-container {
+                top: remOrPercent(0%);
+                left: remOrPercent(50%);
+                max-width: $commonLgJumbotronContainerWidth;
+                color: blue;
+
+                h1 {
+                  @include h1HeadingCommonStyles();
+                }
+
+                .first-paragraph {
+                  font-size: $paragraphMediumResolutionsFontSize;
+                }
+
+
+              }
+
+              .jumbotron-img-container {
+                .image-class {
+                  height: $xlContainerSize;
+                  max-width: remOrPercent(450px);
+                  background: file('patient_profile_illustration.webp');
+                  background-size: 90% 80%;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                }
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}

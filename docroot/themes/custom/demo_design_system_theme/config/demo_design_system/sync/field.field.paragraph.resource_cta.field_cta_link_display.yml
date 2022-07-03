@@ -1,0 +1,23 @@
+uuid: c67a65a1-0bbd-472c-a209-4b1b02849dbc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_link_display
+    - paragraphs.paragraphs_type.resource_cta
+  module:
+    - options
+id: paragraph.resource_cta.field_cta_link_display
+field_name: field_cta_link_display
+entity_type: paragraph
+bundle: resource_cta
+label: 'CTA Link Display'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: button
+default_value_callback: ''
+settings: {  }
+field_type: list_string

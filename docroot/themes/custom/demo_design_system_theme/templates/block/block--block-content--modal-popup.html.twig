@@ -1,0 +1,52 @@
+{# In a Twig template we attach the library. #}
+{{ attach_library('demo_design_system_theme/component.modal') }}
+
+{% set cornerBtnVisible = content.field_modal_cornerclosebtn_show|render|trim %}
+
+{%
+  set classes = [
+    'modal',
+    'fade',
+  ]
+%}
+{% set button_ok_text = content.field_modal_ok.0['#context'].value ? content.field_modal_ok.0['#context'].value : 'OK'|t %}
+
+{% if content.field_custom_id|render|trim|length > 1 %}
+<div{{ attributes.addClass(classes).setAttribute('id', content.field_custom_id|render|trim).setAttribute('data-analytics-position', 'Overlay') }}>
+{% else %}
+<div{{ attributes.addClass(classes).setAttribute('data-analytics-position', 'Overlay') }}>
+{% endif %}
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        {{ title_prefix }}
+        {% if label %}
+          <h4{{ title_attributes.addClass('modal-title') }}>{{ content.field_modal_title.0['#context'].value }}</h4>
+        {% endif %}
+        {% if '1' in cornerBtnVisible %}
+          <button type="button" class="close analytics--o-exit-close" data-dismiss="modal" aria-label="Close" data-analytics-id="{{ custom_block_id|data_analytics_id }}">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        {% endif %}
+        {{ title_suffix }}
+      </div>
+      <div class="modal-body">
+        {% block content %}
+          <div{{ content_attributes.addClass('content') }}>
+            {{ content.field_modal_body }}
+          </div>
+        {% endblock %}
+        <div class="body-footer">
+          <hr>
+          <div class="modal-navigation d-flex justify-content-end">
+            {% if content.field_modal_cancel.0['#context'].value %}
+              <button type="button" class="btn btn-secondary analytics--o-general-close" data-dismiss="modal" data-analytics-id="{{ custom_block_id|data_analytics_id }}">{{ content.field_modal_cancel.0['#context'].value }}</button>
+            {% endif %}
+            <button type="button" class="btn btn-primary analytics--o-general-close" data-dismiss="modal" data-analytics-id="{{ custom_block_id|data_analytics_id }}">{{ button_ok_text }}</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

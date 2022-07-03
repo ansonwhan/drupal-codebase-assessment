@@ -1,0 +1,27 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Individual CTA row
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/cta-rows/individual-cta-row.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>Notes about individual CTA row (with Treva logo)</h1>
+  </div>
+    <div class="example">
+      {% include './partial/_individual-cta-row.twig' %}
+      {% if item.notes %}
+        <div class="notes">
+          <h2>Individual CTA row</h2>
+          {{ item.notes }}
+        </div>
+      {% endif %}
+    </div>
+{% endblock %}

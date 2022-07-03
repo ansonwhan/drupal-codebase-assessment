@@ -1,0 +1,68 @@
+{{ attach_library('demo_design_system_theme/paragraph.resource-cta') }}
+
+{% set inset_attributes = create_attribute() %}
+
+{% set displayFormat %}
+{{ content.field_display_format|render|trim }}
+{% endset %}
+
+{% set settings_default_item_classes = paragraph.getParentEntity.getBehaviorSetting('custom_paragraph_behaviors_paragraph_componets_group_settings', 'default_item_classes') %}
+{% set settings_default_item_inset_classes = paragraph.getParentEntity.getBehaviorSetting('custom_paragraph_behaviors_paragraph_componets_group_settings', 'default_item_inset_classes') %}
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set settings_inset_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_resource_cta_settings', 'inset_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    'call-to-action',
+    'view-mode--' ~ displayFormat,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    settings_custom_classes ? settings_custom_classes : settings_default_item_classes,
+    content.field_link_wrapper|render|striptags|trim|lower,
+  ]
+%}
+{% set inset_classes = settings_inset_classes ? settings_inset_classes : settings_default_item_inset_classes %}
+
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+    {% block content %}
+
+    <div{{ inset_attributes.addClass('paragraph-item').addClass(inset_classes) }}>
+
+    {% if 'row' in displayFormat %}
+
+      <div class="row">
+
+        <div class="column-first col d-flex align-items-center cta-img">
+          {{ content.field_cta_image }}
+        </div>
+
+        <div class="column-second col d-flex align-items-left">
+          {{ content.field_heading }}
+          {{ content.field_cta_teaser }}
+        </div>
+
+        <div class="column-third col d-flex justify-content-sm-end align-items-center cta-link">
+          <div>
+          {{ content.field_cta_ext_link }}
+          </div>
+        </div>
+
+      </div>
+
+    {% else %}
+
+      {{ content.field_cta_image }}
+      <div class="column-item">
+        {{ content.field_heading }}
+        {{ content.field_cta_teaser }}
+        <div class="cta-link">
+        {{ content.field_cta_ext_link }}
+        </div>
+      </div>
+
+    {% endif %}
+    </div>
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

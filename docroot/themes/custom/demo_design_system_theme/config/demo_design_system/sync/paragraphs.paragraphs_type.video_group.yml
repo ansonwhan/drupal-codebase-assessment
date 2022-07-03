@@ -1,0 +1,14 @@
+uuid: fc490ab0-fd4c-41fe-a53c-5f22cd902b92
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: video_group
+label: 'Video group'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

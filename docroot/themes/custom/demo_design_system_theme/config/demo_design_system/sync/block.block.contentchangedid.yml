@@ -1,0 +1,25 @@
+uuid: 76897777-b983-4f6c-a2dd-bbe2b92ed42e
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:5f48f76d-08be-48ec-8cf0-ab4fd1291e25'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: contentchangedid
+theme: demo_design_system_theme
+region: footer_8
+weight: 0
+provider: null
+plugin: 'block_content:5f48f76d-08be-48ec-8cf0-ab4fd1291e25'
+settings:
+  id: 'block_content:5f48f76d-08be-48ec-8cf0-ab4fd1291e25'
+  label: 'Content changed id'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

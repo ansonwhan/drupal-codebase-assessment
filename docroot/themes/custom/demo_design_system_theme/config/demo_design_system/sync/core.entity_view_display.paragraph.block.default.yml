@@ -1,0 +1,32 @@
+uuid: d1bc3891-7b04-4d3d-95aa-ec3a09291209
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.block.field_entity_block_embed
+    - field.field.paragraph.block.field_otsk_block_p
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.default
+targetEntityType: paragraph
+bundle: block
+mode: default
+content:
+  field_entity_block_embed:
+    weight: 1
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_otsk_block_p:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden: {  }

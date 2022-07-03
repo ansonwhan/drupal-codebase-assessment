@@ -1,0 +1,23 @@
+uuid: 23e4ede0-bee4-4460-ab6a-3a1655401a1a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: bgOR8KA0mAUc52Z_1rgb06ijVQOEyHyKwgnnNhrV8KM
+id: block_content.field_isi_drawer_content
+field_name: field_isi_drawer_content
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,23 @@
+uuid: 8ce21a8d-1ec6-4729-993d-0d82e4440580
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_side_by_side_proportions
+    - paragraphs.paragraphs_type.side_by_side_content_image
+  module:
+    - options
+id: paragraph.side_by_side_content_image.field_side_by_side_proportions
+field_name: field_side_by_side_proportions
+entity_type: paragraph
+bundle: side_by_side_content_image
+label: 'Side-by-side Proportions'
+description: 'Select the desired column ratio for the side-by-side content and image for viewports >= 768px'
+required: true
+translatable: false
+default_value:
+  -
+    value: 50-50
+default_value_callback: ''
+settings: {  }
+field_type: list_string

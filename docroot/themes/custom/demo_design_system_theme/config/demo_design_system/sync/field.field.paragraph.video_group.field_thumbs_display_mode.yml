@@ -1,0 +1,23 @@
+uuid: fcfebfad-622b-42dc-b59a-36132152aeda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_thumbs_display_mode
+    - paragraphs.paragraphs_type.video_group
+  module:
+    - options
+id: paragraph.video_group.field_thumbs_display_mode
+field_name: field_thumbs_display_mode
+entity_type: paragraph
+bundle: video_group
+label: 'Thumbs display mode'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: teaser_grid
+default_value_callback: ''
+settings: {  }
+field_type: list_string

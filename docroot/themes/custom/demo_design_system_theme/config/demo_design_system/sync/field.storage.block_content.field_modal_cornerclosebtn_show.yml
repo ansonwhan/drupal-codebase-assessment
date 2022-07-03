@@ -1,0 +1,18 @@
+uuid: 0d561495-bd23-4b83-bd9e-d76b6f311144
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_modal_cornerclosebtn_show
+field_name: field_modal_cornerclosebtn_show
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

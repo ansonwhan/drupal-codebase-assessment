@@ -1,0 +1,30 @@
+uuid: 55119ef1-3e36-4398-b54c-a284f4dd54e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.profile_listing
+  module:
+    - system
+    - views
+  theme:
+    - demo_design_system_theme
+id: views_block__profile_listing_block_row
+theme: demo_design_system_theme
+region: hidden
+weight: -21
+provider: null
+plugin: 'views_block:profile_listing-block_row'
+settings:
+  id: 'views_block:profile_listing-block_row'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/221
+    negate: false
+    context_mapping: {  }

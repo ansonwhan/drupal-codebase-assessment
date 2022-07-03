@@ -1,0 +1,83 @@
+{#Please notice this component is specific, because technical specification is specific,#}
+{#when you change the screen resolution, the HTML structure also changes (see css classes "display-lg-none", "display-xs-none").#}
+<div class="group-of-half-people-tiles-with-buttons">
+  <div class="container {{ internalGridClasses.odsFlexCenter }}">
+    <div class="card common-border max-width-height">
+      <div class="row default-row-height">
+        <div class="col-md-6 col-lg-6 ods-pr-0">
+          <div
+                  role="img"
+                  aria-label="{{ firstCard.basicData.alternativeText }}"
+                  title="{{ firstCard.basicData.alternativeText }}"
+                  class="photo{{ firstCard.basicData.imgSrcClass }}"></div>
+        </div>
+        <div
+                class="col-12 col-md-6 col-lg-6 d-flex flex-wrap align-items-center">
+          <div class="card-block">
+            <div class="card-title ods-mt-15">
+              <h4>{{ firstCard.basicData.heading }}</h4>
+            </div>
+            <div class="card-subtitle text-uppercase">
+              <h6>{{ firstCard.basicData.subHeading }}</h6>
+            </div>
+            <div class="card-text">
+              <p>{{ firstCard.basicData.text }}</p>
+            </div>
+            <a
+                    class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-25"
+                    href="#"
+                    target="_blank"
+                    role="button"
+                    tabindex="0"
+            >
+              {{ firstCard.basicData.buttonText }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card common-border max-width-height ">
+      <div class="row default-row-height">
+        <div class="col-md-6 col-lg-6 ods-pr-0 {{ secondCard.specialCssClasses.displayLgNone }}">
+          <div role="img"
+               aria-label="{{ secondCard.basicData.alternativeText }}"
+               title="{{ secondCard.basicData.alternativeText }}"
+               class="photo{{ secondCard.basicData.imgSrcClass }}"></div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-6
+          d-flex flex-wrap align-items-center"
+        >
+          <div class="card-block {{ secondCard.specialCssClasses.marginLeft }}">
+            <div class="card-title ods-mt-15">
+              <h4>{{ secondCard.basicData.heading }}</h4>
+            </div>
+            <div class="card-subtitle text-uppercase">
+              <h6>{{ secondCard.basicData.subHeading }}</h6>
+            </div>
+            <div class="card-text">
+              <p>{{ secondCard.basicData.text }}</p>
+            </div>
+            <a
+                    class="btn btn-primary btn-sm btn-rounded mt-auto text-uppercase ods-mb-25"
+                    href="#"
+                    target="_blank"
+                    role="button"
+                    tabindex="0"
+            >
+              {{ secondCard.basicData.buttonText }}
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-6 ods-pl-0 {{ secondCard.specialCssClasses.displayXsNone }}">
+          <div role="img"
+               aria-label="{{ secondCard.basicData.alternativeText }}"
+               title="{{ secondCard.basicData.alternativeText }}"
+               class="photo{{ secondCard.basicData.imgSrcClass }}"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

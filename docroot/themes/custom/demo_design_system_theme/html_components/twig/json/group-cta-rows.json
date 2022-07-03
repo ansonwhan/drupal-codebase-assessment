@@ -1,0 +1,33 @@
+{
+  "notesAboutComponent": "",
+  "groupCtaRows": [
+    {
+      "alternativeText": "pain icon",
+      "imgSrcClass": "pain-icon",
+      "class": "",
+      "heading": "How to get patients started?",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "enroll now",
+      "notes": ""
+    },
+    {
+      "alternativeText": "time icon",
+      "imgSrcClass": "time-icon",
+      "class": "",
+      "heading": "The chronic pain cycle",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": " about pain",
+      "notes": ""
+    },
+    {
+      "alternativeText": "graph icon",
+      "imgSrcClass": "graph-icon",
+      "class": "",
+      "heading": "Safety Information",
+      "text": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+      "buttonText": "learn more",
+      "notes": ""
+    }
+  ]
+}
+

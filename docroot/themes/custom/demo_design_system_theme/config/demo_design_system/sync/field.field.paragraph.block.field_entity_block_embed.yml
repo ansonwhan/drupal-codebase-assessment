@@ -1,0 +1,23 @@
+uuid: 7076f8b7-acad-437f-9faf-30f0efc897fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_entity_block_embed
+    - paragraphs.paragraphs_type.block
+id: paragraph.block.field_entity_block_embed
+field_name: field_entity_block_embed
+entity_type: paragraph
+bundle: block
+label: 'Entity Block Embed'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:block'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

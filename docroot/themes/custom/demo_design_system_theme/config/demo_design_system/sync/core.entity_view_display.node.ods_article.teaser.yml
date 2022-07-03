@@ -1,0 +1,112 @@
+uuid: 1adac091-f691-4bb1-8e7a-4acbe4c1b8e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.ods_article.body
+    - field.field.node.ods_article.field_ods_add2any_widget_icons
+    - field.field.node.ods_article.field_ods_add2any_widgetposition
+    - field.field.node.ods_article.field_ods_article_dateline
+    - field.field.node.ods_article.field_ods_article_img
+    - field.field.node.ods_article.field_ods_article_link
+    - field.field.node.ods_article.field_ods_article_link_label
+    - field.field.node.ods_article.field_ods_article_source
+    - field.field.node.ods_article.field_ods_article_title
+    - node.type.ods_article
+  module:
+    - datetime
+    - link
+    - options
+    - text
+    - user
+id: node.ods_article.teaser
+targetEntityType: node
+bundle: ods_article
+mode: teaser
+content:
+  addtoany:
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 350
+    third_party_settings: {  }
+    region: content
+  field_ods_add2any_widget_icons:
+    type: list_key
+    weight: 10
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_ods_add2any_widgetposition:
+    type: list_key
+    weight: 9
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_ods_article_dateline:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: month_number_year
+    third_party_settings: {  }
+  field_ods_article_img:
+    type: entity_reference_label
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_ods_article_link:
+    type: link
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_ods_article_link_label:
+    type: string
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ods_article_source:
+    type: string
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_ods_article_title:
+    type: text_default
+    weight: 7
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

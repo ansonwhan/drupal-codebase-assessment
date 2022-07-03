@@ -1,0 +1,10 @@
+uuid: 94ab3f45-6c90-4f50-8d2c-9dc784c41296
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.profile_card
+label: 'Profile card'
+targetEntityType: media
+cache: true

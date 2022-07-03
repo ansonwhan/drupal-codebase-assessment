@@ -1,0 +1,24 @@
+uuid: 6f153025-a48a-4b0e-b880-84979fc9937d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enumerated_content_group.field_enumerated_sections
+    - paragraphs.paragraphs_type.enumerated_content_group
+  module:
+    - entity_reference_revisions
+id: paragraph.enumerated_content_group.default
+targetEntityType: paragraph
+bundle: enumerated_content_group
+mode: default
+content:
+  field_enumerated_sections:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: row
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

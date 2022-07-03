@@ -1,0 +1,94 @@
+uuid: 54458fb4-83ff-4e7c-9aee-4b2058aaf34b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_link_item
+    - paragraphs.paragraphs_type.link_item
+    - paragraphs.paragraphs_type.links_group
+  module:
+    - entity_reference_revisions
+id: paragraph.links_group.field_link_item
+field_name: field_link_item
+entity_type: paragraph
+bundle: links_group
+label: 'Link Item'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      link_item: link_item
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 23
+        enabled: false
+      accordion_item:
+        weight: 24
+        enabled: false
+      block:
+        weight: 25
+        enabled: false
+      carousel:
+        weight: 26
+        enabled: false
+      carousel_slide:
+        weight: 27
+        enabled: false
+      citation_group:
+        weight: 28
+        enabled: false
+      citation_item:
+        weight: 29
+        enabled: false
+      components_group:
+        weight: 30
+        enabled: false
+      content_reporting_divider:
+        weight: 31
+        enabled: false
+      data_table:
+        weight: 32
+        enabled: false
+      enumerated_content_component:
+        weight: 33
+        enabled: false
+      enumerated_content_group:
+        weight: 34
+        enabled: false
+      from_library:
+        weight: 35
+        enabled: false
+      graphic_divider:
+        weight: 36
+        enabled: false
+      hero_banner_item:
+        weight: 37
+        enabled: false
+      isi_section:
+        weight: 38
+        enabled: false
+      link_item:
+        enabled: true
+        weight: 40
+      links_group:
+        weight: 39
+        enabled: false
+      resource_cta:
+        weight: 41
+        enabled: false
+      side_by_side_content_image:
+        weight: 42
+        enabled: false
+      standard_body_copy:
+        weight: 43
+        enabled: false
+      video:
+        weight: 44
+        enabled: false
+field_type: entity_reference_revisions

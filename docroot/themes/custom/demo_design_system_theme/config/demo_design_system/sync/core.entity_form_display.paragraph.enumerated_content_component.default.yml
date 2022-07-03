@@ -1,0 +1,25 @@
+uuid: 237393c5-51fa-46ea-9e03-f738bfb03e72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.enumerated_content_component.field_cta_teaser
+    - paragraphs.paragraphs_type.enumerated_content_component
+  module:
+    - text
+id: paragraph.enumerated_content_component.default
+targetEntityType: paragraph
+bundle: enumerated_content_component
+mode: default
+content:
+  field_cta_teaser:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+hidden:
+  created: true
+  status: true

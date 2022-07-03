@@ -1,0 +1,25 @@
+uuid: f1389e7a-d43c-4c0c-ae36-7de7e68db312
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:3c0ca396-833f-4c03-8859-a212d7fd25a2'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: prefootercontent
+theme: demo_design_system_theme
+region: footer_1
+weight: 0
+provider: null
+plugin: 'block_content:3c0ca396-833f-4c03-8859-a212d7fd25a2'
+settings:
+  id: 'block_content:3c0ca396-833f-4c03-8859-a212d7fd25a2'
+  label: 'Pre Footer Space'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

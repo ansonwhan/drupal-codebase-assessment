@@ -1,0 +1,26 @@
+<!-- start example code for Drupal -->
+<div class="group-cta-rows-without-buttons {{ internalGridClasses.odsMarginAuto }}">
+  {% for item in groupCtaRowsWithoutButtons %}
+      <div class="cta-row">
+          <div class="card-body d-flex flex-wrap align-items-center">
+              <div class="col-4 col-sm-2 img-container">
+                  <div class="rounded-circle-default-styles">{{ item.enumeratedSectionNumber }}</div>
+              </div>
+              <div class="col-12 col-sm-10 ods-mt-15">
+                  <div class="card-title">
+                      <h4>{{ item.heading }}</h4>
+                  </div>
+                  <div class="card-text">
+                      <p>{{ item.text }}</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+  {% endfor %}
+</div>
+<!-- end example code for Drupal -->
+
+
+
+

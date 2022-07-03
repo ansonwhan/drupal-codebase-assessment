@@ -1,0 +1,118 @@
+{
+  "notesAboutComponent": "",
+  "basicForm": {
+    "headingText": "Basic styles for Fieldsets, Legends, and Form Elements",
+    "paragraphText": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis\n    est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem.\n    Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent\n    mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam\n    eget metus.",
+    "textInput": {
+      "placeholder": "Text field",
+      "labelText": "Text input:",
+      "ariaDescribedbyText": "We'll never send data via\n form by GET method.",
+      "ariaDescribedbyId": "ariaTextField",
+      "id": "text_field",
+      "forLabel": "text_field"
+    },
+    "textArea": {
+      "labelText": "Text Area:",
+      "rows": "3",
+      "id": "text_area",
+      "forLabel": "text_area"
+    },
+    "select": {
+      "labelText": "Select Element:",
+      "id": "select_element",
+      "forLabel": "select_element",
+      "optgroupLabel1": "Option Group 1",
+      "optgroupLabel2": "Option Group 2"
+    },
+    "radioInput": {
+      "labelText1": "Default radio:",
+      "labelText2": "Second default radio:",
+      "labelText3": "Disabled radio:",
+      "id1": "exampleRadios1",
+      "id2": "exampleRadios2",
+      "id3": "exampleRadios3",
+      "forLabel1": "exampleRadios1",
+      "forLabel2": "exampleRadios2",
+      "forLabel3": "exampleRadios3",
+      "name1": "exampleRadios1",
+      "name2": "exampleRadios2",
+      "name3": "exampleRadios3",
+      "isChecked": false,
+      "isDisabled": true
+    },
+    "checkBoxInput": {
+      "labelText1": "Default checkbox",
+      "labelText2": "Disabled checkbox",
+      "id1": "defaultCheck1",
+      "id2": "defaultCheck2",
+      "id3": "defaultCheck3",
+      "forLabel1": "defaultCheck1",
+      "forLabel2": "defaultCheck2",
+      "forLabel3": "defaultCheck3",
+      "isChecked": false,
+      "isDisabled": true
+    },
+    "passwordInput": {
+      "labelText": "Password:",
+      "id": "inputPassword6",
+      "forLabel": "inputPassword6",
+      "ariaDescribedbyText": "Password must be 8-15\n  characters\n long + (UpperCase, LowerCase, Number/SpecialChar)",
+      "ariaDescribedbyId": "passwordHelpInline",
+      "isValidationPattern": true,
+      "validationPattern": "((?=.*\\d)|(?=.*\\W+))(?![.\\n])(?=.*[A-Z])(?=.*[a-z]).*$",
+      "isRequired": true,
+      "minLength": 8,
+      "maxLength": 15
+    },
+    "basicFileInput": {
+      "labelText": "Basic example of file input:",
+      "id": "exampleFormControlFile1",
+      "forLabel": "exampleFormControlFile1"
+    },
+    "customFileInput": {
+      "labelText": "Custom example of file input:",
+      "id": "customFile",
+      "forLabel": "customFile"
+    },
+    "buttonsTypes": {
+      "buttonName1": "Submit",
+      "buttonName2": "Cancel",
+      "buttonName3": "Clear",
+      "type1": "submit",
+      "type2": "button",
+      "type3": "reset"
+    },
+    "nativeBootstrapModifiers": {
+      "inputSize": {
+        "formControlSm": "form-control-sm",
+        "formControlLg": "form-control-lg"
+      },
+      "inputValidation": {
+        "isValid": "is-valid",
+        "isInvalid": "is-invalid"
+      },
+      "inputState": {
+        "readOnly": "readonly",
+        "isDisabled": "disabled"
+      },
+      "inputPositioning": {
+        "inline": "form-inline"
+      },
+      "inputSpacing": {
+        "ml3": "ods-ml-15",
+        "ml4": "ods-ml-25",
+        "ml5": "ods-ml-50",
+        "pt2": "ods-pt-10",
+        "pr5": "ods-pr-50",
+        "pl3": "ods-pl-15",
+        "mlMd4": "ml-md-4",
+        "mlLg4": "ml-lg-4",
+        "mt3": "ods-mt-15"
+      }
+    },
+    "jsSelectors": {
+      "jsValidationClass": "js-validation"
+    }
+  }
+}
+

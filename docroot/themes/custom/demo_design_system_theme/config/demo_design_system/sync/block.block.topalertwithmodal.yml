@@ -1,0 +1,28 @@
+uuid: e8fa73e5-8716-44ef-953f-1693b733cede
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - demo_design_system_theme
+id: topalertwithmodal
+theme: demo_design_system_theme
+region: hidden
+weight: -18
+provider: null
+plugin: 'block_content:ecc654c0-5b64-4ba8-8c90-70e8f932cfa4'
+settings:
+  id: 'block_content:ecc654c0-5b64-4ba8-8c90-70e8f932cfa4'
+  label: 'Top alert with modal'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /node/166
+    negate: false
+    context_mapping: {  }

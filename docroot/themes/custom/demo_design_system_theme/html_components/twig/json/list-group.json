@@ -1,0 +1,173 @@
+{
+  "listGroup": {
+    "basic": [
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      }
+    ],
+    "flush": [
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      }
+    ],
+    "withBadges": [
+      {
+        "text": "Some quick example.",
+        "badgeText": "badge"
+      },
+      {
+        "text": "Some quick example.",
+        "badgeText": "badge"
+      },
+      {
+        "text": "Some quick example.",
+        "badgeText": "badge"
+      },
+      {
+        "text": "Some quick example.",
+        "badgeText": "badge"
+      }
+    ],
+    "listGroupWithActive": [
+      {
+        "text": "Some quick example.",
+        "activeCssClass": "active",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      }
+    ],
+    "listGroupWithDisabled": [
+      {
+        "text": "Some quick disabled example.",
+        "disabledCssClass": "disabled",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      },
+      {
+        "text": "Some quick example."
+      }
+    ],
+    "listGroupWithContextualClasses": [
+      {
+        "text": "Basic example.",
+        "contextualClass": "",
+        "bootstrapDefBackground": ""
+      },
+      {
+        "text": "list-group-item-primary",
+        "contextualClass": "list-group-item-primary",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-secondary example.",
+        "contextualClass": "list-group-item-secondary",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-success example.",
+        "contextualClass": "list-group-item-success",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-danger example.",
+        "contextualClass": "list-group-item-danger",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-warning example.",
+        "contextualClass": "list-group-item-warning",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-info example.",
+        "contextualClass": "list-group-item-info",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-light example.",
+        "contextualClass": "list-group-item-light",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-dark example.",
+        "contextualClass": "list-group-item-dark",
+        "bootstrapDefBackground": "bs-default-background"
+      }
+    ],
+    "listGroupWithContextualClassesAndHover": [
+      {
+        "text": "list-group-item-primary",
+        "contextualClass": "list-group-item-action list-group-item-primary",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-secondary example.",
+        "contextualClass": "list-group-item-action list-group-item-secondary",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-success example.",
+        "contextualClass": "list-group-item-action list-group-item-success",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-danger example.",
+        "contextualClass": "list-group-item-action list-group-item-danger",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-warning example.",
+        "contextualClass": "list-group-item-action list-group-item-warning",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-info example.",
+        "contextualClass": "list-group-item-action list-group-item-info",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-light example.",
+        "contextualClass": "list-group-item-action list-group-item-light",
+        "bootstrapDefBackground": "bs-default-background"
+      },
+      {
+        "text": "list-group-item-dark example.",
+        "contextualClass": "list-group-item-action list-group-item-dark",
+        "bootstrapDefBackground": "bs-default-background"
+      }
+    ]
+  }
+}
+
+

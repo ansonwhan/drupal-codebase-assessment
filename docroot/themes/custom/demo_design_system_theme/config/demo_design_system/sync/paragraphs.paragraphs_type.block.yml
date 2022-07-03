@@ -1,0 +1,14 @@
+uuid: adec67a2-92fd-4af5-9b49-7b9d96eec77c
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: block
+label: 'Drupal Block Embed'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

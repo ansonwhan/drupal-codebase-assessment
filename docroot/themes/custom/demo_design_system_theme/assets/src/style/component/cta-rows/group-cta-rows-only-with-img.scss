@@ -1,0 +1,48 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.group-cta-rows-only-with-img {
+  max-width: remOrPercent(728px);
+  border: $common-border-size solid $common-border-color;
+  background-color: $common-background-light-gray;
+
+  .cta-row {
+    .rounded-circle-default-styles {
+      @include enumeratedCircleComponent;
+    }
+
+    .pain-icon {
+      @include commonStylesForImg('pain_icon.webp');
+    }
+
+    .graph-icon {
+      @include commonStylesForImg('graph_icon.webp');
+    }
+
+    .time-icon {
+      @include commonStylesForImg('time_icon.webp');
+    }
+
+    .clock-icon {
+      @include commonStylesForImg('clock_icon.webp');
+    }
+
+    //wrappers for headings tags
+    .card-title {
+      @include overwriteAllHeadingTagsStyles;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .img-container {
+        margin-top: 1rem;
+      }
+    }
+
+    @include media-breakpoint-down(sm) {
+      .img-container {
+        margin-top: 1rem;
+      }
+    }
+  }
+}

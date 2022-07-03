@@ -1,0 +1,19 @@
+uuid: f0d05d49-d1c4-4bcb-85c8-4d4ac73e9743
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.modal_popup
+    - field.storage.block_content.field_modal_cancel
+id: block_content.modal_popup.field_modal_cancel
+field_name: field_modal_cancel
+entity_type: block_content
+bundle: modal_popup
+label: 'Modal Cancel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

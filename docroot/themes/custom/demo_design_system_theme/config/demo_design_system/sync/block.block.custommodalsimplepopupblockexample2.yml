@@ -1,0 +1,31 @@
+uuid: 42283bdb-e0fb-4c0a-ac85-037f5283b6ea
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:modal_popup:41bfc781-97f7-4ce9-b989-51af2fad7a4c'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: custommodalsimplepopupblockexample2
+theme: demo_design_system_theme
+region: hidden
+weight: -15
+provider: null
+plugin: 'block_content:41bfc781-97f7-4ce9-b989-51af2fad7a4c'
+settings:
+  id: 'block_content:41bfc781-97f7-4ce9-b989-51af2fad7a4c'
+  label: 'Custom Modal Simple Popup Block Example 2'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /elements/modals
+    negate: false
+    context_mapping: {  }

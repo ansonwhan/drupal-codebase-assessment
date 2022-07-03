@@ -1,0 +1,30 @@
+uuid: 7814887b-bbce-4fbc-94e7-6554070eb360
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_banner_color_scheme
+field_name: field_banner_color_scheme
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Bluish
+      label: 'Bluish Solid background, white foreground text'
+    -
+      value: Charcoal
+      label: 'Dark grayish/black background, white foreground text'
+    -
+      value: Clear
+      label: 'Transparent background, black foreground text'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

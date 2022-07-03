@@ -1,0 +1,68 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.custom--symptom-questionnaire-block {
+  h2 {
+    display: none;
+
+    & + p {
+      display: none;
+    }
+
+    &.symptom-questionnaire-views-block-title-element {
+      display: block;
+    }
+  }
+
+  summary {
+    display: none;
+  }
+
+  .webform-submission-data--webform-symptom-questionnaire {
+    counter-reset: questionnaire-counter 0;
+
+    details {
+      counter-increment: questionnaire-counter 1;
+      position: relative;
+      padding-left: 23px;
+      margin-bottom: 10px;
+
+      &:before {
+        content: counter(questionnaire-counter) ". ";
+        position: absolute;
+        left: 0;
+      }
+
+      .details-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        @include media-breakpoint-up(md) {
+          flex-direction: row;
+        }
+
+        p, .webform-element {
+          display: flex;
+        }
+
+        .webform-element {
+          @include media-breakpoint-up(md) {
+            margin-left: auto;
+          }
+        }
+
+        label {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .symptom-questionnaire-views-block-header-elements-wrapper {
+    a {
+      & + .ajax-progress {
+        display: none;
+      }
+    }
+  }
+}

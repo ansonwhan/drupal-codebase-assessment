@@ -1,0 +1,21 @@
+uuid: ae47a651-f1d8-4fbc-ad46-63d11c497f2c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.profile_node_embed.field_profile_nodes
+    - paragraphs.paragraphs_type.profile_node_embed
+id: paragraph.profile_node_embed.default
+targetEntityType: paragraph
+bundle: profile_node_embed
+mode: default
+content:
+  field_profile_nodes:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+hidden:
+  created: true
+  status: true

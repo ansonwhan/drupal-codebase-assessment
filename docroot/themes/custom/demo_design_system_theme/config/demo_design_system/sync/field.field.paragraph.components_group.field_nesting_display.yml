@@ -1,0 +1,23 @@
+uuid: 399cd9d3-f59b-4cf2-bf7b-f50883518158
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_nesting_display
+    - paragraphs.paragraphs_type.components_group
+  module:
+    - options
+id: paragraph.components_group.field_nesting_display
+field_name: field_nesting_display
+entity_type: paragraph
+bundle: components_group
+label: 'Nested Component Display'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: normal
+default_value_callback: ''
+settings: {  }
+field_type: list_string

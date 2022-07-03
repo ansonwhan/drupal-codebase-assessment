@@ -1,0 +1,27 @@
+{
+  "notesAboutComponent": "",
+  "aSpotHeroDarkTheme": [
+    {
+      "alternativeText": "navy Blue theme background",
+      "backgroundAlt": "dark theme background",
+      "imgSrc": "",
+      "class": "",
+      "heading": "Medication to manage your mental health",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "buttonText": "how it works",
+      "notes": "",
+      "specialCssClasses": {
+        "pageHeroImage": "page-hero-img",
+        "backgroundDark": "background-dark",
+        "borderLeft": "",
+        "borderRight": "",
+        "displayLgNone": "",
+        "displayXsNone": "",
+        "marginLeft": ""
+      },
+      "imgInsideBannerProperties": {
+        "pageHeroImageAlt": "home page hero"
+      }
+    }
+  ]
+}

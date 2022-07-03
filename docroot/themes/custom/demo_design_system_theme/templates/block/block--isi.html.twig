@@ -1,0 +1,69 @@
+{#
+/*
+* @file:  block--isi.twig.html
+* @description: ISI block twig template
+*
+*/
+#}
+
+<a id="isi-top" name="isi-top"></a>
+<section id="inline-isi-wrapper" class="inline-isi-wrapper section isi-section" data-analytics-position="ISI">
+
+  <div class="isi isi-block">
+    <div class="isi-inline-inner-wrap container">
+      {{ elements.content.field_isi_inline_content }}
+    </div>
+  </div>
+
+</section>
+
+{% if (footerEnabled) %}
+
+  {% if (drawerEnabled) %}
+
+    <section id="drawer-isi" class="isi-tray jsIsiContainer isi-drawer-collapsed" data-analytics-position="ISI">
+
+      <div class="isi-header">
+        <div class="isi-header-wrap container">
+          <div class="drawer-title">{{ elements.content.field_isi_title }}</div>
+          <button class="isi-btn jsIsiMinimize btn btn-outline-primary" data-oapigtmcategory="Button Clicks" data-oapigtmaction="ISI"
+                  data-oapigtmlabel="{{ drawer_expand_text }}">
+            <span class="isi-btn-icon"></span>
+            <span class="js-swap-text jsSwapTextExpand">{{ drawer_expand_text }}</span>
+            <span class="js-swap-text jsSwapTextCollapse hide">{{ drawer_collapse_text }}</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="isi isi-block isi-drawer-content isi-content-wrap container">
+
+        <div class="isi-scrollable">
+          {{ elements.content.field_isi_drawer_content }}
+        </div>
+
+        <div class="external-scroll-y">
+          <div class="scroll-element_outer">
+            <div class="scroll-element_size"></div>
+            <div class="scroll-element_track"></div>
+            <div class="scroll-bar"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+  {% else %}
+
+    <div id="stickyfooter-isi" class="jump-link-stickyfooter-wrapper sticky-footer-revealed jsIsiContainer isi-tray">
+      <div class="isi-header">
+        <div class="isi-header-wrap container">
+          <div class="drawer-title">
+            <a class="isi-jump-link" href="#">{{ elements.content.field_isi_title }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  {% endif %}
+{% endif %}

@@ -1,0 +1,14 @@
+@import "./assets/src/style/variables";
+@import "./assets/src/style/mixins_functions";
+@import "./assets/src/style/common_components_mixins";
+
+.heading-separator-paragraph {
+  h1 {
+    @include h1HeadingCommonStyles(36px, null, $inheritedBoldClass);
+  }
+
+  p {
+    font-family: Whitman, serif;
+    font-size: remOrPercent(24px) !important;
+  }
+}

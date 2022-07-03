@@ -1,0 +1,10 @@
+uuid: 23a34037-a9ea-452e-82e6-2357ed50efc4
+langcode: en
+status: true
+dependencies: {  }
+id: citation_item
+label: 'Citation item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

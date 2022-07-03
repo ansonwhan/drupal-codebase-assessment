@@ -1,0 +1,27 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Enumerated circle component
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet" media="all"
+          href="{{ basePath }}css/component/circle-component/enumerated-circle-component.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>Notes about enumerated circle component (different types) </h1>
+  </div>
+  <div class="example">
+    {% include './partial/_enumerated-circle-component.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Enumerated circle component</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

@@ -1,0 +1,8 @@
+uuid: d7f38683-02e1-4a63-b3fd-b35b2975727b
+langcode: en
+status: true
+dependencies: {  }
+id: contentpatternsmainmenu
+theme: ''
+text: ''
+classes: horiz-slide-menu

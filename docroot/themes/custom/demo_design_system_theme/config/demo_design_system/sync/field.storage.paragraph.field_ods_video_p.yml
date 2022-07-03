@@ -1,0 +1,20 @@
+uuid: 0e9dfa34-7988-4f37-8f11-dd317db60fd0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_ods_video_p
+field_name: field_ods_video_p
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

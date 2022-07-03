@@ -1,0 +1,81 @@
+{% set imageData    = communityBuildMicrositeImages %}
+{% set setPathToImg = pathsToDependencies.isDockerLocalHost ? "/themes/custom/otsk-sandboxes/themes/custom/demo_design_system_theme/html_components/temp/img/" : "/themes/custom/demo_design_system_theme/html_components/temp/img/" %}
+
+{% set commonData    = communityBuildMicrosite %}
+
+<article>
+    <section class="community-build-registration-microsite" role="banner">
+        <div class="containers-wrapper-large-screen">
+            <div class="trapezoid-background">
+                <div class="container--logo">
+                    <a href="https://www.jynarque.com/" target="_blank">
+                        <img
+                                tabindex="0"
+                                src="{{ imageData.tmpJynarqueLogo }}"
+                                alt="{{ socialLandingPageImage.tmpJynarqueLogoAlt }}"
+                                role="link"
+                        >
+                    </a>
+                </div>
+                <div class="container--adpkd-image">
+                    <a href="https://www.jynarque.com/" target="_blank">
+                        <img tabindex="0"
+                             src="{{ setPathToImg }}{{ imageData.tmpAdpkdImgName }}"
+                             alt="{{ socialLandingPageImage.tmpJynarqueLogoAlt }}"
+                             role="link"
+                        >
+                    </a>
+                </div>
+                <div class="container--text ">
+                    <p tabindex="0"
+                       aria-label="{{ commonData.textInsideBanner1 }}">{{ commonData.textInsideBanner1 }}</p>
+                    <p tabindex="0"
+                       aria-label="{{ commonData.textInsideBanner2 }}">{{ commonData.textInsideBanner2 }}</p>
+                </div>
+            </div>
+            <picture class="container--community-img">
+                <img class="background-image"
+                     src="{{ setPathToImg }}{{ imageData.tmpBackgroundImgName }}"
+                     role="presentation"
+                >
+            </picture>
+        </div>
+
+        <div class="containers-wrapper--small-medium-screen">
+
+            <div class="container--wrapper-for-images">
+                <picture class="container--community-img">
+                    <img class="background-image"
+                         src="{{ setPathToImg }}{{ imageData.tmpBackgroundImgName }}"
+                         role="presentation"
+                    >
+                </picture>
+                <div class="container--logo">
+                    <a href="https://www.jynarque.com/" target="_blank">
+                        <img src="{{ imageData.tmpJynarqueLogo }}"
+                             alt="{{ socialLandingPageImage.tmpJynarqueLogoAlt }}"
+                             role="link"
+                        >
+                    </a>
+                </div>
+            </div>
+
+            <div class="conventional-background">
+                <div class="container--adpkd-image">
+                    <a href="https://www.jynarque.com/" target="_blank">
+                        <img src="{{ setPathToImg }}{{ imageData.tmpAdpkdImgName }}"
+                             alt="{{ socialLandingPageImage.tmpJynarqueLogoAlt }}"
+                             role="link"
+                        >
+                    </a>
+                </div>
+                <div class="container--text ">
+                    <p tabindex="0"
+                       aria-label="{{ commonData.textInsideBanner1 }}">{{ commonData.textInsideBanner1 }}</p>
+                    <p tabindex="0"
+                       aria-label="{{ commonData.textInsideBanner2 }}">{{ commonData.textInsideBanner2 }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</article>

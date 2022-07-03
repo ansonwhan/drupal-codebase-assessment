@@ -1,0 +1,35 @@
+{% set proportions %}
+  {{ content.field_side_by_side_proportions|render|lower|trim }}
+{% endset %}
+
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    'side-by-side',
+    settings_custom_classes ? settings_custom_classes,
+    'side-by-side' ~ proportions|clean_class,
+  ]
+%}
+{% block paragraph %}
+  <div{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+    {% block content %}
+    {% if content.field_image_position|render|trim == 'R' %}
+      <div class="side-by-side--container">
+      {{ content.field_blurb }}
+      </div>
+      <div class="side-by-side--container">
+      {{ content.field_image }}
+      </div>
+    {% else %}
+      <div class="side-by-side--container">
+      {{ content.field_image }}
+      </div>
+      <div class="side-by-side--container">
+      {{ content.field_blurb }}
+      </div>
+    {% endif %}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

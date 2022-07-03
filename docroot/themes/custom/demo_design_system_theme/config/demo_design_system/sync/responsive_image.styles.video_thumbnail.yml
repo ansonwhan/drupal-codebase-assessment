@@ -1,0 +1,23 @@
+uuid: 11af9089-dca7-405f-89e6-7a96d33468c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.video_thumbnail_x1
+  theme:
+    - demo_design_system_theme
+id: video_thumbnail
+label: 'Video thumbnail'
+image_style_mappings:
+  -
+    breakpoint_id: demo_design_system_theme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: video_thumbnail_x1
+  -
+    breakpoint_id: demo_design_system_theme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: video_thumbnail_x1
+breakpoint_group: demo_design_system_theme
+fallback_image_style: video_thumbnail_x1

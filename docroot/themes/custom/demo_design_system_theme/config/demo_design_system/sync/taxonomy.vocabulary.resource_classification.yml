@@ -1,0 +1,8 @@
+uuid: aa869d5e-50de-4bed-9460-5f2af40457e0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Resource Classification'
+vid: resource_classification
+description: ''
+weight: 0

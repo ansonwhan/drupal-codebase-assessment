@@ -1,0 +1,175 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.a-spot-hero-dark {
+  $slickInactiveNavButtons: rgba(255, 255, 255, 0.5);
+  $paragraphLargeResolutionsFontSize: remOrPercent(24px);
+
+  //Common styles for each slide
+  .card {
+    .carousel {
+      .slick-list {
+        .slide-wrapper {
+          position: relative;
+
+          .card-img-top {
+            box-sizing: border-box;
+            background: $gray-700;
+            min-height: remOrPercent(450px);
+            width: 100%;
+          }
+
+          .jumbotron-container {
+            h1 {
+              @include h1HeadingCommonStyles(null, null, $inheritedBoldClass);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //End common styles for each slide
+
+
+  @include media-breakpoint-down(xs) {
+    .card {
+      .carousel {
+        .slick-list {
+          min-height: remOrPercent(350px);
+          max-width: remOrPercent(375px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(10%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(206px);
+              min-width: remOrPercent(293px);
+
+              h1 {
+                $h1Padding: 0 remOrPercent(16px) 0 remOrPercent(16px) !important;
+                @include h1HeadingCommonStyles(null, $h1Padding);
+              }
+
+              .first-paragraph {
+                padding: 0 remOrPercent(24px) 0 remOrPercent(24px) !important;
+              }
+
+              a {
+                margin-left: remOrPercent(17.6px);
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    .card {
+      .carousel {
+        .slick-list {
+          height: remOrPercent(300px);
+          max-width: remOrPercent(576px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(9%);
+              left: remOrPercent(52%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(202px);
+              min-width: remOrPercent(300px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h3FontSizeModifier);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .card {
+      .carousel {
+        .slick-list {
+          max-height: remOrPercent(350px);
+          max-width: remOrPercent(768px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(10%);
+              left: remOrPercent(39%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(219px);
+              min-width: remOrPercent(464px);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    .card {
+      .carousel {
+        .slick-list {
+          max-height: remOrPercent(450px);
+          max-width: remOrPercent(992px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(14%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(265px);
+              min-width: remOrPercent(629px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    .card {
+      .carousel {
+        .slick-list {
+          max-height: remOrPercent(450px);
+          max-width: remOrPercent(1440px);
+
+          .slide-wrapper {
+            .jumbotron-container {
+              top: remOrPercent(14%);
+              left: remOrPercent(50%);
+              transform: translate(-50%, 0);
+              min-height: remOrPercent(268px);
+              min-width: remOrPercent(630px);
+
+              h1 {
+                @include h1HeadingCommonStyles($h1Display4SizeModifier);
+              }
+
+              .first-paragraph {
+                font-size: $paragraphLargeResolutionsFontSize;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

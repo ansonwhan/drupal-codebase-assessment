@@ -1,0 +1,33 @@
+uuid: a4b755bb-ea9e-423c-af0e-0ce6d73e3592
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.links_group.field_link_item
+    - field.field.paragraph.links_group.field_sticky_nav_location
+    - paragraphs.paragraphs_type.links_group
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.links_group.default
+targetEntityType: paragraph
+bundle: links_group
+mode: default
+content:
+  field_link_item:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_sticky_nav_location:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

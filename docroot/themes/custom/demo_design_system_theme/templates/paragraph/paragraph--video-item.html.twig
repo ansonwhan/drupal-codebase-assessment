@@ -1,0 +1,140 @@
+{#
+/**
+ * @file
+ * Default theme implementation to display a paragraph.
+ *
+ * Available variables:
+ * - paragraph: Full paragraph entity.
+ *   Only method names starting with "get", "has", or "is" and a few common
+ *   methods such as "id", "label", and "bundle" are available. For example:
+ *   - paragraph.getCreatedTime() will return the paragraph creation timestamp.
+ *   - paragraph.id(): The paragraph ID.
+ *   - paragraph.bundle(): The type of the paragraph, for example, "image" or "text".
+ *   - paragraph.getOwnerId(): The user ID of the paragraph author.
+ *   See Drupal\paragraphs\Entity\Paragraph for a full list of public properties
+ *   and methods for the paragraph object.
+ * - content: All paragraph items. Use {{ content }} to print them all,
+ *   or print a subset such as {{ content.field_example }}. Use
+ *   {{ content|without('field_example') }} to temporarily suppress the printing
+ *   of a given child element.
+ * - attributes: HTML attributes for the containing element.
+ *   The attributes.class element may contain one or more of the following
+ *   classes:
+ *   - paragraphs: The current template type (also known as a "theming hook").
+ *   - paragraphs--type-[type]: The current paragraphs type. For example, if the paragraph is an
+ *     "Image" it would result in "paragraphs--type--image". Note that the machine
+ *     name will often be in a short form of the human readable label.
+ *   - paragraphs--view-mode--[view_mode]: The View Mode of the paragraph; for example, a
+ *     preview would result in: "paragraphs--view-mode--preview", and
+ *     default: "paragraphs--view-mode--default".
+ * - view_mode: View mode; for example, "preview" or "full".
+ * - logged_in: Flag for authenticated user status. Will be true when the
+ *   current user is a logged-in member.
+ * - is_admin: Flag for admin user status. Will be true when the current user
+ *   is an administrator.
+ *
+ * @see template_preprocess_paragraph()
+ *
+ * @ingroup themeable
+ */
+#}
+
+{% set wrapperless_bundle_machine_names = [
+    'from_library',
+  ]
+%}
+
+{% set settings_custom_id = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_id') %}
+{% set settings_custom_classes = paragraph.getBehaviorSetting('custom_paragraph_behaviors_paragraph_custom_id_classes', 'custom_classes') %}
+{% set custom_id = settings_custom_id ? settings_custom_id : 'paragraph-' ~ paragraph.id() %}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    settings_custom_classes ? settings_custom_classes,
+    'custom--video-item'
+  ]
+%}
+
+{% block paragraph %}
+  {% if paragraph.bundle not in wrapperless_bundle_machine_names %}
+  <div{{ attributes.addClass(classes).setAttribute('id', custom_id) }}>
+  {% endif %}
+
+    {% block content %}
+      {% set video_player %}
+        <div class="custom--video-player">
+          {% if player_type == 'videojs' %}
+            <div class="video-js-wrappper">
+              <video class="video-js vjs-16-9 vjs-default-skin"
+                     data-setup='{"controlBar":{"volumePanel":{"inline": false}}}'
+                     preload="{{ player_attributes.preload }}"
+                  {{ player_attributes.controls ? 'controls' : '' }}
+                     poster="{{ player_attributes.poster ?: '' }}"
+                  {{ player_attributes.autoplay ? 'autoplay' : '' }}
+                  {{ player_attributes.loop ? 'loop' : '' }}
+                  {{ player_attributes.muted ? 'muted' : '' }}
+              >
+                <source src="{{ player_attributes.video }}"/>
+              </video>
+            </div>
+          {% else %}
+            {{ content.field_video }}
+          {% endif %}
+        </div>
+      {% endset %}
+
+      <div class="custom--video-wrapper">
+        {% if content.field_video_in_modal|render|striptags|trim|lower == 'true' %}
+          <div type="button" data-toggle="modal" data-target="#videoModal-{{ paragraph.id() }}" class="custom-video-modal-preview video-js custom--player-type-{{ player_type }} analytics--o-video-open" style="background-image: url('{{ player_attributes.poster ?: '' }}')" data-analytics-position="Body" data-analytics-id="{{ ('video-modal-open-link-' ~ paragraph.id())|data_analytics_id }}" >
+            <button class="vjs-big-play-button analytics--o-video-open" tabindex="0" role="button" type="button" aria-live="polite" data-analytics-position="Body" data-analytics-id="{{ ('video-modal-open-button-' ~ paragraph.id())|data_analytics_id }}">
+              <span class="vjs-control-text">Play Video</span>
+            </button>
+          </div>
+          <!-- Modal -->
+          <div class="modal fade custom--video-modal" id="videoModal-{{ paragraph.id() }}" tabindex="-1" role="dialog" aria-labelledby="areaVideoModal-{{ paragraph.id() }}" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">
+                    {{ content.field_video_teaser }}
+                  </h5>
+                  <button type="button" class="close analytics--o-video-close" data-dismiss="modal" aria-label="Close" data-analytics-position="Overlay" data-analytics-id="{{ ('video-modal-close-link-' ~ paragraph.id())|data_analytics_id }}" >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  {{ video_player }}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-danger analytics--o-video-open" data-dismiss="modal" data-analytics-position="Overlay" data-analytics-id="{{ ('video-modal-close-button-' ~ paragraph.id())|data_analytics_id }}" >{{ ('Close')|t }}</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          {{ video_player }}
+        {% endif %}
+      </div>
+      {% if content.field_video_type['#items'].value == 'teaser' or content.field_video_type['#items'].value == 'full' %}
+        <div class="custom--video-description-wrapper" {{ content.field_video_type['#items'].value == 'teaser' and content.field_video_in_modal|render|striptags|trim|lower == 'true' ? ('type="button" data-toggle="modal" data-target="#videoModal-' ~ paragraph.id() ~ '"')|raw : '' }}>
+          <div class="custom--video-teaser">
+            {{ content.field_video_teaser }}
+          </div>
+          <div class="custom--video-duration">
+            {{ ('Time:')|t }} {{ content.field_video_duration }}
+          </div>
+          {% if content.field_video_type['#items'].value == 'full' %}
+            <div class="custom--video-description">
+              {{ content.field_video_blurb }}
+            </div>
+          {% endif %}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+  {% if paragraph.bundle not in wrapperless_bundle_machine_names %}
+  </div>
+  {% endif %}
+{% endblock paragraph %}

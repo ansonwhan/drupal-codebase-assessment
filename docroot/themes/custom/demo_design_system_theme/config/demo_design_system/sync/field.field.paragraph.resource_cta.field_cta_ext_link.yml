@@ -1,0 +1,28 @@
+uuid: 9106f766-70e6-48e2-8d77-20169bda4832
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_ext_link
+    - paragraphs.paragraphs_type.resource_cta
+  module:
+    - link
+id: paragraph.resource_cta.field_cta_ext_link
+field_name: field_cta_ext_link
+entity_type: paragraph
+bundle: resource_cta
+label: Link
+description: 'Set the title for the link text or button.  Set the URL to "<nolink>" if you are uploading/managing a direct file for download.'
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'route:<nolink>'
+    title: Download
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

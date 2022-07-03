@@ -1,0 +1,31 @@
+uuid: 19525752-f0b4-438c-8de3-72bbaba39a9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:back_to_top:901f9502-cb87-4686-b815-ab12ae81b9a3'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: circularbacktotopbutton
+theme: demo_design_system_theme
+region: html_deferred
+weight: -35
+provider: null
+plugin: 'block_content:901f9502-cb87-4686-b815-ab12ae81b9a3'
+settings:
+  id: 'block_content:901f9502-cb87-4686-b815-ab12ae81b9a3'
+  label: 'Circular Back to Top Button, Persistent, Bottom'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: /nav/back-to-top/circle-bottom-persistent
+    negate: false
+    context_mapping: {  }

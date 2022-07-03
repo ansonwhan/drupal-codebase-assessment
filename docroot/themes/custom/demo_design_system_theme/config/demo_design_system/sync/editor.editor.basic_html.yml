@@ -1,0 +1,58 @@
+uuid: 1d759da1-b508-49f9-9135-dd53d91d89f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
+format: basic_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+        -
+          name: Linking
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Media
+          items:
+            - Blockquote
+            - DrupalMediaLibrary
+        -
+          name: 'Block Formatting'
+          items:
+            - Styles
+            - Format
+        -
+          name: Tools
+          items:
+            - Source
+  plugins:
+    language:
+      language_list: un
+    stylescombo:
+      styles: "span.editor--time-meridian|Time meridian\r\nspan.editor--footnotes|Footnotes\r\na.editor--wrapped-urls|Big urls\r\nh1.subhead-bold|H1 Subhead bold\r\nh2.subhead-bold|H2 Subhead bold\r\nh3.subhead-bold|H3 Subhead bold\r\nh4.subhead-bold|H4 Subhead bold\r\nh5.subhead-bold|H5 Subhead bold\r\nh6.subhead-bold|H6 Subhead bold\r\nspan.h1.subhead-bold|H1 span\r\nspan.h2.subhead-bold|H2 span\r\nspan.h3.subhead-bold|H3 span\r\nspan.h4.subhead-bold|H4 span\r\nspan.h5.subhead-bold|H5 span\r\nspan.h6.subhead-bold|H6 span"
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

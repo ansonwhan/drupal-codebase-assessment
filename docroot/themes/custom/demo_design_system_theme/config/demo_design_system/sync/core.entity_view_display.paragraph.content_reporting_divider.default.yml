@@ -1,0 +1,22 @@
+uuid: 07965f6a-31c8-40ab-a348-f64930d87c92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_reporting_divider.field_reporting_section_name
+    - paragraphs.paragraphs_type.content_reporting_divider
+  module:
+    - options
+id: paragraph.content_reporting_divider.default
+targetEntityType: paragraph
+bundle: content_reporting_divider
+mode: default
+content:
+  field_reporting_section_name:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_key
+    region: content
+hidden: {  }

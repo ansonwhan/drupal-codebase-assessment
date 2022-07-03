@@ -1,0 +1,41 @@
+uuid: 9b9a3919-992e-4d99-8aa8-a916e40bb8eb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_item.field_custom_id
+    - field.field.paragraph.link_item.field_nav_label
+    - field.field.paragraph.link_item.field_nav_level
+    - paragraphs.paragraphs_type.link_item
+  module:
+    - text
+id: paragraph.link_item.default
+targetEntityType: paragraph
+bundle: link_item
+mode: default
+content:
+  field_custom_id:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_nav_label:
+    weight: 0
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_nav_level:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,19 @@
+uuid: 3cea8cbe-f949-4591-bbad-60d92e92154d
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+id: paragraph.field_ods_text_p
+field_name: field_ods_text_p
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

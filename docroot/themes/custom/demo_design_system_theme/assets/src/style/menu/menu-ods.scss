@@ -1,0 +1,30 @@
+@import "../mixins_functions";
+
+.horiz-slide-menu {
+  ul.menu {
+    display: block;
+    overflow-y: scroll;
+
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: remOrPercent(10px);
+      background: lightgray;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: remOrPercent(5px);
+      height: remOrPercent(30px);
+      background-color: rgba(0, 0, 0, .5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5);
+    }
+
+    li {
+      display: inline-block;
+
+      a {
+        padding-left: remOrPercent(10px);
+        padding-right: remOrPercent(10px);
+      }
+    }
+  }
+}

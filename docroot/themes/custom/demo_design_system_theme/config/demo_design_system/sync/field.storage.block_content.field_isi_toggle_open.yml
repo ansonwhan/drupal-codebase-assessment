@@ -1,0 +1,22 @@
+uuid: 4e4a9b21-46c7-4843-b5a4-4e440f274ce5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: i0YZCRtZ-Ds1jcWPQ-euESL2FTWHnYxhOfotX7-ebKc
+id: block_content.field_isi_toggle_open
+field_name: field_isi_toggle_open
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 56a188de-d520-4b57-8a45-fe0337f519c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_video_duration
+    - paragraphs.paragraphs_type.video_item
+id: paragraph.video_item.field_video_duration
+field_name: field_video_duration
+entity_type: paragraph
+bundle: video_item
+label: Duration
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

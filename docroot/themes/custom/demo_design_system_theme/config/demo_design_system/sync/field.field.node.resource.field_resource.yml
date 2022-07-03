@@ -1,0 +1,114 @@
+uuid: 0a56cc95-24e2-4ab3-9a99-60612273a102
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resource
+    - node.type.resource
+    - paragraphs.paragraphs_type.resource_cta
+    - paragraphs.paragraphs_type.video_item
+  module:
+    - entity_reference_revisions
+id: node.resource.field_resource
+field_name: field_resource
+entity_type: node
+bundle: resource
+label: RESOURCE
+description: 'Either add video or other type of resource'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      resource_cta: resource_cta
+      video_item: video_item
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 19
+        enabled: false
+      accordion_item:
+        weight: 20
+        enabled: false
+      block:
+        weight: 21
+        enabled: false
+      carousel:
+        weight: 32
+        enabled: false
+      carousel_slide:
+        weight: 33
+        enabled: false
+      citation_group:
+        weight: 22
+        enabled: false
+      citation_item:
+        weight: 23
+        enabled: false
+      components_group:
+        weight: 24
+        enabled: false
+      content_reporting_divider:
+        weight: 25
+        enabled: false
+      data_table:
+        weight: 26
+        enabled: false
+      enumerated_content_component:
+        weight: 27
+        enabled: false
+      enumerated_content_group:
+        weight: 28
+        enabled: false
+      from_library:
+        weight: 29
+        enabled: false
+      graphic_divider:
+        weight: 30
+        enabled: false
+      hero_banner_item:
+        weight: 31
+        enabled: false
+      infographic:
+        weight: 44
+        enabled: false
+      isi_section:
+        weight: 32
+        enabled: false
+      link_item:
+        weight: 47
+        enabled: false
+      links_group:
+        weight: 46
+        enabled: false
+      profile_node_embed:
+        weight: 48
+        enabled: false
+      resource_cta:
+        enabled: true
+        weight: 33
+      side_by_side_content_image:
+        weight: 34
+        enabled: false
+      standard_body_copy:
+        weight: 35
+        enabled: false
+      tab_group:
+        weight: 52
+        enabled: false
+      tab_section:
+        weight: 53
+        enabled: false
+      video:
+        weight: 36
+        enabled: false
+      video_group:
+        weight: 55
+        enabled: false
+      video_item:
+        enabled: true
+        weight: 56
+field_type: entity_reference_revisions

@@ -1,0 +1,52 @@
+<div class="a-spot-hero-light">
+  <div class="container ods-pl-0">
+    <div class="row">
+      <div class="col-12 ods-p-0">
+        <div class="card">
+          <div class="carousel card-block">
+            {% for item in aSpotHeroLightTheme %}
+              <div class="slide-wrapper">
+                <div class="card-img-top"></div>
+                <div
+                  class="jumbotron position-absolute text-dark text-left jumbotron-container">
+                  <div class="row">
+                    <div
+                      class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 jumbotron-img-container {{ item.specialCssClasses.displayLgNone }}">
+                      <div
+                        role="img"
+                        aria-label="{{ item.imgInsideBannerProperties.alternativeText }}"
+                        title="{{ item.imgInsideBannerProperties.alternativeText }}"
+                        class="{{ item.specialCssClasses.pageHeroImage }}"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-7 col-md-7 col-lg-6 col-xl-6 ods-px-10 banner-text-container">
+                      <h1 class="text-dark">{{ item.heading }}</h1>
+                      <p class="first-paragraph">{{ item.text }}</p>
+                      <p>
+                        <a class="text-uppercase btn btn-primary btn-sm btn-rounded ods-p-10"
+                           href="#" role="button" tabindex="0">
+                          {{ item.buttonText }}
+                        </a>
+                      </p>
+                    </div>
+                    <div
+                      class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xl-5 jumbotron-img-container {{ item.specialCssClasses.displayXsNone }}">
+                      <div
+                        role="img"
+                        aria-label="{{ item.imgInsideBannerProperties.alternativeText }}"
+                        title="{{ item.imgInsideBannerProperties.alternativeText }}"
+                        class="{{ item.specialCssClasses.pageHeroImage }}"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+

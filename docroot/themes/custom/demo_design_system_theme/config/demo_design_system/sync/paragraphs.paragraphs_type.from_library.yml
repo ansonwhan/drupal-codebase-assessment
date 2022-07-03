@@ -1,0 +1,16 @@
+uuid: fd43bdb9-c46e-4d51-a044-22e6bc8677b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+_core:
+  default_config_hash: OJUwL6xTTiHbXZy10swc5Fckkr7qhSm4b0nK3326LO8
+id: from_library
+label: 'From library'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

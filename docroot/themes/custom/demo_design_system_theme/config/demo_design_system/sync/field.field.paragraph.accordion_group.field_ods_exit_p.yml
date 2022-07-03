@@ -1,0 +1,21 @@
+uuid: ab6d32d3-52f6-4718-896d-090b657c9ae8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ods_exit_p
+    - paragraphs.paragraphs_type.accordion_group
+  module:
+    - text
+id: paragraph.accordion_group.field_ods_exit_p
+field_name: field_ods_exit_p
+entity_type: paragraph
+bundle: accordion_group
+label: 'Exit text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

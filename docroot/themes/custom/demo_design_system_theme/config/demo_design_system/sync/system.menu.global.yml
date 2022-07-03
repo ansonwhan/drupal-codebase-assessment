@@ -1,0 +1,8 @@
+uuid: f7d7f23f-e9e2-4c8b-9a07-5fc90b2f3c66
+langcode: en
+status: true
+dependencies: {  }
+id: global
+label: 'Global (Base) Variables Main Menu'
+description: ''
+locked: false

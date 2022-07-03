@@ -1,0 +1,172 @@
+uuid: 6609f7b7-b885-4c85-93d9-53ef4286f589
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.row
+    - field.field.paragraph.resource_cta.field_cta_ext_link
+    - field.field.paragraph.resource_cta.field_cta_file
+    - field.field.paragraph.resource_cta.field_cta_image
+    - field.field.paragraph.resource_cta.field_cta_link_display
+    - field.field.paragraph.resource_cta.field_cta_teaser
+    - field.field.paragraph.resource_cta.field_display_format
+    - field.field.paragraph.resource_cta.field_heading
+    - field.field.paragraph.resource_cta.field_icon_type
+    - field.field.paragraph.resource_cta.field_link_wrapper
+    - paragraphs.paragraphs_type.resource_cta
+  module:
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_column_first:
+      children:
+        - group_item_first
+      parent_name: group_row
+      weight: 1
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-first col d-flex align-items-center'
+      label: column_first
+    group_column_second:
+      children:
+        - group_item
+      parent_name: group_row
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-second col d-flex align-items-center'
+      label: column_second
+    group_column_third:
+      children:
+        - field_cta_ext_link
+      parent_name: group_row
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-third col d-flex justify-content-sm-end align-items-center'
+      label: column_third
+    group_row:
+      children:
+        - group_column_first
+        - group_column_second
+        - group_column_third
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: row
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: row
+    group_item:
+      children:
+        - field_cta_teaser
+      parent_name: group_column_second
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: item
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: item
+    group_item_first:
+      children:
+        - field_cta_image
+      parent_name: group_column_first
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: item
+      label: item
+id: paragraph.resource_cta.row
+targetEntityType: paragraph
+bundle: resource_cta
+mode: row
+content:
+  field_cta_ext_link:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_cta_image:
+    type: entity_reference_entity_view
+    weight: 21
+    label: hidden
+    settings:
+      view_mode: row
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_cta_teaser:
+    type: text_default
+    weight: 21
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_cta_file: true
+  field_cta_link_display: true
+  field_display_format: true
+  field_heading: true
+  field_icon_type: true
+  field_link_wrapper: true

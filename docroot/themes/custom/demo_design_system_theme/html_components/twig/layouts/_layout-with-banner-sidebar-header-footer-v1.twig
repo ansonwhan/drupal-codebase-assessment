@@ -1,0 +1,17 @@
+{#layout-with-banner-sidebar-header-footer v.1#}
+
+
+<div class="row storybook-isi-wrapper">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 {{ internalGridClasses.odsCol }}">
+    <div id="layout-no-isi-sidebar" class="layout-a-spot-hero-light-theme ods-mb-15">
+      {% include '../partial/_a-spot-hero-light-theme.twig' %}
+    </div>
+    {% include '../partial/_group-cta-rows.twig' %}
+  </div>
+
+  <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 js-storybook-remove-isi">
+    {% include '../partial/_fake-isi-sidebar.twig' %}
+  </div>
+</div>
+
+

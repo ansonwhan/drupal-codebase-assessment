@@ -1,0 +1,8 @@
+uuid: 05b476c1-e65e-4862-8b07-2a238c3e3d53
+langcode: en
+status: true
+dependencies: {  }
+id: resource_cta
+label: 'Resource CTA'
+revision: 0
+description: ''

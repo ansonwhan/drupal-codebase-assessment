@@ -1,0 +1,30 @@
+{% extends "./_base.twig" %}
+{% block title %}
+  Half content people tiles with buttons (tiles)
+{% endblock %}
+{% block head %}
+    <link rel="stylesheet"
+          media="all"
+          href="{{ basePath }}css/component/cta-block-elements/half-content-people-tiles-with-buttons.css"/>
+    <link rel="stylesheet" media="all"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
+{% endblock %}
+
+ {% block header %}
+   {% include './partial/_page-header-fpo.twig' %}
+ {% endblock %}
+
+{% block content %}
+  <div class="notes">
+    <h1>Notes about half content people tiles with buttons (tiles)</h1>
+  </div>
+  <div class="example">
+    {% include './partial/_half-content-people-tiles-with-buttons.twig' %}
+    {% if item.notes %}
+      <div class="notes">
+        <h2>Half content people tiles with buttons (tiles)</h2>
+        {{ item.notes }}
+      </div>
+    {% endif %}
+  </div>
+{% endblock %}

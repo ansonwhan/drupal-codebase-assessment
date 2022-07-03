@@ -1,0 +1,52 @@
+uuid: d8f27bc8-0d6e-4f52-879e-bc50a79193c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.resource_cta
+    - field.storage.block_content.field_cta_block_wrapper
+    - paragraphs.paragraphs_type.components_group
+  module:
+    - entity_reference_revisions
+id: block_content.resource_cta.field_cta_block_wrapper
+field_name: field_cta_block_wrapper
+entity_type: block_content
+bundle: resource_cta
+label: 'CTA Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      components_group: components_group
+    target_bundles_drag_drop:
+      accordion_group:
+        weight: 9
+        enabled: false
+      accordion_item:
+        weight: 10
+        enabled: false
+      citation_group:
+        weight: 11
+        enabled: false
+      citation_item:
+        weight: 12
+        enabled: false
+      components_group:
+        enabled: true
+        weight: 13
+      resource_cta:
+        weight: 14
+        enabled: false
+      standard_body_copy:
+        weight: 15
+        enabled: false
+      video:
+        weight: 16
+        enabled: false
+field_type: entity_reference_revisions

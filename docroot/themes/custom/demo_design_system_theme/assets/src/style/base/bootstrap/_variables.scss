@@ -1,0 +1,107 @@
+// Variables Bootstrap 4
+
+// Color system
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #868E96 !default;
+$gray-700: #373D42 !default;
+$gray-800: #343A40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$blue:    #007BFF !default;
+$red:     #DC3545 !default;
+$yellow:  #FFC107 !default;
+$green:   #1E7E34 !default;
+$cyan:    #24B2C9 !default;
+
+$primary:       $blue !default;
+$secondary:     $gray-600 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
+
+// stylelint-disable value-keyword-case
+$body-color: $gray-700 !default;
+$font-family-base: 'Whitman', serif !default;
+
+$headings-font-family: 'Museo Sans', sans-serif !default;
+$headings-font-weight: 100 !default;
+$headings-color: $gray-700 !default;
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+        xs: 0,
+        xm: 377px,
+        sm: 577px,
+        md: 769px,
+        lg: 992px,
+        xl: 1200px
+) !default;
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+        xm: 539px,
+        sm: 719px,
+        md: 820px,
+        lg: 960px,
+        xl: 1140px
+) !default;
+
+// Buttons + Forms
+//
+// Shared variables that are reassigned to `$input-` and `$btn-` specific variables.
+$btn-font-weight: bold !default;
+$input-btn-font-family: 'Museo Sans', sans-serif !default;
+$input-btn-font-size-lg: 1.125rem !default;
+
+$input-btn-padding-y: .645rem !default;
+$input-btn-padding-y-lg: .885rem !default;
+$input-btn-padding-y-sm: .47375rem !default;
+
+$input-btn-padding-x: .9375rem !default;
+$input-btn-padding-x-lg: 1.25rem !default;
+$input-btn-padding-x-sm: .625rem !default;
+
+$input-btn-line-height: 1 !default;
+$input-btn-line-height-lg: 1 !default;
+$input-btn-line-height-sm: 1 !default;
+
+// Forms
+$input-color: $gray-700 !default;
+$input-placeholder-color: $gray-600 !default;
+
+$input-font-family: 'Museo Sans', sans-serif !default;
+$input-font-weight: 300 !default;
+$input-font-size-lg: 1.25rem !default;
+
+$input-height: 2.375rem !default;
+$input-height-lg: 3rem !default;
+$input-height-sm: 1.9375rem !default;
+
+$input-padding-x: .8125rem !default;
+$input-padding-x-lg: 1.0625rem !default;
+$input-padding-x-sm: .8125rem !default;
+
+// Tables
+//
+// Customizes the `.table` component with basic values, each used across all table variations.
+$table-th-font-weight: 700 !default;
+
+// Pagination
+$pagination-border-color: transparent !default;
+$pagination-hover-bg: transparent !default;

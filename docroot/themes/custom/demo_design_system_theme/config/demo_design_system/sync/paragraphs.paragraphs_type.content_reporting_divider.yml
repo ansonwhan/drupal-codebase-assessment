@@ -1,0 +1,10 @@
+uuid: 712ec035-30f1-4b40-96b2-fcb9f7582f11
+langcode: en
+status: true
+dependencies: {  }
+id: content_reporting_divider
+label: 'Content Reporting Divider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

@@ -1,0 +1,40 @@
+uuid: a04f1973-512d-44c9-a368-bb232ace50f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.paragraph.button_modal
+    - field.field.paragraph.video.field_ods_video_p
+    - field.field.paragraph.video.field_video_blurb
+    - field.field.paragraph.video.field_video_button_title
+    - field.field.paragraph.video.field_video_duration
+    - field.field.paragraph.video.field_video_teaser
+    - paragraphs.paragraphs_type.video
+  module:
+    - media_library
+id: paragraph.video.button_modal
+targetEntityType: paragraph
+bundle: video
+mode: button_modal
+content:
+  field_ods_video_p:
+    type: media_library_widget
+    weight: 1
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_video_button_title:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  field_video_blurb: true
+  field_video_duration: true
+  field_video_teaser: true
+  status: true

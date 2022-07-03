@@ -1,0 +1,155 @@
+uuid: 50f79814-b9d9-45f5-ab64-6093cdc3f674
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.node.row
+    - field.field.node.profile.field_custom_classes
+    - field.field.node.profile.field_custom_id
+    - field.field.node.profile.field_mobile_image
+    - field.field.node.profile.field_profile_content_bottom
+    - field.field.node.profile.field_profile_content_top
+    - field.field.node.profile.field_profile_heading
+    - field.field.node.profile.field_profile_image
+    - field.field.node.profile.field_profile_intro
+    - field.field.node.profile.field_profile_subheading
+    - field.field.node.profile.field_profile_video
+    - node.type.profile
+  module:
+    - entity_reference_revisions
+    - field_group
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_row:
+      children:
+        - group_column_first
+        - group_column_second
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'row profile-head'
+      label: row
+    group_column_first:
+      children:
+        - field_profile_image
+      parent_name: group_row
+      weight: 2
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-first col-sm-6'
+      label: column_first
+    group_column_second:
+      children:
+        - group_column_item
+      parent_name: group_row
+      weight: 3
+      format_type: html_element
+      region: content
+      format_settings:
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'column-second col-sm-6 d-flex align-items-center'
+      label: column_second
+    group_column_item:
+      children:
+        - field_profile_teaser
+        - field_profile_intro
+        - field_profile_video
+      parent_name: group_column_second
+      weight: 20
+      format_type: html_element
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        element: div
+        show_label: false
+        label_element: h3
+        label_element_classes: ''
+        attributes: ''
+        effect: none
+        speed: fast
+      label: column_item
+id: node.profile.row
+targetEntityType: node
+bundle: profile
+mode: row
+content:
+  field_profile_content_bottom:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_content_top:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_profile_image:
+    type: entity_reference_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: profile_row
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_profile_intro:
+    weight: 22
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_profile_video:
+    type: entity_reference_revisions_entity_view
+    weight: 23
+    label: hidden
+    settings:
+      view_mode: button_modal
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_custom_classes: true
+  field_custom_id: true
+  field_mobile_image: true
+  field_profile_heading: true
+  field_profile_subheading: true
+  links: true

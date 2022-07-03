@@ -1,0 +1,40 @@
+uuid: b4915b33-d9f5-4d90-82f2-c24291517b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.link_item.field_custom_id
+    - field.field.paragraph.link_item.field_nav_label
+    - field.field.paragraph.link_item.field_nav_level
+    - paragraphs.paragraphs_type.link_item
+  module:
+    - options
+    - text
+id: paragraph.link_item.default
+targetEntityType: paragraph
+bundle: link_item
+mode: default
+content:
+  field_custom_id:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_nav_label:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_nav_level:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

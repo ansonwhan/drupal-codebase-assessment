@@ -1,0 +1,17 @@
+uuid: 638950e6-099f-4105-bccd-32d6531d4684
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: for_card_x2_lg
+label: 'For card x2 lg'
+effects:
+  e87080b3-7283-4e60-b1fc-6c8bd1f9905a:
+    uuid: e87080b3-7283-4e60-b1fc-6c8bd1f9905a
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 760
+      height: 395
+      crop_type: focal_point

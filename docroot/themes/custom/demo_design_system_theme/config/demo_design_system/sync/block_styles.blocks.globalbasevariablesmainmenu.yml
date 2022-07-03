@@ -1,0 +1,8 @@
+uuid: f096503d-ee80-4c1a-8f54-655bc8652fc6
+langcode: en
+status: true
+dependencies: {  }
+id: globalbasevariablesmainmenu
+theme: ''
+text: ''
+classes: horiz-slide-menu

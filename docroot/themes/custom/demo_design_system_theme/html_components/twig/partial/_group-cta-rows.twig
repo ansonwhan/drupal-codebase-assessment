@@ -1,0 +1,35 @@
+<!-- start example code for Drupal -->
+<div class="group-cta-rows ods-mt-50  {{ internalGridClasses.odsMarginAuto }}">
+  {% for item in groupCtaRows %}
+    <div class="cta-row ods-mt-15">
+      <div class="card-body d-flex flex-wrap align-items-center">
+        <div class="img-container col-4 col-sm-2">
+          <!-- At the moment img src is defined in the scss stylesheet  -->
+          <div
+                  role="img"
+                  aria-label="{{ item.alternativeText }}"
+                  title="{{ item.alternativeText }}"
+                  class="{{ item.imgSrcClass }} d-block"></div>
+        </div>
+        <div class="col-12 col-sm-6">
+          <div class="card-title">
+            <h4>{{ item.heading }}</h4>
+          </div>
+          <div class="card-text">
+            <p>{{ item.text }}</p>
+          </div>
+        </div>
+        <div class="button-container col-12 col-sm-4">
+          <a
+                  class="text-uppercase btn btn-primary btn-sm btn-rounded float-lg-right float-md-right float-sm-right"
+                  role="button"
+          >
+            {{ item.buttonText }}
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="ods-mr-15 ods-ml-15 ods-mt-0 ods-mb-0">
+  {% endfor %}
+  </div>
+  <!-- end example code for Drupal -->

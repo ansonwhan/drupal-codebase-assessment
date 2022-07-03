@@ -1,0 +1,625 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming in the demo_design_system_theme theme.
+ */
+
+use Drupal\node\Entity\Node;
+use Drupal\Core\Render\Markup;
+use Drupal\block\BlockInterface;
+use Drupal\Component\Utility\Html;
+use Drupal\block_content\BlockContentInterface;
+use Drupal\Core\Link;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\block\Entity\Block;
+use Drupal\media\Entity\Media;
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_preprocess_webform().
+ */
+function demo_design_system_theme_preprocess_webform(&$variables) {
+  // Attach library.
+  $library_name = 'webform.' . $variables['element']['#webform_id'];
+  _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for page block.
+ */
+function demo_design_system_theme_preprocess_block(&$variables) {
+  if ($variables['base_plugin_id'] == 'block_content') {
+    if (!empty($variables['elements']['content']['#block_content'])) {
+      /** @var \Drupal\block_content\Entity\BlockContent $block_content */
+      $block_content = $variables['elements']['content']['#block_content'];
+      $variables['custom_block_id'] = Html::getId($block_content->label());
+      $variables['attributes']['class'][] = Html::getClass('block-content-' . $block_content->label());
+      $variables['attributes']['class'][] = Html::getClass('block-content-' . $block_content->bundle());
+      _demo_design_system_theme_check_and_attach_component_styles('block.' . Html::getClass($block_content->label()), $variables);
+      _demo_design_system_theme_check_and_attach_component_styles('block.' . Html::getClass($block_content->bundle()), $variables);
+    }
+  }
+
+  if ($variables['base_plugin_id'] == 'system_branding_block' || $variables['base_plugin_id'] == 'otsuka_condition_switcher_block') {
+    _demo_design_system_theme_check_and_attach_component_styles('block.' . Html::getClass($variables['base_plugin_id']), $variables);
+  }
+
+  if (isset($variables['content']['#menu_name'])) {
+    _demo_design_system_theme_check_and_attach_component_styles('menu.' . Html::getClass($variables['content']['#menu_name']), $variables);
+    $variables['content']['#attributes']['block'] = $variables['attributes']['id'];
+
+    if ($variables['content']['#menu_name'] == 'main' || $variables['content']['#menu_name'] == 'indication-b-main-menu') {
+      _demo_design_system_theme_check_and_attach_component_styles('menu.' . Html::getClass('main'), $variables);
+    }
+
+    if (isset($variables["elements"]["#id"])) {
+      $block_id = $variables["elements"]["#id"];
+      $block = Block::load($block_id);
+
+      if ($block) {
+        $variables["content"]["#attributes"]["region"] = $block->getRegion();
+      }
+    }
+  }
+
+  // Add custom class to the block from the field 'field_class'.
+  $content = $variables['elements']['content'];
+  if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+    if ($content['#block_content']->hasField('field_class')) {
+      $class = $content['#block_content']->get('field_class')->value;
+      if (!empty($class)) {
+        $variables['attributes']['class'][] = Html::cleanCssIdentifier('custom-block--' . $class);
+      }
+    }
+  }
+
+  // Manage cache for system branding block by url.
+  if ($variables['plugin_id'] == 'system_branding_block') {
+    $variables['#cache']['contexts'] = ['url.path', 'url.query_args'];
+  }
+
+  // Preprocess sidebar ISI.
+  if (!empty($variables['custom_block_id']) && $variables['custom_block_id'] == 'isi-sidebar') {
+    $content = $variables['elements']['content'];
+    if (isset($content['#block_content']) && $content['#block_content'] instanceof BlockContentInterface) {
+      $variables['#attached']['library'][] = 'isi/inline';
+
+      if ($content['#block_content']->hasField('field_isi_drawer')) {
+        $footer = $content['#block_content']->get('field_isi_footer')->value;
+        $drawer = $content['#block_content']->get('field_isi_drawer')->value;
+        $initialVisit = $content['#block_content']->get('field_isi_initial_visit')->value;
+
+        if ($footer) {
+          $variables['footerEnabled'] = $footer;
+          $variables['#attached']['drupalSettings']['isi']['footer'] = 1;
+
+          if ($drawer) {
+            $variables['#attached']['library'][] = 'isi/drawer';
+            $variables['#attached']['drupalSettings']['isi']['drawer'] = 1;
+            $variables['drawerEnabled'] = $drawer;
+            $variables['drawerTitle'] = $content['#block_content']->get('field_isi_title')->value;
+            $variables['drawer_expand_text'] = $content['#block_content']->get('field_isi_toggle_open')->value;
+            $variables['drawer_collapse_text'] = $content['#block_content']->get('field_isi_toggle_close')->value;
+          }
+          else {
+            $variables['#attached']['library'][] = 'isi/stickyfooter';
+            $variables['#attached']['drupalSettings']['isi']['stickyfooter'] = 1;
+          }
+        }
+
+        if ($initialVisit) {
+          $variables['#attached']['library'][] = 'isi/initial_visit';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_paragraph().
+ */
+function demo_design_system_theme_preprocess_paragraph(&$variables) {
+  // \Drupal::logger('ods_theme')->debug('preprocess paragraph called', []);
+  /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
+  $paragraph = &$variables['paragraph'];
+
+  $field_type = 'field_' . $paragraph->bundle() . '_type';
+  // Attach specific paragraphs libraries and add specific class.
+  if ($paragraph->hasField($field_type) && !$paragraph->get($field_type)
+    ->isEmpty()) {
+    $type = $paragraph->get($field_type)->first()->getValue()['value'];
+    _demo_design_system_theme_check_and_attach_component_styles('paragraph.' . HTML::getClass($type), $variables);
+  }
+
+  // Attach Paragraph library.
+  $library_name = 'paragraph.' . HTML::getClass($paragraph->getType());
+  _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+
+  // Set desired media entity image display mode for CTAs.
+  if ($paragraph->bundle() === 'resource_cta') {
+    if ($paragraph->field_display_format->value == 'row') {
+      $variables['content']['field_cta_image']['0']['#view_mode'] = 'row';
+    }
+    else {
+      $variables['content']['field_cta_image']['0']['#view_mode'] = 'card';
+    }
+    unset($variables['content']['field_cta_image']['0']['#cache']['keys']);
+  }
+  elseif ($paragraph->bundle() === 'enumerated_content_group') {
+    $data = [];
+    foreach ($paragraph->get('field_enumerated_sections') as $section) {
+      $data[] = $section->entity->field_cta_teaser->value;
+    }
+    $variables['#attached']['drupalSettings']['demo_design_system_theme']['field_enumerated_sections']['data'] = $data;
+  }
+
+  if ($paragraph->bundle() === 'video_item') {
+
+    // Get poster.
+    if ($paragraph->hasField('field_video_poster')) {
+      $image_entity = $paragraph->get('field_video_poster')->first()->entity;
+      if ($image_entity instanceof Media) {
+        $image = $image_entity->get('field_media_image')->first()->entity;
+        if ($image instanceof File) {
+          $variables['player_attributes']['poster'] = $image->createFileUrl();
+        }
+      }
+    }
+
+    // Get videojs video.
+    if ($paragraph->hasField('field_video')) {
+      $videoEntity = $paragraph->get('field_video')->first()->entity;
+
+      // VideoJS.
+      if ($videoEntity->hasField('field_media_video_file')) {
+        if ($videoEntity instanceof Media) {
+          $video = $videoEntity->get('field_media_video_file')
+            ->first()->entity;
+          if ($video instanceof File) {
+            $variables['player_attributes']['video'] = $video->createFileUrl();
+            $variables['player_type'] = 'videojs';
+            $variables['player_attributes']['controls'] = TRUE;
+            $variables['player_attributes']['preload'] = TRUE;
+            $variables['player_attributes']['autoplay'] = FALSE;
+            $variables['player_attributes']['loop'] = FALSE;
+            $variables['player_attributes']['muted'] = FALSE;
+          }
+        }
+      }
+
+      // Oembed video.
+      if ($videoEntity->hasField('field_media_oembed_video')) {
+        $videoEntity = $videoEntity->get('field_media_oembed_video')->first()->getValue();
+        $variables['video'] = $videoEntity['value'];
+        $variables['player_type'] = 'oembed';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function demo_design_system_theme_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $node_type = Html::getClass($node->getType());
+  $node_view_mode = Html::getClass($variables['view_mode']);
+  $library_names = [
+    "node.{$node_type}",
+    "node.{$node_type}--{$node_view_mode}",
+  ];
+
+  foreach ($library_names as $library_name) {
+    _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function demo_design_system_theme_preprocess_field(&$variables) {
+  $library_name = 'field.' . HTML::getClass($variables['field_name']);
+  _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+
+  switch ($variables['field_name']) {
+    case 'field_video':
+      $paragraph = $variables['element']['#object'];
+
+      foreach ($variables['items'] as &$item) {
+        /** @var \Drupal\media\Entity\Media $media */
+        if (!empty($item['content']['#media'])) {
+
+          // Get poster.
+          if ($paragraph->hasField('field_video_poster')) {
+            $image_entity = $paragraph->get('field_video_poster')->first()->entity;
+            if ($image_entity instanceof Media) {
+              $image = $image_entity->get('field_media_image')->first()->entity;
+              if ($image instanceof File) {
+                $item['player_attributes']['poster'] = $image->createFileUrl();
+              }
+            }
+          }
+
+          $media = &$item['content']['#media'];
+
+          // Get oembed video.
+          if ($media->hasField('field_media_oembed_video')) {
+            $image_entity = $media->get('field_media_oembed_video')->first()->getValue();
+            if ($image_entity instanceof File) {
+              $item['video'] = $image_entity['value'];
+              $item['player_type'] = 'oembed';
+            }
+          }
+
+          // Get videojs video.
+          if ($media->hasField('field_media_video_file')) {
+            $image_entity = $media->get('field_media_video_file')
+              ->first()->entity;
+            if ($image_entity instanceof File) {
+              $item['video'] = $image_entity->createFileUrl();
+              $item['player_type'] = 'videojs';
+              $item['player_attributes']['controls'] = TRUE;
+              $item['player_attributes']['preload'] = 'true';
+              $item['player_attributes']['autoplay'] = FALSE;
+              $item['player_attributes']['loop'] = FALSE;
+              $item['player_attributes']['muted'] = FALSE;
+            }
+          }
+
+        }
+      }
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_region() for region.html.twig.
+ */
+function demo_design_system_theme_preprocess_region(&$variables) {
+  $region_name = $variables['elements']['#region'];
+  _demo_design_system_theme_check_and_attach_component_styles('region.' . Html::getClass($region_name), $variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function demo_design_system_theme_preprocess_html(array &$variables) {
+  $route_match = \Drupal::routeMatch();
+  $route_name = $route_match->getRouteName();
+  switch ($route_name) {
+    case 'system.403':
+    case 'system.404':
+      $variables['attributes']['class'][] = 'page-error';
+      $library_name = 'page.error';
+      _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+      break;
+  }
+
+  // Added body class from node field.
+  $route_match = \Drupal::routeMatch();
+  $node = $route_match->getParameter('node');
+  if ($node instanceof Node &&
+    $node->hasField('field_body_class') &&
+    !$node->get('field_body_class')->isEmpty()) {
+    $value = $node->get('field_body_class')->first()->getString();
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('custom-page--' . $value);
+  }
+
+  // Check if sidebar region is set;if so, add has-isi-side-bar class to body.
+  if (isset($variables['page']['sidebar_right'])) {
+    $variables['attributes']['class'][] = Html::cleanCssIdentifier('has-isi-side-bar');
+  }
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function demo_design_system_theme_preprocess_page(&$variables) {
+  $node = \Drupal::request()->attributes->get('node');
+  if (!empty($node) && $node instanceof Node) {
+    // Check that library exists and attach.
+    $library_name = 'node.' . $node->getType();
+    _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+  }
+
+  // Get theme settings.
+  $variables['#attached']['drupalSettings']['demo_design_system_theme']['menu_behavior'] = theme_get_setting('menu_behavior', 'demo_design_system_theme');
+  $variables['#attached']['drupalSettings']['demo_design_system_theme']['menu_overflow'] = theme_get_setting('menu_overflow', 'demo_design_system_theme');
+}
+
+/**
+ * Implements hook_preprocess_views_view().
+ */
+function demo_design_system_theme_preprocess_views_view(&$variables) {
+  $view = $variables['view'];
+  $view_id = Html::getClass($view->id());
+  $view_machine_name = Html::getClass($view->current_display);
+  $library_names = [
+    "view.{$view_id}",
+    "view.{$view_id}--{$view_machine_name}",
+  ];
+
+  foreach ($library_names as $library_name) {
+    _demo_design_system_theme_check_and_attach_component_styles($library_name, $variables);
+  }
+}
+
+/**
+ * Helper function to add styles.
+ */
+function _demo_design_system_theme_check_and_attach_component_styles($library_name, &$variables, $theme_name = NULL) {
+  if (empty($theme_name)) {
+    $theme_name = \Drupal::service('theme.manager')
+      ->getActiveTheme()
+      ->getName();
+  }
+  $library_exists = \Drupal::service('library.discovery')
+    ->getLibraryByName($theme_name, $library_name);
+
+  if ($library_exists) {
+    $variables['#attached']['library'][] = $theme_name . '/' . $library_name;
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menus.
+ */
+function demo_design_system_theme_preprocess_menu(&$variables, $hook) {
+  _demo_design_system_theme_format_items($variables['items']);
+
+  // Analytics markers.
+  $items = $variables['items'];
+  $regionsClasses = [
+    'header_2' => 'analytics--n-submain-menu',
+    'header_bottom' => 'analytics--n-main-menu',
+    'footer_3' => 'analytics--n-footer',
+    'footer_4' => 'analytics--n-footer',
+    'footer_6' => 'analytics--n-footer-other',
+  ];
+
+  $fileExtensions = [
+    'doc',
+    'docx',
+    'pdf',
+    'jpg',
+    'txt',
+  ];
+
+  foreach ($items as $key => $item) {
+    $linkoptions = $variables['items'][$key]['url']->getOptions();
+    if (!isset($linkoptions['attributes']['data-analytics-id'])) {
+      $linkoptions['attributes']['data-analytics-id'] = substr(md5((!empty($variables['attributes']['region']) ? $variables['attributes']['region'] : '') . $key), -5);
+
+      $linkoptions['attributes']['class'][] = '';
+      if (!in_array('analytics--stop-class', $linkoptions['attributes']['class'])) {
+        $region = !empty($variables['attributes']['region']) ? $variables['attributes']['region'] : 'none';
+
+        $uri = $variables['items'][$key]['url']->toString();
+        $pathParts = pathinfo($uri);
+        if (!empty($pathParts['extension']) && in_array($pathParts['extension'], $fileExtensions)) {
+          $linkoptions['attributes']['class'][] = 'analytics--d-link';
+        }
+
+        if (!empty(parse_url($uri, PHP_URL_SCHEME))) {
+          $linkoptions['attributes']['class'][] = 'analytics--e-link';
+        }
+
+        $linkoptions['attributes']['class'][] = !empty($regionsClasses[$region]) ? $regionsClasses[$region] : '';
+      }
+
+      $variables['items'][$key]['url']->setOptions($linkoptions);
+    }
+  }
+}
+
+/**
+ * Helper function to format menu items.
+ */
+function _demo_design_system_theme_format_items(&$items) {
+  foreach ($items as &$item) {
+    $item['title'] = Markup::create(strip_tags($item['title'], '<br>&nbsp;'));
+    if ($item['below']) {
+      _demo_design_system_theme_format_items($item['below']);
+    }
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function demo_design_system_theme_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  switch ($hook) {
+    case 'page':
+      $path = trim(\Drupal::request()->getPathInfo(), '/');
+      if ($path) {
+        $parts = explode('/', $path);
+        $subparts = preg_split('/\W+/', $parts[0]);
+        $suggestion = $subparts[0];
+        if (isset($subparts[1])) {
+          $suggestion .= '_' . $subparts[1];
+        }
+        array_unshift($suggestions, 'page__' . $suggestion);
+      }
+
+      $route_match = \Drupal::routeMatch();
+      $node = $route_match->getParameter('node');
+      if ($node instanceof Node) {
+        array_unshift($suggestions, 'page__' . $node->getType());
+      }
+      break;
+
+    case 'menu':
+      if (isset($variables['attributes']['block'])) {
+        $block_id = str_replace(['block-', '-'], ['', '_'], $variables['attributes']['block']);
+        $block = \Drupal::entityTypeManager()->getStorage('block')->load($block_id);
+
+        if ($block instanceof BlockInterface) {
+          $suggestions[] = $variables['theme_hook_original'] . '__' . $block->getRegion();
+        }
+      }
+      break;
+
+    case 'block':
+      $id = isset($variables['elements']['#id']) ? $variables['elements']['#id'] : FALSE;
+
+      if (
+        $id
+        && $variables['elements']['#base_plugin_id'] == 'block_content'
+        && !empty($variables['elements']['content']['#block_content'])
+      ) {
+        /** @var \Drupal\block_content\Entity\BlockContent $block_content */
+        $block_content = $variables['elements']['content']['#block_content'];
+
+        $suggestions[1] = 'block__block_content__' . $block_content->bundle();
+        $suggestions[2] = 'block__block_content__' . $block_content->bundle()
+          . '__' . str_replace('-', '_', Html::getId($block_content->label()));
+        $suggestions[3] = 'block__' . $id;
+      }
+
+      if ($id == 'demo_design_system_theme_main_menu' || $id == 'indicationbmainmenu') {
+        $suggestions[] = 'block__menu_main';
+      }
+
+      if ($id == 'isisidebar') {
+        $suggestions[] = 'block__isi_sidebar';
+      }
+
+      $block_id = $variables["elements"]["#id"];
+      $block = Block::load($block_id);
+
+      if ($block) {
+        $suggestions[] = $hook . '__' . $block->getRegion();
+      }
+
+      break;
+
+    case 'form':
+      $suggestions[] = 'form__' . str_replace('-', '_', $variables['element']['#id']);
+      break;
+
+    case 'views_view':
+      $suggestions[] = 'views_view__' . $variables['view']->id();
+      $suggestions[] = 'views_view__' . $variables['view']->id() . '__' . $variables['view']->current_display;
+      break;
+
+    case 'views_exposed_form':
+      $suggestions[] = 'views_exposed_form__' . str_replace('-', '_', substr($variables['form']['#id'], strlen($hook) + 1));
+      break;
+  }
+}
+
+/**
+ * Implements hook_preprocess_menu_local_task().
+ */
+function demo_design_system_theme_preprocess_menu_local_task(&$variables) {
+  $link = $variables['element']['#link'];
+  $url = $link['url'];
+  $options = $url->getOptions();
+  $url->setOptions($options + $link['localized_options']);
+  $variables['item'] = Link::fromTextAndUrl($link['title'], $url);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for menu-local-action.html.twig.
+ */
+function demo_design_system_theme_preprocess_menu_local_action(&$variables) {
+  $link = $variables['element']['#link'];
+  $link += [
+    'localized_options' => [],
+  ];
+  $link['localized_options']['attributes']['class'][] = 'btn';
+  $link['localized_options']['attributes']['class'][] = 'btn-secondary';
+  $link['localized_options']['set_active_class'] = TRUE;
+  $variables['link'] = [
+    '#type' => 'link',
+    '#title' => $link['title'],
+    '#options' => $link['localized_options'],
+    '#url' => $link['url'],
+  ];
+}
+
+/**
+ * Implments theme_form_system_theme_settings_alter()
+ */
+function demo_design_system_theme_form_system_theme_settings_alter(&$form, FormStateInterface $form_state) {
+  $form['menu'] = [
+    '#type' => 'details',
+    '#open' => TRUE,
+    '#title' => t('Menu'),
+  ];
+
+  $menuBehavior = theme_get_setting('menu_behavior', 'demo_design_system_theme');
+  $form['menu']['menu_behavior'] = [
+    '#type' => 'radios',
+    '#title' => t('Top menu behavior'),
+    '#options' => [
+      'Normal' => t('Normal, scrolls out of view until a user scrolls back to top'),
+      'Persistent' => t('Persistent, stays in view as user scrolls'),
+      'Sticky' => t('Sticky, scrolls out of view on scroll down, back in view on scroll up'),
+    ],
+    '#default_value' => $menuBehavior ? $menuBehavior : 'Normal',
+  ];
+
+  $menuOverflow = theme_get_setting('menu_overflow', 'demo_design_system_theme');
+  $form['menu']['menu_overflow'] = [
+    '#type' => 'radios',
+    '#title' => t('Top menu overflow'),
+    '#options' => [
+      'Yes' => t('Yes'),
+      'No' => t('No'),
+    ],
+    '#default_value' => $menuOverflow ? $menuOverflow : 'Yes',
+  ];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter() for field.
+ */
+function demo_design_system_theme_theme_suggestions_field_alter(array &$suggestions, array $variables) {
+  $field = $variables['element'];
+  $field_name = $field['#field_name'];
+  $field_entity_type = $field['#entity_type'];
+  $field_bundle = $field['#bundle'];
+  $field_view_mode = $field['#view_mode'];
+  $field_suggestions = [
+    2 => "field__{$field_name}__{$field_view_mode}",
+    4 => "field__{$field_entity_type}__{$field_bundle}__{$field_view_mode}",
+    6 => "field__{$field_entity_type}__{$field_name}__{$field_view_mode}",
+    8 => "field__{$field_entity_type}__{$field_name}__{$field_bundle}__{$field_view_mode}",
+  ];
+
+  // Adding field suggestions for entity.
+  if ($field_entity_type === 'media') {
+    foreach ($field_suggestions as $position => $suggestion) {
+      array_splice($suggestions, $position, 0, $suggestion);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_breadcrumb() for field.
+ */
+function demo_design_system_theme_preprocess_breadcrumb(&$variables) {
+  if (!empty($variables['current_condition'])) {
+    $variables['breadcrumb'] = array_merge(
+    // The first 3 items from the old array.
+      array_slice($variables['breadcrumb'], 0, 1, TRUE),
+      [
+        1 => [
+          'text' => $variables['current_condition_arr']['label'],
+          'url' => \Drupal::service('path_alias.manager')
+            ->getAliasByPath('/node/' . $variables['current_condition_arr']['default_page']),
+        ],
+        // New value to add after the 3rd item.
+      ],
+      // Other items after the 3rd.
+      array_slice($variables['breadcrumb'], 1, NULL, TRUE)
+    );
+  }
+
+  foreach ($variables['breadcrumb'] as $key => &$item) {
+    $title = is_string($variables['breadcrumb'][$key]['text']) ? $variables['breadcrumb'][$key]['text'] : $variables['breadcrumb'][$key]['text']->render();
+    $variables['breadcrumb'][$key]['id'] = substr(md5($title . $key), -5);
+  }
+}

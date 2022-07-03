@@ -1,0 +1,22 @@
+.graphic-divider hr {
+  border-top: 5px solid rgba(0, 0, 0, 0.7);
+}
+
+.graphic-divider--type--colored_div {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 30px;
+  display: block;
+}
+
+.graphic-divider--type--graphic_div {
+  background-image: url("https://cdn.pixabay.com/photo/2015/04/18/09/57/background-728537_960_720.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 30px;
+  display: block;
+}
+
+/*# sourceMappingURL=paragraph.graphic-divider.css.map */

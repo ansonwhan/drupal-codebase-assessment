@@ -1,0 +1,34 @@
+uuid: 5b5da0b3-974d-4e49-b123-fdcc19cd72aa
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.for_row_x1_lg
+    - image.style.for_row_x2_lg
+  theme:
+    - demo_design_system_theme
+id: for_row
+label: 'For row'
+image_style_mappings:
+  -
+    breakpoint_id: demo_design_system_theme.screen-sm-min
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: for_row_x1_lg
+  -
+    breakpoint_id: demo_design_system_theme.screen-sm-min
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: for_row_x2_lg
+  -
+    breakpoint_id: demo_design_system_theme.screen-xs-max
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: for_row_x1_lg
+  -
+    breakpoint_id: demo_design_system_theme.screen-xs-max
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: for_row_x2_lg
+breakpoint_group: demo_design_system_theme
+fallback_image_style: for_row_x1_lg

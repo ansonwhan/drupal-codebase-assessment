@@ -1,0 +1,21 @@
+uuid: 9772a02a-d723-441b-8c8d-9b2e2dbbb983
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_citations_type
+    - paragraphs.paragraphs_type.citation_group
+  module:
+    - options
+id: paragraph.citation_group.field_citations_type
+field_name: field_citations_type
+entity_type: paragraph
+bundle: citation_group
+label: 'Citations Type'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

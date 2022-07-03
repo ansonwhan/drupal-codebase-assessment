@@ -1,0 +1,17 @@
+uuid: 900751ca-fe1a-4281-a6e9-5b6f4a4110b8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: profile_row_x1_xs
+label: 'Profile row x1 xs'
+effects:
+  04716e25-e331-429d-89dd-559fd09f6bc3:
+    uuid: 04716e25-e331-429d-89dd-559fd09f6bc3
+    id: focal_point_scale_and_crop
+    weight: 1
+    data:
+      width: 507
+      height: 221
+      crop_type: focal_point

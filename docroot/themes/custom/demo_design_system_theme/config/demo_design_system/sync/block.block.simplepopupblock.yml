@@ -1,0 +1,25 @@
+uuid: 0f1afa06-4ad5-484d-badf-8c19774ab9c4
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:modal_popup:bc43df1b-6235-4aa4-91d2-627cbaf1ae3f'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: simplepopupblock
+theme: demo_design_system_theme
+region: hidden
+weight: -16
+provider: null
+plugin: 'block_content:bc43df1b-6235-4aa4-91d2-627cbaf1ae3f'
+settings:
+  id: 'block_content:bc43df1b-6235-4aa4-91d2-627cbaf1ae3f'
+  label: 'Custom Modal Popup Block'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,22 @@
+body {
+  &.user-is-tabbing *:focus {
+    outline-style: solid;
+    outline-color: -webkit-focus-ring-color;
+    outline-width: 1px;
+    box-shadow: none;
+
+    // Disable focus state on mobile devices.
+    @media(hover: none) and (pointer: coarse) {
+      outline-style: none;
+      box-shadow: none;
+    }
+  }
+
+  &.user-is-clicking *:focus {
+    outline-style: none !important;
+    box-shadow: none !important;
+  }
+
+}
+
+

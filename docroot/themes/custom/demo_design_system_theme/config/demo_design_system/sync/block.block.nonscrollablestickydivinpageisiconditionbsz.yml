@@ -1,0 +1,31 @@
+uuid: 8a2bba34-878b-4345-a7c8-fdf754c342ea
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:isi:527861ba-43c4-440d-a793-a3ac6bcdc56a'
+  module:
+    - block_content
+    - system
+  theme:
+    - demo_design_system_theme
+id: nonscrollablestickydivinpageisiconditionbsz
+theme: demo_design_system_theme
+region: content_bottom
+weight: 0
+provider: null
+plugin: 'block_content:527861ba-43c4-440d-a793-a3ac6bcdc56a'
+settings:
+  id: 'block_content:527861ba-43c4-440d-a793-a3ac6bcdc56a'
+  label: 'Nonscrollable Sticky Div & In-Page ISI (condition B/SZ)'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    pages: '/b/*'
+    negate: false
+    context_mapping: {  }

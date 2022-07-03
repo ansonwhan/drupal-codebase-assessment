@@ -1,0 +1,25 @@
+uuid: ff3aef6e-6cdb-43dc-88cb-9e80563bd31c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a6463880-eb34-47a1-b0bc-8f491c6e62c8'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: u.sfullprescribinginformation
+theme: demo_design_system_theme
+region: header_middle
+weight: 0
+provider: null
+plugin: 'block_content:a6463880-eb34-47a1-b0bc-8f491c6e62c8'
+settings:
+  id: 'block_content:a6463880-eb34-47a1-b0bc-8f491c6e62c8'
+  label: 'U.S FULL PRESCRIBING INFORMATION'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

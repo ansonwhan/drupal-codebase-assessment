@@ -1,0 +1,30 @@
+uuid: 5a9878d8-83f9-4b0b-9cb9-ffddae0d0763
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_default_icon
+    - media.type.image
+    - media.type.svg_image
+    - paragraphs.paragraphs_type.tab_section
+id: paragraph.tab_section.field_default_icon
+field_name: field_default_icon
+entity_type: paragraph
+bundle: tab_section
+label: 'Default Icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      svg_image: svg_image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

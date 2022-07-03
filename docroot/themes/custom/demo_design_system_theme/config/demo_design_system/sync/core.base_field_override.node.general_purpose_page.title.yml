@@ -1,0 +1,18 @@
+uuid: c21bbce8-0d2b-41dc-b823-8336cdb14b7c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.general_purpose_page
+id: node.general_purpose_page.title
+field_name: title
+entity_type: node
+bundle: general_purpose_page
+label: 'Internal Title'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

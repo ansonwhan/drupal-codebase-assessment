@@ -1,0 +1,234 @@
+.paragraph--type--tab-group.custom--display-type--accordion0 .tab-pane .paragraph--type--tab-section, .paragraph--type--tab-group.custom--display-type--accordion1 .tab-pane .paragraph--type--tab-section {
+  border-bottom: 1px solid #ced4da;
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--tab-group.custom--display-type--accordion0 .tab-pane:first-child .paragraph--type--tab-section, .paragraph--type--tab-group.custom--display-type--accordion1 .tab-pane:first-child .paragraph--type--tab-section {
+    border-top: 1px solid #ced4da;
+  }
+}
+
+.paragraph--type--tab-group .nav-link {
+  font-size: 16px;
+  font-family: "Museo Sans", sans-serif;
+  font-weight: 700;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link {
+  padding: 10px 0;
+  position: relative;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link .custom--tab-icon {
+  top: 1px;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link:before, .paragraph--type--tab-group .nav-link.custom--accordion-link:after {
+  content: '';
+  position: absolute;
+  background: #007BFF;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link:before {
+  width: 15px;
+  height: 3px;
+  right: 0;
+  top: 17px;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link:after {
+  width: 3px;
+  height: 15px;
+  right: 6px;
+  top: 11px;
+}
+
+.paragraph--type--tab-group .nav-link.custom--accordion-link.active:after {
+  display: none;
+}
+
+.paragraph--type--tab-group .nav-link .custom--tab-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+}
+
+.paragraph--type--tab-group .nav-link .custom--tab-icon > div:last-child {
+  display: none;
+}
+
+.paragraph--type--tab-group .nav-link p {
+  display: inline-block;
+}
+
+.paragraph--type--tab-group .nav-link:hover .custom--tab-icon > div:first-child, .paragraph--type--tab-group .nav-link.active .custom--tab-icon > div:first-child {
+  display: none;
+}
+
+.paragraph--type--tab-group .nav-link:hover .custom--tab-icon > div:last-child, .paragraph--type--tab-group .nav-link.active .custom--tab-icon > div:last-child {
+  display: block;
+}
+
+.paragraph--type--tab-group.custom--display-type--accordion0 .nav-tabs, .paragraph--type--tab-group.custom--display-type--accordion1 .nav-tabs {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .paragraph--type--tab-group.custom--display-type--accordion0 .nav-tabs, .paragraph--type--tab-group.custom--display-type--accordion1 .nav-tabs {
+    display: flex;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--accordion0 .card, .paragraph--type--tab-group.custom--display-type--accordion1 .card {
+    border: none;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--accordion0 .card .card-header, .paragraph--type--tab-group.custom--display-type--accordion1 .card .card-header {
+    display: none;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--accordion0 .card .collapse, .paragraph--type--tab-group.custom--display-type--accordion1 .card .collapse {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--tab-group.custom--display-type--accordion0 .tab-pane, .paragraph--type--tab-group.custom--display-type--accordion1 .tab-pane {
+    display: block !important;
+    opacity: 1;
+  }
+}
+
+.paragraph--type--tab-group.custom--display-type--h_tabbed .card .card-header, .paragraph--type--tab-group.custom--display-type--v_tabbed .card .card-header {
+  display: none;
+}
+
+.paragraph--type--tab-group.custom--display-type--h_tabbed .card .collapse, .paragraph--type--tab-group.custom--display-type--v_tabbed .card .collapse {
+  display: block;
+}
+
+.paragraph--type--tab-group.custom--display-type--v_tabbed .nav-tabs {
+  flex-direction: column;
+}
+
+.paragraph--type--tab-group.custom--display-type--v_tabbed .nav-tabs li {
+  margin-top: 0;
+}
+
+.paragraph--type--tab-group.custom--display-type--v_tabbed .nav-tabs .nav-link {
+  border-radius: .25rem;
+}
+
+.paragraph--type--tab-group.custom--display-type--v_tabbed .nav-tabs .nav-link.active {
+  background-color: #007bff;
+  color: #fff;
+}
+
+@media (min-width: 767px) {
+  .paragraph--type--tab-group.custom--display-type--v_tabbed .custom--tab-sections {
+    flex-direction: row;
+    display: flex;
+    column-gap: 20px;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--v_tabbed .custom--tab-sections > .nav-tabs {
+    min-width: 150px;
+    max-width: 220px;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--v_tabbed .custom--tab-sections .card-body.pt-3 {
+    padding-top: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .paragraph--type--tab-group.custom--display-type--h_tabbed .nav-tabs {
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: nowrap;
+  }
+
+  .paragraph--type--tab-group.custom--display-type--h_tabbed .nav-tabs .nav-link {
+    white-space: nowrap;
+  }
+}
+
+.js--overflow-menu-tab {
+  position: relative;
+}
+
+.js--overflow-menu-tab ul.nav-tabs {
+  padding-right: 40px;
+  overflow-y: hidden;
+  width: 100%;
+}
+
+.js--overflow-menu-tab .custom--more {
+  color: #007BFF;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  text-align: right;
+}
+
+.js--overflow-menu-tab .custom--more:hover, .js--overflow-menu-tab .custom--more:active {
+  text-decoration: none;
+}
+
+.js--overflow-menu-tab .custom--overflow {
+  background-color: #fff;
+  text-align: left;
+  display: none;
+  width: 250px;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+}
+
+.js--overflow-menu-tab .custom--overflow li {
+  margin: 0;
+}
+
+.js--overflow-menu-tab .custom--overflow a {
+  display: block;
+  padding: 13px 25px;
+  font-size: 16px;
+  border: none;
+}
+
+.js--overflow-menu-tab .custom--more:hover .custom--overflow {
+  display: block;
+}
+
+.js--overflow-menu-tab .overflow-squares-menu {
+  cursor: pointer;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.js--overflow-menu-tab .overflow-squares-menu i {
+  font-size: 0.4375rem;
+  color: #007BFF;
+}
+
+.js--overflow-menu-tab .overflow-squares-menu .spacer {
+  margin: 0 3px 0 3px;
+}
+
+.js--overflow-menu-tab .overflow-squares-menu:hover i {
+  color: #0056b3;
+}
+
+.js--overflow-menu-tab .overflow-squares-menu:hover {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.js--overflow-menu-tab .overflow-squares-menu:hover i {
+  color: #212529;
+}
+
+/*# sourceMappingURL=paragraph.tab-group.css.map */

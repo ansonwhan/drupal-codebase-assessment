@@ -1,0 +1,14 @@
+uuid: f2e3f5ac-06c8-4aa6-96a3-dd8841dde347
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_paragraph_behaviors
+id: side_by_side_content_image
+label: 'Side-by-side Content & Image'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins:
+  custom_paragraph_behaviors_paragraph_custom_id_classes:
+    enabled: true

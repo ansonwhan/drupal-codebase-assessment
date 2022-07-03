@@ -1,0 +1,21 @@
+uuid: 9052eb69-0fa0-446f-9d1e-e144f01100f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_display_format
+    - paragraphs.paragraphs_type.resource_cta
+  module:
+    - options
+id: paragraph.resource_cta.field_display_format
+field_name: field_display_format
+entity_type: paragraph
+bundle: resource_cta
+label: 'Display Format'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

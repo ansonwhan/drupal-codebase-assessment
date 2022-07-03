@@ -1,0 +1,125 @@
+.a-spot-hero-carousel .jumbotron.w-90 {
+  width: 90%;
+}
+
+.a-spot-hero-carousel .jumbotron.w-90 > .row {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+@media (max-width: 376.98px) {
+  .a-spot-hero-carousel h1 {
+    font-size: 1rem !important;
+  }
+}
+
+.a-spot-hero-carousel p {
+  font-size: 0.75rem;
+  font-size: 1rem;
+}
+
+@media (min-width: 769px) {
+  .a-spot-hero-carousel p {
+    font-size: 1.5rem;
+  }
+}
+
+.a-spot-hero-carousel h2 {
+  font-size: 1rem;
+}
+
+@media (min-width: 577px) {
+  .a-spot-hero-carousel h2 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .a-spot-hero-carousel h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .a-spot-hero-carousel h2 {
+    font-size: 2rem;
+  }
+}
+
+.a-spot-hero-carousel h3 {
+  font-size: 0.8rem;
+  font-size: 0.95rem;
+}
+
+@media (min-width: 577px) {
+  .a-spot-hero-carousel h3 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (min-width: 769px) {
+  .a-spot-hero-carousel h3 {
+    font-size: 1.35rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .a-spot-hero-carousel h3 {
+    font-size: 1.75rem;
+  }
+}
+
+.a-spot-hero-carousel p, .a-spot-hero-carousel h1, .a-spot-hero-carousel h2, .a-spot-hero-carousel h3, .a-spot-hero-carousel h4, .a-spot-hero-carousel h5, .a-spot-hero-carousel h6 {
+  color: #fff;
+}
+
+.a-spot-hero-carousel .opaque-background {
+  padding: 15px;
+}
+
+.a-spot-hero-carousel .opaque-background p, .a-spot-hero-carousel .opaque-background h1, .a-spot-hero-carousel .opaque-background h2, .a-spot-hero-carousel .opaque-background h3, .a-spot-hero-carousel .opaque-background h4, .a-spot-hero-carousel .opaque-background h5, .a-spot-hero-carousel .opaque-background h6 {
+  color: #343A40;
+}
+
+.a-spot-hero-carousel .slick-dots {
+  position: absolute;
+  bottom: 2%;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.a-spot-hero-carousel .slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 5px;
+  width: 30px;
+  transform: scaleY(-1);
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 5px;
+  padding: 0;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.a-spot-hero-carousel .slick-dots li.slick-active {
+  background-color: #fff;
+  opacity: 1;
+}
+
+.a-spot-hero-carousel .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  height: 5px;
+  width: 30px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+}
+
+/*# sourceMappingURL=paragraph.carousel.css.map */

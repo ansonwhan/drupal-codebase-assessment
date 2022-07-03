@@ -1,0 +1,91 @@
+@import "variables";
+@import "mixins_functions";
+@import "inherited";
+
+@mixin enumeratedCircleComponent($fontSize: 30px) {
+  font-family: "Museo Sans";
+  color: $common-light-gray;
+  font-size: remOrPercent($fontSize);
+  width: remOrPercent(81px);
+  height: remOrPercent(81px);
+  background-color: $blue;
+  border: $common-border-size solid $blue;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin backToTopButton($fontSize: 30px, $height: 57px, $width: 57px, $borderRadius: 50%) {
+  display: none;
+  font-family: "Museo Sans";
+  color: $common-light-gray;
+  font-size: remOrPercent($fontSize);
+  width: remOrPercent($width);
+  height: remOrPercent($height);
+  border-radius: remOrPercent($borderRadius);
+  border: none;
+  text-align: center;
+  &:focus, &:active {
+    box-shadow: $standardButtonBoxShadow;
+  }
+  i {
+    height: remOrPercent(11px);
+    width: remOrPercent(15px);
+    font-weight: bold;
+  }
+  .text-span {
+    margin-top: remOrPercent(-6px);
+    display: block;
+  }
+}
+
+@mixin commonStylesForImg($webpImgName: '', $height: 81px, $width: 81px) {
+  background-image: file($webpImgName);
+  height: remOrPercent($height);
+  width: remOrPercent($width);
+  max-width: remOrPercent($width);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin commonStylesForHalfCardsImg($webpImgName: '', $height: 180px, $width: 100%, $minWidth: null) {
+  background-image: file($webpImgName);
+  height: remOrPercent($height);
+  width: remOrPercent($width);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  @if $minWidth {
+    min-width: remOrPercent($minWidth);
+  }
+}
+
+@mixin commonStylesForA_SpotHeroThemeImg($webpImgName: '', $height: 100%, $width: 100%) {
+  background-image: file($webpImgName);
+  height: remOrPercent($height);
+  width: remOrPercent($width);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@mixin commonStylesForSlickSlideNavigation($backgroundColor: rgba(255, 255, 255, 0.5), $absolutePositionXUnit: 0) {
+  cursor: pointer;
+  height: remOrPercent(5px);
+  width: remOrPercent(30px) !important;
+  transform: scaleY(-1);
+  background-color: $backgroundColor;
+  left: remOrPercent($absolutePositionXUnit);
+  position: relative;
+}
+
+@mixin pseudoElementFullWindowWidth($backgroundColor: linear-gradient(180deg, #497C98 0%, #2F617D 100%)) {
+  position: absolute;
+  height: 100%;
+  display: block;
+  content: '';
+  background: $backgroundColor;
+  width: 150vw;
+  left: 50%;
+  transform: translateX(-50%);
+}

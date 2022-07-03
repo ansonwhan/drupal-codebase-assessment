@@ -1,0 +1,25 @@
+uuid: 71fcbb7c-fc83-4613-812c-6151998d36ed
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:a1f40162-4675-4243-9e22-34b4f5bf0b2c'
+  module:
+    - block_content
+  theme:
+    - demo_design_system_theme
+id: footersectionlinksfakemenublocktitle
+theme: demo_design_system_theme
+region: footer_3
+weight: -28
+provider: null
+plugin: 'block_content:a1f40162-4675-4243-9e22-34b4f5bf0b2c'
+settings:
+  id: 'block_content:a1f40162-4675-4243-9e22-34b4f5bf0b2c'
+  label: 'Footer Section Links fake menu block title'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

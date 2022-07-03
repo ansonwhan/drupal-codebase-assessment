@@ -1,0 +1,54 @@
+.scroll-wrapper {
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+
+  &>.scroll-content {
+    border: 0;
+    box-sizing: content-box;
+    height: auto;
+    left: 0;
+    margin: 0;
+    max-height: none;
+    max-width: none;
+    overflow: scroll;
+    padding: 0;
+    position: relative;
+    top: 0;
+    width: auto;
+
+    &::-webkit-scrollbar {
+      height: 0;
+      width: 0;
+    }
+  }
+}
+
+/******************* EXTERNAL SCROLLBAR *******************/
+.inline-external-scroll-y {
+  cursor: pointer;
+  display: none;
+  position: absolute;
+
+  &.scroll-scrolly_visible {
+    bottom: 0;
+    display: block;
+    height: auto;
+    right: 15px;
+    top: 0;
+    width: 10px;
+  }
+
+  div {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .scroll-bar {
+    height: 25px;
+    z-index: 12;
+  }
+}

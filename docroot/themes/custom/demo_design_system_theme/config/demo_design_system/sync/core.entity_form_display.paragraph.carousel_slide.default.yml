@@ -1,0 +1,70 @@
+uuid: 2a7344f7-99e4-47db-a511-03d29bffe731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.carousel_slide.field_backdrop
+    - field.field.paragraph.carousel_slide.field_image
+    - field.field.paragraph.carousel_slide.field_link
+    - field.field.paragraph.carousel_slide.field_text
+    - field.field.paragraph.carousel_slide.field_text_position
+    - paragraphs.paragraphs_type.carousel_slide
+  module:
+    - link_attributes
+    - media_library
+    - text
+id: paragraph.carousel_slide.default
+targetEntityType: paragraph
+bundle: carousel_slide
+mode: default
+content:
+  field_backdrop:
+    weight: 3
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image:
+    weight: 0
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    type: media_library_widget
+    region: content
+  field_link:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: true
+        target: true
+        rel: true
+        class: true
+        aria-label: true
+        data-analytics-position: true
+        data-analytics-id: true
+        name: false
+        accesskey: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_text_position:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

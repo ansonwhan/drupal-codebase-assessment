@@ -1,0 +1,273 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.paragraph--type--tab-group {
+
+  &.custom--display-type--accordion0,
+  &.custom--display-type--accordion1 {
+    .tab-pane {
+      .paragraph--type--tab-section {
+        border-bottom: 1px solid #ced4da;
+      }
+
+      @media(max-width: 767px) {
+        &:first-child {
+          .paragraph--type--tab-section {
+            border-top: 1px solid #ced4da;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    font-size: 16px;
+    font-family: $headings-font-family;
+    font-weight: 700;
+
+    &.custom--accordion-link {
+      padding: 10px 0;
+      position: relative;
+
+      .custom--tab-icon {
+        top: 1px;
+      }
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        background: $primary;
+      }
+
+      &:before {
+        width: 15px;
+        height: 3px;
+        right: 0;
+        top: 17px;
+      }
+
+      &:after {
+        width: 3px;
+        height: 15px;
+        right: 6px;
+        top: 11px;
+      }
+
+      &.active {
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    .custom--tab-icon {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      position: relative;
+      top: 3px;
+
+      & > div {
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+
+    p {
+      display: inline-block;
+    }
+
+    &:hover,
+    &.active {
+      .custom--tab-icon {
+        & > div {
+          &:first-child {
+            display: none;
+          }
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  &.custom--display-type--accordion0,
+  &.custom--display-type--accordion1 {
+    .nav-tabs {
+      display: none;
+    }
+
+    @media(min-width: 768px) {
+      .nav-tabs {
+        display: flex;
+      }
+
+      .card {
+        border: none;
+
+        .card-header {
+          display: none;
+        }
+
+        .collapse {
+          display: block;
+        }
+      }
+    }
+
+    @media(max-width: 767px) {
+      .tab-pane {
+        display: block !important;
+        opacity: 1;
+      }
+    }
+  }
+
+  &.custom--display-type--h_tabbed,
+  &.custom--display-type--v_tabbed {
+    .card {
+      .card-header {
+        display: none;
+      }
+
+      .collapse {
+        display: block;
+      }
+    }
+  }
+  &.custom--display-type--v_tabbed {
+    .nav-tabs {
+      flex-direction: column;
+      li {
+        margin-top: 0;
+      }
+      .nav-link {
+        border-radius: .25rem;
+
+        &.active {
+          background-color: #007bff;
+          color: #fff;
+        }
+      }
+    }
+  }
+  @media(min-width: 767px) {
+    &.custom--display-type--v_tabbed {
+      .custom--tab-sections {
+        flex-direction: row;
+        display: flex;
+        column-gap: 20px;
+        > .nav-tabs {
+          min-width: 150px;
+          max-width: 220px;
+        }
+        .card-body.pt-3 {
+          padding-top: 0 !important;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 767px) {
+    &.custom--display-type--h_tabbed {
+      .nav-tabs {
+        overflow-x: auto;
+        overflow-y:hidden;
+        flex-wrap: nowrap;
+
+        .nav-link {
+          white-space: nowrap;
+        }
+      }
+    }
+
+  }
+}
+
+.js--overflow-menu-tab {
+  position: relative;
+
+  ul {
+    &.nav-tabs {
+      padding-right: 40px;
+      overflow-y: hidden;
+      width: 100%;
+    }
+  }
+
+  .custom--more {
+    color: #007BFF;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    text-align: right;
+
+    &:hover,
+    &:active {
+      text-decoration: none;
+    }
+  }
+
+  .custom--overflow {
+    background-color: #fff;
+    text-align: left;
+    display: none;
+    width: 250px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    max-height: calc(100vh - 160px);
+    overflow: auto;
+
+    li {
+      margin: 0;
+    }
+
+    a {
+      display: block;
+      padding: 13px 25px;
+      font-size: 16px;
+      border: none;
+    }
+  }
+
+  .custom--more:hover {
+    .custom--overflow {
+      display: block;
+    }
+  }
+
+  .overflow-squares-menu {
+    cursor: pointer;
+    width: remOrPercent(40px);
+    height: remOrPercent(40px);
+
+    i {
+      font-size: remOrPercent(7px);
+      color: $blue;
+    }
+
+    .spacer {
+      margin: 0 3px 0 3px;
+    }
+
+    &:hover {
+      i {
+        color: $basic-link-hover-color;
+      }
+    }
+
+    &:hover {
+      border: 1px solid rgba(0, 0, 0, 0.12);
+
+      i {
+        color: #212529;
+      }
+    }
+
+  }
+}

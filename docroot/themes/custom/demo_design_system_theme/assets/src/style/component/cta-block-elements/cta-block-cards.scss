@@ -1,0 +1,58 @@
+@import "../../variables";
+@import "../../mixins_functions";
+@import "../../common_components_mixins";
+
+.cta-block-cards {
+  background-color: $common-background-light-gray;
+
+  .height-100 {
+    height: 100%;
+  }
+
+  .max-width-height {
+    //max-height: remOrPercent(329px);
+    max-width: remOrPercent(348px);
+  }
+
+  .common-border {
+    border: $common-border-size solid $common-border-color;
+  }
+
+  .card {
+    .pain-icon {
+      @include commonStylesForImg('pain_icon.webp');
+    }
+
+    .graph-icon {
+      @include commonStylesForImg('graph_icon.webp');
+    }
+
+    .time-icon {
+      @include commonStylesForImg('time_icon.webp');
+    }
+
+    //wrapper for headings tags
+    .card-title {
+      @include overwriteAllHeadingTagsStyles;
+    }
+  }
+
+  .call-to-action__card.cta-with-icon img {
+    width: 100%;
+    max-width: 81px;
+    height: auto;
+    max-height: 81px;
+    margin: auto;
+  }
+
+  .call-to-action__card.cta-with-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: 100px;
+  }
+
+  .col-4 {
+    border: $common-border-size solid $common-border-color;
+  }
+}

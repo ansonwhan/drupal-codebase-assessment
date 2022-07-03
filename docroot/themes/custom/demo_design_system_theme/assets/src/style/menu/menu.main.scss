@@ -1,0 +1,153 @@
+@import "../variables";
+@import "../mixins_functions";
+
+$common-menu-border-color: #DFE3E6;
+
+.menu-main {
+  .navbar-toggler {
+    border: $common-border-size solid $common-menu-border-color;
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+    height: remOrPercent(70px);
+    padding: remOrPercent(5px) remOrPercent(15px);
+
+    @media (max-width: 425px) {
+      right: - remOrPercent(15px);
+    }
+
+    @include media-breakpoint-down(sm) {
+      position: relative;
+      z-index: 2;
+    }
+  }
+
+  .navbar-toggler-icon {
+    background-image: url('../../img/icon-menu-toggle-blue.png');
+    background-size: inherit;
+  }
+
+  @include media-breakpoint-down(sm) {
+    &.navbar {
+      margin-top: - remOrPercent(70px);
+    }
+  }
+
+  .field--border-top {
+    border-top: $common-border-size solid $common-menu-border-color;
+    margin-top: remOrPercent(10px);
+    padding-top: remOrPercent(20px);
+  }
+
+  .field--border-bottom {
+    border-bottom: $common-border-size solid $common-menu-border-color;
+    margin-bottom: remOrPercent(10px);
+    padding-bottom: remOrPercent(20px);
+  }
+}
+
+.region-header-2 {
+  display: flex;
+
+  nav {
+    margin-left: auto;
+  }
+}
+
+.region--header-1-2 {
+  border-bottom: $common-border-size solid $common-menu-border-color;
+}
+
+.region-header-bottom {
+  nav {
+    padding: 0;
+
+    ul {
+      display: flex;
+      flex-wrap: nowrap;
+      flex-direction: column;
+      overflow-y: auto;
+      height: calc(100vh - 150px);
+      max-height: remOrPercent(430px);
+      margin-top: remOrPercent(10px);
+
+      @include media-breakpoint-between(xs, sm) {
+        margin-top: remOrPercent(5px);
+      }
+
+      @include media-breakpoint-up(md) {
+        flex-direction: row;
+        height: auto;
+        margin-top: 0;
+      }
+
+      li {
+        width: 100%;
+
+        @include media-breakpoint-up(md) {
+          width: auto;
+        }
+
+        &.show-only-in-footer {
+          display: none;
+        }
+      }
+
+      $common-padding-10: remOrPercent(10px);
+      $common-padding-20: remOrPercent(20px);
+      $common-padding-30: remOrPercent(30px);
+
+      a {
+        display: block;
+        padding: $common-padding-10 $common-padding-20 $common-padding-10 $common-padding-20;
+        font-size: remOrPercent(15px);
+
+        &.field--discussion-guide,
+        &.field--savings-card,
+        &.field--custom-icon {
+          padding-left: remOrPercent(45px);
+
+          &:before {
+            left: remOrPercent(20px);
+            top: remOrPercent(15px);
+          }
+        }
+
+        &.field--discussion-guide {
+          &:before {
+            top: remOrPercent(25px);
+          }
+        }
+
+        @include media-breakpoint-down(sm) {
+          &.field--border-top,
+          &.field--border-bottom {
+            padding-left: remOrPercent(30px);
+
+            &:before {
+              left: remOrPercent(10px);
+            }
+          }
+        }
+
+        @include media-breakpoint-up(md) {
+          padding-left: $common-padding-20;
+          padding-right: $common-padding-20;
+        }
+
+        @include media-breakpoint-up(lg) {
+          padding-left: $common-padding-30;
+          padding-right: $common-padding-30;
+        }
+      }
+    }
+  }
+
+  .navbar-brand {
+    visibility: hidden;
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+}

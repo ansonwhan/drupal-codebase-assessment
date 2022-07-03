@@ -1,0 +1,64 @@
+@import "../variables";
+@import "../mixins_functions";
+
+.region--header-middle {
+  background: $gray-700;
+  font-weight: 500;
+
+  .region {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      text-align: initial;
+      justify-content: flex-end;
+    }
+  }
+
+  .block-content-us-healthcare-professionals-site {
+    display: none;
+
+    @include media-breakpoint-up(md) {
+      display: initial;
+    }
+  }
+
+  .content {
+    ul {
+      list-style: none;
+      padding-left: 0;
+      margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-items: center;
+      align-content: normal;
+
+      li {
+        display: inline-block;
+        padding: 14px 10px 12px 0;
+        margin: 0 10px;
+        line-height: .9rem;
+
+        @include media-breakpoint-up(lg) {
+          margin: 0 0 0 38px;
+        }
+      }
+
+    }
+  }
+
+  a {
+    color: #FFB740;
+    font-size: 0.75rem;
+    position: relative;
+
+    &:after {
+      content: "›";
+      position: absolute;
+      right: -7px;
+    }
+  }
+}
