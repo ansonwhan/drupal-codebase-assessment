@@ -1,0 +1,16 @@
+uuid: 70f49bda-a633-4e1f-8eae-4e7dcc466b23
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+name: Blog Post
+type: blog_post
+description: 'Used for blog content'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false
+
+_core:
+  default_config_hash: OdZt4zPgXzd25QMDtGJI2imd_Ug9kE-Qng8TUImLXVE
