@@ -1,0 +1,47 @@
+<?php
+
+/**
+ * @file
+ * Contains example_module.module.
+ */
+
+use Drupal\Core\Entity\ContentEntityForm;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Entity\EntityInterface;
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function approval_code_preprocess_node(&$vars) {
+
+  // Load configuration values
+  $moduleConfig = \Drupal::config('example_module.settings');
+
+  // Load the supported content types config list into an array.
+  $supportedTypes = $moduleConfig['content_types_supported'];
+
+    // Iterate through compacting array, leaving only enabled/supported types.
+    if (($key = array_search('0', $supportedTypes)) !== false) {
+      unset($supportedTypes[$key]);
+    }
+
+    // Load node entity and fields.
+    $node = $vars['node'];
+
+    // Load node type.
+    $nodeType = $node->getType();
+
+    // Conditionally check if node type matches those supported by module.
+    if (array_key_exists($nodeType, $supportedTypes)) {
+      
+      // Check to see if approval code field is set on the node, if not, set value passed for rendering.
+      if ($node->get('field_approval_code')->getValue()[0]['value'] == "") {
+        $node->set('field_approval_code') = $moduleConfig['fallback_approval_code'];
+      }      
+
+    }
+  
+  
+}

@@ -1,12 +1,11 @@
 example-module-enable: true
 dependencies: {  }
 fallback_approval_code: 01US20EUC0121
-fallback_approval_expiration: '2022-12-01'
-content_types:
+content_types_supported:
   blog_post: 1
   landing_page: 1
-  events: 1
-  news: 1
+  events: 0
+  news: 0
   page: 1
 _core:
   default_config_hash: OdZt4zPgXzd25QMDtGJI2imd_Ug9kE-Qng8TUImLXVE
